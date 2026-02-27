@@ -1,0 +1,22 @@
+{
+  "folders": [
+    { "path": "." }
+  ],
+  "settings": {
+    "python.defaultInterpreterPath": "./backend/.venv/bin/python",
+    "eslint.workingDirectories": ["./frontend"],
+    "typescript.tsdk": "./frontend/node_modules/typescript/lib"
+  },
+  "extensions": {
+    "recommendations": [
+      "ms-python.python",
+      "ms-python.vscode-pylance",
+      "FastAPILabs.fastapi-vscode",
+      "vue.volar",
+      "dbaeumer.vscode-eslint",
+      "esbenp.prettier-vscode",
+      "bradlc.vscode-tailwindcss",
+      "github.copilot"
+    ]
+  }
+}
