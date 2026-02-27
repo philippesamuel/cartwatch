@@ -4,7 +4,6 @@ from pytest import fixture
 
 from app.main import app
 
-
 client = TestClient(app)
 
 
@@ -12,13 +11,13 @@ client = TestClient(app)
 def health_response() -> httpx.Response:
     return client.get("/health")
 
+
 def test_health_returns_ok(health_response: httpx.Response) -> None:
     response = health_response
     assert response.status_code == 200
     assert response.json()["status"] == "ok"
-    
+
 
 def test_health_returns_version(health_response: httpx.Response) -> None:
     response = health_response
     assert "version" in response.json()
-    
