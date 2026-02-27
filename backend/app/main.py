@@ -1,8 +1,8 @@
-from importlib.metadata import version
-
 from fastapi import FastAPI
 
-__version__ = version("carwatch_backend")
+from app.utils import get_version
+
+__version__ = get_version()
 
 app = FastAPI(title="cartwatch", version=__version__)
 
