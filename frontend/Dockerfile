@@ -1,23 +1,32 @@
 # ──────────────────────────────────────────
 # Base
 # ──────────────────────────────────────────
-FROM python:3.12-slim AS base
+FROM node:22-alpine AS base
+RUN corepack enable && corepack prepare pnpm@latest --activate
 WORKDIR /app
-RUN pip install uv --break-system-packages
 
 # ──────────────────────────────────────────
 # Dev — hot reload via volume mount
 # ──────────────────────────────────────────
 FROM base AS dev
-COPY pyproject.toml uv.lock ./
-RUN uv sync --all-groups
-CMD ["uv", "run", "fastapi", "dev", "app/main.py", "--host", "0.0.0.0", "--port", "8000"]
+COPY package.json pnpm-lock.yaml ./
+RUN pnpm install
+CMD ["pnpm", "dev", "--host", "0.0.0.0"]
 
 # ──────────────────────────────────────────
-# Prod — no dev deps, no volume mount
+# Build
+# ──────────────────────────────────────────
+FROM base AS build
+COPY package.json pnpm-lock.yaml ./
+RUN pnpm install --frozen-lockfile
+COPY . .
+RUN pnpm build
+
+# ──────────────────────────────────────────
+# Prod — serve with node
 # ──────────────────────────────────────────
 FROM base AS prod
-COPY pyproject.toml uv.lock ./
-RUN uv sync --no-dev
-COPY app/ ./app/
-CMD ["uv", "run", "fastapi", "run", "app/main.py", "--host", "0.0.0.0", "--port", "8000"]
+COPY package.json pnpm-lock.yaml ./
+RUN pnpm install --prod --frozen-lockfile
+COPY --from=build /app/.output ./.output
+CMD ["node", ".output/server/index.mjs"]
