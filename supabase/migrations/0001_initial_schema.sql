@@ -82,7 +82,7 @@ create index on receipts(purchased_at);
 
 create table receipt_sources (
   id          uuid primary key default uuid_generate_v4(),
-  receipt_id  uuid not null references receipts(id) on delete cascade,
+  receipt_id  uuid references receipts(id) on delete set null,
   user_id     uuid not null references auth.users(id) on delete cascade,
   source_type text not null,  -- 'email' | 'pdf' | 'manual'
   external_id text,           -- gmail message id, filename, etc.
@@ -274,3 +274,7 @@ insert into store_chains (name, country) values
   ('Rossmann',    'DE'),
   ('Amazon',      'DE'),
   ('Other',       'DE');
+
+-- grant permissions to service role (backend)
+grant usage on schema public to service_role;
+grant all on all tables in schema public to service_role;

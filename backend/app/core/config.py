@@ -13,17 +13,14 @@ def _find_env() -> Path:
 
 
 class Settings(BaseSettings):
-    model_config = SettingsConfigDict(
-            env_file=_find_env(), 
-            extra="ignore"
-            )
+    model_config = SettingsConfigDict(env_file=_find_env(), extra="ignore")
 
     supabase_url: str
     supabase_anon_key: SecretStr
     supabase_service_key: SecretStr
     anthropic_api_key: SecretStr | None = None
     environment: str = "development"
+    gmail_label: str = "Kassenbons"
 
 
-settings = Settings()
-
+settings = Settings()  # ty: ignore[missing-argument]

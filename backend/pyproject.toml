@@ -5,7 +5,13 @@ description = "Backend for grocery price tracker"
 readme = "../README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "beautifulsoup4>=4.14.3",
     "fastapi[standard]>=0.133.1",
+    "google-api-python-client>=2.190.0",
+    "google-auth>=2.48.0",
+    "google-auth-oauthlib>=1.3.0",
+    "pdfplumber>=0.11.9",
+    "prefect>=3.6.20",
     "pydantic-settings>=2.13.1",
     "supabase>=2.28.0",
 ]
@@ -21,6 +27,9 @@ dev = [
 testpaths = ["tests"]
 asyncio_mode = "auto"
 pythonpath = ["."]
+filterwarnings = [
+    "ignore::DeprecationWarning:supabase",
+]
 
 [tool.ruff]
 src = ["app"]
