@@ -1,5 +1,7 @@
+from postgrest.exceptions import APIError
 from prefect import flow, get_run_logger, task
 
+from app.core.config import settings
 from app.core.supabase import get_supabase
 from app.ingestion.extractor import extract_text
 from app.ingestion.gmail import (
@@ -8,8 +10,6 @@ from app.ingestion.gmail import (
     fetch_raw_email,
     get_gmail_service,
 )
-
-from app.core.config import settings
 
 LABEL = settings.gmail_label
 
@@ -39,14 +39,20 @@ def process_email(access_token: str, user_id: str, message_id: str) -> str | Non
 
     # store raw source in supabase
     supabase = get_supabase()
-    supabase.table("receipt_sources").insert({
+    receipt_source = {
         "user_id": user_id,
         "receipt_id": None,  # linked after extraction
         "source_type": "email",
         "external_id": message_id,
         "raw_text": text,
-    }).execute()
-
+    }
+    try:
+        supabase.table("receipt_sources").insert(receipt_source).execute()
+    except APIError as e:
+        if e.code == "23505":
+            logger.info(f"Email {message_id} already ingested, skipping")
+            return None
+        raise
     logger.info(f"Stored raw source for email {message_id}")
     return message_id
 
