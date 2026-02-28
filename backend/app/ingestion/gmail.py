@@ -11,6 +11,7 @@ class RawEmail(BaseModel):
     message_id: str
     subject: str
     date: str
+    text_body: str | None = None
     html_body: str | None = None
     pdf_attachments: list[bytes] = Field(default_factory=list)
 
@@ -43,6 +44,7 @@ def fetch_raw_email(service, message_id: str) -> RawEmail:
 
     subject = ""
     date = ""
+    text_body = None
     html_body = None
     pdf_attachments: list[bytes] = []
 
@@ -53,14 +55,20 @@ def fetch_raw_email(service, message_id: str) -> RawEmail:
         if h["name"] == "Date":
             date = h["value"]
 
-    html_body, pdf_attachments = _extract_parts(
-        service, msg.get("payload", {}), message_id, html_body, pdf_attachments
+    text_body, html_body, pdf_attachments = _extract_parts(
+        service,
+        msg.get("payload", {}),
+        message_id,
+        text_body,
+        html_body,
+        pdf_attachments,
     )
 
     return RawEmail(
         message_id=message_id,
         subject=subject,
         date=date,
+        text_body=text_body,
         html_body=html_body,
         pdf_attachments=pdf_attachments,
     )
@@ -70,33 +78,41 @@ def _extract_parts(
     service,
     payload: dict,
     message_id: str,
+    text_body: str | None,
     html_body: str | None,
     pdf_attachments: list[bytes],
-) -> tuple[str | None, list[bytes]]:
+) -> tuple[str | None, str | None, list[bytes]]:
     mime_type = payload.get("mimeType", "")
     body = payload.get("body", {})
 
-    if mime_type == "text/html":
-        data = body.get("data", "")
-        if data:
-            html_body = base64.urlsafe_b64decode(data).decode("utf-8", errors="replace")
-
-    elif mime_type == "application/pdf":
-        attachment_id = body.get("attachmentId")
-        if attachment_id:
-            att = (
-                service.users()
-                .messages()
-                .attachments()
-                .get(userId="me", messageId=message_id, id=attachment_id)
-                .execute()
-            )
-            pdf_data = base64.urlsafe_b64decode(att["data"])
-            pdf_attachments.append(pdf_data)
+    match mime_type:
+        case "text/plain":
+            data = body.get("data", "")
+            if data:
+                text_body = base64.urlsafe_b64decode(data).decode(
+                    "utf-8", errors="replace"
+                )
+        case "text/html":
+            data = body.get("data", "")
+            if data:
+                html_body = base64.urlsafe_b64decode(data).decode(
+                    "utf-8", errors="replace"
+                )
+        case "application/pdf":
+            attachment_id = body.get("attachmentId")
+            if attachment_id:
+                att = (
+                    service.users()
+                    .messages()
+                    .attachments()
+                    .get(userId="me", messageId=message_id, id=attachment_id)
+                    .execute()
+                )
+                pdf_attachments.append(base64.urlsafe_b64decode(att["data"]))
 
     for part in payload.get("parts", []):
-        html_body, pdf_attachments = _extract_parts(
-            service, part, message_id, html_body, pdf_attachments
+        text_body, html_body, pdf_attachments = _extract_parts(
+            service, part, message_id, text_body, html_body, pdf_attachments
         )
 
-    return html_body, pdf_attachments
+    return text_body, html_body, pdf_attachments
