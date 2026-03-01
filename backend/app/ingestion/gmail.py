@@ -32,6 +32,15 @@ class RawEmail(BaseModel):
     def pdf_attachments(self) -> tuple[bytes, ...]:
         return self.content.pdf_attachments
 
+    def content_is_empty(self) -> bool:
+        return all(
+            (
+                self.content.text is None,
+                self.content.html is None,
+                self.content.pdf_attachments == (),
+            )
+        )
+
 
 def get_gmail_service(access_token: str):
     creds = Credentials(token=access_token)

@@ -35,8 +35,8 @@ def process_email(access_token: str, user_id: str, message_id: str) -> str | Non
     service = get_gmail_service(access_token)
     raw = fetch_raw_email(service, message_id)
 
-    if not raw.text:
-        logger.warning(f"No text extracted from email {message_id}")
+    if raw.content_is_empty():
+        logger.warning(f"No content extracted from email {message_id}")
         return None
 
     # upload PDFs to Supabase Storage, collect URLs
