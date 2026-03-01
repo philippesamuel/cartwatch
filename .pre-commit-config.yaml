@@ -24,6 +24,7 @@ repos:
         language: system
         files: ^backend/
         pass_filenames: false
+        args: ["--python", "backend/.venv/bin/python"]
 
   - repo: https://github.com/gitleaks/gitleaks
     rev: v8.26.0
@@ -38,6 +39,14 @@ repos:
         language: system
         files: \.(ts|vue)$
         pass_filenames: false
+
+      - id: pytest
+        name: pytest
+        entry: bash -c 'cd backend && uv run pytest'
+        language: system
+        pass_filenames: false
+        always_run: true
+        stages: [pre-push]
 
   - repo: https://github.com/alessandrojcm/commitlint-pre-commit-hook
     rev: v9.22.0
