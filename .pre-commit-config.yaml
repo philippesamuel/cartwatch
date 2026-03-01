@@ -40,6 +40,14 @@ repos:
         files: \.(ts|vue)$
         pass_filenames: false
 
+      - id: pytest
+        name: pytest
+        entry: bash -c 'cd backend && uv run pytest -m ""'
+        language: system
+        pass_filenames: false
+        always_run: true
+        stages: [pre-push]
+
   - repo: https://github.com/alessandrojcm/commitlint-pre-commit-hook
     rev: v9.22.0
     hooks:

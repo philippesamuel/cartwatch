@@ -30,6 +30,8 @@ pythonpath = ["."]
 filterwarnings = [
     "ignore::DeprecationWarning:supabase",
 ]
+markers = ["integration: requires external services",]
+addopts = "-m 'not integration'"
 
 [tool.ruff]
 src = ["app"]

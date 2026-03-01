@@ -1,5 +1,7 @@
 import os
 
+import pytest
+
 from app.flows.ingest import ingest_receipts
 
 
@@ -10,6 +12,10 @@ from app.flows.ingest import ingest_receipts
 #
 # run local prefect server: uv run prefect server start
 #
+# uv run pytest -m integration  # integration only
+# uv run pytest                  # unit only
+# uv run pytest -m ""            # everything
+@pytest.mark.integration
 def test_ingest_receipts():
     user_id = os.environ["SUPABASE_TEST_USER_ID"]  # your user id from supabase
     access_token = os.environ["GMAIL_ACCESS_TOKEN"]
