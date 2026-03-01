@@ -35,7 +35,7 @@ def process_email(access_token: str, user_id: str, message_id: str) -> str | Non
     service = get_gmail_service(access_token)
     raw = fetch_raw_email(service, message_id)
 
-    if not raw.text_body:
+    if not raw.text:
         logger.warning(f"No text extracted from email {message_id}")
         return None
 
@@ -65,8 +65,8 @@ def process_email(access_token: str, user_id: str, message_id: str) -> str | Non
         "receipt_id": None,  # linked after extraction
         "source_type": "email",
         "external_id": message_id,
-        "raw_text": raw.text_body or pdf_text or None,
-        "raw_html": raw.html_body,
+        "raw_text": raw.text or pdf_text or None,
+        "raw_html": raw.html,
         "pdf_urls": pdf_urls or None,
     }
     try:

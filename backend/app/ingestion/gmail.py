@@ -2,18 +2,35 @@ import base64
 
 from google.oauth2.credentials import Credentials
 from googleapiclient.discovery import build
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field
 
 SCOPES = ["https://www.googleapis.com/auth/gmail.readonly"]
+
+
+class EmailContent(BaseModel):
+    model_config = ConfigDict(frozen=True)
+    text: str | None = None
+    html: str | None = None
+    pdf_attachments: tuple[bytes, ...] = ()
 
 
 class RawEmail(BaseModel):
     message_id: str
     subject: str
     date: str
-    text_body: str | None = None
-    html_body: str | None = None
-    pdf_attachments: list[bytes] = Field(default_factory=list)
+    content: EmailContent = Field(default_factory=EmailContent)
+
+    @property
+    def text(self) -> str | None:
+        return self.content.text
+
+    @property
+    def html(self) -> str | None:
+        return self.content.html
+
+    @property
+    def pdf_attachments(self) -> tuple[bytes, ...]:
+        return self.content.pdf_attachments
 
 
 def get_gmail_service(access_token: str):
@@ -44,9 +61,6 @@ def fetch_raw_email(service, message_id: str) -> RawEmail:
 
     subject = ""
     date = ""
-    text_body = None
-    html_body = None
-    pdf_attachments: list[bytes] = []
 
     headers = msg.get("payload", {}).get("headers", [])
     for h in headers:
@@ -55,22 +69,17 @@ def fetch_raw_email(service, message_id: str) -> RawEmail:
         if h["name"] == "Date":
             date = h["value"]
 
-    text_body, html_body, pdf_attachments = _extract_parts(
+    content = _extract_parts(
         service,
         msg.get("payload", {}),
         message_id,
-        text_body,
-        html_body,
-        pdf_attachments,
+        content=EmailContent(),
     )
-
     return RawEmail(
         message_id=message_id,
         subject=subject,
         date=date,
-        text_body=text_body,
-        html_body=html_body,
-        pdf_attachments=pdf_attachments,
+        content=content,
     )
 
 
@@ -78,10 +87,8 @@ def _extract_parts(
     service,
     payload: dict,
     message_id: str,
-    text_body: str | None,
-    html_body: str | None,
-    pdf_attachments: list[bytes],
-) -> tuple[str | None, str | None, list[bytes]]:
+    content: EmailContent,
+) -> EmailContent:
     mime_type = payload.get("mimeType", "")
     body = payload.get("body", {})
 
@@ -89,14 +96,22 @@ def _extract_parts(
         case "text/plain":
             data = body.get("data", "")
             if data:
-                text_body = base64.urlsafe_b64decode(data).decode(
-                    "utf-8", errors="replace"
+                text = base64.urlsafe_b64decode(data).decode(
+                    "utf-8",
+                    errors="replace",
+                )
+                updated_content = content.model_copy(
+                    update=dict(text=text),
                 )
         case "text/html":
             data = body.get("data", "")
             if data:
-                html_body = base64.urlsafe_b64decode(data).decode(
-                    "utf-8", errors="replace"
+                html = base64.urlsafe_b64decode(data).decode(
+                    "utf-8",
+                    errors="replace",
+                )
+                updated_content = content.model_copy(
+                    update=dict(html=html),
                 )
         case "application/pdf":
             attachment_id = body.get("attachmentId")
@@ -108,11 +123,20 @@ def _extract_parts(
                     .get(userId="me", messageId=message_id, id=attachment_id)
                     .execute()
                 )
-                pdf_attachments.append(base64.urlsafe_b64decode(att["data"]))
+                new_pdf_attachment = base64.urlsafe_b64decode(att["data"])
+                pdf_attachments = content.pdf_attachments + (new_pdf_attachment,)
+                updated_content = content.model_copy(
+                    update=dict(pdf_attachments=pdf_attachments)
+                )
+        case _:
+            updated_content = content.model_copy()
 
     for part in payload.get("parts", []):
-        text_body, html_body, pdf_attachments = _extract_parts(
-            service, part, message_id, text_body, html_body, pdf_attachments
+        updated_content = _extract_parts(
+            service,
+            part,
+            message_id,
+            updated_content,
         )
 
-    return text_body, html_body, pdf_attachments
+    return updated_content
