@@ -29,9 +29,6 @@ testpaths = ["tests"]
 asyncio_mode = "auto"
 pythonpath = ["."]
 env = [
-    "SUPABASE_URL=''",
-    "SUPABASE_ANON_KEY=''",
-    "SUPABASE_SERVICE_KEY=''",
 ]
 filterwarnings = [
     "ignore::DeprecationWarning:supabase",

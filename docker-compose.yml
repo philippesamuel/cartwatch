@@ -1,4 +1,19 @@
 services:
+  prefect-server:
+    image: prefecthq/prefect:3-latest
+    environment:
+      PREFECT_SERVER_API_HOST: 0.0.0.0
+      PREFECT_SERVER_UI_API_URL: http://localhost:4200/api
+    command: prefect server start
+    ports:
+      - "4200:4200"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://prefect-server:4200/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+
   backend:
     build:
       context: ./backend
