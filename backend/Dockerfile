@@ -66,5 +66,7 @@ CMD ["uv", "run", "fastapi", "run", "/app/main.py", "--host", "0.0.0.0", "--port
 # Worker — prod + playwright chromium
 # ──────────────────────────────────────────
 FROM prod AS worker
+USER root
 RUN uv run playwright install chromium --with-deps
+USER nonroot
 CMD ["uv", "run", "prefect", "worker", "start", "--pool", "local-pool"]

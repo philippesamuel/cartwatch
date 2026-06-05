@@ -2,7 +2,7 @@ import os
 
 import pytest
 
-from app.flows.ingest import ingest_receipts
+from flows.ingest import ingest_receipts
 
 
 # integration test
