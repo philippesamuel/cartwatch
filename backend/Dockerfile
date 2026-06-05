@@ -11,7 +11,8 @@ RUN pip install uv --break-system-packages
 FROM base AS dev
 COPY pyproject.toml uv.lock ./
 RUN uv sync --all-groups
-CMD ["uv", "run", "fastapi", "dev", "app/main.py", "--host", "0.0.0.0", "--port", "8000"]
+COPY app/ /app/
+CMD ["uv", "run", "fastapi", "dev", "/app/main.py", "--host", "0.0.0.0", "--port", "8000"]
 
 # ──────────────────────────────────────────
 # Prod — no dev deps, no volume mount
@@ -19,5 +20,12 @@ CMD ["uv", "run", "fastapi", "dev", "app/main.py", "--host", "0.0.0.0", "--port"
 FROM base AS prod
 COPY pyproject.toml uv.lock ./
 RUN uv sync --no-dev
-COPY app/ ./app/
-CMD ["uv", "run", "fastapi", "run", "app/main.py", "--host", "0.0.0.0", "--port", "8000"]
+COPY app/ /app/
+CMD ["uv", "run", "fastapi", "run", "/app/main.py", "--host", "0.0.0.0", "--port", "8000"]
+
+# ──────────────────────────────────────────
+# Worker — prod + playwright chromium
+# ──────────────────────────────────────────
+FROM prod AS worker
+RUN uv run playwright install chromium --with-deps
+CMD ["uv", "run", "prefect", "worker", "start", "--pool", "local-pool"]

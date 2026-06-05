@@ -1,19 +1,4 @@
 services:
-  prefect-server:
-    image: prefecthq/prefect:3-latest
-    environment:
-      PREFECT_SERVER_API_HOST: 0.0.0.0
-      PREFECT_SERVER_UI_API_URL: http://localhost:4200/api
-    command: prefect server start
-    ports:
-      - "4200:4200"
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://prefect-server:4200/api/health"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-      start_period: 60s
-
   backend:
     build:
       context: ./backend
@@ -24,17 +9,32 @@ services:
       - "8000:8000"
     env_file:
       - .env
+    environment:
+      PREFECT_API_URL: http://prefect-server:4200/api
+    depends_on:
+      - prefect-server
 
-  frontend:
-    build:
-      context: ./frontend
-      target: dev
+  prefect-server:
+    image: prefecthq/prefect:3-latest
+    command: prefect server start
+    environment:
+      PREFECT_SERVER_API_HOST: 0.0.0.0
+      PREFECT_UI_API_URL: http://localhost:4200/api
     volumes:
-      - ./frontend:/app
-      - /app/node_modules
+      - prefect_data:/root/.prefect
     ports:
-      - "3000:3000"
+      - "4200:4200"
+
+  prefect-worker:
+    build:
+      context: ./backend
+      target: worker
+    environment:
+      PREFECT_API_URL: http://prefect-server:4200/api
     env_file:
       - .env
     depends_on:
-      - backend
+      - prefect-server
+
+volumes:
+  prefect_data:
