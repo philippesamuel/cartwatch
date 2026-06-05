@@ -6,7 +6,7 @@ from pydantic_ai.models.mistral import MistralModel
 from pydantic_ai.providers.mistral import MistralProvider
 
 from app.core.config import settings
-from app.ingestion.models import ExtractedReceipt
+from app.ingestion.receipts.models import ExtractedReceipt
 
 
 def extract_pdf_text(pdf_bytes: bytes) -> str:

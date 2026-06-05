@@ -5,8 +5,8 @@ import pdfplumber
 from prefect import flow, get_run_logger, task
 
 from app.core.supabase import get_supabase
-from app.ingestion.extractor import extract_receipt
-from app.ingestion.models import ExtractedReceipt
+from app.ingestion.receipts.extractor import extract_receipt
+from app.ingestion.receipts.models import ExtractedReceipt
 
 
 @task

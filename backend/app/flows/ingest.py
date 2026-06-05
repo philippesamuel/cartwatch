@@ -3,8 +3,8 @@ from storage3.exceptions import StorageApiError
 
 from app.core.config import settings
 from app.core.supabase import get_supabase
-from app.ingestion.extractor import extract_pdf_text
-from app.ingestion.gmail import (
+from app.ingestion.receipts.extractor import extract_pdf_text
+from app.ingestion.receipts.gmail import (
     fetch_emails,
     fetch_label_id,
     fetch_raw_email,
