@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Header
 
-from app.flows.ingest import ingest_receipts
+from flows.ingest import ingest_receipts
 
 router = APIRouter(prefix="/ingest", tags=["ingestion"])
 

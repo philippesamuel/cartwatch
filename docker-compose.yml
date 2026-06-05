@@ -33,6 +33,8 @@ services:
       PREFECT_API_URL: http://prefect-server:4200/api
     env_file:
       - .env
+    volumes:
+      - ./backend/app/:/app/
     depends_on:
       - prefect-server
 

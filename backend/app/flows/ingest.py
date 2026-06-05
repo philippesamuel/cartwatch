@@ -1,10 +1,10 @@
 from prefect import flow, get_run_logger, task
 from storage3.exceptions import StorageApiError
 
-from app.core.config import settings
-from app.core.supabase import get_supabase
-from app.ingestion.receipts.extractor import extract_pdf_text
-from app.ingestion.receipts.gmail import (
+from core.config import settings
+from core.supabase import get_supabase
+from ingestion.receipts.extractor import extract_pdf_text
+from ingestion.receipts.gmail import (
     fetch_emails,
     fetch_label_id,
     fetch_raw_email,
@@ -15,9 +15,9 @@ LABEL = settings.gmail_label
 
 
 @task
-def fetch_receipts(access_token: str) -> list[dict]:
+def fetch_receipts() -> list[dict]:
     logger = get_run_logger()
-    service = get_gmail_service(access_token)
+    service = get_gmail_service()
     label_id = fetch_label_id(service, label_name=LABEL)
     if not label_id:
         logger.warning(f"Label '{LABEL}' not found in Gmail")
@@ -28,10 +28,10 @@ def fetch_receipts(access_token: str) -> list[dict]:
 
 
 @task
-def process_email(access_token: str, user_id: str, message_id: str) -> str | None:
+def process_email(user_id: str, message_id: str) -> str | None:
     logger = get_run_logger()
     supabase = get_supabase()
-    service = get_gmail_service(access_token)
+    service = get_gmail_service()
     raw = fetch_raw_email(service, message_id)
 
     if raw.content_is_empty():
@@ -88,12 +88,13 @@ def process_email(access_token: str, user_id: str, message_id: str) -> str | Non
 
 # ty: ignore[no-matching-overload]
 @flow(name="ingest-receipts")
-def ingest_receipts(user_id: str, access_token: str) -> list[str]:
-    emails = fetch_receipts(access_token)  # ty: ignore[no-matching-overload]
+def ingest_receipts() -> list[str]:
+    user_id=settings.supabase_user_id
+    emails = fetch_receipts()  # ty: ignore[no-matching-overload]
 
     processed = []
     for email in emails:
-        result = process_email(access_token, user_id, email["id"])  # ty: ignore[no-matching-overload]
+        result = process_email(user_id, email["id"])  # ty: ignore[no-matching-overload]
 
         if result:
             processed.append(result)

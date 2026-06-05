@@ -1,12 +1,14 @@
+import asyncio
 import io
 from typing import Generator, Iterable, overload
 
 import pdfplumber
 from prefect import flow, get_run_logger, task
+from prefect.tasks import exponential_backoff
 
-from app.core.supabase import get_supabase
-from app.ingestion.receipts.extractor import extract_receipt
-from app.ingestion.receipts.models import ExtractedReceipt
+from core.supabase import get_supabase
+from ingestion.receipts.extractor import extract_receipt
+from ingestion.receipts.models import ExtractedReceipt
 
 
 @task
