@@ -9,6 +9,7 @@ services:
     labels:
       caddy_0: api.cartwatch.philippecosta.de
       caddy_0.reverse_proxy: "{{upstreams 8000}}"
+      caddy_0.reverse_proxy.flush_interval: "-1"
     networks:
       - web_proxy
 
@@ -24,6 +25,7 @@ services:
     labels:
       caddy_0: prefect.philippecosta.de
       caddy_0.reverse_proxy: "{{upstreams 4200}}"
+      caddy_0.reverse_proxy.flush_interval: "-1"
     networks:
       - web_proxy
 
