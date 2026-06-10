@@ -100,43 +100,32 @@ def _extract_parts(
 ) -> EmailContent:
     mime_type = payload.get("mimeType", "")
     body = payload.get("body", {})
+    updated_content = content
 
     match mime_type:
         case "text/plain":
             data = body.get("data", "")
             if data:
-                text = base64.urlsafe_b64decode(data).decode(
-                    "utf-8",
-                    errors="replace",
-                )
                 updated_content = content.model_copy(
-                    update=dict(text=text),
+                    update=dict(text=_decode_base64(data)),
                 )
         case "text/html":
             data = body.get("data", "")
             if data:
-                html = base64.urlsafe_b64decode(data).decode(
-                    "utf-8",
-                    errors="replace",
-                )
                 updated_content = content.model_copy(
-                    update=dict(html=html),
+                    update=dict(html=_decode_base64(data)),
                 )
-        case "application/pdf":
+        case "application/pdf" | "application/octet-stream":
+            filename = payload.get("filename", "")
             attachment_id = body.get("attachmentId")
-            if attachment_id:
-                att = (
-                    service.users()
-                    .messages()
-                    .attachments()
-                    .get(userId="me", messageId=message_id, id=attachment_id)
-                    .execute()
-                )
-                new_pdf_attachment = base64.urlsafe_b64decode(att["data"])
-                pdf_attachments = content.pdf_attachments + (new_pdf_attachment,)
+            is_pdf = mime_type == "application/pdf" or filename.endswith(".pdf")
+            if is_pdf and attachment_id:
+                pdf_bytes = _fetch_pdf_bytes(service, message_id, attachment_id)
                 updated_content = content.model_copy(
-                    update=dict(pdf_attachments=pdf_attachments)
-                )
+                    update=dict(
+                        pdf_attachments=content.pdf_attachments + (pdf_bytes,)
+                        )
+                    )
         case _:
             updated_content = content.model_copy()
 
@@ -149,3 +138,18 @@ def _extract_parts(
         )
 
     return updated_content
+
+
+def _fetch_pdf_bytes(service, message_id: str, attachment_id: str) -> bytes:
+    att = (
+        service.users()
+        .messages()
+        .attachments()
+        .get(userId="me", messageId=message_id, id=attachment_id)
+        .execute()
+    )
+    return base64.urlsafe_b64decode(att["data"])
+
+
+def _decode_base64(data: str) -> str:
+    return base64.urlsafe_b64decode(data).decode("utf-8", errors="replace")

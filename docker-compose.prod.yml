@@ -12,18 +12,38 @@ services:
     networks:
       - web_proxy
 
-  frontend:
-    image: ghcr.io/${GITHUB_REPOSITORY}/frontend:latest
-    build:
-      target: prod
+  prefect-server:
+    image: prefecthq/prefect:3-latest
+    command: prefect server start
+    environment:
+      PREFECT_SERVER_API_HOST: 0.0.0.0
+      PREFECT_UI_API_URL: https://prefect.philippecosta.de/api
+    volumes:
+      - prefect_data:/root/.prefect
     restart: unless-stopped
-    env_file:
-      - .env.prod
     labels:
-      caddy_0: cartwatch.philippecosta.de
-      caddy_0.reverse_proxy: "{{upstreams 3000}}"
+      caddy_0: prefect.philippecosta.de
+      caddy_0.reverse_proxy: "{{upstreams 4200}}"
     networks:
       - web_proxy
+
+  prefect-worker:
+    image: ghcr.io/${GITHUB_REPOSITORY}/worker:latest
+    build:
+      context: ./backend
+      target: worker
+    environment:
+      PREFECT_API_URL: http://prefect-server:4200/api
+    env_file:
+      - .env.prod
+    restart: unless-stopped
+    depends_on:
+      - prefect-server
+    networks:
+      - web_proxy
+
+volumes:
+  prefect_data:
 
 networks:
   web_proxy:

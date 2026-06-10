@@ -1,11 +1,10 @@
-from postgrest.exceptions import APIError
 from prefect import flow, get_run_logger, task
 from storage3.exceptions import StorageApiError
 
 from app.core.config import settings
 from app.core.supabase import get_supabase
-from app.ingestion.extractor import extract_pdf_text
-from app.ingestion.gmail import (
+from app.ingestion.receipts.extractor import extract_pdf_text
+from app.ingestion.receipts.gmail import (
     fetch_emails,
     fetch_label_id,
     fetch_raw_email,
@@ -52,8 +51,8 @@ def process_email(access_token: str, user_id: str, message_id: str) -> str | Non
         except StorageApiError as e:
             if e.status == "409":
                 logger.info(f"PDF {path} already ingested")
-                return None
-            raise
+            else:
+                raise
         pdf_urls.append(path)
 
     # extract text from PDFs if no text/html body
@@ -62,20 +61,27 @@ def process_email(access_token: str, user_id: str, message_id: str) -> str | Non
     # store raw source in supabase
     receipt_source = {
         "user_id": user_id,
-        "receipt_id": None,  # linked after extraction
         "source_type": "email",
         "external_id": message_id,
         "raw_text": raw.text or pdf_text or None,
         "raw_html": raw.html,
         "pdf_urls": pdf_urls or None,
     }
-    try:
+    existing = (
+        supabase.table("receipt_sources")
+        .select("id")
+        .eq("external_id", message_id)
+        .maybe_single()
+        .execute()
+    )
+    if existing.data:
+        logger.debug(receipt_source)
+        logger.info(f"Email {message_id} already ingested. Upserting")
+        receipt_source["id"] = existing.data["id"]
+        supabase.table("receipt_sources").upsert(receipt_source).execute()
+    else:
+        logger.info(f"Inserting e-mail {message_id} ...")
         supabase.table("receipt_sources").insert(receipt_source).execute()
-    except APIError as e:
-        if e.code == "23505":
-            logger.info(f"Email {message_id} already ingested, skipping")
-            return None
-        raise
     logger.info(f"Stored raw source for email {message_id}")
     return message_id
 

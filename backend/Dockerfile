@@ -1,23 +1,70 @@
 # ──────────────────────────────────────────
 # Base
 # ──────────────────────────────────────────
-FROM python:3.12-slim AS base
+# Use a Python image with uv pre-installed
+FROM ghcr.io/astral-sh/uv:python3.12-bookworm-slim AS base
+
+# Setup a non-root user
+RUN groupadd --system --gid 999 nonroot \
+    && useradd --system --gid 999 --uid 999 --create-home nonroot
+
+# Install the project into `/app`
 WORKDIR /app
-RUN pip install uv --break-system-packages
+
+# Keeps Python from buffering stdout and stderr to avoid situations where
+# the application crashes without emitting any logs due to buffering.
+ENV PYTHONUNBUFFERED=1
+
+# Enable bytecode compilation
+ENV UV_COMPILE_BYTECODE=1
+
+# Copy from the cache instead of linking since it's a mounted volume
+ENV UV_LINK_MODE=copy
+
+# Omit development dependencies
+ENV UV_NO_DEV=1
+
+# Ensure installed tools can be executed out of the box
+ENV UV_TOOL_BIN_DIR=/usr/local/bin
+
+# Install the project's dependencies using the lockfile and settings
+RUN --mount=type=cache,target=/root/.cache/uv \
+    --mount=type=bind,source=uv.lock,target=uv.lock \
+    --mount=type=bind,source=pyproject.toml,target=pyproject.toml \
+    uv sync --locked --no-install-project
+
+# Then, add the rest of the project source code and install it
+# Installing separately from its dependencies allows optimal layer caching
+COPY app/ /app/
+COPY pyproject.toml uv.lock /
+COPY .venv/ /.venv/
+RUN --mount=type=cache,target=/root/.cache/uv \
+    uv sync --locked
+
+# Place executables in the environment at the front of the path
+ENV PATH="/.venv/bin:$PATH"
+
+# Reset the entrypoint, don't invoke `uv`
+ENTRYPOINT []
+
+# Use the non-root user to run our application
+USER nonroot
 
 # ──────────────────────────────────────────
 # Dev — hot reload via volume mount
 # ──────────────────────────────────────────
 FROM base AS dev
-COPY pyproject.toml uv.lock ./
-RUN uv sync --all-groups
-CMD ["uv", "run", "fastapi", "dev", "app/main.py", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["fastapi", "dev", "/app/main.py", "--host", "0.0.0.0", "--port", "8000"]
 
 # ──────────────────────────────────────────
 # Prod — no dev deps, no volume mount
 # ──────────────────────────────────────────
 FROM base AS prod
-COPY pyproject.toml uv.lock ./
-RUN uv sync --no-dev
-COPY app/ ./app/
-CMD ["uv", "run", "fastapi", "run", "app/main.py", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uv", "run", "fastapi", "run", "/app/main.py", "--host", "0.0.0.0", "--port", "8000"]
+
+# ──────────────────────────────────────────
+# Worker — prod + playwright chromium
+# ──────────────────────────────────────────
+FROM prod AS worker
+RUN uv run playwright install chromium --with-deps
+CMD ["uv", "run", "prefect", "worker", "start", "--pool", "local-pool"]
