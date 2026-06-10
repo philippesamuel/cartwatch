@@ -34,7 +34,7 @@ dev = [
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 asyncio_mode = "auto"
-pythonpath = ["."]
+pythonpath = ["./app/"]
 env = [
     "SUPABASE_URL=''",
     "SUPABASE_ANON_KEY=''",
