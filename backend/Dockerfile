@@ -37,7 +37,6 @@ RUN --mount=type=cache,target=/root/.cache/uv \
 # Installing separately from its dependencies allows optimal layer caching
 COPY app/ /app/
 COPY pyproject.toml uv.lock /
-COPY .venv/ /.venv/
 RUN --mount=type=cache,target=/root/.cache/uv \
     uv sync --locked
 
