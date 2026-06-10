@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 
-from app.api.ingest import router as ingest_router
-from app.utils import get_version
+from api.ingest import router as ingest_router
+from utils import get_version
 
 __version__ = get_version()
 

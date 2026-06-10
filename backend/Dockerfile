@@ -37,7 +37,6 @@ RUN --mount=type=cache,target=/root/.cache/uv \
 # Installing separately from its dependencies allows optimal layer caching
 COPY app/ /app/
 COPY pyproject.toml uv.lock /
-COPY .venv/ /.venv/
 RUN --mount=type=cache,target=/root/.cache/uv \
     uv sync --locked
 
@@ -66,5 +65,7 @@ CMD ["uv", "run", "fastapi", "run", "/app/main.py", "--host", "0.0.0.0", "--port
 # Worker — prod + playwright chromium
 # ──────────────────────────────────────────
 FROM prod AS worker
+USER root
 RUN uv run playwright install chromium --with-deps
+USER nonroot
 CMD ["uv", "run", "prefect", "worker", "start", "--pool", "local-pool"]

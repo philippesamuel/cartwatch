@@ -1,4 +1,4 @@
-import io
+import io  # noqa: I001
 
 import pdfplumber
 from pydantic_ai import Agent
@@ -6,7 +6,7 @@ from pydantic_ai.models.mistral import MistralModel
 from pydantic_ai.providers.mistral import MistralProvider
 
 from core.config import settings
-from ingestion.receipts.models import ExtractedReceipt
+from ingestion.models import ExtractedReceipt
 
 
 def extract_pdf_text(pdf_bytes: bytes) -> str:

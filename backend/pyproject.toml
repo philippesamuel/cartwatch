@@ -34,12 +34,16 @@ dev = [
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 asyncio_mode = "auto"
-pythonpath = ["."]
+pythonpath = ["./app/"]
 env = [
     "SUPABASE_URL=''",
     "SUPABASE_ANON_KEY=''",
     "SUPABASE_SERVICE_KEY=''",
     "MISTRAL_API_KEY=''",
+    "SUPABASE_USER_ID=''", 
+    "GMAIL_CLIENT_ID=''", 
+    "GMAIL_CLIENT_SECRET=''", 
+    "GMAIL_REFRESH_TOKEN=''", 
 ]
 filterwarnings = [
     "ignore::DeprecationWarning:supabase",

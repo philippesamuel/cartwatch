@@ -1,8 +1,11 @@
 import base64
 
+from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
 from googleapiclient.discovery import build
 from pydantic import BaseModel, ConfigDict, Field
+
+from core.config import settings
 
 SCOPES = ["https://www.googleapis.com/auth/gmail.readonly"]
 
@@ -42,8 +45,15 @@ class RawEmail(BaseModel):
         )
 
 
-def get_gmail_service(access_token: str):
-    creds = Credentials(token=access_token)
+def get_gmail_service():
+    creds = Credentials(
+        token=None,
+        refresh_token=settings.gmail_refresh_token.get_secret_value(),
+        client_id=settings.gmail_client_id.get_secret_value(),
+        client_secret=settings.gmail_client_secret.get_secret_value(),
+        token_uri="https://oauth2.googleapis.com/token",
+    )
+    creds.refresh(Request())  # exchanges refresh token → short-lived access token
     return build("gmail", "v1", credentials=creds)
 
 
