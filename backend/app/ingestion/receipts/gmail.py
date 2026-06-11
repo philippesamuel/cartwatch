@@ -5,7 +5,7 @@ from google.oauth2.credentials import Credentials
 from googleapiclient.discovery import build
 from pydantic import BaseModel, ConfigDict, Field
 
-from core.config import settings
+from core.config import get_gmail_settings
 
 SCOPES = ["https://www.googleapis.com/auth/gmail.readonly"]
 
@@ -46,6 +46,7 @@ class RawEmail(BaseModel):
 
 
 def get_gmail_service():
+    settings = get_gmail_settings()
     creds = Credentials(
         token=None,
         refresh_token=settings.gmail_refresh_token.get_secret_value(),

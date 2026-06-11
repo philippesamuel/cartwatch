@@ -1,7 +1,7 @@
 from prefect import flow, get_run_logger, task
 from storage3.exceptions import StorageApiError
 
-from core.config import settings
+from core.config import get_gmail_settings, get_supabase_settings
 from core.supabase import get_supabase
 from ingestion.receipts.extractor import extract_pdf_text
 from ingestion.receipts.gmail import (
@@ -11,11 +11,12 @@ from ingestion.receipts.gmail import (
     get_gmail_service,
 )
 
-LABEL = settings.gmail_label
-
 
 @task
 def fetch_receipts() -> list[dict]:
+    settings = get_gmail_settings()
+    LABEL = settings.gmail_label
+
     logger = get_run_logger()
     service = get_gmail_service()
     label_id = fetch_label_id(service, label_name=LABEL)
@@ -89,6 +90,7 @@ def process_email(user_id: str, message_id: str) -> str | None:
 # ty: ignore[no-matching-overload]
 @flow(name="ingest-receipts")
 def ingest_receipts() -> list[str]:
+    settings = get_supabase_settings()
     user_id=settings.supabase_user_id
     emails = fetch_receipts()  # ty: ignore[no-matching-overload]
 
