@@ -6,12 +6,6 @@ router = APIRouter(prefix="/ingest", tags=["ingestion"])
 
 
 @router.post("/receipts")
-async def trigger_ingestion(
-    x_supabase_user_id: str = Header(...),
-    x_google_access_token: str = Header(...),
-):
-    processed = ingest_receipts(  # ty: ignore[no-matching-overload]
-        user_id=x_supabase_user_id,
-        access_token=x_google_access_token,
-    )
+async def trigger_ingestion():
+    processed = ingest_receipts()
     return {"processed": len(processed), "message_ids": processed}

@@ -9,8 +9,6 @@ services:
     labels:
       caddy_0: cartwatch.philippecosta.de
       caddy_0.handle_path: /api/*
-      caddy_0.handle_path.basic_auth: ""
-      caddy_0.handle_path.basic_auth.philippe: "${CADDY_BASIC_AUTH_HASH_BACKEND}"
       caddy_0.handle_path.reverse_proxy: "{{upstreams 8000}}"
       caddy_0.handle_path.reverse_proxy.flush_interval: "-1"
     networks:

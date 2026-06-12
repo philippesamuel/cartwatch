@@ -1,22 +1,24 @@
 from contextlib import asynccontextmanager
 import secrets
 
-from fastapi import FastAPI, Request, HTTPException
-from starlette.middleware.base import BaseHTTPMiddleware
+from fastapi import FastAPI, Request, HTTPException, Security, Depends
+from fastapi.security import APIKeyHeader
 
 from api.ingest import router as ingest_router
 from utils import get_version
 
+api_key_scheme = APIKeyHeader(name="X-API-Key", auto_error=False)
 
-class APIKeyMiddleware(BaseHTTPMiddleware):
-    async def dispatch(self, request: Request, call_next):
-        if request.url.path == "/health":       # allow unauthenticated health checks
-            return await call_next(request)
-        api_key = request.headers.get("X-API-Key")
-        expected = request.app.state.api_key
-        if not api_key or not secrets.compare_digest(api_key, expected):
-            raise HTTPException(status_code=401, detail="Invalid or missing API key")
-        return await call_next(request)
+
+async def verify_api_key(
+    request: Request, api_key: str | None = Security(api_key_scheme)
+):
+    if not api_key or not secrets.compare_digest(api_key, request.app.state.api_key):
+        raise HTTPException(
+            status_code=401, 
+            detail="Invalid or missing API key",
+            )
+
 
 __version__ = get_version()
 
@@ -36,13 +38,12 @@ async def load_api_key(app: FastAPI) -> None:
 
 
 app = FastAPI(
-    title="cartwatch", 
-    version=__version__, 
+    title="cartwatch",
+    version=__version__,
     root_path="/api",
-    lifespan=lifespan
-    )
-app.add_middleware(APIKeyMiddleware)
-app.include_router(ingest_router)
+    lifespan=lifespan,
+)
+app.include_router(ingest_router, dependencies=[Depends(verify_api_key)])
 
 
 @app.get("/health")
