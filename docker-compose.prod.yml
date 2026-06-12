@@ -7,9 +7,12 @@ services:
     env_file:
       - .env.prod
     labels:
-      caddy_0: api.cartwatch.philippecosta.de
-      caddy_0.reverse_proxy: "{{upstreams 8000}}"
-      caddy_0.reverse_proxy.flush_interval: "-1"
+      caddy_0: cartwatch.philippecosta.de
+      caddy_0.handle_path: /api/*
+      caddy_0.handle_path.basic_auth: ""
+      caddy_0.handle_path.basic_auth.philippe: "${CADDY_BASIC_AUTH_HASH_BACKEND}"
+      caddy_0.handle_path.reverse_proxy: "{{upstreams 8000}}"
+      caddy_0.handle_path.reverse_proxy.flush_interval: "-1"
     networks:
       - web_proxy
 
@@ -24,6 +27,8 @@ services:
     restart: unless-stopped
     labels:
       caddy_0: prefect.philippecosta.de
+      caddy_0.basic_auth: ""
+      caddy_0.basic_auth.philippe: "${CADDY_BASIC_AUTH_HASH_PREFECT}"
       caddy_0.reverse_proxy: "{{upstreams 4200}}"
       caddy_0.reverse_proxy.flush_interval: "-1"
     networks:
