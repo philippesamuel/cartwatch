@@ -1,13 +1,15 @@
 from datetime import date
 from pathlib import Path
-import playwright
-from prefect import flow, task, get_run_logger
-from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeoutError
-from bs4 import BeautifulSoup
+
+from prefect import flow, get_run_logger, task
 
 from core.supabase import get_supabase
-from ingestion.offers.rewe_scrapper import get_store_configs, StoreConfig, deny_usercentrics_banner, scroll_to_top, scrape_store
-
+from ingestion.browser import browser_context
+from ingestion.offers.rewe_scrapper import (
+    StoreConfig,
+    get_store_configs,
+    scrape_store,
+)
 
 STORE_CONFIGS_PATH = Path(__file__).parent / "../../../data/stores/rewe_store_configs.json"
 STORE_CONFIGS = get_store_configs(STORE_CONFIGS_PATH)
@@ -28,13 +30,9 @@ def extract_html_with_playwright(conf: StoreConfig) -> dict[str, str]:
     logger = get_run_logger()
     logger.info("Starting scrape for %s - %s", conf.retailer, conf.name)
     
-    with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True)
-        page = browser.new_page()
-        try:
-            return scrape_store(url=conf.url, page=page)
-        finally:
-            browser.close()
+    with browser_context(headless=True) as ctx:
+        page = ctx.new_page()
+        return scrape_store(url=conf.url, page=page)
 
 
 @task

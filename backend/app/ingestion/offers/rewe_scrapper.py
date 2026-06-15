@@ -1,21 +1,22 @@
-from dataclasses import dataclass
-from datetime import date
 import functools
 import json
-from pathlib import Path
 import time
+from dataclasses import dataclass
+from datetime import date
+from pathlib import Path
 from typing import Literal, Optional, Self
 
 from bs4 import BeautifulSoup
 from loguru import logger
-from playwright.sync_api import Page, sync_playwright
+from playwright.sync_api import Page
+
+from ingestion.browser import browser_context
 
 
 @dataclass(frozen=True, slots=True)
 class StoreConfig:
     retailer: str
     external_id: str
-    name: str
     url: str
     
     @classmethod
@@ -23,7 +24,6 @@ class StoreConfig:
         return cls(
             retailer=dict_["retailer"],
             external_id=dict_["external_id"],
-            name=dict_["name"],
             url=dict_["url"],
         )
 
@@ -32,7 +32,6 @@ STORE_CONFIGS: list[StoreConfig] = [
     StoreConfig(
         retailer="rewe",
         external_id="1765982",
-        name="REWE Müllerstr. 141 Berlin",
         url="https://www.rewe.de/angebote/berlin-wedding/1765982/rewe-markt-muellerstr-141/",
     ),
 ]
@@ -72,30 +71,9 @@ def main(
         if main_file.exists() and articles_file.exists():
             logger.info("{} and {} already exist. Skipping ...", main_file, articles_file)
             continue
-        with sync_playwright() as p:
-            chromium = p.chromium # or "firefox" or "webkit".
-            browser = chromium.launch(headless=headless)
-            context = browser.new_context(
-                user_agent=(
-                    "Mozilla/5.0 "
-                    "(Windows NT 10.0; Win64; x64) "
-                    "AppleWebKit/537.36 "
-                    "(KHTML, like Gecko) "
-                    "Chrome/91.0.4472.124 "
-                    "Safari/537.36"
-                    ),
-                extra_http_headers={
-                    "Accept-Language": "en-US,en;q=0.9",
-                    "Accept-Encoding": "gzip, deflate, br",
-                    },
-                java_script_enabled=True,
-                bypass_csp=True,
-                )
-            page = context.new_page()
-            try:
-                html_content = scrape_store(url=conf.url, page=page)
-            finally:
-                browser.close()
+        with browser_context(headless=headless) as ctx:
+            page = ctx.new_page()
+            html_content = scrape_store(url=conf.url, page=page)
 
         save_scraped_html(
             html=html_content["main"], 
