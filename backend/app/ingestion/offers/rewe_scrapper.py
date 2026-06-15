@@ -1,13 +1,14 @@
 from dataclasses import dataclass
 from datetime import date
 import functools
+import json
 from pathlib import Path
 import time
-from typing import Optional, Protocol
+from typing import Literal, Optional, Self
 
 from bs4 import BeautifulSoup
 from loguru import logger
-from playwright.sync_api import sync_playwright, Playwright
+from playwright.sync_api import Page, sync_playwright
 
 
 @dataclass(frozen=True, slots=True)
@@ -16,6 +17,15 @@ class StoreConfig:
     external_id: str
     name: str
     url: str
+    
+    @classmethod
+    def from_dict(cls, dict_) -> Self:
+        return cls(
+            retailer=dict_["retailer"],
+            external_id=dict_["external_id"],
+            name=dict_["name"],
+            url=dict_["url"],
+        )
 
 
 STORE_CONFIGS: list[StoreConfig] = [
@@ -32,34 +42,78 @@ DENY_BUTTON_CSS_LOCATOR = 'button[data-testid="uc-deny-all-button"]'
 DATE = date.today()
 ISODATE = DATE.isoformat()
 HTML_FILE_TEMPLATE = (
-    './data/retailer={retailer}/store_external_id={external_id}/'
+    '{root}/retailer={retailer}/store_external_id={external_id}/'
     'year={year}/month={month}/day={day}/'
     'page={page}/{name}.html'
     )
 
 
-def run(playwright: Playwright):
-    for conf in STORE_CONFIGS:
+def main(
+    store_configs_path: Optional[Path] = None,
+    output_data_dir: Optional[Path] = None,
+    headless: bool = True
+    ) -> None:
+    store_configs = STORE_CONFIGS
+    if store_configs_path is not None:
+        store_configs = get_store_configs(store_configs_path)
+        
+    if output_data_dir is None:
+        output_data_dir = Path('./data')
+    
+    for conf in store_configs:
         file_path_fn = functools.partial(
             get_file_path_with_retailer_store_date_partitions, 
             conf=conf,
+            root_dir=str(output_data_dir.absolute())
             )
-        scrape_store(
-            url=conf.url, 
-            file_path_fn=file_path_fn,
-            playwright=playwright,
+        main_file = file_path_fn(name="main")
+        articles_file = file_path_fn(name="articles")
+        
+        if main_file.exists() and articles_file.exists():
+            logger.info("{} and {} already exist. Skipping ...", main_file, articles_file)
+            continue
+        with sync_playwright() as p:
+            chromium = p.chromium # or "firefox" or "webkit".
+            browser = chromium.launch(headless=headless)
+            context = browser.new_context(
+                user_agent=(
+                    "Mozilla/5.0 "
+                    "(Windows NT 10.0; Win64; x64) "
+                    "AppleWebKit/537.36 "
+                    "(KHTML, like Gecko) "
+                    "Chrome/91.0.4472.124 "
+                    "Safari/537.36"
+                    ),
+                extra_http_headers={
+                    "Accept-Language": "en-US,en;q=0.9",
+                    "Accept-Encoding": "gzip, deflate, br",
+                    },
+                java_script_enabled=True,
+                bypass_csp=True,
+                )
+            page = context.new_page()
+            try:
+                html_content = scrape_store(url=conf.url, page=page)
+            finally:
+                browser.close()
+
+        save_scraped_html(
+            html=html_content["main"], 
+            file_path=file_path_fn(name="main"),
             )
-
-
-class FilePathFn(Protocol):
-    def __call__(self, name: str) -> Path: ...
+        save_scraped_html(
+            html=html_content["articles"], 
+            file_path=file_path_fn(name="articles"),
+            )
 
 
 def get_file_path_with_retailer_store_date_partitions(
     name: str, 
     conf: StoreConfig,
+    root_dir: str = './data'
     ) -> Path:
     path_str = HTML_FILE_TEMPLATE.format(
+        root=root_dir,
         name=name,
         retailer=conf.retailer, 
         external_id=conf.external_id, 
@@ -73,20 +127,12 @@ def get_file_path_with_retailer_store_date_partitions(
 
 def scrape_store(
     url: str,
-    playwright: Playwright,
-    file_path_fn: FilePathFn
-    ) -> None:
-    
-    main_html_file = file_path_fn(name="main")
-    articles_html_file = file_path_fn(name="articles")
-    
-    chromium = playwright.chromium # or "firefox" or "webkit".
-    browser = chromium.launch(headless=False)
-    page = browser.new_page()
+    page: Page,
+    ) -> dict[Literal['main', 'articles'], str]:
     page.goto(url)
     deny_usercentrics_banner(page)
     
-    page.wait_for_timeout(2000)
+    page.wait_for_timeout(1000)
     
     page.wait_for_selector("footer").scroll_into_view_if_needed()
     scroll_to_top(page)  # prime all content before scrapping
@@ -96,22 +142,19 @@ def scrape_store(
     articles = main_soup.find_all("article") 
     
     logger.info(f"Found {len(articles)} items")
-    
-    logger.info(f"Saving <main> element to {main_html_file}")
-    if not (parent_dir := main_html_file.parent).exists():
+    return {
+        "main": main_soup.prettify(), 
+        "articles": "".join([a.prettify() for a in articles])
+        }
+
+
+def save_scraped_html(html: str, file_path: Path) -> None:
+    logger.info(f"Saving to {file_path}")
+    if not (parent_dir := file_path.parent).exists():
         logger.info("Creating folder {}", parent_dir)
         parent_dir.mkdir(parents=True, exist_ok=True) 
-    with main_html_file.open("wt") as f:
-        f.write(main_soup.prettify())
-    
-    logger.info(f"Saving <article> elements to {articles_html_file}")
-    
-    articles_html_file.unlink(missing_ok=True) 
-    with articles_html_file.open("at") as f:
-        for article in articles:
-            f.write(article.prettify())
-    
-    browser.close()
+    with file_path.open("wt") as f:
+        f.write(html)
     
     
 def deny_usercentrics_banner(page) -> None:
@@ -139,7 +182,7 @@ def scroll_to_top(page):
         """
         var intervalID = setInterval(function () {
             window.scrollBy(0, -window.innerHeight);
-        }, 300);
+        }, 200);
         """
     )
     counter = 0
@@ -150,9 +193,19 @@ def scroll_to_top(page):
             break
         else:
             counter += 1
-            logger.info(f"Scrolling... {counter=}")
-            time.sleep(1)
+            logger.debug(f"Scrolling... {counter=}")
+            time.sleep(0.5)
 
 
-with sync_playwright() as playwright:
-    run(playwright) 
+def get_store_configs(path: Path) -> list[StoreConfig]:
+    with path.open("rt") as f:
+        store_dicts = json.load(f)
+    
+    for d in store_dicts:
+        d.setdefault('retailer', 'rewe')
+    
+    return  [StoreConfig.from_dict(d) for d in store_dicts]
+    
+
+if __name__ == "__main__":
+    main()
