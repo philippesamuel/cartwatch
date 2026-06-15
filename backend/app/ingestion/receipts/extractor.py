@@ -23,11 +23,11 @@ def build_agent() -> Agent[None, ExtractedReceipt]:
     settings = get_mistral_settings()
     model = MistralModel(
         "mistral-small-latest",
-        provider=MistralProvider(
+        provider=MistralProvider(  # type: ignore[call-overload]
             api_key=settings.mistral_api_key.get_secret_value(),
-            base_url=settings.mistral_base_url
-        )
-        )
+            base_url=settings.mistral_base_url,
+        ),
+    )
     return Agent(
         model,
         output_type=ExtractedReceipt,
@@ -48,20 +48,14 @@ _agent = build_agent()
 
 
 async def extract_receipt(
-    text: str | None, 
-    html: str | None,
-    pdf_text: str | None
-    ) -> ExtractedReceipt:    
+    text: str | None, html: str | None, pdf_text: str | None
+) -> ExtractedReceipt:
     sections = {
         "pdf_text": pdf_text,
         "html": html,
         "text": text,
     }
-    present = {
-        k: v 
-        for k, v in sections.items() 
-        if ((v is not None) and (v.strip() != ""))
-        }
+    present = {k: v for k, v in sections.items() if ((v is not None) and (v.strip() != ""))}
 
     if not present:
         raise ValueError("No content to extract from")

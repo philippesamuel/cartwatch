@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Header
+from fastapi import APIRouter
 
 from flows.ingest import ingest_receipts
 

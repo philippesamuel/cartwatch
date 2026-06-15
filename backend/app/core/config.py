@@ -27,16 +27,18 @@ class MistralSettings(BaseSettings):
     model_config = SettingsConfigDict(env_file=find_env(), extra="ignore")
     mistral_api_key: SecretStr
     mistral_base_url: str = "https://api.mistral.ai"
-    
+
 
 @lru_cache
 def get_supabase_settings() -> SupabaseSettings:
-    return SupabaseSettings() # pyright: ignore[reportCallIssue]
+    return SupabaseSettings()  # type: ignore[missing-argument]
+
 
 @lru_cache
 def get_gmail_settings() -> GmailSettings:
-    return GmailSettings() # pyright: ignore[reportCallIssue]
+    return GmailSettings()  # type: ignore[missing-argument]
+
 
 @lru_cache
 def get_mistral_settings() -> MistralSettings:
-    return MistralSettings() # pyright: ignore[reportCallIssue]
+    return MistralSettings()  # type: ignore[missing-argument]

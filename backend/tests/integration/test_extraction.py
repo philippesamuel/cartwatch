@@ -1,6 +1,8 @@
 # backend/tests/integration/test_extraction.py
 import pytest
+
 from flows.extract import extract_receipts
+
 
 @pytest.mark.integration
 @pytest.mark.asyncio

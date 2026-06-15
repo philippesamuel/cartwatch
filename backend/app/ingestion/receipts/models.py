@@ -1,4 +1,5 @@
 from datetime import datetime
+
 from pydantic import BaseModel, ConfigDict
 
 
@@ -8,7 +9,7 @@ class ExtractedLineItem(BaseModel):
     raw_name: str
     short_name: str
     quantity: float
-    unit: str          # kg, L, piece, m — must match units seed data
+    unit: str  # kg, L, piece, m — must match units seed data
     unit_price: float  # price per SI unit
     total_price: float
     discount: float | None = None
