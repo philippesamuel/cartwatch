@@ -24,7 +24,7 @@ repos:
         language: system
         files: ^backend/
         pass_filenames: false
-        args: ["--python", "backend/.venv/bin/python"]
+        args: ["--project", "backend", "--extra-search-path", "backend/app"]
 
   - repo: https://github.com/gitleaks/gitleaks
     rev: v8.26.0

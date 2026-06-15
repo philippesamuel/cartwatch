@@ -1,10 +1,8 @@
-import asyncio
 import io
 from typing import Generator, Iterable, overload
 
 import pdfplumber
 from prefect import flow, get_run_logger, task
-from prefect.tasks import exponential_backoff
 
 from core.supabase import get_supabase
 from ingestion.receipts.extractor import extract_receipt
@@ -14,12 +12,7 @@ from ingestion.receipts.models import ExtractedReceipt
 @task
 async def fetch_unprocessed_sources() -> list[dict]:
     supabase = get_supabase()
-    result = (
-        supabase.table("receipt_sources")
-        .select("*")
-        .is_("receipt_id", "null")
-        .execute()
-    )
+    result = supabase.table("receipt_sources").select("*").is_("receipt_id", "null").execute()
     return result.data
 
 
@@ -33,7 +26,7 @@ async def extract_and_store(source: dict) -> str | None:
         extracted = await extract_receipt(
             text=source.get("raw_text"),
             html=source.get("raw_html"),
-            pdf_text=get_pdf_text_from_object_storage(pdf_urls)
+            pdf_text=get_pdf_text_from_object_storage(pdf_urls),
         )
     except Exception as e:
         logger.error(f"Extraction failed for source {source['id']}: {e}")
@@ -45,41 +38,45 @@ async def extract_and_store(source: dict) -> str | None:
     # insert receipt
     receipt = (
         supabase.table("receipts")
-        .insert({
-            "user_id": source["user_id"],
-            "store_id": store_id,
-            "purchased_at": extracted.purchased_at.isoformat(),
-            "currency": extracted.currency,
-            "subtotal": extracted.subtotal,
-            "tax_total": extracted.tax_total,
-            "total": extracted.total,
-            "payment_method": extracted.payment_method,
-        })
+        .insert(
+            {
+                "user_id": source["user_id"],
+                "store_id": store_id,
+                "purchased_at": extracted.purchased_at.isoformat(),
+                "currency": extracted.currency,
+                "subtotal": extracted.subtotal,
+                "tax_total": extracted.tax_total,
+                "total": extracted.total,
+                "payment_method": extracted.payment_method,
+            }
+        )
         .execute()
     )
     receipt_id = receipt.data[0]["id"]
 
     # insert line items
-    supabase.table("receipt_items").insert([
-        {
-            "receipt_id": receipt_id,
-            "user_id": source["user_id"],
-            "raw_name": item.raw_name,
-            "short_name": item.short_name,
-            "quantity": item.quantity,
-            "unit_id": _resolve_unit(supabase, item.unit),
-            "unit_price": item.unit_price,
-            "total_price": item.total_price,
-            "discount": item.discount,
-            "tax_rate": item.tax_rate,
-        }
-        for item in extracted.line_items
-    ]).execute()
+    supabase.table("receipt_items").insert(
+        [
+            {
+                "receipt_id": receipt_id,
+                "user_id": source["user_id"],
+                "raw_name": item.raw_name,
+                "short_name": item.short_name,
+                "quantity": item.quantity,
+                "unit_id": _resolve_unit(supabase, item.unit),
+                "unit_price": item.unit_price,
+                "total_price": item.total_price,
+                "discount": item.discount,
+                "tax_rate": item.tax_rate,
+            }
+            for item in extracted.line_items
+        ]
+    ).execute()
 
     # link source back to receipt
-    supabase.table("receipt_sources").update(
-        {"receipt_id": receipt_id}
-    ).eq("id", source["id"]).execute()
+    supabase.table("receipt_sources").update({"receipt_id": receipt_id}).eq(
+        "id", source["id"]
+    ).execute()
 
     logger.info(f"Extracted receipt {receipt_id} from source {source['id']}")
     return receipt_id
@@ -108,13 +105,15 @@ def _resolve_store(supabase, extracted: ExtractedReceipt, user_id: str) -> str |
 
     new_store = (
         supabase.table("stores")
-        .insert({
-            "user_id": user_id,
-            "name": extracted.store_name,
-            "chain_id": chain_id,
-            "address": extracted.store_address,
-            "city": extracted.store_city,
-        })
+        .insert(
+            {
+                "user_id": user_id,
+                "name": extracted.store_name,
+                "chain_id": chain_id,
+                "address": extracted.store_address,
+                "city": extracted.store_city,
+            }
+        )
         .execute()
     )
     return new_store.data[0]["id"]
@@ -122,12 +121,7 @@ def _resolve_store(supabase, extracted: ExtractedReceipt, user_id: str) -> str |
 
 def _resolve_unit(supabase, unit_symbol: str) -> str | None:
     """Resolve unit symbol to unit id."""
-    result = (
-        supabase.table("units")
-        .select("id")
-        .eq("symbol", unit_symbol)
-        .execute()
-    )
+    result = supabase.table("units").select("id").eq("symbol", unit_symbol).execute()
     return result.data[0]["id"] if result.data else None
 
 
@@ -155,11 +149,8 @@ def get_pdf_text_from_object_storage(urls: list[str]) -> str:
 def download_receipts(urls: Iterable[str]) -> Generator[bytes, None, None]:
     client = get_supabase()
     for url in urls:
-        yield (
-            client.storage
-            .from_("receipts")
-            .download(url)
-            )
+        yield (client.storage.from_("receipts").download(url))
+
 
 @overload
 def get_pdf_text(pdf_bytes: None) -> None: ...

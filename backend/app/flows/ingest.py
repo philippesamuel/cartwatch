@@ -91,7 +91,7 @@ def process_email(user_id: str, message_id: str) -> str | None:
 @flow(name="ingest-receipts")
 def ingest_receipts() -> list[str]:
     settings = get_supabase_settings()
-    user_id=settings.supabase_user_id
+    user_id = settings.supabase_user_id
     emails = fetch_receipts()  # ty: ignore[no-matching-overload]
 
     processed = []

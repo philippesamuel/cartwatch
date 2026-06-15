@@ -40,10 +40,10 @@ env = [
     "SUPABASE_ANON_KEY=''",
     "SUPABASE_SERVICE_KEY=''",
     "MISTRAL_API_KEY=''",
-    "SUPABASE_USER_ID=''", 
-    "GMAIL_CLIENT_ID=''", 
-    "GMAIL_CLIENT_SECRET=''", 
-    "GMAIL_REFRESH_TOKEN=''", 
+    "SUPABASE_USER_ID=''",
+    "GMAIL_CLIENT_ID=''",
+    "GMAIL_CLIENT_SECRET=''",
+    "GMAIL_REFRESH_TOKEN=''",
 ]
 filterwarnings = [
     "ignore::DeprecationWarning:supabase",
@@ -53,6 +53,7 @@ addopts = "-m 'not integration'"
 
 [tool.ruff]
 src = ["app"]
+line-length = 100
 
 [tool.ruff.lint]
 select = ["E", "F", "I"]  # pycodestyle, pyflakes, isort

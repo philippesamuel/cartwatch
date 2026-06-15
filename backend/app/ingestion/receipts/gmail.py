@@ -72,12 +72,7 @@ def fetch_emails(service, label_id: str) -> list[dict]:
 
 
 def fetch_raw_email(service, message_id: str) -> RawEmail:
-    msg = (
-        service.users()
-        .messages()
-        .get(userId="me", id=message_id, format="full")
-        .execute()
-    )
+    msg = service.users().messages().get(userId="me", id=message_id, format="full").execute()
 
     subject = ""
     date = ""
@@ -133,10 +128,8 @@ def _extract_parts(
             if is_pdf and attachment_id:
                 pdf_bytes = _fetch_pdf_bytes(service, message_id, attachment_id)
                 updated_content = content.model_copy(
-                    update=dict(
-                        pdf_attachments=content.pdf_attachments + (pdf_bytes,)
-                        )
-                    )
+                    update=dict(pdf_attachments=content.pdf_attachments + (pdf_bytes,))
+                )
         case _:
             updated_content = content.model_copy()
 
