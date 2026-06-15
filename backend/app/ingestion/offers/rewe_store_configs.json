@@ -1,0 +1,5692 @@
+[
+  {
+    "external_id": "1100128",
+    "name": "REWE Jenny Zinnow oHG",
+    "companyName": "REWE Jenny Zinnow oHG",
+    "street": "Bergstr. 56a",
+    "zipCode": "01069",
+    "city": "Dresden",
+    "location": {
+      "latitude": 51.03239,
+      "longitude": 13.72965
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "06:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/dresden/1100128/bergstr-56a/"
+  },
+  {
+    "external_id": "1350030",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Ackerstr. 23-26/Invalidenstr. 158",
+    "zipCode": "10115",
+    "city": "Berlin / Mitte",
+    "location": {
+      "latitude": 52.53198,
+      "longitude": 13.39708
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 23:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-mitte/1350030/ackerstr-23-26-invalidenstr-158/"
+  },
+  {
+    "external_id": "1350032",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Chausseestr. 118-120",
+    "zipCode": "10115",
+    "city": "Berlin / Mitte",
+    "location": {
+      "latitude": 52.52888,
+      "longitude": 13.3849
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 23:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-mitte/1350032/chausseestr-118-120/"
+  },
+  {
+    "external_id": "1350034",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Schönhauser Allee 10-11",
+    "zipCode": "10119",
+    "city": "Berlin / Prenzlauer Berg",
+    "location": {
+      "latitude": 52.53058,
+      "longitude": 13.41215
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 23:30 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-prenzlauer-berg/1350034/schönhauser-allee-10-11/"
+  },
+  {
+    "external_id": "1350044",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Weitlingstr. 59-60",
+    "zipCode": "10317",
+    "city": "Berlin / Lichtenberg",
+    "location": {
+      "latitude": 52.50538,
+      "longitude": 13.49631
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "06:00 - 23:30 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-lichtenberg/1350044/weitlingstr-59-60/"
+  },
+  {
+    "external_id": "1350073",
+    "name": "REWE Markt",
+    "companyName": "REWE Neda Musura oHG",
+    "street": "Rheinstr. 30",
+    "zipCode": "12161",
+    "city": "Berlin / Friedenau",
+    "location": {
+      "latitude": 52.46694,
+      "longitude": 13.33019
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "06:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-friedenau/1350073/rheinstr-30/"
+  },
+  {
+    "external_id": "1350076",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Schönefelder Chaussee 1",
+    "zipCode": "12524",
+    "city": "Berlin / Altglienicke",
+    "location": {
+      "latitude": 52.41804,
+      "longitude": 13.537
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "06:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-altglienicke/1350076/schönefelder-chaussee-1/"
+  },
+  {
+    "external_id": "1350078",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Bruno-Taut Str. 1",
+    "zipCode": "12524",
+    "city": "Berlin / Altglienicke",
+    "location": {
+      "latitude": 52.41242,
+      "longitude": 13.57178
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "06:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-altglienicke/1350078/bruno-taut-str-1/"
+  },
+  {
+    "external_id": "1350088",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Pablo-Neruda-Str. 2",
+    "zipCode": "12559",
+    "city": "Berlin / Köpenick",
+    "location": {
+      "latitude": 52.44181,
+      "longitude": 13.58723
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "06:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-köpenick/1350088/pablo-neruda-str-2/"
+  },
+  {
+    "external_id": "1350100",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Mehrower Allee 20",
+    "zipCode": "12687",
+    "city": "Berlin / Marzahn",
+    "location": {
+      "latitude": 52.55577,
+      "longitude": 13.55846
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-marzahn/1350100/mehrower-allee-20/"
+  },
+  {
+    "external_id": "1350111",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Achillesstr. 46",
+    "zipCode": "13125",
+    "city": "Berlin / Karow",
+    "location": {
+      "latitude": 52.61838,
+      "longitude": 13.48634
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-karow/1350111/achillesstr-46/"
+  },
+  {
+    "external_id": "1352776",
+    "name": "REWE Markt",
+    "companyName": "Olaf Adler e. K.",
+    "street": "Auf dem Alten Berg 1",
+    "zipCode": "35799",
+    "city": "Merenberg",
+    "location": {
+      "latitude": 50.49984,
+      "longitude": 8.18677
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 20:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/merenberg/1352776/auf-dem-alten-berg-1/"
+  },
+  {
+    "external_id": "1461432",
+    "name": "Nahkauf",
+    "companyName": "Sylke Kramer",
+    "street": "Auf dem Alten Berg 9",
+    "zipCode": "35796",
+    "city": "Weinbach",
+    "location": {
+      "latitude": 50.43943,
+      "longitude": 8.28472
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 20:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/weinbach/1461432/auf-dem-alten-berg-9/"
+  },
+  {
+    "external_id": "1464147",
+    "name": "REWE Markt",
+    "companyName": "REWE Stefan Gaiseder oHG",
+    "street": "Sählingstraße 1",
+    "zipCode": "57319",
+    "city": "Bad Berleburg",
+    "location": {
+      "latitude": 51.05669,
+      "longitude": 8.39518
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "06:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/bad-berleburg/1464147/sählingstraße-1/"
+  },
+  {
+    "external_id": "1465002",
+    "name": "Nahkauf",
+    "companyName": "Stefan Gaiseder",
+    "street": "Hauptstraße 21",
+    "zipCode": "57319",
+    "city": "Bad Berleburg / Aue",
+    "location": {
+      "latitude": 51.05172,
+      "longitude": 8.29066
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "06:00 - 20:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/bad-berleburg-aue/1465002/hauptstraße-21/"
+  },
+  {
+    "external_id": "1465147",
+    "name": "REWE Thomas Scholl",
+    "companyName": "REWE Thomas Scholl oHG",
+    "street": "Bergstraße 5",
+    "zipCode": "63691",
+    "city": "Ranstadt",
+    "location": {
+      "latitude": 50.35346,
+      "longitude": 8.98265
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 21:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/ranstadt/1465147/bergstraße-5/"
+  },
+  {
+    "external_id": "1465882",
+    "name": "REWE Markt Anja Mohr OHG",
+    "companyName": "REWE Anja Mohr oHG",
+    "street": "Ostring 40",
+    "zipCode": "34277",
+    "city": "Fuldabrück / Bergshausen",
+    "location": {
+      "latitude": 51.27213,
+      "longitude": 9.50017
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 21:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/fuldabrück-bergshausen/1465882/ostring-40/"
+  },
+  {
+    "external_id": "1469036",
+    "name": "REWE Markt",
+    "companyName": "REWE Regiemarkt GmbH - Süd -",
+    "street": "Berliner Str. 29",
+    "zipCode": "36129",
+    "city": "Gersfeld",
+    "location": {
+      "latitude": 50.45246,
+      "longitude": 9.90557
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 20:00 Uhr",
+        "openingType": "REGULAR"
+      },
+      {
+        "days": "13.06.",
+        "hours": "geschlossen",
+        "openingType": "SPECIAL_CLOSING"
+      },
+      {
+        "days": "14.06.",
+        "hours": "geschlossen",
+        "openingType": "SPECIAL_CLOSING"
+      },
+      {
+        "days": "15.06.",
+        "hours": "geschlossen",
+        "openingType": "SPECIAL_CLOSING"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/gersfeld/1469036/berliner-str-29/"
+  },
+  {
+    "external_id": "1469465",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt Post oHG",
+    "street": "Berliner Platz 1",
+    "zipCode": "41564",
+    "city": "Kaarst / Büttgen",
+    "location": {
+      "latitude": 51.19437,
+      "longitude": 6.60741
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 21:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/kaarst-büttgen/1469465/berliner-platz-1/"
+  },
+  {
+    "external_id": "1469474",
+    "name": "REWE Dreschmann & Ludwig",
+    "companyName": "REWE Dreschmann & Ludwig oHG",
+    "street": "Hugo-Zade-Weg 4",
+    "zipCode": "40764",
+    "city": "Langenfeld / Berghausen",
+    "location": {
+      "latitude": 51.11221,
+      "longitude": 6.93548
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/langenfeld-berghausen/1469474/hugo-zade-weg-4/"
+  },
+  {
+    "external_id": "1469846",
+    "name": "Nahkauf",
+    "companyName": "Toptan Handels GmbH",
+    "street": "Gneisenaustr. 84",
+    "zipCode": "10961",
+    "city": "Berlin",
+    "location": {
+      "latitude": 52.4914,
+      "longitude": 13.39671
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 21:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin/1469846/gneisenaustr-84/"
+  },
+  {
+    "external_id": "1471343",
+    "name": "REWE Dennis Henkelmann oHG",
+    "companyName": "REWE Dennis Henkelmann oHG",
+    "street": "Revaler Str. 33",
+    "zipCode": "10245",
+    "city": "Berlin / Friedrichhain",
+    "location": {
+      "latitude": 52.50561,
+      "longitude": 13.45927
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "06:00 - 23:30 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-friedrichhain/1471343/revaler-str-33/"
+  },
+  {
+    "external_id": "1471822",
+    "name": "REWE Markt",
+    "companyName": "REWE Felix Thomas oHG",
+    "street": "Malteserstr. 136",
+    "zipCode": "12249",
+    "city": "Berlin / Lankwitz",
+    "location": {
+      "latitude": 52.42075,
+      "longitude": 13.35976
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "06:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-lankwitz/1471822/malteserstr-136/"
+  },
+  {
+    "external_id": "1478506",
+    "name": "REWE Alexander Pütz",
+    "companyName": "REWE Alexander Pütz oHG",
+    "street": "Schloßstr. 53",
+    "zipCode": "51429",
+    "city": "Bergisch Gladbach / Bensberg",
+    "location": {
+      "latitude": 50.96527,
+      "longitude": 7.16136
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/bergisch-gladbach-bensberg/1478506/schloßstr-53/"
+  },
+  {
+    "external_id": "1478520",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt Rohe oHG",
+    "street": "Bergisch Gladbacher Str. 380",
+    "zipCode": "51067",
+    "city": "Köln / Holweide",
+    "location": {
+      "latitude": 50.96613,
+      "longitude": 7.033
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 00:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/köln-holweide/1478520/bergisch-gladbacher-str-380/"
+  },
+  {
+    "external_id": "1656754",
+    "name": "REWE Familie Korthals ",
+    "companyName": "REWE Holger Gaul oHG",
+    "street": "Adlergestell 744",
+    "zipCode": "12527",
+    "city": "Berlin / Schmöckwitz",
+    "location": {
+      "latitude": 52.37916,
+      "longitude": 13.6436
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-schmöckwitz/1656754/adlergestell-744/"
+  },
+  {
+    "external_id": "1762009",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Friedrichstr. 111",
+    "zipCode": "10117",
+    "city": "Berlin / Mitte",
+    "location": {
+      "latitude": 52.52533,
+      "longitude": 13.38931
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-mitte/1762009/friedrichstr-111/"
+  },
+  {
+    "external_id": "1763368",
+    "name": "REWE Markt",
+    "companyName": "REWE Regiemarkt GmbH - Ost -",
+    "street": "Bergstr. 45",
+    "zipCode": "16928",
+    "city": "Pritzwalk",
+    "location": {
+      "latitude": 53.15081,
+      "longitude": 12.18258
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/pritzwalk/1763368/bergstr-45/"
+  },
+  {
+    "external_id": "1763372",
+    "name": "REWE Tim Hübscher",
+    "companyName": "REWE Tim Hübscher oHG",
+    "street": "Landsberger Allee 117",
+    "zipCode": "10407",
+    "city": "Berlin / Lichtenberg",
+    "location": {
+      "latitude": 52.52909,
+      "longitude": 13.45634
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-lichtenberg/1763372/landsberger-allee-117/"
+  },
+  {
+    "external_id": "1763545",
+    "name": "REWE Yorckbrücken",
+    "companyName": "GEBA Supermärkte GmbH & Co. KG",
+    "street": "Bautzener Str. 36",
+    "zipCode": "10829",
+    "city": "Berlin / Schöneberg",
+    "location": {
+      "latitude": 52.49153,
+      "longitude": 13.37129
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "06:30 - 22:30 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-schöneberg/1763545/bautzener-str-36/"
+  },
+  {
+    "external_id": "1765207",
+    "name": "REWE Richrath",
+    "companyName": "REWE Richrath SM GmbH & Co. oHG",
+    "street": "Fischbachstr. 31-39",
+    "zipCode": "50127",
+    "city": "Bergheim / Quadrath-Ichendorf",
+    "location": {
+      "latitude": 50.93417,
+      "longitude": 6.69925
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/bergheim-quadrath-ichendorf/1765207/fischbachstr-31-39/"
+  },
+  {
+    "external_id": "1765255",
+    "name": "REWE Jakubek OHG",
+    "companyName": "REWE Markt Jakubek oHG",
+    "street": "Kempener Str. 79",
+    "zipCode": "51469",
+    "city": "Bergisch Gladbach / Paffrath",
+    "location": {
+      "latitude": 51.00325,
+      "longitude": 7.09405
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "08:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/bergisch-gladbach-paffrath/1765255/kempener-str-79/"
+  },
+  {
+    "external_id": "1765268",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt Björn Rohe oHG",
+    "street": "Bergisch Gladbacher Str. 667",
+    "zipCode": "51067",
+    "city": "Köln / Holweide",
+    "location": {
+      "latitude": 50.9726,
+      "longitude": 7.05223
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/köln-holweide/1765268/bergisch-gladbacher-str-667/"
+  },
+  {
+    "external_id": "1765501",
+    "name": "REWE Ursula Wintgens",
+    "companyName": "REWE Markt Wintgens oHG",
+    "street": "Sattlerweg 8",
+    "zipCode": "51429",
+    "city": "Bergisch Gladbach / Bensberg",
+    "location": {
+      "latitude": 50.96063,
+      "longitude": 7.16558
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/bergisch-gladbach-bensberg/1765501/sattlerweg-8/"
+  },
+  {
+    "external_id": "1765576",
+    "name": "REWE Richrath",
+    "companyName": "REWE Richrath SM GmbH & Co. oHG",
+    "street": "Zeppelinstr. 11",
+    "zipCode": "50126",
+    "city": "Bergheim",
+    "location": {
+      "latitude": 50.95144,
+      "longitude": 6.64242
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/bergheim/1765576/zeppelinstr-11/"
+  },
+  {
+    "external_id": "1765981",
+    "name": "REWE Markt",
+    "companyName": "REWE Regiemarkt GmbH - Ost -",
+    "street": "Ludolfingerplatz 1",
+    "zipCode": "13465",
+    "city": "Berlin / Frohnau",
+    "location": {
+      "latitude": 52.63234,
+      "longitude": 13.28934
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "06:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-frohnau/1765981/ludolfingerplatz-1/"
+  },
+  {
+    "external_id": "1765982",
+    "name": "REWE Josef Seifert oHG",
+    "companyName": "REWE Josef Seifert oHG",
+    "street": "Müllerstr. 141",
+    "zipCode": "13353",
+    "city": "Berlin / Wedding",
+    "location": {
+      "latitude": 52.5488,
+      "longitude": 13.35373
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-wedding/1765982/müllerstr-141/"
+  },
+  {
+    "external_id": "1765986",
+    "name": "REWE Markt",
+    "companyName": "REWE Viet Nguyen Duc oHG",
+    "street": "Ernststr. 7",
+    "zipCode": "13509",
+    "city": "Berlin / Tegel",
+    "location": {
+      "latitude": 52.58312,
+      "longitude": 13.29176
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-tegel/1765986/ernststr-7/"
+  },
+  {
+    "external_id": "1766069",
+    "name": "REWE Kai Windmüller",
+    "companyName": "REWE Kai Windmüller oHG",
+    "street": "Hönower Str. 80",
+    "zipCode": "12623",
+    "city": "Berlin / Mahlsdorf",
+    "location": {
+      "latitude": 52.51191,
+      "longitude": 13.61386
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-mahlsdorf/1766069/hönower-str-80/"
+  },
+  {
+    "external_id": "1766079",
+    "name": "REWE Markt",
+    "companyName": "REWE Sebastian Schäfer oHG",
+    "street": "Am Pfarracker 1",
+    "zipCode": "12529",
+    "city": "Schönefeld bei Berlin",
+    "location": {
+      "latitude": 52.39475,
+      "longitude": 13.44076
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "06:00 - 21:45 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/schönefeld-bei-berlin/1766079/am-pfarracker-1/"
+  },
+  {
+    "external_id": "1766114",
+    "name": "REWE Marcel Tuffin oHG",
+    "companyName": "REWE Marcel Tuffin oHG",
+    "street": "Dolgenseestr. 9 c-f",
+    "zipCode": "10319",
+    "city": "Berlin / Friedrichsfelde",
+    "location": {
+      "latitude": 52.49353,
+      "longitude": 13.50741
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-friedrichsfelde/1766114/dolgenseestr-9-c-f/"
+  },
+  {
+    "external_id": "1766134",
+    "name": "REWE Markt",
+    "companyName": "REWE Frank Glawe oHG",
+    "street": "Gotlindestr. 40a",
+    "zipCode": "10365",
+    "city": "Berlin / Lichtenberg",
+    "location": {
+      "latitude": 52.51881,
+      "longitude": 13.49706
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "06:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-lichtenberg/1766134/gotlindestr-40a/"
+  },
+  {
+    "external_id": "1766154",
+    "name": "REWE Siemensdamm",
+    "companyName": "Peterson Warenhandels GmbH & Co. KG",
+    "street": "Siemensdamm 43-44",
+    "zipCode": "13629",
+    "city": "Berlin / Siemensstadt",
+    "location": {
+      "latitude": 52.53638,
+      "longitude": 13.27469
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "06:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-siemensstadt/1766154/siemensdamm-43-44/"
+  },
+  {
+    "external_id": "1766175",
+    "name": "REWE Markt Kurfürstenstraße",
+    "companyName": "GEBA Supermärkte GmbH & Co. KG",
+    "street": "Kurfürstenstr. 46",
+    "zipCode": "10785",
+    "city": "Berlin / Tiergarten",
+    "location": {
+      "latitude": 52.50099,
+      "longitude": 13.35882
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-tiergarten/1766175/kurfürstenstr-46/"
+  },
+  {
+    "external_id": "1766184",
+    "name": "REWE Ivonne Schönbein oHG",
+    "companyName": "REWE Ivonne Schönbein oHG",
+    "street": "Fritz-Lang-Str. 3",
+    "zipCode": "12627",
+    "city": "Berlin / Hellersdorf",
+    "location": {
+      "latitude": 52.53664,
+      "longitude": 13.60241
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-hellersdorf/1766184/fritz-lang-str-3/"
+  },
+  {
+    "external_id": "1931055",
+    "name": "REWE Markt",
+    "companyName": "REWE Alexander Sangel oHG",
+    "street": "Köthener Str. 1",
+    "zipCode": "12689",
+    "city": "Berlin / Marzahn",
+    "location": {
+      "latitude": 52.56857,
+      "longitude": 13.55671
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      },
+      {
+        "days": "05.06.",
+        "hours": "geschlossen",
+        "openingType": "SPECIAL_CLOSING"
+      },
+      {
+        "days": "06.06.",
+        "hours": "geschlossen",
+        "openingType": "SPECIAL_CLOSING"
+      },
+      {
+        "days": "07.06.",
+        "hours": "geschlossen",
+        "openingType": "SPECIAL_CLOSING"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-marzahn/1931055/köthener-str-1/"
+  },
+  {
+    "external_id": "1931084",
+    "name": "Nahkauf",
+    "companyName": "Christian Drabiszczak",
+    "street": "Habichtstr. 16",
+    "zipCode": "13505",
+    "city": "Berlin OT Konradshöhe",
+    "location": {
+      "latitude": 52.58574,
+      "longitude": 13.23345
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "08:00 - 21:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-ot-konradshöhe/1931084/habichtstr-16/"
+  },
+  {
+    "external_id": "1931090",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Konrad-Wolf-Str. 24",
+    "zipCode": "13055",
+    "city": "Berlin / Alt-Hohenschönhausen",
+    "location": {
+      "latitude": 52.54381,
+      "longitude": 13.49053
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-alt-hohenschönhausen/1931090/konrad-wolf-str-24/"
+  },
+  {
+    "external_id": "1931091",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Hermann-Hesse-Str. 14",
+    "zipCode": "13156",
+    "city": "Berlin / Niederschönhausen",
+    "location": {
+      "latitude": 52.58126,
+      "longitude": 13.40058
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 23:30 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-niederschönhausen/1931091/hermann-hesse-str-14/"
+  },
+  {
+    "external_id": "1931092",
+    "name": "REWE Daniela Fischer oHG",
+    "companyName": "REWE Daniela Fischer oHG",
+    "street": "Schwerstedter Str. 4",
+    "zipCode": "99439",
+    "city": "Am Ettersberg / Berlstedt",
+    "location": {
+      "latitude": 51.06226,
+      "longitude": 11.25135
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Fr",
+        "hours": "06:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      },
+      {
+        "days": "Sa",
+        "hours": "07:00 - 20:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/am-ettersberg-berlstedt/1931092/schwerstedter-str-4/"
+  },
+  {
+    "external_id": "1931096",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Pasteurstr. 19",
+    "zipCode": "10407",
+    "city": "Berlin / Prenzlauer Berg",
+    "location": {
+      "latitude": 52.53328,
+      "longitude": 13.43436
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 21:45 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-prenzlauer-berg/1931096/pasteurstr-19/"
+  },
+  {
+    "external_id": "1931098",
+    "name": "REWE Markt",
+    "companyName": "Senkaya Supermarkt GmbH & Co. Warenhandel KG",
+    "street": "Turmstr. 48",
+    "zipCode": "10551",
+    "city": "Berlin / Moabit",
+    "location": {
+      "latitude": 52.52715,
+      "longitude": 13.33301
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Fr",
+        "hours": "06:00 - 00:00 Uhr",
+        "openingType": "REGULAR"
+      },
+      {
+        "days": "Sa",
+        "hours": "06:00 - 23:30 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-moabit/1931098/turmstr-48/"
+  },
+  {
+    "external_id": "1931099",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Pichelsdorfer Str. 110",
+    "zipCode": "13595",
+    "city": "Berlin / Wilhelmstadt",
+    "location": {
+      "latitude": 52.52462,
+      "longitude": 13.19771
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "06:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-wilhelmstadt/1931099/pichelsdorfer-str-110/"
+  },
+  {
+    "external_id": "1931100",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Yorckstr. 78",
+    "zipCode": "10965",
+    "city": "Berlin / Kreuzberg",
+    "location": {
+      "latitude": 52.49315,
+      "longitude": 13.38301
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Fr",
+        "hours": "06:00 - 00:00 Uhr",
+        "openingType": "REGULAR"
+      },
+      {
+        "days": "Sa",
+        "hours": "06:00 - 23:30 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-kreuzberg/1931100/yorckstr-78/"
+  },
+  {
+    "external_id": "1931101",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Kaiserin-Augusta-Str. 55",
+    "zipCode": "12103",
+    "city": "Berlin / Tempelhof",
+    "location": {
+      "latitude": 52.4599,
+      "longitude": 13.37541
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-tempelhof/1931101/kaiserin-augusta-str-55/"
+  },
+  {
+    "external_id": "1931102",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Heinsestr. 46-48",
+    "zipCode": "13467",
+    "city": "Berlin / Hermsdorf",
+    "location": {
+      "latitude": 52.61864,
+      "longitude": 13.3057
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-hermsdorf/1931102/heinsestr-46-48/"
+  },
+  {
+    "external_id": "1931103",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Bismarckstr. 91",
+    "zipCode": "10625",
+    "city": "Berlin / Charlottenburg",
+    "location": {
+      "latitude": 52.51153,
+      "longitude": 13.30959
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Fr",
+        "hours": "06:00 - 00:00 Uhr",
+        "openingType": "REGULAR"
+      },
+      {
+        "days": "Sa",
+        "hours": "06:00 - 23:30 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-charlottenburg/1931103/bismarckstr-91/"
+  },
+  {
+    "external_id": "1931104",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Wundtstr. 26",
+    "zipCode": "14059",
+    "city": "Berlin / Charlottenburg",
+    "location": {
+      "latitude": 52.51086,
+      "longitude": 13.29185
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 23:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-charlottenburg/1931104/wundtstr-26/"
+  },
+  {
+    "external_id": "1931105",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Schönhauser Allee 130",
+    "zipCode": "10437",
+    "city": "Berlin / Prenzlauer Berg",
+    "location": {
+      "latitude": 52.54537,
+      "longitude": 13.41237
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "06:00 - 23:30 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-prenzlauer-berg/1931105/schönhauser-allee-130/"
+  },
+  {
+    "external_id": "1931106",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Friedrichstr. 60 (Atrium)",
+    "zipCode": "10117",
+    "city": "Berlin / Mitte",
+    "location": {
+      "latitude": 52.5105,
+      "longitude": 13.39074
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 23:30 Uhr",
+        "openingType": "REGULAR"
+      },
+      {
+        "days": "05.06.",
+        "hours": "geschlossen",
+        "openingType": "SPECIAL_CLOSING"
+      },
+      {
+        "days": "06.06.",
+        "hours": "geschlossen",
+        "openingType": "SPECIAL_CLOSING"
+      },
+      {
+        "days": "07.06.",
+        "hours": "geschlossen",
+        "openingType": "SPECIAL_CLOSING"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-mitte/1931106/friedrichstr-60-atrium-/"
+  },
+  {
+    "external_id": "1931107",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Grellstr. 75",
+    "zipCode": "10409",
+    "city": "Berlin / Prenzlauer Berg",
+    "location": {
+      "latitude": 52.54529,
+      "longitude": 13.43009
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Fr",
+        "hours": "07:00 - 00:00 Uhr",
+        "openingType": "REGULAR"
+      },
+      {
+        "days": "Sa",
+        "hours": "07:00 - 23:30 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-prenzlauer-berg/1931107/grellstr-75/"
+  },
+  {
+    "external_id": "1931108",
+    "name": "REWE Markt",
+    "companyName": "REWE Nicole Köhler oHG",
+    "street": "Oberspreestr. 145",
+    "zipCode": "12555",
+    "city": "Berlin / Köpenick",
+    "location": {
+      "latitude": 52.44609,
+      "longitude": 13.56412
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Fr",
+        "hours": "06:00 - 00:00 Uhr",
+        "openingType": "REGULAR"
+      },
+      {
+        "days": "Sa",
+        "hours": "06:00 - 23:30 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-köpenick/1931108/oberspreestr-145/"
+  },
+  {
+    "external_id": "1931109",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Hubertusdamm 53-59",
+    "zipCode": "13125",
+    "city": "Berlin / Karow",
+    "location": {
+      "latitude": 52.61649,
+      "longitude": 13.47167
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-karow/1931109/hubertusdamm-53-59/"
+  },
+  {
+    "external_id": "1931111",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Am Tierpark 68/Heinrich-Dathe-Platz",
+    "zipCode": "10319",
+    "city": "Berlin / Friedrichsfelde",
+    "location": {
+      "latitude": 52.49832,
+      "longitude": 13.52178
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-friedrichsfelde/1931111/am-tierpark-68-heinrich-dathe-platz/"
+  },
+  {
+    "external_id": "1931112",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Oberfeldstr. 138",
+    "zipCode": "12683",
+    "city": "Berlin / Biesdorf",
+    "location": {
+      "latitude": 52.52485,
+      "longitude": 13.55811
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Fr",
+        "hours": "07:00 - 00:00 Uhr",
+        "openingType": "REGULAR"
+      },
+      {
+        "days": "Sa",
+        "hours": "07:00 - 23:30 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-biesdorf/1931112/oberfeldstr-138/"
+  },
+  {
+    "external_id": "1931113",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Rosenthaler Weg 74",
+    "zipCode": "13127",
+    "city": "Berlin / Buchholz",
+    "location": {
+      "latitude": 52.60718,
+      "longitude": 13.42876
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-buchholz/1931113/rosenthaler-weg-74/"
+  },
+  {
+    "external_id": "1931117",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Genslerstr. 34",
+    "zipCode": "13055",
+    "city": "Berlin / Alt-Hohenschönhausen",
+    "location": {
+      "latitude": 52.53479,
+      "longitude": 13.49645
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 20:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-alt-hohenschönhausen/1931117/genslerstr-34/"
+  },
+  {
+    "external_id": "1931118",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Ribnitzer Str. 26",
+    "zipCode": "13051",
+    "city": "Berlin / Neu-Hohenschönhausen",
+    "location": {
+      "latitude": 52.5696,
+      "longitude": 13.4948
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-neu-hohenschönhausen/1931118/ribnitzer-str-26/"
+  },
+  {
+    "external_id": "1931120",
+    "name": "REWE Tim Kulicke oHG",
+    "companyName": "REWE Tim Kulicke oHG",
+    "street": "Prerower Platz 1 / Linden-Center",
+    "zipCode": "13051",
+    "city": "Berlin / Neu-Hohenschönhausen",
+    "location": {
+      "latitude": 52.56451,
+      "longitude": 13.50651
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "08:00 - 20:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-neu-hohenschönhausen/1931120/prerower-platz-1-linden-center/"
+  },
+  {
+    "external_id": "1931123",
+    "name": "REWE Marc Balkow oHG",
+    "companyName": "REWE Marc Balkow oHG",
+    "street": "Landsberger Allee 68 D",
+    "zipCode": "10249",
+    "city": "Berlin / Friedrichshain",
+    "location": {
+      "latitude": 52.52583,
+      "longitude": 13.44698
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Fr",
+        "hours": "07:00 - 00:00 Uhr",
+        "openingType": "REGULAR"
+      },
+      {
+        "days": "Sa",
+        "hours": "07:00 - 23:30 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-friedrichshain/1931123/landsberger-allee-68-d/"
+  },
+  {
+    "external_id": "1931124",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Eschengraben 47",
+    "zipCode": "13189",
+    "city": "Berlin / Pankow",
+    "location": {
+      "latitude": 52.55641,
+      "longitude": 13.42425
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-pankow/1931124/eschengraben-47/"
+  },
+  {
+    "external_id": "1931125",
+    "name": "REWE Christoph Kluwe oHG",
+    "companyName": "REWE Christoph Kluwe oHG",
+    "street": "Sterndamm 31,33,35",
+    "zipCode": "12487",
+    "city": "Berlin / Johannisthal",
+    "location": {
+      "latitude": 52.45068,
+      "longitude": 13.50843
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "06:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-johannisthal/1931125/sterndamm-31-33-35/"
+  },
+  {
+    "external_id": "1931126",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Frankfurter Allee 144",
+    "zipCode": "10365",
+    "city": "Berlin / Lichtenberg",
+    "location": {
+      "latitude": 52.51181,
+      "longitude": 13.48182
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Fr",
+        "hours": "07:00 - 00:00 Uhr",
+        "openingType": "REGULAR"
+      },
+      {
+        "days": "Sa",
+        "hours": "07:00 - 23:30 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-lichtenberg/1931126/frankfurter-allee-144/"
+  },
+  {
+    "external_id": "1931127",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Helene-Weigel-Platz 1,2",
+    "zipCode": "12681",
+    "city": "Berlin / Marzahn",
+    "location": {
+      "latitude": 52.52748,
+      "longitude": 13.53838
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-marzahn/1931127/helene-weigel-platz-1-2/"
+  },
+  {
+    "external_id": "1931129",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Alfred-Kowalke-Str. 2",
+    "zipCode": "10315",
+    "city": "Berlin / Friedrichsfelde",
+    "location": {
+      "latitude": 52.50482,
+      "longitude": 13.51501
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-friedrichsfelde/1931129/alfred-kowalke-str-2/"
+  },
+  {
+    "external_id": "1931131",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt Ricardo Steinbrück oHG",
+    "street": "Vincent-van-Gogh-Str. 18A",
+    "zipCode": "13057",
+    "city": "Berlin / Neu-Hohenschönhausen",
+    "location": {
+      "latitude": 52.56494,
+      "longitude": 13.52331
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-neu-hohenschönhausen/1931131/vincent-van-gogh-str-18a/"
+  },
+  {
+    "external_id": "1931132",
+    "name": "REWE Markt",
+    "companyName": "REWE Adrian Powierski oHG",
+    "street": "Buckower Damm 50",
+    "zipCode": "12349",
+    "city": "Berlin / Britz",
+    "location": {
+      "latitude": 52.43997,
+      "longitude": 13.43411
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Fr",
+        "hours": "06:00 - 00:00 Uhr",
+        "openingType": "REGULAR"
+      },
+      {
+        "days": "Sa",
+        "hours": "06:00 - 23:30 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-britz/1931132/buckower-damm-50/"
+  },
+  {
+    "external_id": "1931134",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Germaniastr. 12-13",
+    "zipCode": "12099",
+    "city": "Berlin / Tempelhof",
+    "location": {
+      "latitude": 52.46466,
+      "longitude": 13.39505
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "06:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-tempelhof/1931134/germaniastr-12-13/"
+  },
+  {
+    "external_id": "1931136",
+    "name": "REWE Dennis Wenzlaff oHG ",
+    "companyName": "REWE Dennis Wenzlaff oHG",
+    "street": "Theodor-Heuss-Platz 6",
+    "zipCode": "14052",
+    "city": "Berlin / Westend",
+    "location": {
+      "latitude": 52.51015,
+      "longitude": 13.27271
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "06:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-westend/1931136/theodor-heuss-platz-6/"
+  },
+  {
+    "external_id": "1931138",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Clayallee 336",
+    "zipCode": "14169",
+    "city": "Berlin / Zehlendorf",
+    "location": {
+      "latitude": 52.43706,
+      "longitude": 13.2622
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "06:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-zehlendorf/1931138/clayallee-336/"
+  },
+  {
+    "external_id": "1931139",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Lankwitzer Str. 19-24",
+    "zipCode": "12209",
+    "city": "Berlin / Lichterfelde",
+    "location": {
+      "latitude": 52.42972,
+      "longitude": 13.33015
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "06:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-lichterfelde/1931139/lankwitzer-str-19-24/"
+  },
+  {
+    "external_id": "1931140",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Skalitzer Str. 134",
+    "zipCode": "10999",
+    "city": "Berlin / Kreuzberg",
+    "location": {
+      "latitude": 52.49942,
+      "longitude": 13.4187
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Fr",
+        "hours": "07:00 - 00:00 Uhr",
+        "openingType": "REGULAR"
+      },
+      {
+        "days": "Sa",
+        "hours": "07:00 - 23:30 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-kreuzberg/1931140/skalitzer-str-134/"
+  },
+  {
+    "external_id": "1931142",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Wrangelstr. 53",
+    "zipCode": "10997",
+    "city": "Berlin / Kreuzberg",
+    "location": {
+      "latitude": 52.49843,
+      "longitude": 13.44187
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Fr",
+        "hours": "07:00 - 00:00 Uhr",
+        "openingType": "REGULAR"
+      },
+      {
+        "days": "Sa",
+        "hours": "07:00 - 23:30 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-kreuzberg/1931142/wrangelstr-53/"
+  },
+  {
+    "external_id": "1931143",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Hermannstr. 158 A",
+    "zipCode": "12051",
+    "city": "Berlin / Neukölln",
+    "location": {
+      "latitude": 52.46728,
+      "longitude": 13.43257
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Fr",
+        "hours": "08:00 - 00:00 Uhr",
+        "openingType": "REGULAR"
+      },
+      {
+        "days": "Sa",
+        "hours": "08:00 - 23:30 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-neukölln/1931143/hermannstr-158-a/"
+  },
+  {
+    "external_id": "1931144",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Europaplatz 1",
+    "zipCode": "10557",
+    "city": "Berlin / Mitte",
+    "location": {
+      "latitude": 52.52409,
+      "longitude": 13.36954
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "06:00 - 23:00 Uhr",
+        "openingType": "REGULAR"
+      },
+      {
+        "days": "So",
+        "hours": "08:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-mitte/1931144/europaplatz-1/"
+  },
+  {
+    "external_id": "1931146",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Hauptstr. 141-144",
+    "zipCode": "10827",
+    "city": "Berlin / Schöneberg",
+    "location": {
+      "latitude": 52.48564,
+      "longitude": 13.35617
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Fr",
+        "hours": "07:00 - 00:00 Uhr",
+        "openingType": "REGULAR"
+      },
+      {
+        "days": "Sa",
+        "hours": "07:00 - 23:30 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-schöneberg/1931146/hauptstr-141-144/"
+  },
+  {
+    "external_id": "1931147",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Töpchiner Weg 189-193",
+    "zipCode": "12309",
+    "city": "Berlin / Lichtenrade",
+    "location": {
+      "latitude": 52.40165,
+      "longitude": 13.41309
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "06:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-lichtenrade/1931147/töpchiner-weg-189-193/"
+  },
+  {
+    "external_id": "1931149",
+    "name": "REWE Marcel Weyermann oHG",
+    "companyName": "REWE Marcel Weyermann oHG",
+    "street": "John-Schehr-Str. 20-24",
+    "zipCode": "10407",
+    "city": "Berlin / Prenzlauer Berg",
+    "location": {
+      "latitude": 52.53634,
+      "longitude": 13.43669
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-prenzlauer-berg/1931149/john-schehr-str-20-24/"
+  },
+  {
+    "external_id": "1931150",
+    "name": "Nahkauf",
+    "companyName": "Viet Nguyen Duc & Tong GbR",
+    "street": "Angerburger Allee 45",
+    "zipCode": "14055",
+    "city": "Berlin",
+    "location": {
+      "latitude": 52.50931,
+      "longitude": 13.22232
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "08:00 - 20:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin/1931150/angerburger-allee-45/"
+  },
+  {
+    "external_id": "1931152",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Konstanzer Str. 53",
+    "zipCode": "10707",
+    "city": "Berlin / Wilmersdorf",
+    "location": {
+      "latitude": 52.49559,
+      "longitude": 13.31119
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Fr",
+        "hours": "06:00 - 00:00 Uhr",
+        "openingType": "REGULAR"
+      },
+      {
+        "days": "Sa",
+        "hours": "06:00 - 23:30 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-wilmersdorf/1931152/konstanzer-str-53/"
+  },
+  {
+    "external_id": "1931154",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Südwestkorso 36",
+    "zipCode": "14197",
+    "city": "Berlin / Wilmersdorf",
+    "location": {
+      "latitude": 52.46863,
+      "longitude": 13.31179
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 21:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-wilmersdorf/1931154/südwestkorso-36/"
+  },
+  {
+    "external_id": "1931155",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Königin-Luise-Str. 37",
+    "zipCode": "14195",
+    "city": "Berlin / Dahlem",
+    "location": {
+      "latitude": 52.45849,
+      "longitude": 13.29245
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "06:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-dahlem/1931155/königin-luise-str-37/"
+  },
+  {
+    "external_id": "1931157",
+    "name": "REWE Rocco Bräsemann ",
+    "companyName": "REWE Markt Rocco Bräsemann oHG",
+    "street": "Hildburghauser Str. 29",
+    "zipCode": "12279",
+    "city": "Berlin / Marienfelde",
+    "location": {
+      "latitude": 52.41272,
+      "longitude": 13.35469
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "06:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-marienfelde/1931157/hildburghauser-str-29/"
+  },
+  {
+    "external_id": "1931158",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Litfaß-Platz 4 / Hackescher Markt",
+    "zipCode": "10178",
+    "city": "Berlin / Mitte",
+    "location": {
+      "latitude": 52.52233,
+      "longitude": 13.40339
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Fr",
+        "hours": "07:00 - 00:00 Uhr",
+        "openingType": "REGULAR"
+      },
+      {
+        "days": "Sa",
+        "hours": "07:00 - 23:30 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-mitte/1931158/litfaß-platz-4-hackescher-markt/"
+  },
+  {
+    "external_id": "1931258",
+    "name": "REWE Center",
+    "companyName": "REWE Markt GmbH",
+    "street": "Badstr. 4",
+    "zipCode": "13357",
+    "city": "Berlin / Gesundbrunnen",
+    "location": {
+      "latitude": 52.54982,
+      "longitude": 13.3908
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "08:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-gesundbrunnen/1931258/badstr-4/"
+  },
+  {
+    "external_id": "1931421",
+    "name": "Nahkauf",
+    "companyName": "Cindy & Michael Lind GbR",
+    "street": "Senftenberger Ring 46",
+    "zipCode": "13435",
+    "city": "Berlin",
+    "location": {
+      "latitude": 52.60539,
+      "longitude": 13.35714
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin/1931421/senftenberger-ring-46/"
+  },
+  {
+    "external_id": "1931433",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Allee der Kosmonauten 196",
+    "zipCode": "12685",
+    "city": "Berlin / Marzahn",
+    "location": {
+      "latitude": 52.54126,
+      "longitude": 13.5649
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-marzahn/1931433/allee-der-kosmonauten-196/"
+  },
+  {
+    "external_id": "1931450",
+    "name": "REWE Sven Fölski",
+    "companyName": "REWE Sven Fölski oHG",
+    "street": "Tamara-Danz-Str. 11",
+    "zipCode": "10243",
+    "city": "Berlin / Friedrichshain",
+    "location": {
+      "latitude": 52.50574,
+      "longitude": 13.44743
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Do",
+        "hours": "07:00 - 23:00 Uhr",
+        "openingType": "REGULAR"
+      },
+      {
+        "days": "Fr-Sa",
+        "hours": "07:00 - 00:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-friedrichshain/1931450/tamara-danz-str-11/"
+  },
+  {
+    "external_id": "1931595",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Bernhard-Bästlein-Str. 1",
+    "zipCode": "10367",
+    "city": "Berlin / Lichtenberg",
+    "location": {
+      "latitude": 52.52744,
+      "longitude": 13.48124
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-lichtenberg/1931595/bernhard-bästlein-str-1/"
+  },
+  {
+    "external_id": "1931604",
+    "name": "REWE Frank Glawe ",
+    "companyName": "REWE Frank Glawe oHG",
+    "street": "Alfred-Jung-Str. 12",
+    "zipCode": "10369",
+    "city": "Berlin / Lichtenberg",
+    "location": {
+      "latitude": 52.52318,
+      "longitude": 13.4779
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-lichtenberg/1931604/alfred-jung-str-12/"
+  },
+  {
+    "external_id": "1931619",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Uhlandstr. 30",
+    "zipCode": "10719",
+    "city": "Berlin / Charlottenburg",
+    "location": {
+      "latitude": 52.50083,
+      "longitude": 13.32427
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Fr",
+        "hours": "06:00 - 00:00 Uhr",
+        "openingType": "REGULAR"
+      },
+      {
+        "days": "Sa",
+        "hours": "06:00 - 23:30 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-charlottenburg/1931619/uhlandstr-30/"
+  },
+  {
+    "external_id": "1931620",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Neue Grottkauer Str. 9",
+    "zipCode": "12619",
+    "city": "Berlin / Kaulsdorf",
+    "location": {
+      "latitude": 52.52939,
+      "longitude": 13.59433
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-kaulsdorf/1931620/neue-grottkauer-str-9/"
+  },
+  {
+    "external_id": "1931623",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Willy-Brandt-Platz 1",
+    "zipCode": "12529",
+    "city": "Schönefeld bei Berlin",
+    "location": {
+      "latitude": 52.36418,
+      "longitude": 13.51011
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-So",
+        "hours": "00:00 - 00:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/schönefeld-bei-berlin/1931623/willy-brandt-platz-1/"
+  },
+  {
+    "external_id": "1931628",
+    "name": "REWE Marcel Weyermann oHG",
+    "companyName": "REWE Marcel Weyermann oHG",
+    "street": "Pappelallee 47",
+    "zipCode": "10437",
+    "city": "Berlin / Prenzlauer Berg",
+    "location": {
+      "latitude": 52.54757,
+      "longitude": 13.41909
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-prenzlauer-berg/1931628/pappelallee-47/"
+  },
+  {
+    "external_id": "1931629",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Gorkistr. 11-21",
+    "zipCode": "13507",
+    "city": "Berlin / Tegel",
+    "location": {
+      "latitude": 52.59033,
+      "longitude": 13.28656
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-tegel/1931629/gorkistr-11-21/"
+  },
+  {
+    "external_id": "1931630",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Heidestr. 41",
+    "zipCode": "10557",
+    "city": "Berlin / Mitte",
+    "location": {
+      "latitude": 52.53228,
+      "longitude": 13.36603
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-mitte/1931630/heidestr-41/"
+  },
+  {
+    "external_id": "1931642",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Kalistr. 11",
+    "zipCode": "06406",
+    "city": "Bernburg",
+    "location": {
+      "latitude": 51.77681,
+      "longitude": 11.73557
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Fr",
+        "hours": "06:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      },
+      {
+        "days": "Sa",
+        "hours": "06:00 - 20:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/bernburg/1931642/kalistr-11/"
+  },
+  {
+    "external_id": "1931643",
+    "name": "REWE Harun Baykus oHG",
+    "companyName": "REWE Harun Baykus oHG",
+    "street": "Bahnhofstr. 33-38 Forum Köp.",
+    "zipCode": "12555",
+    "city": "Berlin / Köpenick",
+    "location": {
+      "latitude": 52.45745,
+      "longitude": 13.57774
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-köpenick/1931643/bahnhofstr-33-38-forum-köp-/"
+  },
+  {
+    "external_id": "1931644",
+    "name": "Nahkauf",
+    "companyName": "Ralf Oelmann",
+    "street": "Gensinger Str. 83",
+    "zipCode": "10315",
+    "city": "Berlin / Friedrichsfelde",
+    "location": {
+      "latitude": 52.51098,
+      "longitude": 13.53568
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 20:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-friedrichsfelde/1931644/gensinger-str-83/"
+  },
+  {
+    "external_id": "1931651",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Kastanienallee 38",
+    "zipCode": "13158",
+    "city": "Berlin / Rosenthal",
+    "location": {
+      "latitude": 52.59183,
+      "longitude": 13.38258
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "06:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-rosenthal/1931651/kastanienallee-38/"
+  },
+  {
+    "external_id": "1940003",
+    "name": "REWE Alexander Sept OHG",
+    "companyName": "REWE Alexander Sept oHG",
+    "street": "Hauptstr. 170 - 174",
+    "zipCode": "51465",
+    "city": "Bergisch Gladbach",
+    "location": {
+      "latitude": 50.99107,
+      "longitude": 7.12817
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 21:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/bergisch-gladbach/1940003/hauptstr-170-174/"
+  },
+  {
+    "external_id": "1940040",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Siebenmorgen 40",
+    "zipCode": "51427",
+    "city": "Bergisch Gladbach / Refrath",
+    "location": {
+      "latitude": 50.95781,
+      "longitude": 7.11561
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/bergisch-gladbach-refrath/1940040/siebenmorgen-40/"
+  },
+  {
+    "external_id": "1940095",
+    "name": "REWE Center",
+    "companyName": "REWE Markt GmbH",
+    "street": "Adolf-Kolping-Str. 1",
+    "zipCode": "54470",
+    "city": "Bernkastel / Kues",
+    "location": {
+      "latitude": 49.92773,
+      "longitude": 7.05839
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "08:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/bernkastel-kues/1940095/adolf-kolping-str-1/"
+  },
+  {
+    "external_id": "1940158",
+    "name": "REWE Center",
+    "companyName": "REWE Markt GmbH",
+    "street": "Stadionstraße 2",
+    "zipCode": "51702",
+    "city": "Bergneustadt",
+    "location": {
+      "latitude": 51.01824,
+      "longitude": 7.64547
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/bergneustadt/1940158/stadionstraße-2/"
+  },
+  {
+    "external_id": "1940378",
+    "name": "REWE Markt",
+    "companyName": "S-Mart Lebensmittel Märkte GmbH & Co. KG",
+    "street": "Lustheide 6-8",
+    "zipCode": "51427",
+    "city": "Bergisch Gladbach / Refrath",
+    "location": {
+      "latitude": 50.95087,
+      "longitude": 7.11672
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/bergisch-gladbach-refrath/1940378/lustheide-6-8/"
+  },
+  {
+    "external_id": "1940413",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Rellinghauser Str. 239",
+    "zipCode": "45136",
+    "city": "Essen / Bergerhausen",
+    "location": {
+      "latitude": 51.43772,
+      "longitude": 7.02961
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 00:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/essen-bergerhausen/1940413/rellinghauser-str-239/"
+  },
+  {
+    "external_id": "1940461",
+    "name": "REWE Markt",
+    "companyName": "REWE Schorn oHG",
+    "street": "Peter-Achnitz-Str. 8",
+    "zipCode": "50129",
+    "city": "Bergheim / Niederaussem",
+    "location": {
+      "latitude": 50.97949,
+      "longitude": 6.68198
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/bergheim-niederaussem/1940461/peter-achnitz-str-8/"
+  },
+  {
+    "external_id": "233301",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt Braunschweig GmbH",
+    "street": "Berliner Straße 53",
+    "zipCode": "38104",
+    "city": "Braunschweig",
+    "location": {
+      "latitude": 52.2837,
+      "longitude": 10.57957
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 21:30 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/braunschweig/233301/berliner-straße-53/"
+  },
+  {
+    "external_id": "240050",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Berliner Str. 22a",
+    "zipCode": "63906",
+    "city": "Erlenbach",
+    "location": {
+      "latitude": 49.80564,
+      "longitude": 9.16315
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 20:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/erlenbach/240050/berliner-str-22a/"
+  },
+  {
+    "external_id": "240057",
+    "name": "REWE Servet Ilhan oHG",
+    "companyName": "REWE Servet Ilhan oHG",
+    "street": "Am Schaubacher Berg 19",
+    "zipCode": "64401",
+    "city": "Groß-Bieberau",
+    "location": {
+      "latitude": 49.80941,
+      "longitude": 8.82508
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/groß-bieberau/240057/am-schaubacher-berg-19/"
+  },
+  {
+    "external_id": "240185",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Victor-Slotosch-Str. 11",
+    "zipCode": "60388",
+    "city": "Frankfurt / Bergen-Enkheim",
+    "location": {
+      "latitude": 50.1434,
+      "longitude": 8.74809
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Fr",
+        "hours": "07:00 - 00:00 Uhr",
+        "openingType": "REGULAR"
+      },
+      {
+        "days": "Sa",
+        "hours": "07:00 - 23:30 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/frankfurt-bergen-enkheim/240185/victor-slotosch-str-11/"
+  },
+  {
+    "external_id": "240188",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Katharinenstr. 1/Berliner Platz",
+    "zipCode": "61476",
+    "city": "Kronberg",
+    "location": {
+      "latitude": 50.17855,
+      "longitude": 8.51105
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/kronberg/240188/katharinenstr-1-berliner-platz/"
+  },
+  {
+    "external_id": "240354",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Marktstr. 1",
+    "zipCode": "60388",
+    "city": "Frankfurt / Bergen-Enkheim",
+    "location": {
+      "latitude": 50.15517,
+      "longitude": 8.74878
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/frankfurt-bergen-enkheim/240354/marktstr-1/"
+  },
+  {
+    "external_id": "240460",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Berger Str. 96",
+    "zipCode": "60316",
+    "city": "Frankfurt/Bornheim",
+    "location": {
+      "latitude": 50.12187,
+      "longitude": 8.69941
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/frankfurt-bornheim/240460/berger-str-96/"
+  },
+  {
+    "external_id": "240493",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Bergerstr. 161",
+    "zipCode": "60385",
+    "city": "Frankfurt / Nordend-Ost",
+    "location": {
+      "latitude": 50.12497,
+      "longitude": 8.70524
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/frankfurt-nordend-ost/240493/bergerstr-161/"
+  },
+  {
+    "external_id": "240573",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Berliner Allee 59",
+    "zipCode": "64295",
+    "city": "Darmstadt",
+    "location": {
+      "latitude": 49.86706,
+      "longitude": 8.63291
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/darmstadt/240573/berliner-allee-59/"
+  },
+  {
+    "external_id": "240788",
+    "name": "REWE Markt",
+    "companyName": "REWE Regiemarkt GmbH - Mitte -",
+    "street": "Berliner Straße 3a",
+    "zipCode": "64732",
+    "city": "Bad König",
+    "location": {
+      "latitude": 49.74904,
+      "longitude": 9.0028
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/bad-könig/240788/berliner-straße-3a/"
+  },
+  {
+    "external_id": "241190",
+    "name": "REWE Markt",
+    "companyName": "REWE Stefan Zizek oHG",
+    "street": "Berliner Straße 207-211",
+    "zipCode": "65205",
+    "city": "Wiesbaden / Erbenheim",
+    "location": {
+      "latitude": 50.05773,
+      "longitude": 8.29009
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 21:30 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/wiesbaden-erbenheim/241190/berliner-straße-207-211/"
+  },
+  {
+    "external_id": "25819",
+    "name": "REWE Markt",
+    "companyName": "Rainer Littau Einzelhandels oHG",
+    "street": "Präsidentenstr. 41",
+    "zipCode": "59192",
+    "city": "Bergkamen",
+    "location": {
+      "latitude": 51.61976,
+      "longitude": 7.63873
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 20:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/bergkamen/25819/präsidentenstr-41/"
+  },
+  {
+    "external_id": "25830",
+    "name": "REWE Markt",
+    "companyName": "Feldkamp Einzelhandels oHG",
+    "street": "Trompeter Straße 12 a",
+    "zipCode": "47228",
+    "city": "Duisburg / Bergheim",
+    "location": {
+      "latitude": 51.41115,
+      "longitude": 6.68211
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "06:30 - 21:30 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/duisburg-bergheim/25830/trompeter-straße-12-a/"
+  },
+  {
+    "external_id": "260018",
+    "name": "REWE Liebendahl",
+    "companyName": "Liebendahl EH-oHG",
+    "street": "Jahnstraße 90d",
+    "zipCode": "59192",
+    "city": "Bergkamen",
+    "location": {
+      "latitude": 51.6162,
+      "longitude": 7.59874
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 20:30 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/bergkamen/260018/jahnstraße-90d/"
+  },
+  {
+    "external_id": "260035",
+    "name": "REWE Markt",
+    "companyName": "Hannelore Kamp",
+    "street": "Berghoferstr. 163",
+    "zipCode": "44269",
+    "city": "Dortmund",
+    "location": {
+      "latitude": 51.47779,
+      "longitude": 7.53566
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 20:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/dortmund/260035/berghoferstr-163/"
+  },
+  {
+    "external_id": "260043",
+    "name": "REWE voll pflanzlich",
+    "companyName": "REWE Dennis Henkelmann oHG",
+    "street": "Warschauer Str. 33",
+    "zipCode": "10243",
+    "city": "Berlin / Friedrichhain",
+    "location": {
+      "latitude": 52.50774,
+      "longitude": 13.44989
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 23:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-friedrichhain/260043/warschauer-str-33/"
+  },
+  {
+    "external_id": "320170",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Bergerstr. 125-129",
+    "zipCode": "60385",
+    "city": "Frankfurt / Nordend-Ost",
+    "location": {
+      "latitude": 50.12372,
+      "longitude": 8.70271
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/frankfurt-nordend-ost/320170/bergerstr-125-129/"
+  },
+  {
+    "external_id": "320741",
+    "name": "REWE Markt",
+    "companyName": "REWE Oliver Herhaus oHG",
+    "street": "Mittelstr. 4a",
+    "zipCode": "16562",
+    "city": "Hohen Neuendorf OT Bergfelde",
+    "location": {
+      "latitude": 52.6718,
+      "longitude": 13.31704
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "06:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/hohen-neuendorf-ot-bergfelde/320741/mittelstr-4a/"
+  },
+  {
+    "external_id": "321032",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Bergisch Gladbacher Str. 1007",
+    "zipCode": "51069",
+    "city": "Köln",
+    "location": {
+      "latitude": 50.98046,
+      "longitude": 7.07227
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 00:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/köln/321032/bergisch-gladbacher-str-1007/"
+  },
+  {
+    "external_id": "321035",
+    "name": "REWE Forssman-Trevedy",
+    "companyName": "REWE Ambroise Forssman-Trevedy OHG",
+    "street": "Odenthaler Str. 196",
+    "zipCode": "51467",
+    "city": "Bergisch Gladbach",
+    "location": {
+      "latitude": 51.00014,
+      "longitude": 7.13283
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/bergisch-gladbach/321035/odenthaler-str-196/"
+  },
+  {
+    "external_id": "4030935",
+    "name": "REWE Janett Kansy",
+    "companyName": "REWE Janett Kansy oHG",
+    "street": "An der Staatsstr. 1",
+    "zipCode": "92348",
+    "city": "Berg bei Neumarkt",
+    "location": {
+      "latitude": 49.31709,
+      "longitude": 11.44968
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 20:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berg-bei-neumarkt/4030935/an-der-staatsstr-1/"
+  },
+  {
+    "external_id": "4031002",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Wollankstr. 16",
+    "zipCode": "13187",
+    "city": "Berlin / Pankow",
+    "location": {
+      "latitude": 52.56636,
+      "longitude": 13.39555
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-pankow/4031002/wollankstr-16/"
+  },
+  {
+    "external_id": "4031014",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Sophie-Charlotten-Str. 41",
+    "zipCode": "14059",
+    "city": "Berlin / Charlottenburg",
+    "location": {
+      "latitude": 52.51342,
+      "longitude": 13.28783
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "06:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-charlottenburg/4031014/sophie-charlotten-str-41/"
+  },
+  {
+    "external_id": "4031023",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Schivelbeiner Str. 38",
+    "zipCode": "10439",
+    "city": "Berlin / Prenzlauer Berg",
+    "location": {
+      "latitude": 52.55072,
+      "longitude": 13.40972
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 23:30 Uhr",
+        "openingType": "REGULAR"
+      },
+      {
+        "days": "05.06.",
+        "hours": "geschlossen",
+        "openingType": "SPECIAL_CLOSING"
+      },
+      {
+        "days": "06.06.",
+        "hours": "geschlossen",
+        "openingType": "SPECIAL_CLOSING"
+      },
+      {
+        "days": "07.06.",
+        "hours": "geschlossen",
+        "openingType": "SPECIAL_CLOSING"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-prenzlauer-berg/4031023/schivelbeiner-str-38/"
+  },
+  {
+    "external_id": "4034042",
+    "name": "REWE Jirko Lehmberg oHG",
+    "companyName": "REWE Jirko Lehmberg oHG",
+    "street": "Wilmersdorfer Str. 109-111",
+    "zipCode": "10627",
+    "city": "Berlin / Wilmersdorf",
+    "location": {
+      "latitude": 52.50642,
+      "longitude": 13.30704
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "06:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-wilmersdorf/4034042/wilmersdorfer-str-109-111/"
+  },
+  {
+    "external_id": "4040012",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Bismarckstr. 68-69",
+    "zipCode": "12157",
+    "city": "Berlin / Steglitz",
+    "location": {
+      "latitude": 52.46175,
+      "longitude": 13.33964
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "06:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      },
+      {
+        "days": "06.06.",
+        "hours": "06:00 - 20:00 Uhr",
+        "openingType": "SPECIAL_OPENING"
+      },
+      {
+        "days": "08.06.",
+        "hours": "geschlossen",
+        "openingType": "SPECIAL_CLOSING"
+      },
+      {
+        "days": "09.06.",
+        "hours": "geschlossen",
+        "openingType": "SPECIAL_CLOSING"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-steglitz/4040012/bismarckstr-68-69/"
+  },
+  {
+    "external_id": "4040021",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Eichenauer Weg 61",
+    "zipCode": "12355",
+    "city": "Berlin / Rudow",
+    "location": {
+      "latitude": 52.41278,
+      "longitude": 13.49329
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-rudow/4040021/eichenauer-weg-61/"
+  },
+  {
+    "external_id": "4040022",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Rauchstr. 56",
+    "zipCode": "13587",
+    "city": "Berlin / Spandau",
+    "location": {
+      "latitude": 52.56156,
+      "longitude": 13.21384
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-spandau/4040022/rauchstr-56/"
+  },
+  {
+    "external_id": "4040034",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Sömmeringstr. 24-26",
+    "zipCode": "10589",
+    "city": "Berlin / Charlottenburg",
+    "location": {
+      "latitude": 52.52342,
+      "longitude": 13.30656
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "06:00 - 23:30 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-charlottenburg/4040034/sömmeringstr-24-26/"
+  },
+  {
+    "external_id": "4040037",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Bayernring 15",
+    "zipCode": "12101",
+    "city": "Berlin / Tempelhof",
+    "location": {
+      "latitude": 52.48366,
+      "longitude": 13.37743
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Fr",
+        "hours": "06:00 - 00:00 Uhr",
+        "openingType": "REGULAR"
+      },
+      {
+        "days": "Sa",
+        "hours": "06:00 - 23:30 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-tempelhof/4040037/bayernring-15/"
+  },
+  {
+    "external_id": "4040067",
+    "name": "REWE Bianca Kröplin ",
+    "companyName": "REWE Bianca Kröplin oHG",
+    "street": "Havemannstr. 12A",
+    "zipCode": "12689",
+    "city": "Berlin / Marzahn",
+    "location": {
+      "latitude": 52.56871,
+      "longitude": 13.56848
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-marzahn/4040067/havemannstr-12a/"
+  },
+  {
+    "external_id": "4040080",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Marzahner Promenade 1",
+    "zipCode": "12679",
+    "city": "Berlin / Marzahn",
+    "location": {
+      "latitude": 52.54443,
+      "longitude": 13.54513
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "08:00 - 20:00 Uhr",
+        "openingType": "REGULAR"
+      },
+      {
+        "days": "21.06.",
+        "hours": "13:00 - 18:00 Uhr",
+        "openingType": "SPECIAL_OPENING"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-marzahn/4040080/marzahner-promenade-1/"
+  },
+  {
+    "external_id": "4040083",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Schönhauser Allee 36-39",
+    "zipCode": "10435",
+    "city": "Berlin / Prenzlauer Berg",
+    "location": {
+      "latitude": 52.53846,
+      "longitude": 13.4128
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Fr",
+        "hours": "07:00 - 00:00 Uhr",
+        "openingType": "REGULAR"
+      },
+      {
+        "days": "Sa",
+        "hours": "07:00 - 23:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-prenzlauer-berg/4040083/schönhauser-allee-36-39/"
+  },
+  {
+    "external_id": "4040089",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Am Ostbahnhof 9",
+    "zipCode": "10243",
+    "city": "Berlin / Friedrichshain",
+    "location": {
+      "latitude": 52.50961,
+      "longitude": 13.43506
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-So",
+        "hours": "06:00 - 00:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-friedrichshain/4040089/am-ostbahnhof-9/"
+  },
+  {
+    "external_id": "4040098",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Lausanner Str. 82 / Goerzallee",
+    "zipCode": "12205",
+    "city": "Berlin / Lichterfelde",
+    "location": {
+      "latitude": 52.42626,
+      "longitude": 13.30248
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 21:45 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-lichterfelde/4040098/lausanner-str-82-goerzallee/"
+  },
+  {
+    "external_id": "4040108",
+    "name": "REWE Markt",
+    "companyName": "REWE Manuela Hammel oHG",
+    "street": "Eldenaer Str. 42",
+    "zipCode": "10247",
+    "city": "Berlin / Friedrichshain",
+    "location": {
+      "latitude": 52.52043,
+      "longitude": 13.46308
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 23:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-friedrichshain/4040108/eldenaer-str-42/"
+  },
+  {
+    "external_id": "4040128",
+    "name": "REWE Markt",
+    "companyName": "REWE Paul Golly oHG",
+    "street": "Ladiusstr. 26",
+    "zipCode": "14165",
+    "city": "Berlin / Zehlendorf",
+    "location": {
+      "latitude": 52.41123,
+      "longitude": 13.26254
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-zehlendorf/4040128/ladiusstr-26/"
+  },
+  {
+    "external_id": "4040129",
+    "name": "Nahkauf",
+    "companyName": "Thanh Phong Nguyen",
+    "street": "Bernauer Str. 100",
+    "zipCode": "16515",
+    "city": "Oranienburg",
+    "location": {
+      "latitude": 52.75879,
+      "longitude": 13.25355
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "08:00 - 20:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/oranienburg/4040129/bernauer-str-100/"
+  },
+  {
+    "external_id": "4040133",
+    "name": "Nahkauf",
+    "companyName": "Ngo's Food GmbH",
+    "street": "Onkel-Tom-Str. 99",
+    "zipCode": "14169",
+    "city": "Berlin",
+    "location": {
+      "latitude": 52.44994,
+      "longitude": 13.2528
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 20:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin/4040133/onkel-tom-str-99/"
+  },
+  {
+    "external_id": "4040137",
+    "name": "Nahkauf",
+    "companyName": "Trong Binh Nguyen",
+    "street": "Liebenowzeile 29",
+    "zipCode": "12167",
+    "city": "Berlin",
+    "location": {
+      "latitude": 52.44934,
+      "longitude": 13.34991
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:30 - 20:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin/4040137/liebenowzeile-29/"
+  },
+  {
+    "external_id": "4040139",
+    "name": "REWE Heerstr.",
+    "companyName": "Peterson Warenhandels GmbH & Co. KG",
+    "street": "Heerstr. 560",
+    "zipCode": "13591",
+    "city": "Berlin / Staaken",
+    "location": {
+      "latitude": 52.52493,
+      "longitude": 13.14184
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-staaken/4040139/heerstr-560/"
+  },
+  {
+    "external_id": "4040143",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt R. Jarius oHG",
+    "street": "Wendenschloßstr. 354-358",
+    "zipCode": "12557",
+    "city": "Berlin / Köpenick",
+    "location": {
+      "latitude": 52.42444,
+      "longitude": 13.58622
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "06:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-köpenick/4040143/wendenschloßstr-354-358/"
+  },
+  {
+    "external_id": "4040147",
+    "name": "REWE Schneider Schönow",
+    "companyName": "REWE Markt René Schneider oHG",
+    "street": "Bernauer Allee 18",
+    "zipCode": "16321",
+    "city": "Bernau bei Berlin / Schönow",
+    "location": {
+      "latitude": 52.67713,
+      "longitude": 13.54451
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/bernau-bei-berlin-schönow/4040147/bernauer-allee-18/"
+  },
+  {
+    "external_id": "4040191",
+    "name": "Nahkauf",
+    "companyName": "Enrico Neher",
+    "street": "Schulstr. 2 A",
+    "zipCode": "19348",
+    "city": "Berge",
+    "location": {
+      "latitude": 53.23887,
+      "longitude": 11.87365
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Fr",
+        "hours": "08:00 - 18:30 Uhr",
+        "openingType": "REGULAR"
+      },
+      {
+        "days": "Sa",
+        "hours": "07:00 - 12:30 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berge/4040191/schulstr-2-a/"
+  },
+  {
+    "external_id": "4040212",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt M. Kramer oHG",
+    "street": "Oberweißbacher Str. 2-4",
+    "zipCode": "12687",
+    "city": "Berlin / Marzahn",
+    "location": {
+      "latitude": 52.55656,
+      "longitude": 13.57148
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "06:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-marzahn/4040212/oberweißbacher-str-2-4/"
+  },
+  {
+    "external_id": "4040216",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt Thomas Pausch oHG",
+    "street": "Emmentaler Str. 122-130",
+    "zipCode": "13409",
+    "city": "Berlin / Reinickendorf",
+    "location": {
+      "latitude": 52.57179,
+      "longitude": 13.3655
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-reinickendorf/4040216/emmentaler-str-122-130/"
+  },
+  {
+    "external_id": "4040225",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Am Borsigturm 2",
+    "zipCode": "13507",
+    "city": "Berlin / Tegel",
+    "location": {
+      "latitude": 52.58442,
+      "longitude": 13.28521
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-tegel/4040225/am-borsigturm-2/"
+  },
+  {
+    "external_id": "4040229",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Walther-Schreiber-Platz 1",
+    "zipCode": "12161",
+    "city": "Berlin / Friedenau",
+    "location": {
+      "latitude": 52.4659,
+      "longitude": 13.32772
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "08:00 - 21:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-friedenau/4040229/walther-schreiber-platz-1/"
+  },
+  {
+    "external_id": "4040231",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Breisgauer Str. 1/3",
+    "zipCode": "14129",
+    "city": "Berlin / Zehlendorf",
+    "location": {
+      "latitude": 52.43951,
+      "longitude": 13.21579
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "06:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-zehlendorf/4040231/breisgauer-str-1-3/"
+  },
+  {
+    "external_id": "4040239",
+    "name": "REWE Markt",
+    "companyName": "REWE Neda Musura oHG",
+    "street": "Rheinstr. 14",
+    "zipCode": "12159",
+    "city": "Berlin / Friedenau",
+    "location": {
+      "latitude": 52.46977,
+      "longitude": 13.33309
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "06:00 - 23:30 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-friedenau/4040239/rheinstr-14/"
+  },
+  {
+    "external_id": "4040244",
+    "name": "REWE Markt",
+    "companyName": "REWE Simone Lehmann oHG",
+    "street": "Otto-Suhr-Allee 80-82",
+    "zipCode": "10585",
+    "city": "Berlin / Charlottenburg",
+    "location": {
+      "latitude": 52.5165,
+      "longitude": 13.31042
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-charlottenburg/4040244/otto-suhr-allee-80-82/"
+  },
+  {
+    "external_id": "4040245",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt Wörner oHG",
+    "street": "Karl-Marx-Str. 92-98",
+    "zipCode": "12043",
+    "city": "Berlin / Neukölln",
+    "location": {
+      "latitude": 52.47986,
+      "longitude": 13.43576
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Fr",
+        "hours": "07:00 - 00:00 Uhr",
+        "openingType": "REGULAR"
+      },
+      {
+        "days": "Sa",
+        "hours": "07:00 - 23:30 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-neukölln/4040245/karl-marx-str-92-98/"
+  },
+  {
+    "external_id": "4040246",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt K. Feibig oHG",
+    "street": "Auerbachstr. 12",
+    "zipCode": "14193",
+    "city": "Berlin / Grunewald",
+    "location": {
+      "latitude": 52.48744,
+      "longitude": 13.26138
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 21:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-grunewald/4040246/auerbachstr-12/"
+  },
+  {
+    "external_id": "4040267",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt Juliane Hoff oHG",
+    "street": "Ernst-Barlach-Str. 19",
+    "zipCode": "13059",
+    "city": "Berlin / Neu-Hohenschönhausen",
+    "location": {
+      "latitude": 52.57495,
+      "longitude": 13.50963
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-neu-hohenschönhausen/4040267/ernst-barlach-str-19/"
+  },
+  {
+    "external_id": "4040274",
+    "name": "REWE Martin Nothelle oHG",
+    "companyName": "REWE Martin Nothelle oHG",
+    "street": "Rollbergstr. 59",
+    "zipCode": "12053",
+    "city": "Berlin / Neukölln",
+    "location": {
+      "latitude": 52.47855,
+      "longitude": 13.42977
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Fr",
+        "hours": "06:00 - 00:00 Uhr",
+        "openingType": "REGULAR"
+      },
+      {
+        "days": "Sa",
+        "hours": "06:00 - 23:30 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-neukölln/4040274/rollbergstr-59/"
+  },
+  {
+    "external_id": "4040276",
+    "name": "REWE Markt",
+    "companyName": "REWE Arina Fester oHG",
+    "street": "Brodowiner Ring 8",
+    "zipCode": "12679",
+    "city": "Berlin / Marzahn",
+    "location": {
+      "latitude": 52.5502,
+      "longitude": 13.57839
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-marzahn/4040276/brodowiner-ring-8/"
+  },
+  {
+    "external_id": "4040282",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt Carmen Jaenisch OHG",
+    "street": "Greifswalder Str. 154-156",
+    "zipCode": "10409",
+    "city": "Berlin / Prenzlauer Berg",
+    "location": {
+      "latitude": 52.5438,
+      "longitude": 13.44137
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "06:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-prenzlauer-berg/4040282/greifswalder-str-154-156/"
+  },
+  {
+    "external_id": "4040291",
+    "name": "Nahkauf",
+    "companyName": "Thi Thanh Thao Nguyen",
+    "street": "Gersdorfer Str. 40",
+    "zipCode": "12105",
+    "city": "Berlin",
+    "location": {
+      "latitude": 52.44662,
+      "longitude": 13.37165
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Fr",
+        "hours": "08:00 - 20:00 Uhr",
+        "openingType": "REGULAR"
+      },
+      {
+        "days": "Sa",
+        "hours": "08:00 - 16:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin/4040291/gersdorfer-str-40/"
+  },
+  {
+    "external_id": "4040312",
+    "name": "REWE Markt",
+    "companyName": "REWE Selim Senkaya oHG",
+    "street": "Kurt-Schumacher-Damm 1",
+    "zipCode": "13405",
+    "city": "Berlin / Reinickendorf",
+    "location": {
+      "latitude": 52.56293,
+      "longitude": 13.32918
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-reinickendorf/4040312/kurt-schumacher-damm-1/"
+  },
+  {
+    "external_id": "4040330",
+    "name": "REWE Markt",
+    "companyName": "REWE Tino Reitmann oHG",
+    "street": "Karlsplatz 25",
+    "zipCode": "06406",
+    "city": "Bernburg",
+    "location": {
+      "latitude": 51.79367,
+      "longitude": 11.74239
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Fr",
+        "hours": "06:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      },
+      {
+        "days": "Sa",
+        "hours": "06:00 - 20:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/bernburg/4040330/karlsplatz-25/"
+  },
+  {
+    "external_id": "4040360",
+    "name": "Nahkauf",
+    "companyName": "Michael Lind",
+    "street": "Bottroper Weg 18",
+    "zipCode": "13507",
+    "city": "Berlin",
+    "location": {
+      "latitude": 52.57684,
+      "longitude": 13.27813
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin/4040360/bottroper-weg-18/"
+  },
+  {
+    "external_id": "4040366",
+    "name": "REWE Jana Gießler oHG",
+    "companyName": "REWE Jana Gießler oHG",
+    "street": "Bahnhofstr. 15",
+    "zipCode": "99438",
+    "city": "Bad Berka",
+    "location": {
+      "latitude": 50.89611,
+      "longitude": 11.28252
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Fr",
+        "hours": "06:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      },
+      {
+        "days": "Sa",
+        "hours": "06:00 - 20:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/bad-berka/4040366/bahnhofstr-15/"
+  },
+  {
+    "external_id": "4040370",
+    "name": "REWE Markt",
+    "companyName": "REWE Melanie Tolk oHG",
+    "street": "Anton-Saefkow-Platz 10",
+    "zipCode": "10369",
+    "city": "Berlin / Lichtenberg",
+    "location": {
+      "latitude": 52.52867,
+      "longitude": 13.47051
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 23:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-lichtenberg/4040370/anton-saefkow-platz-10/"
+  },
+  {
+    "external_id": "4040373",
+    "name": "REWE Markt",
+    "companyName": "REWE Janine Matthes oHG",
+    "street": "Wuhlestr. 31",
+    "zipCode": "12683",
+    "city": "Berlin / Biesdorf",
+    "location": {
+      "latitude": 52.52809,
+      "longitude": 13.56906
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "06:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-biesdorf/4040373/wuhlestr-31/"
+  },
+  {
+    "external_id": "4040375",
+    "name": "Nahkauf",
+    "companyName": "Ralf Oelmann",
+    "street": "Drakestr. 33 A",
+    "zipCode": "12205",
+    "city": "Berlin / Lichterfelde",
+    "location": {
+      "latitude": 52.44332,
+      "longitude": 13.29681
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-lichterfelde/4040375/drakestr-33-a/"
+  },
+  {
+    "external_id": "4040379",
+    "name": "Nahkauf",
+    "companyName": "Ralf Oelmann",
+    "street": "Berliner Allee 261-269",
+    "zipCode": "13088",
+    "city": "Berlin",
+    "location": {
+      "latitude": 52.56195,
+      "longitude": 13.46768
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 20:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin/4040379/berliner-allee-261-269/"
+  },
+  {
+    "external_id": "4040389",
+    "name": "Nahkauf",
+    "companyName": "Hoang Tung Le",
+    "street": "Hirtsieferzeile 42-43",
+    "zipCode": "12351",
+    "city": "Berlin",
+    "location": {
+      "latitude": 52.43116,
+      "longitude": 13.46962
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "08:00 - 20:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin/4040389/hirtsieferzeile-42-43/"
+  },
+  {
+    "external_id": "4040399",
+    "name": "Nahkauf",
+    "companyName": "Ralf Oelmann",
+    "street": "Badensche Str. 56",
+    "zipCode": "10825",
+    "city": "Berlin/Schöneberg",
+    "location": {
+      "latitude": 52.48547,
+      "longitude": 13.34081
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-schöneberg/4040399/badensche-str-56/"
+  },
+  {
+    "external_id": "4040419",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt Ricardo Steinbrück oHG",
+    "street": "Randowstr. 3",
+    "zipCode": "13057",
+    "city": "Berlin / Hohenschönhausen",
+    "location": {
+      "latitude": 52.5671,
+      "longitude": 13.5281
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-hohenschönhausen/4040419/randowstr-3/"
+  },
+  {
+    "external_id": "4040441",
+    "name": "REWE Markt",
+    "companyName": "REWE Ilka Schilling oHG",
+    "street": "Tempelhofer Weg 11",
+    "zipCode": "12347",
+    "city": "Berlin / Britz",
+    "location": {
+      "latitude": 52.45843,
+      "longitude": 13.42504
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-britz/4040441/tempelhofer-weg-11/"
+  },
+  {
+    "external_id": "4040446",
+    "name": "REWE Markt",
+    "companyName": "REWE Marco Sterna oHG",
+    "street": "Rustweg 1",
+    "zipCode": "13587",
+    "city": "Berlin / Spandau",
+    "location": {
+      "latitude": 52.57589,
+      "longitude": 13.21338
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 23:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-spandau/4040446/rustweg-1/"
+  },
+  {
+    "external_id": "4040448",
+    "name": "REWE Markt",
+    "companyName": "REWE Regiemarkt GmbH - Ost -",
+    "street": "Friedrichstr. 67-70",
+    "zipCode": "10117",
+    "city": "Berlin / Mitte",
+    "location": {
+      "latitude": 52.51251,
+      "longitude": 13.39046
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "08:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-mitte/4040448/friedrichstr-67-70/"
+  },
+  {
+    "external_id": "4040479",
+    "name": "REWE Markt",
+    "companyName": "REWE Andy Linde oHG",
+    "street": "Wildhüterweg 42-46",
+    "zipCode": "12353",
+    "city": "Berlin / Buckow",
+    "location": {
+      "latitude": 52.42203,
+      "longitude": 13.44877
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-buckow/4040479/wildhüterweg-42-46/"
+  },
+  {
+    "external_id": "4040488",
+    "name": "REWE Markt",
+    "companyName": "REWE Hendryk Kania oHG",
+    "street": "Bahnhofstr. 23-25",
+    "zipCode": "12555",
+    "city": "Berlin / Köpenick",
+    "location": {
+      "latitude": 52.45773,
+      "longitude": 13.57891
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "06:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-köpenick/4040488/bahnhofstr-23-25/"
+  },
+  {
+    "external_id": "4040494",
+    "name": "REWE Nicole Köhler oHG",
+    "companyName": "REWE Nicole Köhler oHG",
+    "street": "Berliner Damm 169",
+    "zipCode": "15831",
+    "city": "Blankenfelde-Mahlow",
+    "location": {
+      "latitude": 52.35328,
+      "longitude": 13.40592
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/blankenfelde-mahlow/4040494/berliner-damm-169/"
+  },
+  {
+    "external_id": "4040495",
+    "name": "Nahkauf",
+    "companyName": "Silvia Brigitte Becker",
+    "street": "Hauptstr. 66",
+    "zipCode": "15378",
+    "city": "Rüdersdorf b. Berlin / OT Herzfelde",
+    "location": {
+      "latitude": 52.48242,
+      "longitude": 13.84681
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 20:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/rüdersdorf-b-berlin-ot-herzfelde/4040495/hauptstr-66/"
+  },
+  {
+    "external_id": "4040497",
+    "name": "REWE Markt",
+    "companyName": "REWE Sabrina Fischer oHG",
+    "street": "Zepernicker Str. 11",
+    "zipCode": "13125",
+    "city": "Berlin / Buch",
+    "location": {
+      "latitude": 52.64075,
+      "longitude": 13.51543
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "06:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-buch/4040497/zepernicker-str-11/"
+  },
+  {
+    "external_id": "4040502",
+    "name": "REWE Markt",
+    "companyName": "REWE Daniel Kühn oHG",
+    "street": "Pasewalker Str. 115",
+    "zipCode": "13127",
+    "city": "Berlin / Französisch Buchholz",
+    "location": {
+      "latitude": 52.58429,
+      "longitude": 13.42992
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "06:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-französisch-buchholz/4040502/pasewalker-str-115/"
+  },
+  {
+    "external_id": "4040505",
+    "name": "REWE Markt",
+    "companyName": "REWE Regiemarkt GmbH - Ost -",
+    "street": "Bernburger Str. 10",
+    "zipCode": "06420",
+    "city": "Könnern",
+    "location": {
+      "latitude": 51.67542,
+      "longitude": 11.77284
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Fr",
+        "hours": "06:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      },
+      {
+        "days": "Sa",
+        "hours": "06:00 - 20:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/könnern/4040505/bernburger-str-10/"
+  },
+  {
+    "external_id": "4040705",
+    "name": "REWE Markt",
+    "companyName": "REWE Benjamin Schober oHG",
+    "street": "Köpenicker Str. 192-198",
+    "zipCode": "12683",
+    "city": "Berlin / Biesdorf",
+    "location": {
+      "latitude": 52.48667,
+      "longitude": 13.55963
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-biesdorf/4040705/köpenicker-str-192-198/"
+  },
+  {
+    "external_id": "4040707",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt M. Paczek oHG",
+    "street": "Rummelsburger Str. 16",
+    "zipCode": "12459",
+    "city": "Berlin / Oberschöneweide",
+    "location": {
+      "latitude": 52.46933,
+      "longitude": 13.51243
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "06:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-oberschöneweide/4040707/rummelsburger-str-16/"
+  },
+  {
+    "external_id": "4040708",
+    "name": "REWE Mike Baer",
+    "companyName": "REWE Mike Baer oHG",
+    "street": "Schnellerstr. 74",
+    "zipCode": "12439",
+    "city": "Berlin / Niederschöneweide",
+    "location": {
+      "latitude": 52.45142,
+      "longitude": 13.52978
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "06:00 - 21:30 Uhr",
+        "openingType": "REGULAR"
+      },
+      {
+        "days": "29.06.",
+        "hours": "geschlossen",
+        "openingType": "SPECIAL_CLOSING"
+      },
+      {
+        "days": "30.06.",
+        "hours": "geschlossen",
+        "openingType": "SPECIAL_CLOSING"
+      },
+      {
+        "days": "01.07.",
+        "hours": "geschlossen",
+        "openingType": "SPECIAL_CLOSING"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-niederschöneweide/4040708/schnellerstr-74/"
+  },
+  {
+    "external_id": "4040712",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt Kerstin Daedelow oHG",
+    "street": "Kiefholzstr. 50",
+    "zipCode": "12435",
+    "city": "Berlin / Alt Treptow",
+    "location": {
+      "latitude": 52.48558,
+      "longitude": 13.45686
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-alt-treptow/4040712/kiefholzstr-50/"
+  },
+  {
+    "external_id": "4040715",
+    "name": "REWE Markt",
+    "companyName": "REWE Douglas Toll oHG",
+    "street": "Alte Potsdamer Str. 7",
+    "zipCode": "10785",
+    "city": "Berlin / Tiergarten",
+    "location": {
+      "latitude": 52.50648,
+      "longitude": 13.37377
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "08:00 - 21:30 Uhr",
+        "openingType": "REGULAR"
+      },
+      {
+        "days": "21.06.",
+        "hours": "13:00 - 18:00 Uhr",
+        "openingType": "SPECIAL_OPENING"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-tiergarten/4040715/alte-potsdamer-str-7/"
+  },
+  {
+    "external_id": "4040719",
+    "name": "REWE Markt",
+    "companyName": "REWE Regiemarkt GmbH - Ost -",
+    "street": "Thiemannstr. 9-11",
+    "zipCode": "12059",
+    "city": "Berlin / Neukölln",
+    "location": {
+      "latitude": 52.47862,
+      "longitude": 13.45105
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-neukölln/4040719/thiemannstr-9-11/"
+  },
+  {
+    "external_id": "4040722",
+    "name": "REWE Madelaine Pfau oHG",
+    "companyName": "REWE Madelaine Pfau oHG",
+    "street": "Neumannstr. 13",
+    "zipCode": "13189",
+    "city": "Berlin / Pankow",
+    "location": {
+      "latitude": 52.56129,
+      "longitude": 13.42271
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "08:00 - 21:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-pankow/4040722/neumannstr-13/"
+  },
+  {
+    "external_id": "4062467",
+    "name": "Nahkauf",
+    "companyName": "Thanh Hai Tran",
+    "street": "Dessauer Str. 64",
+    "zipCode": "12249",
+    "city": "Berlin",
+    "location": {
+      "latitude": 52.42926,
+      "longitude": 13.34661
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 20:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin/4062467/dessauer-str-64/"
+  },
+  {
+    "external_id": "410561",
+    "name": "REWE Markt",
+    "companyName": "REWE Josef Seifert oHG",
+    "street": "Pankstr. 39",
+    "zipCode": "13357",
+    "city": "Berlin",
+    "location": {
+      "latitude": 52.54946,
+      "longitude": 13.37761
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin/410561/pankstr-39/"
+  },
+  {
+    "external_id": "410717",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Kurfürstendamm 146-147",
+    "zipCode": "10709",
+    "city": "Berlin / Halensee",
+    "location": {
+      "latitude": 52.49833,
+      "longitude": 13.29978
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Fr",
+        "hours": "06:00 - 00:00 Uhr",
+        "openingType": "REGULAR"
+      },
+      {
+        "days": "Sa",
+        "hours": "06:00 - 23:30 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-halensee/410717/kurfürstendamm-146-147/"
+  },
+  {
+    "external_id": "440351",
+    "name": "REWE Markt",
+    "companyName": "REWE Arthur Sattler oHG",
+    "street": "Bernd-Motzkus-Str. 7",
+    "zipCode": "83512",
+    "city": "Wasserburg a. Inn",
+    "location": {
+      "latitude": 48.05032,
+      "longitude": 12.22137
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 20:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/wasserburg-a-inn/440351/bernd-motzkus-str-7/"
+  },
+  {
+    "external_id": "440509",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Josephsburgstr. 37",
+    "zipCode": "81673",
+    "city": "München / Berg am Laim",
+    "location": {
+      "latitude": 48.12656,
+      "longitude": 11.63163
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 20:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/münchen-berg-am-laim/440509/josephsburgstr-37/"
+  },
+  {
+    "external_id": "440526",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Perchastr. 3A",
+    "zipCode": "82335",
+    "city": "Berg",
+    "location": {
+      "latitude": 47.96736,
+      "longitude": 11.35584
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 20:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berg/440526/perchastr-3a/"
+  },
+  {
+    "external_id": "440960",
+    "name": "REWE Markt",
+    "companyName": "Senkaya Supermarkt GmbH & Co. Warenhandel KG",
+    "street": "Bartningallee 3",
+    "zipCode": "10557",
+    "city": "Berlin / Hansaviertel",
+    "location": {
+      "latitude": 52.51876,
+      "longitude": 13.3423
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-hansaviertel/440960/bartningallee-3/"
+  },
+  {
+    "external_id": "440963",
+    "name": "REWE Markt",
+    "companyName": "GEBA Supermärkte GmbH & Co. KG",
+    "street": "Potsdamer Str. 128",
+    "zipCode": "10783",
+    "city": "Berlin / Schöneberg",
+    "location": {
+      "latitude": 52.49925,
+      "longitude": 13.36223
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "06:00 - 23:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-schöneberg/440963/potsdamer-str-128/"
+  },
+  {
+    "external_id": "440967",
+    "name": "Nahkauf",
+    "companyName": "Michael Lind",
+    "street": "Kiehlufer 75-79",
+    "zipCode": "12059",
+    "city": "Berlin",
+    "location": {
+      "latitude": 52.4838,
+      "longitude": 13.44789
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 23:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin/440967/kiehlufer-75-79/"
+  },
+  {
+    "external_id": "440968",
+    "name": "REWE Markt",
+    "companyName": "REWE Regiemarkt GmbH - Ost -",
+    "street": "Alt Rudow 64",
+    "zipCode": "12355",
+    "city": "Berlin / Rudow",
+    "location": {
+      "latitude": 52.41709,
+      "longitude": 13.49571
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "06:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-rudow/440968/alt-rudow-64/"
+  },
+  {
+    "external_id": "440969",
+    "name": "REWE Schönwalder",
+    "companyName": "Peterson Warenhandels GmbH & Co. KG",
+    "street": "Schönwalder Str. 32-33",
+    "zipCode": "13585",
+    "city": "Berlin / Spandau",
+    "location": {
+      "latitude": 52.54902,
+      "longitude": 13.20109
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Do",
+        "hours": "06:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      },
+      {
+        "days": "Fr-Sa",
+        "hours": "06:00 - 23:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-spandau/440969/schönwalder-str-32-33/"
+  },
+  {
+    "external_id": "440971",
+    "name": "REWE Sakrower",
+    "companyName": "Peterson Warenhandels GmbH & Co. KG",
+    "street": "Sakrower Landstr. 1a",
+    "zipCode": "14089",
+    "city": "Berlin / Kladow",
+    "location": {
+      "latitude": 52.45285,
+      "longitude": 13.143
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-kladow/440971/sakrower-landstr-1a/"
+  },
+  {
+    "external_id": "440972",
+    "name": "REWE Markt",
+    "companyName": "REWE Mandy Görlitz-Krüger oHG",
+    "street": "Schlangenbader Str. 25",
+    "zipCode": "14197",
+    "city": "Berlin / Wilmersdorf",
+    "location": {
+      "latitude": 52.47295,
+      "longitude": 13.30782
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "06:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-wilmersdorf/440972/schlangenbader-str-25/"
+  },
+  {
+    "external_id": "441133",
+    "name": "REWE Markt",
+    "companyName": "Littau EH oHG",
+    "street": "Am Roggenkamp 3-5",
+    "zipCode": "59192",
+    "city": "Bergkamen",
+    "location": {
+      "latitude": 51.61702,
+      "longitude": 7.6576
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "06:00 - 21:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/bergkamen/441133/am-roggenkamp-3-5/"
+  },
+  {
+    "external_id": "461903",
+    "name": "REWE Markt",
+    "companyName": "REWE Petra Landes oHG",
+    "street": "Bertoldsheimer Str. 82",
+    "zipCode": "86666",
+    "city": "Burgheim",
+    "location": {
+      "latitude": 48.7084,
+      "longitude": 11.01107
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 20:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/burgheim/461903/bertoldsheimer-str-82/"
+  },
+  {
+    "external_id": "5100025",
+    "name": "REWE in der WATERKANT Berlin",
+    "companyName": "REWE Dominik Zupp oHG",
+    "street": "Daumstr. 90",
+    "zipCode": "13599",
+    "city": "Berlin / Haselhorst",
+    "location": {
+      "latitude": 52.55466,
+      "longitude": 13.22609
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-haselhorst/5100025/daumstr-90/"
+  },
+  {
+    "external_id": "531379",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Am Schwarzen Berge 71",
+    "zipCode": "38112",
+    "city": "Braunschweig",
+    "location": {
+      "latitude": 52.29189,
+      "longitude": 10.5141
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 21:30 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/braunschweig/531379/am-schwarzen-berge-71/"
+  },
+  {
+    "external_id": "533549",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Großbeerenstr. 62,64",
+    "zipCode": "12107",
+    "city": "Berlin / Mariendorf",
+    "location": {
+      "latitude": 52.43424,
+      "longitude": 13.3769
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Fr",
+        "hours": "06:00 - 00:00 Uhr",
+        "openingType": "REGULAR"
+      },
+      {
+        "days": "Sa",
+        "hours": "06:00 - 23:30 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-mariendorf/533549/großbeerenstr-62-64/"
+  },
+  {
+    "external_id": "540184",
+    "name": "REWE Familie Hagen",
+    "companyName": "REWE Stefan Hagen oHG",
+    "street": "Berliner Freiheit 11",
+    "zipCode": "28327",
+    "city": "Bremen / Vahr",
+    "location": {
+      "latitude": 53.08017,
+      "longitude": 8.89289
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Mi",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      },
+      {
+        "days": "Do-Sa",
+        "hours": "07:00 - 23:30 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/bremen-vahr/540184/berliner-freiheit-11/"
+  },
+  {
+    "external_id": "540680",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Berliner Allee 38-44/Her.-Cent.",
+    "zipCode": "22850",
+    "city": "Norderstedt",
+    "location": {
+      "latitude": 53.68615,
+      "longitude": 9.98624
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 20:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/norderstedt/540680/berliner-allee-38-44-her-cent-/"
+  },
+  {
+    "external_id": "540883",
+    "name": "REWE Familie Woisch",
+    "companyName": "REWE Daniel Woisch oHG",
+    "street": "Berliner Str. 23",
+    "zipCode": "30952",
+    "city": "Ronnenberg / Empelde",
+    "location": {
+      "latitude": 52.34068,
+      "longitude": 9.66859
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 23:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/ronnenberg-empelde/540883/berliner-str-23/"
+  },
+  {
+    "external_id": "561302",
+    "name": "Nahkauf",
+    "companyName": "Thi Nga Nguyen",
+    "street": "Birkbuschstr. 76 / 77",
+    "zipCode": "12167",
+    "city": "Berlin",
+    "location": {
+      "latitude": 52.44855,
+      "longitude": 13.32543
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Fr",
+        "hours": "08:00 - 20:00 Uhr",
+        "openingType": "REGULAR"
+      },
+      {
+        "days": "Sa",
+        "hours": "08:00 - 18:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin/561302/birkbuschstr-76-77/"
+  },
+  {
+    "external_id": "561404",
+    "name": "Nahkauf",
+    "companyName": "Michael Hellmund",
+    "street": "Görresstr. 3",
+    "zipCode": "12161",
+    "city": "Berlin",
+    "location": {
+      "latitude": 52.47344,
+      "longitude": 13.32756
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "08:00 - 20:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin/561404/görresstr-3/"
+  },
+  {
+    "external_id": "561407",
+    "name": "Nahkauf",
+    "companyName": "Deniz Cetin",
+    "street": "Im Spektefeld 32-34",
+    "zipCode": "13589",
+    "city": "Berlin",
+    "location": {
+      "latitude": 52.5494,
+      "longitude": 13.15598
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 21:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin/561407/im-spektefeld-32-34/"
+  },
+  {
+    "external_id": "561462",
+    "name": "Nahkauf",
+    "companyName": "Thi Thu Trang Pham",
+    "street": "Titiseestr. 3",
+    "zipCode": "13469",
+    "city": "Berlin",
+    "location": {
+      "latitude": 52.60964,
+      "longitude": 13.33536
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "08:00 - 20:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin/561462/titiseestr-3/"
+  },
+  {
+    "external_id": "561542",
+    "name": "Nahkauf",
+    "companyName": "Ralf Oelmann",
+    "street": "Adamstr. 6",
+    "zipCode": "13595",
+    "city": "Berlin",
+    "location": {
+      "latitude": 52.52119,
+      "longitude": 13.19596
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 21:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin/561542/adamstr-6/"
+  },
+  {
+    "external_id": "561547",
+    "name": "Nahkauf",
+    "companyName": "Tuan Khiem Nguyen",
+    "street": "Fritschestr. 45-46",
+    "zipCode": "10627",
+    "city": "Berlin / Charlottenburg",
+    "location": {
+      "latitude": 52.50752,
+      "longitude": 13.30025
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Fr",
+        "hours": "08:00 - 20:00 Uhr",
+        "openingType": "REGULAR"
+      },
+      {
+        "days": "Sa",
+        "hours": "08:00 - 16:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-charlottenburg/561547/fritschestr-45-46/"
+  },
+  {
+    "external_id": "561786",
+    "name": "Nahkauf",
+    "companyName": "Agrargenossenschaft Baalberge eG",
+    "street": "Umgehungsstr. 30",
+    "zipCode": "06406",
+    "city": "Bernburg / Baalberge",
+    "location": {
+      "latitude": 51.76569,
+      "longitude": 11.79819
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Fr",
+        "hours": "08:00 - 18:00 Uhr",
+        "openingType": "REGULAR"
+      },
+      {
+        "days": "Sa",
+        "hours": "08:00 - 12:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/bernburg-baalberge/561786/umgehungsstr-30/"
+  },
+  {
+    "external_id": "561848",
+    "name": "Nahkauf",
+    "companyName": "Jutta Hellmund",
+    "street": "Brüderstr. 10",
+    "zipCode": "16321",
+    "city": "Bernau",
+    "location": {
+      "latitude": 52.67895,
+      "longitude": 13.59094
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Fr",
+        "hours": "07:00 - 19:00 Uhr",
+        "openingType": "REGULAR"
+      },
+      {
+        "days": "Sa",
+        "hours": "07:00 - 16:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/bernau/561848/brüderstr-10/"
+  },
+  {
+    "external_id": "561883",
+    "name": "Nahkauf",
+    "companyName": "Ngo Ngoc, Lam/Nguyen, Le Tran GbR",
+    "street": "Hildburghauser Str. 196 - 198",
+    "zipCode": "12209",
+    "city": "Berlin / Lichterfelde",
+    "location": {
+      "latitude": 52.41878,
+      "longitude": 13.32435
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:30 - 20:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-lichterfelde/561883/hildburghauser-str-196-198/"
+  },
+  {
+    "external_id": "561888",
+    "name": "Nahkauf",
+    "companyName": "Oguz GbR",
+    "street": "Wrangelstr. 75",
+    "zipCode": "10997",
+    "city": "Berlin / Kreuzberg",
+    "location": {
+      "latitude": 52.49796,
+      "longitude": 13.44378
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Fr",
+        "hours": "08:00 - 18:00 Uhr",
+        "openingType": "REGULAR"
+      },
+      {
+        "days": "Sa",
+        "hours": "08:00 - 12:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-kreuzberg/561888/wrangelstr-75/"
+  },
+  {
+    "external_id": "562379",
+    "name": "REWE Daniel Jahn oHG",
+    "companyName": "REWE Daniel Jahn oHG",
+    "street": "Am Eulenberg 2",
+    "zipCode": "97241",
+    "city": "Bergtheim",
+    "location": {
+      "latitude": 49.90339,
+      "longitude": 10.06586
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 20:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/bergtheim/562379/am-eulenberg-2/"
+  },
+  {
+    "external_id": "562485",
+    "name": "REWE Markt",
+    "companyName": "REWE Stefan Zizek oHG",
+    "street": "Berliner Straße 277-279",
+    "zipCode": "65205",
+    "city": "Wiesbaden / Erbenheim",
+    "location": {
+      "latitude": 50.05362,
+      "longitude": 8.29952
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/wiesbaden-erbenheim/562485/berliner-straße-277-279/"
+  },
+  {
+    "external_id": "565071",
+    "name": "Nahkauf",
+    "companyName": "DELIKAT Rudow GmbH",
+    "street": "Lieselotte-Berger-Platz 4-9",
+    "zipCode": "12355",
+    "city": "Berlin",
+    "location": {
+      "latitude": 52.40382,
+      "longitude": 13.50646
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 20:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin/565071/lieselotte-berger-platz-4-9/"
+  },
+  {
+    "external_id": "565077",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt Engels oHG",
+    "street": "Volkradstr. 32",
+    "zipCode": "10319",
+    "city": "Berlin / Friedrichsfelde",
+    "location": {
+      "latitude": 52.4997,
+      "longitude": 13.50745
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-friedrichsfelde/565077/volkradstr-32/"
+  },
+  {
+    "external_id": "565119",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt Claudia Fischer oHG",
+    "street": "Arthur-Scheunert-Allee 71",
+    "zipCode": "14558",
+    "city": "Nuthetal / Bergholz-Rehbrücke",
+    "location": {
+      "latitude": 52.35146,
+      "longitude": 13.10236
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "06:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/nuthetal-bergholz-rehbrücke/565119/arthur-scheunert-allee-71/"
+  },
+  {
+    "external_id": "565157",
+    "name": "REWE Markt",
+    "companyName": "REWE Yassin Al-Roubaie oHG",
+    "street": "Otto-Suhr-Allee 141",
+    "zipCode": "10585",
+    "city": "Berlin / Charlottenburg",
+    "location": {
+      "latitude": 52.51899,
+      "longitude": 13.30077
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "06:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-charlottenburg/565157/otto-suhr-allee-141/"
+  },
+  {
+    "external_id": "565214",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt S. Lehmann oHG",
+    "street": "Ostseestr. 23",
+    "zipCode": "10409",
+    "city": "Berlin / Prenzlauer Berg",
+    "location": {
+      "latitude": 52.55077,
+      "longitude": 13.43267
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "06:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-prenzlauer-berg/565214/ostseestr-23/"
+  },
+  {
+    "external_id": "565217",
+    "name": "REWE Markt",
+    "companyName": "REWE Daniel Schoeneck oHG",
+    "street": "Hauptstr. 65-70",
+    "zipCode": "13127",
+    "city": "Berlin / Französisch Buchholz",
+    "location": {
+      "latitude": 52.60392,
+      "longitude": 13.43247
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "06:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-französisch-buchholz/565217/hauptstr-65-70/"
+  },
+  {
+    "external_id": "565297",
+    "name": "REWE Markt",
+    "companyName": "REWE Paul Golly oHG",
+    "street": "Schloßstr. 34-36/ Grunewaldstr. 1-3",
+    "zipCode": "12163",
+    "city": "Berlin / Steglitz",
+    "location": {
+      "latitude": 52.45767,
+      "longitude": 13.32085
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "08:00 - 20:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-steglitz/565297/schloßstr-34-36-grunewaldstr-1-3/"
+  },
+  {
+    "external_id": "565308",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt R. Reiche oHG",
+    "street": "Turmstr. 60",
+    "zipCode": "10551",
+    "city": "Berlin / Tiergarten",
+    "location": {
+      "latitude": 52.52761,
+      "longitude": 13.32916
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "06:30 - 23:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-tiergarten/565308/turmstr-60/"
+  },
+  {
+    "external_id": "565507",
+    "name": "REWE Markt",
+    "companyName": "REWE Goce Jandreoski oHG",
+    "street": "Berliner Str. 133 / Nordring",
+    "zipCode": "33330",
+    "city": "Gütersloh",
+    "location": {
+      "latitude": 51.91209,
+      "longitude": 8.38632
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/gütersloh/565507/berliner-str-133-nordring/"
+  },
+  {
+    "external_id": "565660",
+    "name": "REWE Center Markus Mauz ",
+    "companyName": "REWE Markus Mauz oHG",
+    "street": "Berliner Platz 1",
+    "zipCode": "69469",
+    "city": "Weinheim",
+    "location": {
+      "latitude": 49.54822,
+      "longitude": 8.65261
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 00:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/weinheim/565660/berliner-platz-1/"
+  },
+  {
+    "external_id": "565950",
+    "name": "REWE Supermarkt",
+    "companyName": "REWE Jan Stahl oHG",
+    "street": "Alte Bergstraße 80",
+    "zipCode": "64665",
+    "city": "Alsbach / Hähnlein",
+    "location": {
+      "latitude": 49.74543,
+      "longitude": 8.62172
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/alsbach-hähnlein/565950/alte-bergstraße-80/"
+  },
+  {
+    "external_id": "7100013",
+    "name": "Nahkauf",
+    "companyName": "Cetin und Cetin GbR",
+    "street": "Haselhorster Damm 27",
+    "zipCode": "13599",
+    "city": "Berlin / Spandau",
+    "location": {
+      "latitude": 52.54482,
+      "longitude": 13.23792
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 20:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-spandau/7100013/haselhorster-damm-27/"
+  },
+  {
+    "external_id": "7200011",
+    "name": "Nahkauf",
+    "companyName": "Öztürk GbR",
+    "street": "Meller Bogen 2",
+    "zipCode": "13403",
+    "city": "Berlin",
+    "location": {
+      "latitude": 52.57076,
+      "longitude": 13.32159
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 21:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin/7200011/meller-bogen-2/"
+  },
+  {
+    "external_id": "831055",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Berliner Str. 5",
+    "zipCode": "69502",
+    "city": "Hemsbach",
+    "location": {
+      "latitude": 49.59387,
+      "longitude": 8.64694
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/hemsbach/831055/berliner-str-5/"
+  },
+  {
+    "external_id": "8321066",
+    "name": "REWE Markt Steven Horn oHG",
+    "companyName": "REWE Steven Horn oHG",
+    "street": "Hallesches Ufer 40",
+    "zipCode": "10963",
+    "city": "Berlin / Kreuzberg",
+    "location": {
+      "latitude": 52.49942,
+      "longitude": 13.3844
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Fr",
+        "hours": "06:00 - 00:00 Uhr",
+        "openingType": "REGULAR"
+      },
+      {
+        "days": "Sa",
+        "hours": "06:00 - 23:30 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-kreuzberg/8321066/hallesches-ufer-40/"
+  },
+  {
+    "external_id": "8321320",
+    "name": "REWE Markt",
+    "companyName": "Michael Brücken Kaufpark GmbH & Co. OHG",
+    "street": "Berlingser Weg 5",
+    "zipCode": "59519",
+    "city": "Möhnesee / Körbecke",
+    "location": {
+      "latitude": 51.4991,
+      "longitude": 8.13089
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/möhnesee-körbecke/8321320/berlingser-weg-5/"
+  },
+  {
+    "external_id": "840168",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Berliner Ring 81",
+    "zipCode": "64625",
+    "city": "Bensheim",
+    "location": {
+      "latitude": 49.68214,
+      "longitude": 8.60486
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 00:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/bensheim/840168/berliner-ring-81/"
+  },
+  {
+    "external_id": "840463",
+    "name": "REWE Julian Schüngel",
+    "companyName": "REWE Julian Schüngel oHG",
+    "street": "Hinter den Höfen 10",
+    "zipCode": "34477",
+    "city": "Twistetal / Berndorf",
+    "location": {
+      "latitude": 51.31292,
+      "longitude": 8.90997
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 21:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/twistetal-berndorf/840463/hinter-den-höfen-10/"
+  },
+  {
+    "external_id": "841039",
+    "name": "REWE MATHEMATIKON ",
+    "companyName": "REWE Sahin Karaaslan GmbH & Co. KG",
+    "street": "Berliner Str. 41-49",
+    "zipCode": "69120",
+    "city": "Heidelberg",
+    "location": {
+      "latitude": 49.41884,
+      "longitude": 8.67572
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 00:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/heidelberg/841039/berliner-str-41-49/"
+  },
+  {
+    "external_id": "841814",
+    "name": "REWE Markt",
+    "companyName": "REWE Kai Windmüller oHG",
+    "street": "Alt-Kaulsdorf 64",
+    "zipCode": "12621",
+    "city": "Berlin / Kaulsdorf",
+    "location": {
+      "latitude": 52.50427,
+      "longitude": 13.59125
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-kaulsdorf/841814/alt-kaulsdorf-64/"
+  },
+  {
+    "external_id": "8534214",
+    "name": "REWE Ann-Kathrin Masanetz oHG",
+    "companyName": "REWE Ann-Kathrin Masanetz oHG",
+    "street": "Berliner Straße 31",
+    "zipCode": "71540",
+    "city": "Murrhardt",
+    "location": {
+      "latitude": 48.9828,
+      "longitude": 9.56006
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/murrhardt/8534214/berliner-straße-31/"
+  },
+  {
+    "external_id": "8536974",
+    "name": "REWE Markt",
+    "companyName": "REWE Marc Balkow oHG",
+    "street": "Frankfurter Allee 113-117",
+    "zipCode": "10365",
+    "city": "Berlin / Lichtenberg",
+    "location": {
+      "latitude": 52.51378,
+      "longitude": 13.47527
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Fr",
+        "hours": "06:00 - 00:00 Uhr",
+        "openingType": "REGULAR"
+      },
+      {
+        "days": "Sa",
+        "hours": "06:00 - 23:30 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-lichtenberg/8536974/frankfurter-allee-113-117/"
+  },
+  {
+    "external_id": "8537529",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Berliner Str. 66",
+    "zipCode": "66839",
+    "city": "Schmelz / Hüttersdorf",
+    "location": {
+      "latitude": 49.42022,
+      "longitude": 6.84209
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 20:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/schmelz-hüttersdorf/8537529/berliner-str-66/"
+  },
+  {
+    "external_id": "8542505",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt GmbH",
+    "street": "Berliner Str. 1",
+    "zipCode": "73728",
+    "city": "Esslingen / Stadtmitte",
+    "location": {
+      "latitude": 48.74034,
+      "longitude": 9.30098
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 00:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/esslingen-stadtmitte/8542505/berliner-str-1/"
+  },
+  {
+    "external_id": "8543379",
+    "name": "REWE Familie Schaurer z`Lern",
+    "companyName": "REWE Marc Schaurer oHG",
+    "street": "St.-Florian-Weg 1",
+    "zipCode": "85459",
+    "city": "Berglern",
+    "location": {
+      "latitude": 48.38855,
+      "longitude": 11.93079
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "06:30 - 20:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berglern/8543379/st-florian-weg-1/"
+  },
+  {
+    "external_id": "8546556",
+    "name": "REWE Staaken",
+    "companyName": "Peterson Warenhandels GmbH & Co. KG",
+    "street": "Brunsbütteler Damm 280",
+    "zipCode": "13591",
+    "city": "Berlin / Staaken",
+    "location": {
+      "latitude": 52.53337,
+      "longitude": 13.15575
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 21:30 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-staaken/8546556/brunsbütteler-damm-280/"
+  },
+  {
+    "external_id": "8547534",
+    "name": "REWE Schmidt",
+    "companyName": "REWE Karsten Schmidt oHG",
+    "street": "Schönhauser Allee 80",
+    "zipCode": "10439",
+    "city": "Berlin",
+    "location": {
+      "latitude": 52.54984,
+      "longitude": 13.41488
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "08:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin/8547534/schönhauser-allee-80/"
+  },
+  {
+    "external_id": "8548072",
+    "name": "REWE Elmas oHG",
+    "companyName": "REWE Aysel Elmas oHG",
+    "street": "Berliner Str. 91",
+    "zipCode": "27232",
+    "city": "Sulingen",
+    "location": {
+      "latitude": 52.6853,
+      "longitude": 8.83344
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/sulingen/8548072/berliner-str-91/"
+  },
+  {
+    "external_id": "861519",
+    "name": "Nahkauf",
+    "companyName": "Peter Claus Ceglarek",
+    "street": "Rotenackerstr. 22",
+    "zipCode": "73732",
+    "city": "Esslingen / St Bernhardt",
+    "location": {
+      "latitude": 48.74766,
+      "longitude": 9.32288
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 20:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/esslingen-st-bernhardt/861519/rotenackerstr-22/"
+  },
+  {
+    "external_id": "861592",
+    "name": "Nahkauf",
+    "companyName": "Thomas Kugler",
+    "street": "Jakob-Krause-Str. 6",
+    "zipCode": "86199",
+    "city": "Augsburg / Bergheim",
+    "location": {
+      "latitude": 48.32042,
+      "longitude": 10.82745
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Fr",
+        "hours": "07:30 - 18:00 Uhr",
+        "openingType": "REGULAR"
+      },
+      {
+        "days": "Sa",
+        "hours": "07:30 - 16:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/augsburg-bergheim/861592/jakob-krause-str-6/"
+  },
+  {
+    "external_id": "865853",
+    "name": "REWE Markt",
+    "companyName": "REWE Markt Schmailzl oHG",
+    "street": "Maria-Hilf-Str. 3",
+    "zipCode": "92334",
+    "city": "Berching",
+    "location": {
+      "latitude": 49.1034,
+      "longitude": 11.44529
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 20:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berching/865853/maria-hilf-str-3/"
+  },
+  {
+    "external_id": "9127936",
+    "name": "REWE Markt",
+    "companyName": "REWE Grit Ehmann oHG",
+    "street": "Bahnhofstr. 53",
+    "zipCode": "18528",
+    "city": "Bergen auf Rügen",
+    "location": {
+      "latitude": 54.41832,
+      "longitude": 13.42625
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "06:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/bergen-auf-rügen/9127936/bahnhofstr-53/"
+  },
+  {
+    "external_id": "9300003",
+    "name": "REWE Keven Albrecht oHG",
+    "companyName": "REWE Keven Albrecht oHG",
+    "street": "Marchwitzastr. 29",
+    "zipCode": "12681",
+    "city": "Berlin / Marzahn",
+    "location": {
+      "latitude": 52.52315,
+      "longitude": 13.54456
+    },
+    "openingInfo": [
+      {
+        "days": "Mo-Sa",
+        "hours": "07:00 - 22:00 Uhr",
+        "openingType": "REGULAR"
+      }
+    ],
+    "url": "https://www.rewe.de/angebote/berlin-marzahn/9300003/marchwitzastr-29/"
+  }
+]

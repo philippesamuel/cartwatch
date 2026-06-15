@@ -13,7 +13,10 @@ from ingestion.offers.rewe_scrapper import (
     scrape_store,
 )
 
-STORE_CONFIGS_PATH = Path(__file__).parent / "../../../data/stores/rewe_store_configs.json"
+# TODO: migrate store configs to a Supabase table so they can be managed without a redeploy
+# Alternative (Option B): mount a host volume at /data/stores/ in docker-compose.prod.yml
+#   and point this path there — useful if the list grows large or needs frequent updates
+STORE_CONFIGS_PATH = Path(__file__).parent / "../ingestion/offers/rewe_store_configs.json"
 STORE_CONFIGS = get_store_configs(STORE_CONFIGS_PATH)
 
 DATALAKE_PATH_TEMPLATE = (
