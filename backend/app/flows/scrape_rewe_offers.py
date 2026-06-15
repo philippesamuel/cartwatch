@@ -1,4 +1,5 @@
 from datetime import date
+from itertools import batched
 from pathlib import Path
 from typing import Literal
 
@@ -69,18 +70,17 @@ def upload_html_to_datalake(conf: StoreConfig, html_content: str, page_name: str
 
 # 3. The Orchestrating Flow
 @flow(name="scrape-daily-offers")
-def scrape_offers_flow():
+def scrape_offers_flow(batch_size: int = 10):
     logger = get_run_logger()
 
-    for conf in STORE_CONFIGS[:3]:
-        try:
-            # Execute the resilient scrape task
-            scraped_data = extract_html_with_playwright(conf)  # type: ignore[no-matching-overload]
+    for batch in batched(STORE_CONFIGS, batch_size):
+        scrape_futures = extract_html_with_playwright.map(list(batch))  # type: ignore[no-matching-overload]
 
-            # Upload the results
+        for conf, future in zip(batch, scrape_futures):
+            try:
+                scraped_data = future.result()
+            except Exception as e:
+                logger.error(f"Scrape failed for {conf.retailer}: {e}")
+                continue
             upload_html_to_datalake(conf, scraped_data["main"], "main")  # type: ignore[no-matching-overload]
             upload_html_to_datalake(conf, scraped_data["articles"], "articles")  # type: ignore[no-matching-overload]
-
-        except Exception as e:
-            logger.error(f"Failed to process {conf.retailer}: {e}")
-            # Flow continues to the next store even if one fails
