@@ -7,3 +7,7 @@
 **/.credentials.json
 **/__marimo__
 **/__pycache__
+.actrc
+data/
+backend/data/
+backend/db_backups/
