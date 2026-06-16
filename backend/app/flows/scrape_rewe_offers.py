@@ -5,6 +5,7 @@ from typing import Literal
 
 from prefect import flow, get_run_logger, task
 
+from core.config import get_prefect_settings()
 from core.supabase import get_supabase
 from ingestion.browser import browser_context
 from ingestion.offers.rewe_scrapper import (
@@ -12,6 +13,8 @@ from ingestion.offers.rewe_scrapper import (
     get_store_configs,
     scrape_store,
 )
+
+settings = get_prefect_settings()
 
 # TODO: migrate store configs to a Supabase table so they can be managed without a redeploy
 # Alternative (Option B): mount a host volume at /data/stores/ in docker-compose.prod.yml
@@ -73,7 +76,7 @@ def upload_html_to_datalake(conf: StoreConfig, html_content: str, page_name: str
 
 # 3. The Orchestrating Flow
 @flow(name="scrape-rewe-daily-offers")
-def scrape_offers_flow(batch_size: int = 10):
+def scrape_offers_flow(batch_size: int = settings.scrapper_batch_size):
     logger = get_run_logger()
 
     for batch in batched(STORE_CONFIGS, batch_size):

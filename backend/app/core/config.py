@@ -29,6 +29,11 @@ class MistralSettings(BaseSettings):
     mistral_base_url: str = "https://api.mistral.ai"
 
 
+class PrefectSettings(BaseSettings):
+    model_config = SettingsConfigDict(env_file=find_env(), extra="ignore")
+    scrapper_batch_size: int = 4
+    
+
 @lru_cache
 def get_supabase_settings() -> SupabaseSettings:
     return SupabaseSettings()  # type: ignore[missing-argument]
@@ -42,3 +47,8 @@ def get_gmail_settings() -> GmailSettings:
 @lru_cache
 def get_mistral_settings() -> MistralSettings:
     return MistralSettings()  # type: ignore[missing-argument]
+
+
+@lru_cache
+def get_prefect_settings() -> PrefectSettings:
+    return PrefectSettings() # type: ignore[missing-argument] 
