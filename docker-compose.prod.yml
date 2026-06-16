@@ -38,7 +38,7 @@ services:
       - web_proxy
 
   prefect-server:
-    image: prefecthq/prefect:3.7.3
+    image: prefecthq/prefect:3.7.3-python3.12
     command: prefect server start
     environment:
       PREFECT_SERVER_API_HOST: 0.0.0.0
