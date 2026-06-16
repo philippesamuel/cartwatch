@@ -63,7 +63,9 @@ CMD ["fastapi", "run", "/backend/app/main.py", "--host", "0.0.0.0", "--port", "8
 # Worker — prod + playwright chromium
 # ──────────────────────────────────────────
 FROM runner AS worker
+ENV PLAYWRIGHT_BROWSERS_PATH=/home/nonroot/.cache/ms-playwright/
 USER root
-RUN playwright install chromium --with-deps
+RUN playwright install chromium --only-shell --with-deps \
+ && chown -R nonroot:nonroot "$PLAYWRIGHT_BROWSERS_PATH"
 USER nonroot
 CMD ["prefect", "worker", "start", "--pool", "local-pool"]

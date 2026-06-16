@@ -72,7 +72,7 @@ def upload_html_to_datalake(conf: StoreConfig, html_content: str, page_name: str
 
 
 # 3. The Orchestrating Flow
-@flow(name="scrape-daily-offers")
+@flow(name="scrape-rewe-daily-offers")
 def scrape_offers_flow(batch_size: int = 10):
     logger = get_run_logger()
 
