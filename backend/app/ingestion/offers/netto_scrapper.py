@@ -1,4 +1,3 @@
-import functools
 import json
 import time
 from dataclasses import dataclass
@@ -13,15 +12,21 @@ from playwright.sync_api import Page, TimeoutError
 from ingestion.browser import seleniumbase_browser_context
 
 STORE_FINDER_URL = "https://www.netto-online.de/filialangebote"
-DENY_BUTTON_CSS_LOCATOR = "#CybotCookiebotDialogBodyButtonDecline"
 
-DATE = date.today()
-ISODATE = DATE.isoformat()
-HTML_FILE_TEMPLATE = (
+DENY_BUTTON_CSS_LOCATOR = "#CybotCookiebotDialogBodyButtonDecline"
+STOREFINDER_BUTTON_SELECTOR = "a.js-layer-storefinder"
+ADDRESS_INPUT_SELECTOR = 'input[type="text"][name="post_code"]'
+ADDRESS_DROPDOWN_SELECTOR = "div.js-autocomplete-dropdown span"
+GO_TO_OFFERS_BUTTON_SELECTOR = (
+    "a.btn-primary"
+    ".store-finder__inner__box__button"
+    ".store-offers-btn"
+    )
+
+PARTITION_TEMPLATE = (
     "{root}/retailer={retailer}/store_external_id={external_id}/"
     "year={year}/month={month}/day={day}/"
-    "page={page}/{name}.html"
-)
+    )
 
 
 @dataclass(frozen=True, slots=True)
@@ -39,6 +44,47 @@ class StoreConfig:
         )
 
 
+class StoreOfferFiles:
+    def __init__(
+        self,
+        conf: StoreConfig,
+        date: date = date.today(), 
+        root_dir: Path = Path("./data")
+        ) -> None:
+        self.conf = conf
+        self.date = date
+        self.root_dir = root_dir
+        self.partition_template = PARTITION_TEMPLATE
+    
+    @property
+    def partition_dir(self) -> Path:
+        path_str = self.partition_template.format(
+            root=self.root_dir,
+            retailer=self.conf.retailer,
+            external_id=self.conf.external_id,
+            year=self.date.year,
+            month=self.date.strftime("%m"),
+            day=self.date.strftime(r"%d"),
+        )
+        return Path(path_str)      
+    
+    def partition_exists(self) -> bool:
+        return self.partition_dir.exists()  
+    
+    def get_file_path(self, name: str, page: int) -> Path:
+        page_name_str = "page={}/{}.html".format(page, name)  
+        return self.partition_dir / page_name_str
+    
+    def save(self, html: str, name: str, page: int) -> None:
+        file_path = self.get_file_path(name=name, page=page)
+        logger.info(f"Saving to {file_path}")    
+        if not (parent_dir := file_path.parent).exists():
+            logger.info("Creating folder {}", parent_dir)
+            parent_dir.mkdir(parents=True, exist_ok=True)
+        with file_path.open("wt") as f:
+            f.write(html) 
+
+
 STORE_CONFIGS: list[StoreConfig] = [
     StoreConfig(
         retailer="netto",
@@ -51,7 +97,6 @@ STORE_CONFIGS: list[StoreConfig] = [
 def main(
     store_configs_path: Optional[Path] = None,
     output_data_dir: Optional[Path] = None,
-    headless: bool = True,
 ) -> None:
     store_configs = STORE_CONFIGS
     if store_configs_path is not None:
@@ -61,11 +106,17 @@ def main(
         output_data_dir = Path("./data")
 
     for conf in store_configs:
-        file_path_fn = functools.partial(
-            get_file_path_with_retailer_store_date_partitions,
-            conf=conf,
-            root_dir=str(output_data_dir.absolute()),
-        )
+        files = StoreOfferFiles(
+            conf=conf, 
+            date=date.today(), 
+            root_dir=output_data_dir.absolute(),
+            )
+        
+        if files.partition_exists():
+            logger.info(
+                "{} already exist. Skipping ...", files.partition_dir
+                )
+            continue
 
         with seleniumbase_browser_context() as ctx:             
             page = ctx.new_page()
@@ -77,52 +128,26 @@ def main(
                 continue
 
         for page_number, html in enumerate(pages_html, start=1):
-            save_scraped_html(html=html, file_path=file_path_fn(name="main", page=page_number))
-
-
-def get_file_path_with_retailer_store_date_partitions(
-    name: str, conf: StoreConfig, page: int, root_dir: str = "./data"
-) -> Path:
-    path_str = HTML_FILE_TEMPLATE.format(
-        root=root_dir,
-        name=name,
-        retailer=conf.retailer,
-        external_id=conf.external_id,
-        year=DATE.year,
-        month=DATE.strftime("%m"),
-        day=DATE.strftime(r"%d"),
-        page=page,
-    )
-    return Path(path_str)
+            files.save(html=html, name="main", page=page_number)
 
 
 def scrape_store(address: str, page: Page) -> list[str]:
     page.goto(STORE_FINDER_URL)
-
-    storefinder_butto_selector = "a.js-layer-storefinder"
-    address_input_selector = 'input[type="text"][name="post_code"]'
-    address_dropdown_selector = "div.js-autocomplete-dropdown span"
-    go_to_offers_button_selector = (
-        "a.btn-primary"
-        ".store-finder__inner__box__button"
-        ".store-offers-btn"
-        )
-    
     deny_cookiebot_banner(page)
     
     logger.info("Clicking storefinder button ...")
-    page.locator(storefinder_butto_selector).click()
+    page.locator(STOREFINDER_BUTTON_SELECTOR).click()
     
-    page.wait_for_selector(address_input_selector)
+    page.wait_for_selector(ADDRESS_INPUT_SELECTOR)
     logger.info("Typing address into input field ...")
-    page.locator(address_input_selector).type(address)
+    page.locator(ADDRESS_INPUT_SELECTOR).type(address)
     
-    page.wait_for_selector(address_dropdown_selector)
+    page.wait_for_selector(ADDRESS_DROPDOWN_SELECTOR)
     logger.info("Clicking first address in autocomplete dropdown ...")
-    page.locator(address_dropdown_selector).first.click()
+    page.locator(ADDRESS_DROPDOWN_SELECTOR).first.click()
     
     logger.info('Clicking "Go to offers" button ...')
-    page.locator(go_to_offers_button_selector).first.click()
+    page.locator(GO_TO_OFFERS_BUTTON_SELECTOR).first.click()
     page.wait_for_timeout(1000)
 
     number_of_pages = get_number_of_pages(page)
@@ -157,15 +182,6 @@ def get_number_of_pages(page: Page) -> int:
     if last_page_el is None:
         return 1
     return int(last_page_el.inner_text())
-
-
-def save_scraped_html(html: str, file_path: Path) -> None:
-    logger.info(f"Saving to {file_path}")
-    if not (parent_dir := file_path.parent).exists():
-        logger.info("Creating folder {}", parent_dir)
-        parent_dir.mkdir(parents=True, exist_ok=True)
-    with file_path.open("wt") as f:
-        f.write(html)
 
 
 def deny_cookiebot_banner(page: Page) -> None:
@@ -218,7 +234,10 @@ def get_store_configs(path: Path) -> list[StoreConfig]:
 
 
 if __name__ == "__main__":
-    main(
-        store_configs_path=Path(__file__).parent / "netto_store_configs.json",
-        output_data_dir=Path("../data/")
-        )
+    # example:
+    # 
+    # main(
+    #    store_configs_path=Path(__file__).parent / "netto_store_configs.json",
+    #    output_data_dir=Path("../data/")
+    #    )
+    main()
