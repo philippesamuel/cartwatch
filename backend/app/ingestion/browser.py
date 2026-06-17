@@ -2,6 +2,7 @@ from contextlib import contextmanager
 
 from playwright.sync_api import sync_playwright
 from seleniumbase import sb_cdp
+from xvfbwrapper import Xvfb
 
 _USER_AGENT = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
@@ -33,14 +34,23 @@ def browser_context(headless: bool = True):
 
 @contextmanager
 def seleniumbase_browser_context(timeout:int = 100):
-    sb = sb_cdp.Chrome(timeout=timeout)
-    endpoint_url = sb.get_endpoint_url()
-    with sync_playwright() as p:
-        browser = p.chromium.connect_over_cdp(endpoint_url)
-        ctx = browser.contexts[0]
+    with _selenium_base_cdp_chrome(timeout=timeout) as sb:
+        endpoint_url = sb.get_endpoint_url()
+        with sync_playwright() as p:
+            browser = p.chromium.connect_over_cdp(endpoint_url)
+            ctx = browser.contexts[0]
+            try:
+                yield ctx
+            finally:
+                browser.close()
+            
+@contextmanager
+def _selenium_base_cdp_chrome(url=None, **kwargs):
+    kwargs.setdefault("sandbox", False)
+    with Xvfb():
+        sb = sb_cdp.Chrome(url, **kwargs)
         try:
-            yield ctx
+            yield sb
         finally:
-            browser.close()
             sb.driver.quit()
-    
+            

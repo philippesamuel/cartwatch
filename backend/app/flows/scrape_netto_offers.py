@@ -4,6 +4,7 @@ from pathlib import Path
 
 from prefect import flow, get_run_logger, task
 
+from logger import forward_logs
 from core.config import get_prefect_settings
 from core.supabase import get_supabase
 from ingestion.browser import seleniumbase_browser_context
@@ -33,6 +34,7 @@ DATALAKE_PATH_TEMPLATE = (
 
 
 @task(retries=2, retry_delay_seconds=30)
+@forward_logs
 def extract_html_with_seleniumbase(conf: StoreConfig) -> list[str]:
     logger = get_run_logger()
     logger.info("Starting scrape for %s - %s", conf.retailer, conf.external_id)
@@ -43,6 +45,7 @@ def extract_html_with_seleniumbase(conf: StoreConfig) -> list[str]:
 
 
 @task
+@forward_logs
 def upload_html_to_datalake(conf: StoreConfig, html_content: str, page_number: int) -> str:
     logger = get_run_logger()
     supabase = get_supabase()
@@ -71,6 +74,7 @@ def upload_html_to_datalake(conf: StoreConfig, html_content: str, page_number: i
 
 
 @flow(name="scrape-netto-daily-offers")
+@forward_logs
 def scrape_offers_flow(batch_size: int = settings.scrapper_batch_size):
     logger = get_run_logger()
 

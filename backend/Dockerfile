@@ -66,6 +66,14 @@ FROM runner AS worker
 ENV PLAYWRIGHT_BROWSERS_PATH=/home/nonroot/.cache/ms-playwright/
 USER root
 RUN playwright install chromium --only-shell --with-deps \
- && chown -R nonroot:nonroot "$PLAYWRIGHT_BROWSERS_PATH"
+    && apt-get update \
+    && apt-get install -y --no-install-recommends \
+            chromium \
+            xorg \
+            openbox \
+            python3-tk \
+            python3-dev \
+    && rm -rf /var/lib/apt/lists/* \
+    && chown -R nonroot:nonroot /home/nonroot/
 USER nonroot
 CMD ["prefect", "worker", "start", "--pool", "local-pool"]
