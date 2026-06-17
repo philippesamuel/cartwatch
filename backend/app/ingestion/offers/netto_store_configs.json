@@ -1,0 +1,1796 @@
+[
+  {
+    "retailer": "netto",
+    "external_id": "4896",
+    "name": "Netto Marken-Discount",
+    "street": "Frankfurter Allee 57-59",
+    "zipCode": "10247",
+    "city": "Berlin-Friedrichshain",
+    "location": {
+      "latitude": 52.514798,
+      "longitude": 13.465888
+    },
+    "address": "Frankfurter Allee 57-59 10247"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "5015",
+    "name": "Netto Marken-Discount",
+    "street": "An der Wuhlheide 154",
+    "zipCode": "12459",
+    "city": "Berlin-Köpenick",
+    "location": {
+      "latitude": 52.459309,
+      "longitude": 13.536273
+    },
+    "address": "An der Wuhlheide 154 12459"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "5016",
+    "name": "Netto Marken-Discount",
+    "street": "Wiltbergstr. 35",
+    "zipCode": "13125",
+    "city": "Berlin-Buch",
+    "location": {
+      "latitude": 52.636897,
+      "longitude": 13.49157
+    },
+    "address": "Wiltbergstr. 35 13125"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "5026",
+    "name": "Netto Marken-Discount",
+    "street": "Sonnenallee 215",
+    "zipCode": "12045",
+    "city": "Berlin-Neukölln",
+    "location": {
+      "latitude": 52.474582,
+      "longitude": 13.455374
+    },
+    "address": "Sonnenallee 215 12045"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "5032",
+    "name": "Netto Marken-Discount",
+    "street": "Tempelhofer Weg 91/97",
+    "zipCode": "12347",
+    "city": "Berlin-Britz",
+    "location": {
+      "latitude": 52.451541,
+      "longitude": 13.435693
+    },
+    "address": "Tempelhofer Weg 91/97 12347"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "5035",
+    "name": "Netto Marken-Discount",
+    "street": "Hohes Feld 1",
+    "zipCode": "15566",
+    "city": "Schöneiche",
+    "location": {
+      "latitude": 52.474204,
+      "longitude": 13.714188
+    },
+    "address": "Hohes Feld 1 15566"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "5040",
+    "name": "Netto Marken-Discount",
+    "street": "Landsberger Allee 174",
+    "zipCode": "10369",
+    "city": "Berlin-Lichtenberg",
+    "location": {
+      "latitude": 52.530612,
+      "longitude": 13.46839
+    },
+    "address": "Landsberger Allee 174 10369"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "5052",
+    "name": "Netto Marken-Discount",
+    "street": "Hubertusdamm 64/65",
+    "zipCode": "13125",
+    "city": "Berlin-Karow",
+    "location": {
+      "latitude": 52.615243,
+      "longitude": 13.470357
+    },
+    "address": "Hubertusdamm 64/65 13125"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "5077",
+    "name": "Netto Marken-Discount",
+    "street": "Hultschiner Damm 47",
+    "zipCode": "12623",
+    "city": "Berlin-Mahlsdorf",
+    "location": {
+      "latitude": 52.479118,
+      "longitude": 13.59993
+    },
+    "address": "Hultschiner Damm 47 12623"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "5115",
+    "name": "Netto Marken-Discount",
+    "street": "Bahnhofstraße 31 a",
+    "zipCode": "13129",
+    "city": "Berlin-Blankenburg",
+    "location": {
+      "latitude": 52.591195,
+      "longitude": 13.445218
+    },
+    "address": "Bahnhofstraße 31 a 13129"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "5132",
+    "name": "Netto Marken-Discount",
+    "street": "Zweiwinkelweg 25",
+    "zipCode": "13591",
+    "city": "Berlin-Spandau",
+    "location": {
+      "latitude": 52.532456,
+      "longitude": 13.147204
+    },
+    "address": "Zweiwinkelweg 25 13591"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "5142",
+    "name": "Netto Marken-Discount",
+    "street": "Richard-Tauber-Damm 36",
+    "zipCode": "12277",
+    "city": "Berlin-Tempelhof",
+    "location": {
+      "latitude": 52.41655,
+      "longitude": 13.392134
+    },
+    "address": "Richard-Tauber-Damm 36 12277"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "5169",
+    "name": "Netto Marken-Discount",
+    "street": "Lynarstr. 32-34",
+    "zipCode": "13585",
+    "city": "Berlin-Spandau",
+    "location": {
+      "latitude": 52.548457,
+      "longitude": 13.206803
+    },
+    "address": "Lynarstr. 32-34 13585"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "5170",
+    "name": "Netto Marken-Discount",
+    "street": "Ortolfstr. 149",
+    "zipCode": "12524",
+    "city": "Berlin-Altglienicke",
+    "location": {
+      "latitude": 52.405841,
+      "longitude": 13.532665
+    },
+    "address": "Ortolfstr. 149 12524"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "5175",
+    "name": "Netto Marken-Discount",
+    "street": "Louis-Lewin-Str. 15",
+    "zipCode": "12627",
+    "city": "Berlin-Hellersdorf",
+    "location": {
+      "latitude": 52.533162,
+      "longitude": 13.62156
+    },
+    "address": "Louis-Lewin-Str. 15 12627"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "5228",
+    "name": "Netto Marken-Discount",
+    "street": "Ruschestr. 57",
+    "zipCode": "10365",
+    "city": "Berlin-Lichtenberg",
+    "location": {
+      "latitude": 52.522224,
+      "longitude": 13.48621
+    },
+    "address": "Ruschestr. 57 10365"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "5236",
+    "name": "Netto Marken-Discount",
+    "street": "Marzahner Chaussee 79",
+    "zipCode": "12681",
+    "city": "Berlin-Marzahn",
+    "location": {
+      "latitude": 52.516431,
+      "longitude": 13.526685
+    },
+    "address": "Marzahner Chaussee 79 12681"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "5250",
+    "name": "Netto Marken-Discount",
+    "street": "Buckower Damm 268",
+    "zipCode": "12349",
+    "city": "Berlin-Buckow",
+    "location": {
+      "latitude": 52.420161,
+      "longitude": 13.437634
+    },
+    "address": "Buckower Damm 268 12349"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "5256",
+    "name": "Netto Marken-Discount",
+    "street": "Rabensteiner Str. 36",
+    "zipCode": "12689",
+    "city": "Berlin-Marzahn",
+    "location": {
+      "latitude": 52.565178,
+      "longitude": 13.577005
+    },
+    "address": "Rabensteiner Str. 36 12689"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "5297",
+    "name": "Netto Marken-Discount",
+    "street": "Regattastr. 123",
+    "zipCode": "12527",
+    "city": "Berlin-Grünau",
+    "location": {
+      "latitude": 52.418085,
+      "longitude": 13.581078
+    },
+    "address": "Regattastr. 123 12527"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "5305",
+    "name": "Netto Marken-Discount",
+    "street": "Haardtweg 2",
+    "zipCode": "13583",
+    "city": "Berlin-Spandau",
+    "location": {
+      "latitude": 52.5492,
+      "longitude": 13.177822
+    },
+    "address": "Haardtweg 2 13583"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "5306",
+    "name": "Netto Marken-Discount",
+    "street": "Cecilienstr. 164",
+    "zipCode": "12683",
+    "city": "Berlin-Biesdorf",
+    "location": {
+      "latitude": 52.528002,
+      "longitude": 13.570151
+    },
+    "address": "Cecilienstr. 164 12683"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "5308",
+    "name": "Netto Marken-Discount",
+    "street": "Alemannenstr. 40",
+    "zipCode": "14129",
+    "city": "Berlin-Nikolassee",
+    "location": {
+      "latitude": 52.429497,
+      "longitude": 13.19305
+    },
+    "address": "Alemannenstr. 40 14129"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "5341",
+    "name": "Netto Marken-Discount",
+    "street": "Mariendorfer Damm 19-21",
+    "zipCode": "12109",
+    "city": "Berlin-Mariendorf",
+    "location": {
+      "latitude": 52.451262,
+      "longitude": 13.385083
+    },
+    "address": "Mariendorfer Damm 19-21 12109"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "5358",
+    "name": "Netto Marken-Discount",
+    "street": "Lise-Meitner-Str. 2",
+    "zipCode": "10589",
+    "city": "Berlin-Charlottenburg",
+    "location": {
+      "latitude": 52.526937,
+      "longitude": 13.306723
+    },
+    "address": "Lise-Meitner-Str. 2 10589"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "5440",
+    "name": "Netto Marken-Discount",
+    "street": "Grünbergallee 233",
+    "zipCode": "12524",
+    "city": "Berlin-Altglienicke",
+    "location": {
+      "latitude": 52.399558,
+      "longitude": 13.54077
+    },
+    "address": "Grünbergallee 233 12524"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "5450",
+    "name": "Netto Marken-Discount",
+    "street": "Randowstr. 3",
+    "zipCode": "13057",
+    "city": "Berlin",
+    "location": {
+      "latitude": 52.566942,
+      "longitude": 13.527863
+    },
+    "address": "Randowstr. 3 13057"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "5454",
+    "name": "Netto Marken-Discount",
+    "street": "Wulkower Str. 2",
+    "zipCode": "12683",
+    "city": "Berlin",
+    "location": {
+      "latitude": 52.504478,
+      "longitude": 13.561162
+    },
+    "address": "Wulkower Str. 2 12683"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "5544",
+    "name": "Netto Marken-Discount",
+    "street": "Dammweg 56",
+    "zipCode": "12435",
+    "city": "Berlin-Treptow",
+    "location": {
+      "latitude": 52.479224,
+      "longitude": 13.48128
+    },
+    "address": "Dammweg 56 12435"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "5550",
+    "name": "Netto Marken-Discount",
+    "street": "Ludwigsluster Str. 27",
+    "zipCode": "12619",
+    "city": "Berlin-Hellersdorf",
+    "location": {
+      "latitude": 52.515879,
+      "longitude": 13.583458
+    },
+    "address": "Ludwigsluster Str. 27 12619"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "5596",
+    "name": "Netto Marken-Discount",
+    "street": "Bruno-Taut-Str. 8",
+    "zipCode": "12524",
+    "city": "Berlin",
+    "location": {
+      "latitude": 52.4127,
+      "longitude": 13.569365
+    },
+    "address": "Bruno-Taut-Str. 8 12524"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "5622",
+    "name": "Netto Marken-Discount",
+    "street": "Buchberger Str. 40",
+    "zipCode": "10365",
+    "city": "Berlin-Lichtenberg",
+    "location": {
+      "latitude": 52.506604,
+      "longitude": 13.4833
+    },
+    "address": "Buchberger Str. 40 10365"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "5632",
+    "name": "Netto Marken-Discount",
+    "street": "Alex-Wedding-Str. 3",
+    "zipCode": "10178",
+    "city": "Berlin-Mitte",
+    "location": {
+      "latitude": 52.52511,
+      "longitude": 13.415492
+    },
+    "address": "Alex-Wedding-Str. 3 10178"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "5633",
+    "name": "Netto Marken-Discount",
+    "street": "Marzahner Promenade 30",
+    "zipCode": "12679",
+    "city": "Berlin",
+    "location": {
+      "latitude": 52.544022,
+      "longitude": 13.548806
+    },
+    "address": "Marzahner Promenade 30 12679"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "5647",
+    "name": "Netto Marken-Discount",
+    "street": "Damerowstr. 40",
+    "zipCode": "13187",
+    "city": "Berlin-Pankow",
+    "location": {
+      "latitude": 52.576256,
+      "longitude": 13.426062
+    },
+    "address": "Damerowstr. 40 13187"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "5664",
+    "name": "Netto Marken-Discount",
+    "street": "Heerstr. 221",
+    "zipCode": "13595",
+    "city": "Berlin",
+    "location": {
+      "latitude": 52.512648,
+      "longitude": 13.196399
+    },
+    "address": "Heerstr. 221 13595"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "5666",
+    "name": "Netto Marken-Discount",
+    "street": "Siemensdamm 43-44",
+    "zipCode": "13627",
+    "city": "Berlin",
+    "location": {
+      "latitude": 52.53639,
+      "longitude": 13.274914
+    },
+    "address": "Siemensdamm 43-44 13627"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "5671",
+    "name": "Netto City",
+    "street": "Albrecht-Achilles-Str. 52",
+    "zipCode": "10709",
+    "city": "Berlin-Wilmersdorf",
+    "location": {
+      "latitude": 52.494656,
+      "longitude": 13.303627
+    },
+    "address": "Albrecht-Achilles-Str. 52 10709"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "5681",
+    "name": "Netto Marken-Discount",
+    "street": "Treskowallee 115",
+    "zipCode": "10318",
+    "city": "Berlin-Karlshorst",
+    "location": {
+      "latitude": 52.48033,
+      "longitude": 13.525508
+    },
+    "address": "Treskowallee 115 10318"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "5692",
+    "name": "Netto Marken-Discount",
+    "street": "Corinthstraße 32",
+    "zipCode": "10245",
+    "city": "Berlin-Friedrichshain",
+    "location": {
+      "latitude": 52.499887,
+      "longitude": 13.461106
+    },
+    "address": "Corinthstraße 32 10245"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "5724",
+    "name": "Netto Marken-Discount",
+    "street": "Köpenicker Str. 27",
+    "zipCode": "12524",
+    "city": "Berlin-Altglienicke",
+    "location": {
+      "latitude": 52.419014,
+      "longitude": 13.537369
+    },
+    "address": "Köpenicker Str. 27 12524"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "5725",
+    "name": "Netto Marken-Discount",
+    "street": "Gotlandstr. 6",
+    "zipCode": "10439",
+    "city": "Berlin",
+    "location": {
+      "latitude": 52.554731,
+      "longitude": 13.411419
+    },
+    "address": "Gotlandstr. 6 10439"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "5730",
+    "name": "Netto Marken-Discount",
+    "street": "Weißenseer Weg 35",
+    "zipCode": "13055",
+    "city": "Berlin-Alt-Hohenschönhausen",
+    "location": {
+      "latitude": 52.535838,
+      "longitude": 13.474926
+    },
+    "address": "Weißenseer Weg 35 13055"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "5760",
+    "name": "Netto Marken-Discount",
+    "street": "Hermannstr. 214",
+    "zipCode": "12049",
+    "city": "Berlin-Neukölln",
+    "location": {
+      "latitude": 52.478849,
+      "longitude": 13.426974
+    },
+    "address": "Hermannstr. 214 12049"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "5805",
+    "name": "Netto Marken-Discount",
+    "street": "Malteserstr. 144",
+    "zipCode": "12277",
+    "city": "Berlin-Marienfelde",
+    "location": {
+      "latitude": 52.41939,
+      "longitude": 13.359991
+    },
+    "address": "Malteserstr. 144 12277"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "5813",
+    "name": "Netto Getränke-Discount",
+    "street": "Treseburger Str. 29",
+    "zipCode": "13129",
+    "city": "Berlin",
+    "location": {
+      "latitude": 52.597567,
+      "longitude": 13.466505
+    },
+    "address": "Treseburger Str. 29 13129"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "5834",
+    "name": "Netto Marken-Discount",
+    "street": "Rudower Str. 84 - 88",
+    "zipCode": "12351",
+    "city": "Berlin-Neukölln",
+    "location": {
+      "latitude": 52.437024,
+      "longitude": 13.46356
+    },
+    "address": "Rudower Str. 84 - 88 12351"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "5850",
+    "name": "Netto Marken-Discount",
+    "street": "Wartenberger Str. 51",
+    "zipCode": "13053",
+    "city": "Berlin",
+    "location": {
+      "latitude": 52.555235,
+      "longitude": 13.511655
+    },
+    "address": "Wartenberger Str. 51 13053"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "5871",
+    "name": "Netto Marken-Discount",
+    "street": "Alt-Moabit 86 a",
+    "zipCode": "10555",
+    "city": "Berlin-Tiergarten",
+    "location": {
+      "latitude": 52.525331,
+      "longitude": 13.341938
+    },
+    "address": "Alt-Moabit 86 a 10555"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "5883",
+    "name": "Netto Marken-Discount",
+    "street": "Otto-Schmirgal-Straße 3",
+    "zipCode": "10319",
+    "city": "Berlin-Friedrichsfelde",
+    "location": {
+      "latitude": 52.497431,
+      "longitude": 13.521249
+    },
+    "address": "Otto-Schmirgal-Straße 3 10319"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "5900",
+    "name": "Netto Marken-Discount",
+    "street": "Neue Grottkauer Straße 3",
+    "zipCode": "12619",
+    "city": "Berlin-Hellersdorf",
+    "location": {
+      "latitude": 52.529565,
+      "longitude": 13.592464
+    },
+    "address": "Neue Grottkauer Straße 3 12619"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "5934",
+    "name": "Netto Getränke-Discount",
+    "street": "Rabensteiner Straße 36",
+    "zipCode": "12689",
+    "city": "Berlin-Marzahn",
+    "location": {
+      "latitude": 52.565255,
+      "longitude": 13.577013
+    },
+    "address": "Rabensteiner Straße 36 12689"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "5941",
+    "name": "Netto Marken-Discount",
+    "street": "Halemweg 21/23",
+    "zipCode": "13627",
+    "city": "Berlin-Charlottenburg",
+    "location": {
+      "latitude": 52.537458,
+      "longitude": 13.285781
+    },
+    "address": "Halemweg 21/23 13627"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "5952",
+    "name": "Netto Marken-Discount",
+    "street": "Genthiner Straße 42",
+    "zipCode": "10785",
+    "city": "Berlin",
+    "location": {
+      "latitude": 52.502308,
+      "longitude": 13.358407
+    },
+    "address": "Genthiner Straße 42 10785"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7426",
+    "name": "Netto Marken-Discount",
+    "street": "Adlergestell 271",
+    "zipCode": "12489",
+    "city": "Berlin-Treptow",
+    "location": {
+      "latitude": 52.433592,
+      "longitude": 13.545524
+    },
+    "address": "Adlergestell 271 12489"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7428",
+    "name": "Netto Marken-Discount",
+    "street": "Gitschiner Str. 73",
+    "zipCode": "10969",
+    "city": "Berlin-Kreuzberg",
+    "location": {
+      "latitude": 52.498694,
+      "longitude": 13.405895
+    },
+    "address": "Gitschiner Str. 73 10969"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7429",
+    "name": "Netto Marken-Discount",
+    "street": "Sonnenallee 57",
+    "zipCode": "12045",
+    "city": "Berlin-Neukölln",
+    "location": {
+      "latitude": 52.485218,
+      "longitude": 13.433804
+    },
+    "address": "Sonnenallee 57 12045"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7446",
+    "name": "Netto Marken-Discount",
+    "street": "Prenzlauer Promenade 43",
+    "zipCode": "13089",
+    "city": "Berlin-Weissensee",
+    "location": {
+      "latitude": 52.560386,
+      "longitude": 13.429297
+    },
+    "address": "Prenzlauer Promenade 43 13089"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7448",
+    "name": "Netto Marken-Discount",
+    "street": "Blankenburger Str. 145",
+    "zipCode": "13127",
+    "city": "Berlin-Pankow",
+    "location": {
+      "latitude": 52.588049,
+      "longitude": 13.426925
+    },
+    "address": "Blankenburger Str. 145 13127"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7451",
+    "name": "Netto Marken-Discount",
+    "street": "Dorfstr. 18",
+    "zipCode": "16356",
+    "city": "Ahrensfelde",
+    "location": {
+      "latitude": 52.574564,
+      "longitude": 13.574838
+    },
+    "address": "Dorfstr. 18 16356"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7455",
+    "name": "Netto Marken-Discount",
+    "street": "Storkower Str. 126",
+    "zipCode": "10407",
+    "city": "Berlin-Prenzlauer Berg",
+    "location": {
+      "latitude": 52.533256,
+      "longitude": 13.452321
+    },
+    "address": "Storkower Str. 126 10407"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7457",
+    "name": "Netto Marken-Discount",
+    "street": "Hauptstr. 103",
+    "zipCode": "13158",
+    "city": "Berlin-Rosenthal",
+    "location": {
+      "latitude": 52.595589,
+      "longitude": 13.375381
+    },
+    "address": "Hauptstr. 103 13158"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7458",
+    "name": "Netto Marken-Discount",
+    "street": "Seeburger Weg 27",
+    "zipCode": "13581",
+    "city": "Berlin-Spandau",
+    "location": {
+      "latitude": 52.523793,
+      "longitude": 13.175478
+    },
+    "address": "Seeburger Weg 27 13581"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7459",
+    "name": "Netto Marken-Discount",
+    "street": "Buddestr. 36",
+    "zipCode": "13507",
+    "city": "Berlin-Tegel",
+    "location": {
+      "latitude": 52.592907,
+      "longitude": 13.285927
+    },
+    "address": "Buddestr. 36 13507"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7462",
+    "name": "Netto Marken-Discount",
+    "street": "Egon-Erwin-Kisch-Str. 90",
+    "zipCode": "13059",
+    "city": "Berlin-Hohenschönhausen",
+    "location": {
+      "latitude": 52.568171,
+      "longitude": 13.511362
+    },
+    "address": "Egon-Erwin-Kisch-Str. 90 13059"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7464",
+    "name": "Netto Marken-Discount",
+    "street": "Treseburger Str. 29",
+    "zipCode": "13129",
+    "city": "Berlin-Pankow",
+    "location": {
+      "latitude": 52.597558,
+      "longitude": 13.466389
+    },
+    "address": "Treseburger Str. 29 13129"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7475",
+    "name": "Netto Marken-Discount",
+    "street": "Müggelheimer Damm 233",
+    "zipCode": "12559",
+    "city": "Berlin-Köpenick",
+    "location": {
+      "latitude": 52.414496,
+      "longitude": 13.658785
+    },
+    "address": "Müggelheimer Damm 233 12559"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7504",
+    "name": "Netto Marken-Discount",
+    "street": "Klosterstraße 3",
+    "zipCode": "13581",
+    "city": "Berlin-Spandau",
+    "location": {
+      "latitude": 52.533396,
+      "longitude": 13.19801
+    },
+    "address": "Klosterstraße 3 13581"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7505",
+    "name": "Netto Marken-Discount",
+    "street": "Berliner Allee 5a",
+    "zipCode": "15345",
+    "city": "Altlandsberg",
+    "location": {
+      "latitude": 52.558528,
+      "longitude": 13.7211
+    },
+    "address": "Berliner Allee 5a 15345"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7511",
+    "name": "Netto Marken-Discount",
+    "street": "Fürstenwalder Allee 8",
+    "zipCode": "12589",
+    "city": "Berlin-Rahnsdorf",
+    "location": {
+      "latitude": 52.442105,
+      "longitude": 13.68512
+    },
+    "address": "Fürstenwalder Allee 8 12589"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7512",
+    "name": "Netto Marken-Discount",
+    "street": "Hänselstr. 71",
+    "zipCode": "12437",
+    "city": "Berlin-Treptow",
+    "location": {
+      "latitude": 52.470723,
+      "longitude": 13.479224
+    },
+    "address": "Hänselstr. 71 12437"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7513",
+    "name": "Netto City",
+    "street": "Schönhauser Allee 78",
+    "zipCode": "10439",
+    "city": "Berlin-Prenzlauer Berg",
+    "location": {
+      "latitude": 52.549884,
+      "longitude": 13.414324
+    },
+    "address": "Schönhauser Allee 78 10439"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7524",
+    "name": "Netto Marken-Discount",
+    "street": "Triftstr. 20",
+    "zipCode": "13127",
+    "city": "Berlin-Pankow",
+    "location": {
+      "latitude": 52.61042,
+      "longitude": 13.431507
+    },
+    "address": "Triftstr. 20 13127"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7525",
+    "name": "Netto Marken-Discount",
+    "street": "Pyramidenring 22",
+    "zipCode": "12681",
+    "city": "Berlin-Marzahn",
+    "location": {
+      "latitude": 52.536262,
+      "longitude": 13.525856
+    },
+    "address": "Pyramidenring 22 12681"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7545",
+    "name": "Netto Marken-Discount",
+    "street": "Schillingstraße 1 a",
+    "zipCode": "10179",
+    "city": "Berlin-Mitte",
+    "location": {
+      "latitude": 52.516813,
+      "longitude": 13.420295
+    },
+    "address": "Schillingstraße 1 a 10179"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7546",
+    "name": "Netto Marken-Discount",
+    "street": "Landsberger Allee 217 k",
+    "zipCode": "13055",
+    "city": "Berlin-Hohenschönhausen",
+    "location": {
+      "latitude": 52.534286,
+      "longitude": 13.488182
+    },
+    "address": "Landsberger Allee 217 k 13055"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7594",
+    "name": "Netto Marken-Discount",
+    "street": "Bucher Chaussee Nr. 6",
+    "zipCode": "13125",
+    "city": "Berlin-Karow",
+    "location": {
+      "latitude": 52.616196,
+      "longitude": 13.486662
+    },
+    "address": "Bucher Chaussee Nr. 6 13125"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7604",
+    "name": "Netto Marken-Discount",
+    "street": "Gounodstr. 92",
+    "zipCode": "13088",
+    "city": "Berlin-Weissensee",
+    "location": {
+      "latitude": 52.548057,
+      "longitude": 13.464553
+    },
+    "address": "Gounodstr. 92 13088"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7610",
+    "name": "Netto Marken-Discount",
+    "street": "Reinickendorfer Straße 16",
+    "zipCode": "13347",
+    "city": "Berlin-Wedding",
+    "location": {
+      "latitude": 52.543904,
+      "longitude": 13.370909
+    },
+    "address": "Reinickendorfer Straße 16 13347"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7611",
+    "name": "Netto Marken-Discount",
+    "street": "Residenzstr. 112",
+    "zipCode": "13407",
+    "city": "Berlin-Reinickendorf",
+    "location": {
+      "latitude": 52.564555,
+      "longitude": 13.364577
+    },
+    "address": "Residenzstr. 112 13407"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7612",
+    "name": "Netto Marken-Discount",
+    "street": "Hermsdorfer Str. 55",
+    "zipCode": "13437",
+    "city": "Berlin-Wittenau",
+    "location": {
+      "latitude": 52.602388,
+      "longitude": 13.323795
+    },
+    "address": "Hermsdorfer Str. 55 13437"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7616",
+    "name": "Netto Marken-Discount",
+    "street": "Emmentaler Str. 12",
+    "zipCode": "13407",
+    "city": "Berlin-Reinickendorf",
+    "location": {
+      "latitude": 52.567648,
+      "longitude": 13.353149
+    },
+    "address": "Emmentaler Str. 12 13407"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7617",
+    "name": "Netto Marken-Discount",
+    "street": "Heilbronner Str. 19",
+    "zipCode": "10711",
+    "city": "Berlin-Wilmersdorf",
+    "location": {
+      "latitude": 52.501211,
+      "longitude": 13.292167
+    },
+    "address": "Heilbronner Str. 19 10711"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7618",
+    "name": "Netto Marken-Discount",
+    "street": "Lehrter Straße 57",
+    "zipCode": "10557",
+    "city": "Berlin-Moabit",
+    "location": {
+      "latitude": 52.532312,
+      "longitude": 13.360051
+    },
+    "address": "Lehrter Straße 57 10557"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7619",
+    "name": "Netto Marken-Discount",
+    "street": "Wollankstr. 85",
+    "zipCode": "13359",
+    "city": "Berlin-Wedding",
+    "location": {
+      "latitude": 52.562656,
+      "longitude": 13.392209
+    },
+    "address": "Wollankstr. 85 13359"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7672",
+    "name": "Netto Marken-Discount",
+    "street": "Oranienburger Chausee 25",
+    "zipCode": "16548",
+    "city": "Glienicke-Nordbahn",
+    "location": {
+      "latitude": 52.634859,
+      "longitude": 13.308416
+    },
+    "address": "Oranienburger Chausee 25 16548"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7622",
+    "name": "Netto Marken-Discount",
+    "street": "Wilhelmstr. 5",
+    "zipCode": "13595",
+    "city": "Berlin-Spandau",
+    "location": {
+      "latitude": 52.528141,
+      "longitude": 13.193265
+    },
+    "address": "Wilhelmstr. 5 13595"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7623",
+    "name": "Netto Marken-Discount",
+    "street": "Louis-Lewin-Str. 120",
+    "zipCode": "12627",
+    "city": "Berlin-Hellersdorf",
+    "location": {
+      "latitude": 52.540555,
+      "longitude": 13.62054
+    },
+    "address": "Louis-Lewin-Str. 120 12627"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7625",
+    "name": "Netto Marken-Discount",
+    "street": "Oudenarder Str. 14",
+    "zipCode": "13347",
+    "city": "Berlin-Wedding",
+    "location": {
+      "latitude": 52.553682,
+      "longitude": 13.360703
+    },
+    "address": "Oudenarder Str. 14 13347"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7627",
+    "name": "Netto Marken-Discount",
+    "street": "Rothenbachstr. 28",
+    "zipCode": "13089",
+    "city": "Berlin-Weißensee",
+    "location": {
+      "latitude": 52.569206,
+      "longitude": 13.437117
+    },
+    "address": "Rothenbachstr. 28 13089"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7630",
+    "name": "Netto Marken-Discount",
+    "street": "Wilhelmsruher Damm 242",
+    "zipCode": "13435",
+    "city": "Berlin-Reinickendorf",
+    "location": {
+      "latitude": 52.595888,
+      "longitude": 13.33387
+    },
+    "address": "Wilhelmsruher Damm 242 13435"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7633",
+    "name": "Netto Marken-Discount",
+    "street": "Hermann-Hesse-Str. 19",
+    "zipCode": "13156",
+    "city": "Berlin-Pankow",
+    "location": {
+      "latitude": 52.5798,
+      "longitude": 13.3997
+    },
+    "address": "Hermann-Hesse-Str. 19 13156"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7635",
+    "name": "Netto Marken-Discount",
+    "street": "Berliner Allee 262",
+    "zipCode": "13088",
+    "city": "Berlin-Weissensee",
+    "location": {
+      "latitude": 52.561418,
+      "longitude": 13.468529
+    },
+    "address": "Berliner Allee 262 13088"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7637",
+    "name": "Netto Marken-Discount",
+    "street": "Hauptstr.17",
+    "zipCode": "16552",
+    "city": "Schildow",
+    "location": {
+      "latitude": 52.636039,
+      "longitude": 13.375739
+    },
+    "address": "Hauptstr.17 16552"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7638",
+    "name": "Netto Marken-Discount",
+    "street": "Martin-Luther-Str. 24",
+    "zipCode": "10777",
+    "city": "Berlin-Schöneberg",
+    "location": {
+      "latitude": 52.496382,
+      "longitude": 13.345811
+    },
+    "address": "Martin-Luther-Str. 24 10777"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7639",
+    "name": "Netto Marken-Discount",
+    "street": "Martha-Arendsee-Str. 4",
+    "zipCode": "12685",
+    "city": "Berlin-Marzahn",
+    "location": {
+      "latitude": 52.534912,
+      "longitude": 13.540445
+    },
+    "address": "Martha-Arendsee-Str. 4 12685"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7640",
+    "name": "Netto Marken-Discount",
+    "street": "Alte Hellersdorfer Str. 102",
+    "zipCode": "12629",
+    "city": "Berlin-Hellersdorf",
+    "location": {
+      "latitude": 52.542281,
+      "longitude": 13.592321
+    },
+    "address": "Alte Hellersdorfer Str. 102 12629"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7641",
+    "name": "Netto Marken-Discount",
+    "street": "Rathausstr.5",
+    "zipCode": "10178",
+    "city": "Berlin-Mitte",
+    "location": {
+      "latitude": 52.519378,
+      "longitude": 13.409803
+    },
+    "address": "Rathausstr.5 10178"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7661",
+    "name": "Netto Marken-Discount",
+    "street": "Am Treptower Park 40",
+    "zipCode": "12435",
+    "city": "Berlin-Treptow",
+    "location": {
+      "latitude": 52.485774,
+      "longitude": 13.465925
+    },
+    "address": "Am Treptower Park 40 12435"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7667",
+    "name": "Netto City",
+    "street": "Kochhannstr. 40",
+    "zipCode": "10249",
+    "city": "Berlin-Friedrichshain",
+    "location": {
+      "latitude": 52.524046,
+      "longitude": 13.446606
+    },
+    "address": "Kochhannstr. 40 10249"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7673",
+    "name": "Netto Marken-Discount",
+    "street": "Langhansstr. 43",
+    "zipCode": "13086",
+    "city": "Berlin-Weissensee",
+    "location": {
+      "latitude": 52.552734,
+      "longitude": 13.438632
+    },
+    "address": "Langhansstr. 43 13086"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7674",
+    "name": "Netto Marken-Discount",
+    "street": "Mollstr. 19",
+    "zipCode": "10249",
+    "city": "Berlin-Mitte",
+    "location": {
+      "latitude": 52.523524,
+      "longitude": 13.426304
+    },
+    "address": "Mollstr. 19 10249"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7676",
+    "name": "Netto Marken-Discount",
+    "street": "Rauchstr. 23",
+    "zipCode": "13587",
+    "city": "Berlin-Spandau",
+    "location": {
+      "latitude": 52.560058,
+      "longitude": 13.218246
+    },
+    "address": "Rauchstr. 23 13587"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7679",
+    "name": "Netto Marken-Discount",
+    "street": "Wilmersdorfer Str. 46",
+    "zipCode": "10627",
+    "city": "Berlin-Charlottenburg",
+    "location": {
+      "latitude": 52.509249,
+      "longitude": 13.304609
+    },
+    "address": "Wilmersdorfer Str. 46 10627"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7683",
+    "name": "Netto Marken-Discount",
+    "street": "Mark-Twain-Str. 4",
+    "zipCode": "12627",
+    "city": "Berlin-Hellersdorf",
+    "location": {
+      "latitude": 52.534092,
+      "longitude": 13.610801
+    },
+    "address": "Mark-Twain-Str. 4 12627"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7687",
+    "name": "Netto Marken-Discount",
+    "street": "Holzhauser Str. 48",
+    "zipCode": "13509",
+    "city": "Berlin-Tegel",
+    "location": {
+      "latitude": 52.57915,
+      "longitude": 13.301569
+    },
+    "address": "Holzhauser Str. 48 13509"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7688",
+    "name": "Netto Marken-Discount",
+    "street": "Hellersdorfer Straße 82",
+    "zipCode": "12619",
+    "city": "Berlin-Hellersdorf",
+    "location": {
+      "latitude": 52.522984,
+      "longitude": 13.588121
+    },
+    "address": "Hellersdorfer Straße 82 12619"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7697",
+    "name": "Netto Marken-Discount",
+    "street": "Scharnweberstr. 120",
+    "zipCode": "13405",
+    "city": "Berlin-Tegel",
+    "location": {
+      "latitude": 52.564827,
+      "longitude": 13.321946
+    },
+    "address": "Scharnweberstr. 120 13405"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7704",
+    "name": "Netto Marken-Discount",
+    "street": "Lindenallee 45",
+    "zipCode": "15366",
+    "city": "Dahlwitz-Hoppegarten",
+    "location": {
+      "latitude": 52.511747,
+      "longitude": 13.663084
+    },
+    "address": "Lindenallee 45 15366"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7714",
+    "name": "Netto Marken-Discount",
+    "street": "Alte Jakobstr. 83",
+    "zipCode": "10179",
+    "city": "Berlin-Mitte",
+    "location": {
+      "latitude": 52.509889,
+      "longitude": 13.407451
+    },
+    "address": "Alte Jakobstr. 83 10179"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7722",
+    "name": "Netto Marken-Discount",
+    "street": "Goerzallee 220",
+    "zipCode": "14167",
+    "city": "Berlin-Lichterfelde",
+    "location": {
+      "latitude": 52.418017,
+      "longitude": 13.285865
+    },
+    "address": "Goerzallee 220 14167"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7729",
+    "name": "Netto Marken-Discount",
+    "street": "Alt-Friedrichsfelde 25",
+    "zipCode": "10315",
+    "city": "Berlin-Lichtenberg",
+    "location": {
+      "latitude": 52.509377,
+      "longitude": 13.513922
+    },
+    "address": "Alt-Friedrichsfelde 25 10315"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7731",
+    "name": "Netto Marken-Discount",
+    "street": "Wendenschloßstraße 360",
+    "zipCode": "12557",
+    "city": "Berlin-Köpenick",
+    "location": {
+      "latitude": 52.424454,
+      "longitude": 13.586076
+    },
+    "address": "Wendenschloßstraße 360 12557"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7734",
+    "name": "Netto Marken-Discount",
+    "street": "Sewanstraße 44",
+    "zipCode": "10319",
+    "city": "Berlin-Friedrichsfelde",
+    "location": {
+      "latitude": 52.497484,
+      "longitude": 13.503042
+    },
+    "address": "Sewanstraße 44 10319"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7735",
+    "name": "Netto Marken-Discount",
+    "street": "Stubenrauchstr. 97",
+    "zipCode": "12357",
+    "city": "Berlin-Rudow",
+    "location": {
+      "latitude": 52.432077,
+      "longitude": 13.496543
+    },
+    "address": "Stubenrauchstr. 97 12357"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7736",
+    "name": "Netto Marken-Discount",
+    "street": "Hultschiner Damm 200/204",
+    "zipCode": "12623",
+    "city": "Berlin-Mahlsdorf",
+    "location": {
+      "latitude": 52.492427,
+      "longitude": 13.609508
+    },
+    "address": "Hultschiner Damm 200/204 12623"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7737",
+    "name": "Netto Marken-Discount",
+    "street": "Attilastr. 60",
+    "zipCode": "12105",
+    "city": "Berlin-Tempelhof",
+    "location": {
+      "latitude": 52.448709,
+      "longitude": 13.362683
+    },
+    "address": "Attilastr. 60 12105"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7739",
+    "name": "Netto Marken-Discount",
+    "street": "Karl-Marx-Str. 152",
+    "zipCode": "12529",
+    "city": "Schönefeld OT Großziethen",
+    "location": {
+      "latitude": 52.394844,
+      "longitude": 13.443331
+    },
+    "address": "Karl-Marx-Str. 152 12529"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7740",
+    "name": "Netto Marken-Discount",
+    "street": "Kölner Damm 74",
+    "zipCode": "12353",
+    "city": "Berlin-Gropiusstadt",
+    "location": {
+      "latitude": 52.426238,
+      "longitude": 13.448814
+    },
+    "address": "Kölner Damm 74 12353"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7742",
+    "name": "Netto Marken-Discount",
+    "street": "Ordensmeisterstr. 7",
+    "zipCode": "12099",
+    "city": "Berlin-Tempelhof",
+    "location": {
+      "latitude": 52.456756,
+      "longitude": 13.390048
+    },
+    "address": "Ordensmeisterstr. 7 12099"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7746",
+    "name": "Netto Marken-Discount",
+    "street": "Späthstr. 12",
+    "zipCode": "12359",
+    "city": "Berlin-Rudow",
+    "location": {
+      "latitude": 52.452146,
+      "longitude": 13.455029
+    },
+    "address": "Späthstr. 12 12359"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7750",
+    "name": "Netto Marken-Discount",
+    "street": "Kaiser-Wilhelm-Str. 11",
+    "zipCode": "12247",
+    "city": "Berlin-Lankwitz",
+    "location": {
+      "latitude": 52.429871,
+      "longitude": 13.335216
+    },
+    "address": "Kaiser-Wilhelm-Str. 11 12247"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7752",
+    "name": "Netto Marken-Discount",
+    "street": "Wildenbruchstr. 55",
+    "zipCode": "12435",
+    "city": "Berlin-Treptow",
+    "location": {
+      "latitude": 52.488476,
+      "longitude": 13.448972
+    },
+    "address": "Wildenbruchstr. 55 12435"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7753",
+    "name": "Netto Marken-Discount",
+    "street": "Alt-Gatow 48-50",
+    "zipCode": "14089",
+    "city": "Berlin-Spandau",
+    "location": {
+      "latitude": 52.485351,
+      "longitude": 13.182491
+    },
+    "address": "Alt-Gatow 48-50 14089"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7757",
+    "name": "Netto Marken-Discount",
+    "street": "Bismarckstr. 3",
+    "zipCode": "12157",
+    "city": "Berlin-Steglitz",
+    "location": {
+      "latitude": 52.462974,
+      "longitude": 13.338813
+    },
+    "address": "Bismarckstr. 3 12157"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7758",
+    "name": "Netto Marken-Discount",
+    "street": "Sterndamm 33",
+    "zipCode": "12487",
+    "city": "Berlin-Johannisthal",
+    "location": {
+      "latitude": 52.451257,
+      "longitude": 13.508767
+    },
+    "address": "Sterndamm 33 12487"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7760",
+    "name": "Netto Marken-Discount",
+    "street": "Bergmannstr. 5",
+    "zipCode": "10961",
+    "city": "Berlin-Kreuzberg",
+    "location": {
+      "latitude": 52.489679,
+      "longitude": 13.388938
+    },
+    "address": "Bergmannstr. 5 10961"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7761",
+    "name": "Netto Marken-Discount",
+    "street": "Kottbusser Damm 1",
+    "zipCode": "10967",
+    "city": "Berlin-Kreuzberg",
+    "location": {
+      "latitude": 52.49536,
+      "longitude": 13.420099
+    },
+    "address": "Kottbusser Damm 1 10967"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7763",
+    "name": "Netto Marken-Discount",
+    "street": "Lauterstr. 17",
+    "zipCode": "12159",
+    "city": "Berlin-Schöneberg",
+    "location": {
+      "latitude": 52.471746,
+      "longitude": 13.335008
+    },
+    "address": "Lauterstr. 17 12159"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7764",
+    "name": "Netto Marken-Discount",
+    "street": "Urbanstr. 122",
+    "zipCode": "10967",
+    "city": "Berlin-Kreuzberg",
+    "location": {
+      "latitude": 52.491338,
+      "longitude": 13.417803
+    },
+    "address": "Urbanstr. 122 10967"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7765",
+    "name": "Netto Marken-Discount",
+    "street": "Flotowstr. 4",
+    "zipCode": "14480",
+    "city": "Potsdam",
+    "location": {
+      "latitude": 52.381335,
+      "longitude": 13.136733
+    },
+    "address": "Flotowstr. 4 14480"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7767",
+    "name": "Netto Marken-Discount",
+    "street": "Kaulsdorfer Str. 140",
+    "zipCode": "12555",
+    "city": "Berlin-Köpenick",
+    "location": {
+      "latitude": 52.469765,
+      "longitude": 13.572474
+    },
+    "address": "Kaulsdorfer Str. 140 12555"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7770",
+    "name": "Netto Marken-Discount",
+    "street": "Str. d. Pariser Kommune10",
+    "zipCode": "10243",
+    "city": "Berlin-Friedrichshain",
+    "location": {
+      "latitude": 52.510461,
+      "longitude": 13.437612
+    },
+    "address": "Str. d. Pariser Kommune10 10243"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7772",
+    "name": "Netto Marken-Discount",
+    "street": "Seegefelder Weg 466",
+    "zipCode": "13591",
+    "city": "Berlin-Spandau",
+    "location": {
+      "latitude": 52.550135,
+      "longitude": 13.128462
+    },
+    "address": "Seegefelder Weg 466 13591"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7779",
+    "name": "Netto Marken-Discount",
+    "street": "Provinzstr. 77",
+    "zipCode": "13158",
+    "city": "Berlin-Rosenthal",
+    "location": {
+      "latitude": 52.573391,
+      "longitude": 13.37934
+    },
+    "address": "Provinzstr. 77 13158"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7783",
+    "name": "Netto City",
+    "street": "Pariser Str. 41",
+    "zipCode": "10707",
+    "city": "Berlin-Wilmersdorf",
+    "location": {
+      "latitude": 52.498094,
+      "longitude": 13.318427
+    },
+    "address": "Pariser Str. 41 10707"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7788",
+    "name": "Netto City",
+    "street": "Kurfürstenstr. 75",
+    "zipCode": "10787",
+    "city": "Berlin-Tiergarten",
+    "location": {
+      "latitude": 52.50373,
+      "longitude": 13.34881
+    },
+    "address": "Kurfürstenstr. 75 10787"
+  },
+  {
+    "retailer": "netto",
+    "external_id": "7829",
+    "name": "Netto Marken-Discount",
+    "street": "Hermannstr. 158 a",
+    "zipCode": "12051",
+    "city": "Berlin-Neukölln",
+    "location": {
+      "latitude": 52.467329,
+      "longitude": 13.432638
+    },
+    "address": "Hermannstr. 158 a 12051"
+  }
+]
