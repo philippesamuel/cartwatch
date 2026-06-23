@@ -77,7 +77,7 @@ class StoreOfferFiles:
     
     def save(self, html: str, name: str, page: int) -> None:
         file_path = self.get_file_path(name=name, page=page)
-        logger.info(f"Saving to {file_path}")    
+        logger.info("Saving to {}", file_path)
         if not (parent_dir := file_path.parent).exists():
             logger.info("Creating folder {}", parent_dir)
             parent_dir.mkdir(parents=True, exist_ok=True)
@@ -113,9 +113,7 @@ def main(
             )
         
         if files.partition_exists():
-            logger.info(
-                "{} already exist. Skipping ...", files.partition_dir
-                )
+            logger.info("{} already exists. Skipping ...", files.partition_dir)
             continue
 
         with seleniumbase_browser_context() as ctx:             
@@ -124,7 +122,7 @@ def main(
                 pages_html = scrape_store(address=conf.address, page=page)
             except Exception as e:
                 logger.error("Failed to scrape store with id {}. Moving to next store.", conf.external_id)
-                logger.error(e)
+                logger.error("{}", e)
                 continue
 
         for page_number, html in enumerate(pages_html, start=1):
@@ -136,7 +134,7 @@ def scrape_store(address: str, page: Page) -> list[str]:
     deny_cookiebot_banner(page)
     
     logger.info("Clicking storefinder button ...")
-    page.locator(STOREFINDER_BUTTON_SELECTOR).click()
+    page.locator(STOREFINDER_BUTTON_SELECTOR).first.click()
     
     page.wait_for_selector(ADDRESS_INPUT_SELECTOR)
     logger.info("Typing address into input field ...")
@@ -151,7 +149,7 @@ def scrape_store(address: str, page: Page) -> list[str]:
     page.wait_for_timeout(1000)
 
     number_of_pages = get_number_of_pages(page)
-    logger.info(f"Found {number_of_pages} offer page(s)")
+    logger.info("Found {} offer page(s)", number_of_pages)
 
     pages_html: list[str] = []
     for page_number in range(1, number_of_pages + 1):
@@ -160,10 +158,10 @@ def scrape_store(address: str, page: Page) -> list[str]:
             footer.scroll_into_view_if_needed()
         scroll_to_top(page)  # prime all content before scrapping
 
-        main_locator = page.get_by_role("main")
+        main_locator = page.get_by_role("main").first
         main_soup = BeautifulSoup(main_locator.inner_html(), "html.parser")
         articles = main_soup.select("div.product-list__item")
-        logger.info(f"Page {page_number}: found {len(articles)} items")
+        logger.info("Page {}: found {} items", page_number, len(articles))
 
         pages_html.append(main_soup.prettify())
 
@@ -219,7 +217,7 @@ def scroll_to_top(page: Page) -> None:
             break
         else:
             counter += 1
-            logger.debug(f"Scrolling... {counter=}")
+            logger.debug("Scrolling... counter={}", counter)
             time.sleep(0.5)
 
 

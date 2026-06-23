@@ -113,11 +113,11 @@ def scrape_store(
     page.wait_for_selector("footer").scroll_into_view_if_needed()
     scroll_to_top(page)  # prime all content before scrapping
 
-    main_locator = page.get_by_role("main")
+    main_locator = page.get_by_role("main").first
     main_soup = BeautifulSoup(main_locator.inner_html(), "html.parser")
     articles = main_soup.find_all("article")
 
-    logger.info(f"Found {len(articles)} items")
+    logger.info("Found {} items", len(articles))
     return {
         "main": main_soup.prettify(),
         "articles": "".join([a.prettify() for a in articles]),
@@ -125,7 +125,7 @@ def scrape_store(
 
 
 def save_scraped_html(html: str, file_path: Path) -> None:
-    logger.info(f"Saving to {file_path}")
+    logger.info("Saving to {}", file_path)
     if not (parent_dir := file_path.parent).exists():
         logger.info("Creating folder {}", parent_dir)
         parent_dir.mkdir(parents=True, exist_ok=True)
@@ -167,12 +167,12 @@ def scroll_to_top(page):
     counter = 0
     while True:
         if page.evaluate("window.scrollY <= window.innerHeight"):
-            logger.success("I reached the top")
+            logger.info("I reached the top")
             page.evaluate("clearInterval(intervalID)")
             break
         else:
             counter += 1
-            logger.debug(f"Scrolling... {counter=}")
+            logger.debug("Scrolling... counter={}", counter)
             time.sleep(0.5)
 
 

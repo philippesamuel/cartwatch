@@ -23,6 +23,7 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: ./backend
+          file: ./backend/Dockerfile.api
           target: prod
           push: true
           tags: |
@@ -33,6 +34,7 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: ./backend
+          file: ./backend/Dockerfile.worker
           target: worker
           push: true
           tags: |

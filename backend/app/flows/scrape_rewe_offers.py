@@ -13,6 +13,7 @@ from ingestion.offers.rewe_scrapper import (
     get_store_configs,
     scrape_store,
 )
+from logger import forward_logs
 
 settings = get_prefect_settings()
 
@@ -34,11 +35,12 @@ DATALAKE_PATH_TEMPLATE = (
 
 
 @task(retries=2, retry_delay_seconds=30)
+@forward_logs
 def extract_html_with_playwright(  # type: ignore[no-matching-overload]
     conf: StoreConfig,
 ) -> dict[Literal["main", "articles"], str]:
     logger = get_run_logger()
-    logger.info("Starting scrape for %s - %s", conf.retailer, conf.external_id)
+    logger.info("Starting scrape for {} - {}", conf.retailer, conf.external_id)
 
     with browser_context(headless=True) as ctx:
         page = ctx.new_page()
@@ -46,6 +48,7 @@ def extract_html_with_playwright(  # type: ignore[no-matching-overload]
 
 
 @task
+@forward_logs
 def upload_html_to_datalake(conf: StoreConfig, html_content: str, page_name: str) -> str:
     logger = get_run_logger()
     supabase = get_supabase()
@@ -60,7 +63,7 @@ def upload_html_to_datalake(conf: StoreConfig, html_content: str, page_name: str
         page_name=page_name,
     )
 
-    logger.info("Uploading %s to Supabase path: %s", page_name, path)
+    logger.info("Uploading {} to Supabase path: {}", page_name, path)
 
     # Assuming you create a bucket named 'raw_offers'
     supabase.storage.from_("raw_offers").upload(
@@ -76,6 +79,7 @@ def upload_html_to_datalake(conf: StoreConfig, html_content: str, page_name: str
 
 # 3. The Orchestrating Flow
 @flow(name="scrape-rewe-daily-offers")
+@forward_logs
 def scrape_offers_flow(batch_size: int = settings.scrapper_batch_size):
     logger = get_run_logger()
 
@@ -87,7 +91,7 @@ def scrape_offers_flow(batch_size: int = settings.scrapper_batch_size):
                 scraped_data = future.result()
             except Exception as e:
                 logger.error(
-                    "Scrape failed for %s %s: %s", 
+                    "Scrape failed for {} {}: {}", 
                     conf.retailer, conf.external_id, e
                     )
                 continue

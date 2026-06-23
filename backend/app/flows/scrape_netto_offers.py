@@ -37,7 +37,7 @@ DATALAKE_PATH_TEMPLATE = (
 @forward_logs
 def extract_html_with_seleniumbase(conf: StoreConfig) -> list[str]:
     logger = get_run_logger()
-    logger.info("Starting scrape for %s - %s", conf.retailer, conf.external_id)
+    logger.info("Starting scrape for {} - {}", conf.retailer, conf.external_id)
 
     with seleniumbase_browser_context() as ctx:
         page = ctx.new_page()
@@ -60,7 +60,7 @@ def upload_html_to_datalake(conf: StoreConfig, html_content: str, page_number: i
         page=page_number,
     )
 
-    logger.info("Uploading page %d to Supabase path: %s", page_number, path)
+    logger.info("Uploading page {} to Supabase path: {}", page_number, path)
 
     supabase.storage.from_("raw_offers").upload(
         path,
@@ -86,7 +86,7 @@ def scrape_offers_flow(batch_size: int = settings.scrapper_batch_size):
                 pages_html = future.result()
             except Exception as e:
                 logger.error(
-                    "Scrape failed for %s %s: %s", 
+                    "Scrape failed for {} {}: {}", 
                     conf.retailer, conf.external_id, e
                     )
                 continue

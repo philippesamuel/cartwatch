@@ -20,6 +20,8 @@ services:
     image: ghcr.io/${GITHUB_REPOSITORY}/backend:latest
     # image is always pulled from GHCR via deploy.yml — build section unused in prod
     build:
+      context: ./backend
+      dockerfile: Dockerfile.api
       target: prod
     restart: unless-stopped
     env_file:
@@ -67,7 +69,22 @@ services:
     image: ghcr.io/${GITHUB_REPOSITORY}/worker:latest
     build:
       context: ./backend
+      dockerfile: Dockerfile.worker
       target: worker
+    environment:
+      PREFECT_API_URL: http://prefect-server:4200/api
+    env_file:
+      - .env.prod
+    restart: unless-stopped
+    depends_on:
+      prefect-server:
+        condition: service_healthy
+    networks:
+      - web_proxy
+
+  prefect-ecs-worker:
+    image: prefecthq/prefect-aws:0.7.9-python3.12-prefect3.7.3
+    command: prefect worker start --pool ecs-pool --type ecs
     environment:
       PREFECT_API_URL: http://prefect-server:4200/api
     env_file:
