@@ -3,7 +3,7 @@ import time
 from dataclasses import dataclass
 from datetime import date
 from pathlib import Path
-from typing import Optional, Self
+from typing import Literal, Optional, Self
 
 from bs4 import BeautifulSoup
 from loguru import logger
@@ -12,16 +12,7 @@ from playwright.sync_api import Page, TimeoutError
 from ingestion.browser import seleniumbase_browser_context
 
 STORE_FINDER_URL = "https://www.netto-online.de/filialangebote"
-
 DENY_BUTTON_CSS_LOCATOR = "#CybotCookiebotDialogBodyButtonDecline"
-STOREFINDER_BUTTON_SELECTOR = "a.js-layer-storefinder"
-ADDRESS_INPUT_SELECTOR = 'input[type="text"][name="post_code"]'
-ADDRESS_DROPDOWN_SELECTOR = "div.js-autocomplete-dropdown span"
-GO_TO_OFFERS_BUTTON_SELECTOR = (
-    "a.btn-primary"
-    ".store-finder__inner__box__button"
-    ".store-offers-btn"
-    )
 
 PARTITION_TEMPLATE = (
     "{root}/retailer={retailer}/store_external_id={external_id}/"
@@ -71,12 +62,12 @@ class StoreOfferFiles:
     def partition_exists(self) -> bool:
         return self.partition_dir.exists()  
     
-    def get_file_path(self, name: str, page: int) -> Path:
-        page_name_str = "page={}/{}.html".format(page, name)  
-        return self.partition_dir / page_name_str
+    def get_file_path(self, name: str) -> Path:
+        name_str = f"{name}.html"
+        return self.partition_dir / name_str
     
-    def save(self, html: str, name: str, page: int) -> None:
-        file_path = self.get_file_path(name=name, page=page)
+    def save(self, html: str, name: str) -> None:
+        file_path = self.get_file_path(name=name)
         logger.info("Saving to {}", file_path)
         if not (parent_dir := file_path.parent).exists():
             logger.info("Creating folder {}", parent_dir)
@@ -116,70 +107,46 @@ def main(
             logger.info("{} already exists. Skipping ...", files.partition_dir)
             continue
 
-        with seleniumbase_browser_context() as ctx:             
+        with seleniumbase_browser_context() as ctx:
             page = ctx.new_page()
             try:
-                pages_html = scrape_store(address=conf.address, page=page)
+                html_content = scrape_store(conf=conf, page=page)
             except Exception as e:
                 logger.error("Failed to scrape store with id {}. Moving to next store.", conf.external_id)
                 logger.error("{}", e)
                 continue
 
-        for page_number, html in enumerate(pages_html, start=1):
-            files.save(html=html, name="main", page=page_number)
+        files.save(html=html_content["main"], name="main")
+        files.save(html=html_content["articles"], name="articles")
 
 
-def scrape_store(address: str, page: Page) -> list[str]:
+def scrape_store(conf: StoreConfig, page: Page) -> dict[Literal["main", "articles"], str]:
+    cookies = [{
+        "name": "netto_user_stores_id",
+        "value": conf.external_id,        
+        "domain": ".netto-online.de",     # leading dot = also valid on subdomains
+        "path": "/",
+        # optional but often expected by the site:
+        "secure": True,
+        "sameSite": "Lax",
+    }] 
+    page.context.add_cookies(cookies) # type: ignore
     page.goto(STORE_FINDER_URL)
     deny_cookiebot_banner(page)
     
-    logger.info("Clicking storefinder button ...")
-    page.locator(STOREFINDER_BUTTON_SELECTOR).first.click()
-    
-    page.wait_for_selector(ADDRESS_INPUT_SELECTOR)
-    logger.info("Typing address into input field ...")
-    page.locator(ADDRESS_INPUT_SELECTOR).type(address)
-    
-    page.wait_for_selector(ADDRESS_DROPDOWN_SELECTOR)
-    logger.info("Clicking first address in autocomplete dropdown ...")
-    page.locator(ADDRESS_DROPDOWN_SELECTOR).first.click()
-    
-    logger.info('Clicking "Go to offers" button ...')
-    page.locator(GO_TO_OFFERS_BUTTON_SELECTOR).first.click()
-    page.wait_for_timeout(1000)
+    footer = page.wait_for_selector("footer")
+    if footer is not None:
+        footer.scroll_into_view_if_needed()
+    scroll_to_top(page)  # prime all content before scrapping
 
-    number_of_pages = get_number_of_pages(page)
-    logger.info("Found {} offer page(s)", number_of_pages)
-
-    pages_html: list[str] = []
-    for page_number in range(1, number_of_pages + 1):
-        footer = page.wait_for_selector("footer")
-        if footer is not None:
-            footer.scroll_into_view_if_needed()
-        scroll_to_top(page)  # prime all content before scrapping
-
-        main_locator = page.get_by_role("main").first
-        main_soup = BeautifulSoup(main_locator.inner_html(), "html.parser")
-        articles = main_soup.select("div.product-list__item")
-        logger.info("Page {}: found {} items", page_number, len(articles))
-
-        pages_html.append(main_soup.prettify())
-
-        if page_number < number_of_pages:
-            next_page_el = page.query_selector("ul.pagination li:last-child")
-            if next_page_el is not None:
-                next_page_el.click()
-                page.wait_for_timeout(1000)
-
-    return pages_html
-
-
-def get_number_of_pages(page: Page) -> int:
-    # second-to-last pagination item is the highest page number (e.g.: < 1 2 3 4 >, last is ">")
-    last_page_el = page.query_selector("ul.pagination li:nth-last-child(2)")
-    if last_page_el is None:
-        return 1
-    return int(last_page_el.inner_text())
+    main_locator = page.get_by_role("main").first
+    main_soup = BeautifulSoup(main_locator.inner_html(), "html.parser")
+    articles = main_soup.select("div.product-list__item")
+    logger.info("Found {} items", len(articles))
+    return {
+        "main": main_soup.prettify(),
+        "articles": "".join([a.prettify() for a in articles]),
+    }
 
 
 def deny_cookiebot_banner(page: Page) -> None:
@@ -222,6 +189,7 @@ def scroll_to_top(page: Page) -> None:
 
 
 def get_store_configs(path: Path) -> list[StoreConfig]:
+    path = Path(path)
     with path.open("rt") as f:
         store_dicts = json.load(f)
 

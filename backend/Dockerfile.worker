@@ -30,6 +30,7 @@ RUN groupadd --system --gid 999 nonroot \
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
             chromium \
+            xvfb \
             xorg \
             openbox \
             python3-tk \

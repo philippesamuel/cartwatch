@@ -29,7 +29,6 @@ DATALAKE_PATH_TEMPLATE = (
     "year={year}/"
     "month={month}/"
     "day={day}/"
-    "page=1/"
     "{page_name}.html"
 )
 

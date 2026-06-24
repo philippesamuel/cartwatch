@@ -41,9 +41,13 @@ DENY_BUTTON_CSS_LOCATOR = 'button[data-testid="uc-deny-all-button"]'
 DATE = date.today()
 ISODATE = DATE.isoformat()
 HTML_FILE_TEMPLATE = (
-    "{root}/retailer={retailer}/store_external_id={external_id}/"
-    "year={year}/month={month}/day={day}/"
-    "page={page}/{name}.html"
+    "{root}/"
+    "retailer={retailer}/"
+    "store_external_id={external_id}/"
+    "year={year}/"
+    "month={month}/"
+    "day={day}/"
+    "{name}.html"
 )
 
 
@@ -96,7 +100,7 @@ def get_file_path_with_retailer_store_date_partitions(
         year=DATE.year,
         month=DATE.strftime("%m"),
         day=DATE.strftime(r"%d"),
-        page=1,
+
     )
     return Path(path_str)
 
@@ -177,6 +181,7 @@ def scroll_to_top(page):
 
 
 def get_store_configs(path: Path) -> list[StoreConfig]:
+    path = Path(path)
     with path.open("rt") as f:
         store_dicts = json.load(f)
 

@@ -1,10 +1,10 @@
 from datetime import date
 from itertools import batched
 from pathlib import Path
+from typing import Literal
 
 from prefect import flow, get_run_logger, task
 
-from logger import forward_logs
 from core.config import get_prefect_settings
 from core.supabase import get_supabase
 from ingestion.browser import seleniumbase_browser_context
@@ -13,6 +13,7 @@ from ingestion.offers.netto_scrapper import (
     get_store_configs,
     scrape_store,
 )
+from logger import forward_logs
 
 settings = get_prefect_settings()
 
@@ -28,25 +29,24 @@ DATALAKE_PATH_TEMPLATE = (
     "year={year}/"
     "month={month}/"
     "day={day}/"
-    "page={page}/"
-    "main.html"
+    "{page_name}.html"
 )
 
 
 @task(retries=2, retry_delay_seconds=30)
 @forward_logs
-def extract_html_with_seleniumbase(conf: StoreConfig) -> list[str]:
+def extract_html_with_seleniumbase(conf: StoreConfig) -> dict[Literal["main", "articles"], str]:
     logger = get_run_logger()
-    logger.info("Starting scrape for {} - {}", conf.retailer, conf.external_id)
+    logger.info(f"Starting scrape for {conf.retailer} - {conf.external_id}")
 
     with seleniumbase_browser_context() as ctx:
         page = ctx.new_page()
-        return scrape_store(address=conf.address, page=page)
+        return scrape_store(conf=conf, page=page)
 
 
 @task
 @forward_logs
-def upload_html_to_datalake(conf: StoreConfig, html_content: str, page_number: int) -> str:
+def upload_html_to_datalake(conf: StoreConfig, html_content: str, page_name: str) -> str:
     logger = get_run_logger()
     supabase = get_supabase()
 
@@ -57,10 +57,10 @@ def upload_html_to_datalake(conf: StoreConfig, html_content: str, page_number: i
         year=today.year,
         month=today.strftime("%m"),
         day=today.strftime("%d"),
-        page=page_number,
+        page_name=page_name,
     )
 
-    logger.info("Uploading page {} to Supabase path: {}", page_number, path)
+    logger.info(f"Uploading page {page_name} to Supabase path: {path}")
 
     supabase.storage.from_("raw_offers").upload(
         path,
@@ -83,13 +83,11 @@ def scrape_offers_flow(batch_size: int = settings.scrapper_batch_size):
 
         for conf, future in zip(batch, scrape_futures):
             try:
-                pages_html = future.result()
+                scraped_data = future.result()
             except Exception as e:
                 logger.error(
-                    "Scrape failed for {} {}: {}", 
-                    conf.retailer, conf.external_id, e
+                    f"Scrape failed for {conf.retailer} {conf.external_id}: {e}"
                     )
                 continue
-
-            for page_number, html in enumerate(pages_html, start=1):
-                upload_html_to_datalake(conf, html, page_number)  # type: ignore[no-matching-overload]
+            upload_html_to_datalake(conf, scraped_data["main"], "main")  # type: ignore[no-matching-overload]
+            upload_html_to_datalake(conf, scraped_data["articles"], "articles")  # type: ignore[no-matching-overload]
