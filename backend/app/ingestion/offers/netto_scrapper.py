@@ -1,5 +1,4 @@
 import json
-import time
 from dataclasses import dataclass
 from datetime import date
 from pathlib import Path
@@ -7,12 +6,16 @@ from typing import Literal, Optional, Self
 
 from bs4 import BeautifulSoup
 from loguru import logger
-from playwright.sync_api import Page, TimeoutError
+from playwright.sync_api import Page
 
-from ingestion.browser import seleniumbase_browser_context
+from ingestion.browser import deny_consent_banner, scroll_to_top, seleniumbase_browser_context
 
 STORE_FINDER_URL = "https://www.netto-online.de/filialangebote"
 DENY_BUTTON_CSS_LOCATOR = "#CybotCookiebotDialogBodyButtonDecline"
+
+_SHOW_ALL_PRODUCTS_JS = (
+    'document.querySelectorAll("ul.product-list").forEach(el => el.style.display = "")'
+)
 
 PARTITION_TEMPLATE = (
     "{root}/retailer={retailer}/store_external_id={external_id}/"
@@ -68,12 +71,12 @@ class StoreOfferFiles:
     
     def save(self, html: str, name: str) -> None:
         file_path = self.get_file_path(name=name)
-        logger.info("Saving to {}", file_path)
+        logger.info(f"Saving to {file_path}")
         if not (parent_dir := file_path.parent).exists():
-            logger.info("Creating folder {}", parent_dir)
+            logger.info(f"Creating folder {parent_dir}")
             parent_dir.mkdir(parents=True, exist_ok=True)
         with file_path.open("wt") as f:
-            f.write(html) 
+            f.write(html)
 
 
 STORE_CONFIGS: list[StoreConfig] = [
@@ -104,7 +107,7 @@ def main(
             )
         
         if files.partition_exists():
-            logger.info("{} already exists. Skipping ...", files.partition_dir)
+            logger.info(f"{files.partition_dir} already exists. Skipping ...")
             continue
 
         with seleniumbase_browser_context() as ctx:
@@ -112,8 +115,8 @@ def main(
             try:
                 html_content = scrape_store(conf=conf, page=page)
             except Exception as e:
-                logger.error("Failed to scrape store with id {}. Moving to next store.", conf.external_id)
-                logger.error("{}", e)
+                logger.error(f"Failed to scrape store {conf.external_id}. Moving to next store.")
+                logger.error(f"{e}")
                 continue
 
         files.save(html=html_content["main"], name="main")
@@ -130,62 +133,25 @@ def scrape_store(conf: StoreConfig, page: Page) -> dict[Literal["main", "article
         "secure": True,
         "sameSite": "Lax",
     }] 
-    page.context.add_cookies(cookies) # type: ignore
+    page.context.add_cookies(cookies)  # type: ignore
     page.goto(STORE_FINDER_URL)
-    deny_cookiebot_banner(page)
-    
+    deny_consent_banner(page, DENY_BUTTON_CSS_LOCATOR, timeout=1000)
+
     footer = page.wait_for_selector("footer")
     if footer is not None:
         footer.scroll_into_view_if_needed()
-    scroll_to_top(page)  # prime all content before scrapping
+    scroll_to_top(page)
+
+    page.evaluate(_SHOW_ALL_PRODUCTS_JS)
 
     main_locator = page.get_by_role("main").first
     main_soup = BeautifulSoup(main_locator.inner_html(), "html.parser")
     articles = main_soup.select("div.product-list__item")
-    logger.info("Found {} items", len(articles))
+    logger.info(f"Found {len(articles)} items")
     return {
         "main": main_soup.prettify(),
         "articles": "".join([a.prettify() for a in articles]),
     }
-
-
-def deny_cookiebot_banner(page: Page) -> None:
-    try:
-        # wait up to 1 second for the button to be attached to the DOM and visible.
-        deny_button = page.locator(DENY_BUTTON_CSS_LOCATOR)
-
-        # This handles the asynchronous loading of the Cookiebot script.
-        logger.info("Waiting for Cookiebot banner...")
-        deny_button.wait_for(state="visible", timeout=1000)
-        deny_button.click()
-        logger.success("Successfully clicked the 'Deny All' button.")
-
-    except TimeoutError:
-        # If 10 seconds pass and the button never shows up, it fails gracefully.
-        logger.warning(
-            "Timeout: Banner did not appear within 1 second. "
-            "It may be disabled or already accepted."
-        )
-
-
-def scroll_to_top(page: Page) -> None:
-    page.evaluate(
-        """
-        var intervalID = setInterval(function () {
-            window.scrollBy(0, -window.innerHeight);
-        }, 200);
-        """
-    )
-    counter = 0
-    while True:
-        if page.evaluate("window.scrollY <= window.innerHeight"):
-            logger.success("I reached the top")
-            page.evaluate("clearInterval(intervalID)")
-            break
-        else:
-            counter += 1
-            logger.debug("Scrolling... counter={}", counter)
-            time.sleep(0.5)
 
 
 def get_store_configs(path: Path) -> list[StoreConfig]:

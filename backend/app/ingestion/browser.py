@@ -1,6 +1,8 @@
+import time
 from contextlib import contextmanager
 
-from playwright.sync_api import sync_playwright
+from loguru import logger
+from playwright.sync_api import Page, TimeoutError, sync_playwright
 from seleniumbase import sb_cdp
 from xvfbwrapper import Xvfb
 
@@ -53,4 +55,36 @@ def _selenium_base_cdp_chrome(url=None, **kwargs):
             yield sb
         finally:
             sb.driver.quit()
-            
+
+
+def deny_consent_banner(page: Page, selector: str, timeout: int = 10000) -> None:
+    try:
+        deny_button = page.locator(selector)
+        logger.info("Waiting for consent banner...")
+        deny_button.wait_for(state="visible", timeout=timeout)
+        deny_button.click()
+        logger.success("Successfully clicked the 'Deny All' button.")
+    except TimeoutError:
+        logger.warning(
+            f"Timeout: Consent banner did not appear within {timeout}ms. "
+            "It may be disabled or already accepted."
+        )
+
+
+def scroll_to_top(page: Page) -> None:
+    page.evaluate(
+        """
+        var intervalID = setInterval(function () {
+            window.scrollBy(0, -window.innerHeight);
+        }, 200);
+        """
+    )
+    counter = 0
+    while True:
+        if page.evaluate("window.scrollY <= window.innerHeight"):
+            logger.success("Reached the top of the page.")
+            page.evaluate("clearInterval(intervalID)")
+            break
+        counter += 1
+        logger.debug(f"Scrolling... counter={counter}")
+        time.sleep(0.5)
