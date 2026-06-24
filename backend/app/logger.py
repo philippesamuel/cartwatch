@@ -1,16 +1,23 @@
 import functools
+import inspect
 
 from loguru import logger
 from prefect import get_run_logger
 
 
 def forward_logs(func):
+    if inspect.iscoroutinefunction(func):
+        @functools.wraps(func)
+        async def async_wrapper(*args, **kwargs):
+            configure_logger()
+            return await func(*args, **kwargs)
+        return async_wrapper
+
     @functools.wraps(func)
-    def wrapper(*args, **kwargs):
+    def sync_wrapper(*args, **kwargs):
         configure_logger()
         return func(*args, **kwargs)
-
-    return wrapper
+    return sync_wrapper
 
 
 handler_ids: list[int] = []

@@ -27,14 +27,14 @@ PARTITION_TEMPLATE = (
 class StoreConfig:
     retailer: str
     external_id: str
-    address: str
+    address: Optional[str] = None
 
     @classmethod
     def from_dict(cls, dict_) -> Self:
         return cls(
             retailer=dict_["retailer"],
             external_id=dict_["external_id"],
-            address=dict_["address"],
+            address=dict_.get("address"),
         )
 
 
@@ -124,32 +124,35 @@ def main(
 
 
 def scrape_store(conf: StoreConfig, page: Page) -> dict[Literal["main", "articles"], str]:
+    logger.info(f"[{conf.external_id}] Injecting store cookie and navigating to {STORE_FINDER_URL}")
     cookies = [{
         "name": "netto_user_stores_id",
-        "value": conf.external_id,        
-        "domain": ".netto-online.de",     # leading dot = also valid on subdomains
+        "value": conf.external_id,
+        "domain": ".netto-online.de",
         "path": "/",
-        # optional but often expected by the site:
         "secure": True,
         "sameSite": "Lax",
-    }] 
+    }]
     page.context.add_cookies(cookies)  # type: ignore
     page.goto(STORE_FINDER_URL)
     deny_consent_banner(page, DENY_BUTTON_CSS_LOCATOR, timeout=1000)
 
+    logger.info(f"[{conf.external_id}] Page loaded, scrolling to prime lazy-loaded content")
     footer = page.wait_for_selector("footer")
     if footer is not None:
         footer.scroll_into_view_if_needed()
     scroll_to_top(page)
 
+    logger.info(f"[{conf.external_id}] Forcing all product lists visible")
     page.evaluate(_SHOW_ALL_PRODUCTS_JS)
 
     main_locator = page.get_by_role("main").first
     main_soup = BeautifulSoup(main_locator.inner_html(), "html.parser")
     articles = main_soup.select("div.product-list__item")
-    logger.info(f"Found {len(articles)} items")
+    main_html = main_soup.prettify()
+    logger.info(f"[{conf.external_id}] Found {len(articles)} articles ({len(main_html):,} chars)")
     return {
-        "main": main_soup.prettify(),
+        "main": main_html,
         "articles": "".join([a.prettify() for a in articles]),
     }
 
