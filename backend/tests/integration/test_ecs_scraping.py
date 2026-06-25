@@ -10,20 +10,22 @@ Indicators of bot detection:
   - cookie_banner_found == False (page never fully loaded)
 """
 
+import pytest
 from prefect import flow, get_run_logger
 
-from ingestion.browser import browser_context
-from ingestion.offers.rewe_scrapper import deny_usercentrics_banner
+from ingestion.browser import browser_context, deny_consent_banner
 
 _TEST_STORE_URL = (
     "https://www.rewe.de/angebote/berlin-wedding/1765982/rewe-markt-muellerstr-141/"
 )
+_DENY_BUTTON_CSS_LOCATOR = 'button[data-testid="uc-deny-all-button"]'
 
 
+@pytest.mark.integration
 @flow(name="test-ecs-scraping")
 def test_ecs_scraping_flow(url: str = _TEST_STORE_URL) -> dict:
     logger = get_run_logger()
-    logger.info("Starting ECS scraping smoke test against: {}", url)
+    logger.info(f"Starting ECS scraping smoke test against: {url}")
 
     with browser_context(headless=True) as ctx:
         page = ctx.new_page()
@@ -31,7 +33,7 @@ def test_ecs_scraping_flow(url: str = _TEST_STORE_URL) -> dict:
 
         status_code = response.status if response else None
         title = page.title()
-        logger.info("HTTP status: {} | Page title: {}", status_code, title)
+        logger.info(f"HTTP status: {status_code} | Page title: {title}")
 
         # Check for bot detection signals in the title
         bot_signals = ["captcha", "robot", "blocked", "access denied", "403", "429"]
@@ -42,10 +44,10 @@ def test_ecs_scraping_flow(url: str = _TEST_STORE_URL) -> dict:
 
         # Try to dismiss the cookie banner
         try:
-            deny_usercentrics_banner(page)
+            deny_consent_banner(page, _DENY_BUTTON_CSS_LOCATOR)
             cookie_banner_found = True
         except Exception as e:
-            logger.warning("Cookie banner handling failed: {}", e)
+            logger.warning(f"Cookie banner handling failed: {e}")
             cookie_banner_found = False
 
         # Wait a moment for content to settle after banner dismissal
@@ -54,7 +56,7 @@ def test_ecs_scraping_flow(url: str = _TEST_STORE_URL) -> dict:
         # Count articles as the key signal that real content loaded
         articles = page.locator("article").all()
         articles_found = len(articles)
-        logger.info("Articles found: {}", articles_found)
+        logger.info(f"Articles found: {articles_found}")
 
         # Grab a small snippet of the main content for visual inspection
         try:
@@ -72,12 +74,12 @@ def test_ecs_scraping_flow(url: str = _TEST_STORE_URL) -> dict:
         "main_html_snippet": main_html_snippet,
     }
 
-    logger.info("Smoke test result: {}", result)
+    logger.info(f"Smoke test result: {result}")
 
     if articles_found == 0:
         logger.error("No articles found — scraping likely blocked or page failed to load.")
     else:
-        logger.info("SUCCESS! Scraping looks healthy: {} articles found.", articles_found)
+        logger.info(f"SUCCESS! Scraping looks healthy: {articles_found} articles found.")
 
     return result
 

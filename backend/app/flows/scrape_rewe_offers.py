@@ -79,8 +79,12 @@ def scrape_store_flow(store_ids: list[str]) -> None:
 @forward_logs
 def scrape_single_store(store_id: str) -> None:
     logger = get_run_logger()
-    conf = next(c for c in STORE_CONFIGS if c.external_id == store_id)
-    scraped_data = extract_html_with_playwright(conf)
-    upload_html_to_datalake(conf, scraped_data["main"], "main")  # type: ignore[no-matching-overload]
-    upload_html_to_datalake(conf, scraped_data["articles"], "articles")  # type: ignore[no-matching-overload]
-    logger.info(f"Store {store_id} uploaded successfully.")
+    try:
+        conf = next(c for c in STORE_CONFIGS if c.external_id == store_id)
+    except StopIteration:
+        logger.error(f"Provided id not registered: {store_id}")
+    else:
+        scraped_data = extract_html_with_playwright(conf)
+        upload_html_to_datalake(conf, scraped_data["main"], "main")  # type: ignore[no-matching-overload]
+        upload_html_to_datalake(conf, scraped_data["articles"], "articles")  # type: ignore[no-matching-overload]
+        logger.info(f"Store {store_id} uploaded successfully.")

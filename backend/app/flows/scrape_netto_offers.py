@@ -5,7 +5,7 @@ from pathlib import Path
 from typing import Literal
 
 from prefect import flow, get_run_logger, task
-from prefect.deployments import arun_deployment, run_deployment
+from prefect.deployments import arun_deployment
 
 from core.config import get_prefect_settings
 from flows.common import upload_html_to_datalake

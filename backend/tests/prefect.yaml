@@ -15,7 +15,7 @@ deployments:
   tags: [test]
   concurrency_limit: null
   description: "Smoke test: scrapes one REWE store to verify ECS can bypass bot detection"
-  entrypoint: tests/test_ecs_scraping.py:test_ecs_scraping_flow
+  entrypoint: tests/integration/test_ecs_scraping.py:test_ecs_scraping_flow
   parameters: {}
   work_pool:
     name: ecs-pool
@@ -28,7 +28,7 @@ deployments:
   tags: [test]
   concurrency_limit: null
   description: "Smoke test: scrapes one REWE store to verify ECS can bypass bot detection"
-  entrypoint: tests/test_ecs_scraping.py:test_ecs_scraping_flow
+  entrypoint: tests/integration/test_ecs_scraping.py:test_ecs_scraping_flow
   parameters: {}
   work_pool:
     name: local-pool
