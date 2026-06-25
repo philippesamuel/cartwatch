@@ -111,6 +111,23 @@ services:
     env_file:
       - .env
     restart: on-failure
+
+  prefect-deploy:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.worker
+      target: worker
+    working_dir: /backend
+    command: prefect deploy --all
+    environment:
+      PREFECT_API_URL: http://prefect-server:4200/api
+    depends_on:
+      prefect-server:
+        condition: service_healthy
+    restart: "no"
+    profiles:
+      - deploy
+
 volumes:
   postgres_data:
   redis_data:
