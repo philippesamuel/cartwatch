@@ -1,8 +1,11 @@
+import asyncio
+import math
 from itertools import batched
 from pathlib import Path
 from typing import Literal
 
 from prefect import flow, get_run_logger, task
+from prefect.deployments import arun_deployment
 
 from core.config import get_prefect_settings
 from flows.common import upload_html_to_datalake
@@ -25,7 +28,7 @@ STORE_CONFIGS = get_store_configs(STORE_CONFIGS_PATH)
 
 @task(retries=2, retry_delay_seconds=30)
 @forward_logs
-def extract_html_with_playwright(  # type: ignore[no-matching-overload]
+def extract_html_with_playwright(
     conf: StoreConfig,
 ) -> dict[Literal["main", "articles"], str]:
     logger = get_run_logger()
@@ -38,17 +41,46 @@ def extract_html_with_playwright(  # type: ignore[no-matching-overload]
 
 @flow(name="scrape-rewe-daily-offers")
 @forward_logs
-def scrape_offers_flow(batch_size: int = settings.scrapper_batch_size):
+async def scrape_offers_flow(batch_size: int = 8):
     logger = get_run_logger()
+    store_ids = [conf.external_id for conf in STORE_CONFIGS]
+    n_batches = math.ceil(len(store_ids) / batch_size)
+    logger.info(
+        f"Dispatching {len(store_ids)} stores, {n_batches} batch(es) of {batch_size}"
+    )
+    futures = []
+    for i, batch in enumerate(batched(store_ids, batch_size), start=1):
+        logger.info(f"Dispatching batch {i}/{n_batches}: {list(batch)}")
+        future = arun_deployment(
+            name="scrape-rewe-store-batch/scrape-rewe-store-batch_ecs",
+            parameters={"store_ids": list(batch)},
+            as_subflow=False,
+        )
+        futures.append(future)
+    await asyncio.gather(*futures)
+    logger.info(f"All {n_batches} batch(es) dispatched.")
 
-    for batch in batched(STORE_CONFIGS, batch_size):
-        scrape_futures = extract_html_with_playwright.map(list(batch))  # type: ignore[no-matching-overload]
 
-        for conf, future in zip(batch, scrape_futures):
-            try:
-                scraped_data = future.result()
-            except Exception as e:
-                logger.error(f"Scrape failed for {conf.retailer} {conf.external_id}: {e}")
-                continue
-            upload_html_to_datalake(conf, scraped_data["main"], "main")  # type: ignore[no-matching-overload]
-            upload_html_to_datalake(conf, scraped_data["articles"], "articles")  # type: ignore[no-matching-overload]
+@flow(name="scrape-rewe-store-batch")
+@forward_logs
+def scrape_store_flow(store_ids: list[str]) -> None:
+    logger = get_run_logger()
+    logger.info(f"Batch started: {len(store_ids)} store(s) — {store_ids}")
+    for i, id_ in enumerate(store_ids, start=1):
+        logger.info(f"[{i}/{len(store_ids)}] Scraping store {id_}")
+        try:
+            scrape_single_store(id_)
+        except Exception as e:
+            logger.error(f"Scrape failed for rewe {id_}: {e}")
+    logger.info(f"Batch complete: {len(store_ids)} store(s) processed.")
+
+
+@task
+@forward_logs
+def scrape_single_store(store_id: str) -> None:
+    logger = get_run_logger()
+    conf = next(c for c in STORE_CONFIGS if c.external_id == store_id)
+    scraped_data = extract_html_with_playwright(conf)
+    upload_html_to_datalake(conf, scraped_data["main"], "main")  # type: ignore[no-matching-overload]
+    upload_html_to_datalake(conf, scraped_data["articles"], "articles")  # type: ignore[no-matching-overload]
+    logger.info(f"Store {store_id} uploaded successfully.")

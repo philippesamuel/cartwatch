@@ -13,8 +13,23 @@ deployments:
 
 # ── REWE ──────────────────────────────────────────────────────────────────────
 
+# Coordinator: runs on Hetzner, fans out batches to ECS via arun_deployment()
 - name: scrape-rewe-offers
   entrypoint: app/flows/scrape_rewe_offers.py:scrape_offers_flow
+  parameters:
+    batch_size: 16
+  work_pool:
+    name: local-pool
+  schedules:
+  - cron: 0 4 * * *
+    timezone: UTC
+    day_or: true
+    active: true
+
+# ECS worker: one deployment run per batch, triggered by the coordinator.
+# Name "scrape-rewe-store-batch_ecs" matches run_deployment(name="scrape-rewe-store-batch/scrape-rewe-store-batch_ecs")
+- name: scrape-rewe-store-batch_ecs
+  entrypoint: app/flows/scrape_rewe_offers.py:scrape_store_flow
   parameters: {}
   work_pool:
     name: ecs-pool
@@ -23,11 +38,7 @@ deployments:
         SUPABASE_URL: "{{ $SUPABASE_URL }}"
         SUPABASE_USER_ID: "{{ $SUPABASE_USER_ID }}"
         PREFECT_LOGGING_EXTRA_LOGGERS: ingestion
-  schedules:
-  - cron: 0 4 * * *
-    timezone: UTC
-    day_or: true
-    active: true
+  schedules: []
 
 # ── NETTO ─────────────────────────────────────────────────────────────────────
 
