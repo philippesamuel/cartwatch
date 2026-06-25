@@ -41,6 +41,15 @@ jobs:
             ghcr.io/${{ github.repository }}/worker:latest
             ghcr.io/${{ github.repository }}/worker:${{ github.sha }}
 
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+
+      - name: Deploy Prefect flows
+        working-directory: backend
+        env:
+          PREFECT_API_URL: ${{ secrets.PREFECT_API_URL }}
+        run: uvx prefect deploy --all
+
       - name: Copy docker-compose file to server
         uses: appleboy/scp-action@v1
         with:
