@@ -1,0 +1,62 @@
+# ──────────────────────────────────────────
+# Builder
+# ──────────────────────────────────────────
+FROM ghcr.io/astral-sh/uv:python3.12-bookworm-slim AS builder
+ENV UV_COMPILE_BYTECODE=1 UV_LINK_MODE=copy UV_NO_DEV=1 UV_PYTHON_DOWNLOADS=0
+
+WORKDIR /backend
+
+# Install dependencies before copying source — reruns only when lockfile changes
+RUN --mount=type=cache,target=/root/.cache/uv \
+    --mount=type=bind,source=uv.lock,target=uv.lock \
+    --mount=type=bind,source=pyproject.toml,target=pyproject.toml \
+    uv sync --locked --no-install-project --extra worker
+
+# Copy only the source files the flows/worker needs
+COPY ./app/ /backend/app/
+COPY pyproject.toml uv.lock /backend/
+
+RUN --mount=type=cache,target=/root/.cache/uv \
+    uv sync --locked --extra worker
+
+# ──────────────────────────────────────────
+# System deps (cached independently of Python deps)
+# ──────────────────────────────────────────
+FROM python:3.12-slim-bookworm AS system-deps
+
+RUN groupadd --system --gid 999 nonroot \
+ && useradd --system --gid 999 --uid 999 --create-home nonroot
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+            chromium \
+            xvfb \
+            xorg \
+            openbox \
+            python3-tk \
+            python3-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+# ──────────────────────────────────────────
+# Runner
+# ──────────────────────────────────────────
+FROM system-deps AS runner
+
+COPY --from=builder --chown=nonroot:nonroot /backend /backend
+
+ENV PATH="/backend/.venv/bin:$PATH"
+ENV PYTHONPATH="/backend/app/"
+ENV PYTHONUNBUFFERED=1
+ENV PLAYWRIGHT_BROWSERS_PATH=/home/nonroot/.cache/ms-playwright/
+
+RUN playwright install chromium --only-shell \
+    && chown -R nonroot:nonroot /home/nonroot/
+
+USER nonroot
+WORKDIR /backend
+
+# ──────────────────────────────────────────
+# Worker
+# ──────────────────────────────────────────
+FROM runner AS worker
+CMD ["prefect", "worker", "start", "--pool", "local-pool"]

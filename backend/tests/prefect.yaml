@@ -1,0 +1,37 @@
+---
+name: backend-tests
+prefect-version: 3.6.20
+
+build: null
+push: null
+
+pull:
+- prefect.deployments.steps.set_working_directory:
+    directory: /backend
+
+deployments:
+- name: test-ecs-scraping
+  version: null
+  tags: [test]
+  concurrency_limit: null
+  description: "Smoke test: scrapes one REWE store to verify ECS can bypass bot detection"
+  entrypoint: tests/integration/test_ecs_scraping.py:test_ecs_scraping_flow
+  parameters: {}
+  work_pool:
+    name: ecs-pool
+    work_queue_name: null
+    job_variables: {}
+  schedules: []
+
+- name: local-test-ecs-scraping
+  version: null
+  tags: [test]
+  concurrency_limit: null
+  description: "Smoke test: scrapes one REWE store to verify ECS can bypass bot detection"
+  entrypoint: tests/integration/test_ecs_scraping.py:test_ecs_scraping_flow
+  parameters: {}
+  work_pool:
+    name: local-pool
+    work_queue_name: null
+    job_variables: {}
+  schedules: []

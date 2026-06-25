@@ -2,6 +2,7 @@ services:
   backend:
     build:
       context: ./backend
+      dockerfile: Dockerfile.api
       target: dev
     volumes:
       - ./backend/app/:/backend/app/
@@ -84,6 +85,7 @@ services:
   prefect-worker:
     build:
       context: ./backend
+      dockerfile: Dockerfile.worker
       target: worker
     depends_on:
       prefect-server:
@@ -97,6 +99,18 @@ services:
       - ./backend/app/:/backend/app/
       # TODO: remove this local hack once file storage is moved to a proper backend (S3/GCS/etc.)
       - ./data/stores/:/data/stores/
+
+  prefect-ecs-worker:
+    image: prefecthq/prefect-aws:0.7.9-python3.12-prefect3.7.3
+    command: prefect worker start --pool ecs-pool --type ecs
+    depends_on:
+      prefect-server:
+        condition: service_healthy
+    environment:
+      PREFECT_API_URL: http://prefect-server:4200/api
+    env_file:
+      - .env
+    restart: on-failure
 volumes:
   postgres_data:
   redis_data:

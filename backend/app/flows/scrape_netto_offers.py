@@ -1,18 +1,21 @@
-from datetime import date
+import asyncio
+import math
 from itertools import batched
 from pathlib import Path
+from typing import Literal
 
 from prefect import flow, get_run_logger, task
+from prefect.deployments import arun_deployment
 
-from logger import forward_logs
 from core.config import get_prefect_settings
-from core.supabase import get_supabase
+from flows.common import upload_html_to_datalake
 from ingestion.browser import seleniumbase_browser_context
 from ingestion.offers.netto_scrapper import (
     StoreConfig,
     get_store_configs,
     scrape_store,
 )
+from logger import forward_logs
 
 settings = get_prefect_settings()
 
@@ -22,74 +25,65 @@ settings = get_prefect_settings()
 STORE_CONFIGS_PATH = Path(__file__).parent / "../ingestion/offers/netto_store_configs.json"
 STORE_CONFIGS = get_store_configs(STORE_CONFIGS_PATH)
 
-DATALAKE_PATH_TEMPLATE = (
-    "retailer={retailer}/"
-    "store_external_id={store_external_id}/"
-    "year={year}/"
-    "month={month}/"
-    "day={day}/"
-    "page={page}/"
-    "main.html"
-)
-
 
 @task(retries=2, retry_delay_seconds=30)
 @forward_logs
-def extract_html_with_seleniumbase(conf: StoreConfig) -> list[str]:
+def extract_html_with_seleniumbase(conf: StoreConfig) -> dict[Literal["main", "articles"], str]:
     logger = get_run_logger()
-    logger.info("Starting scrape for %s - %s", conf.retailer, conf.external_id)
+    logger.info(f"Starting scrape for {conf.retailer} - {conf.external_id}")
 
     with seleniumbase_browser_context() as ctx:
         page = ctx.new_page()
-        return scrape_store(address=conf.address, page=page)
-
-
-@task
-@forward_logs
-def upload_html_to_datalake(conf: StoreConfig, html_content: str, page_number: int) -> str:
-    logger = get_run_logger()
-    supabase = get_supabase()
-
-    today = date.today()
-    path = DATALAKE_PATH_TEMPLATE.format(
-        retailer=conf.retailer,
-        store_external_id=conf.external_id,
-        year=today.year,
-        month=today.strftime("%m"),
-        day=today.strftime("%d"),
-        page=page_number,
-    )
-
-    logger.info("Uploading page %d to Supabase path: %s", page_number, path)
-
-    supabase.storage.from_("raw_offers").upload(
-        path,
-        html_content.encode("utf-8"),
-        file_options={
-            "content-type": "text/html",
-            "upsert": "true",
-        },
-    )
-    return path
+        return scrape_store(conf=conf, page=page)
 
 
 @flow(name="scrape-netto-daily-offers")
 @forward_logs
-def scrape_offers_flow(batch_size: int = settings.scrapper_batch_size):
+async def scrape_offers_flow(batch_size: int = 16):
     logger = get_run_logger()
+    store_ids = [conf.external_id for conf in STORE_CONFIGS]
+    n_batches = math.ceil(len(store_ids) / batch_size)
+    logger.info(
+        f"Dispatching {len(store_ids)} stores, {n_batches} batch(es) of {batch_size}"
+        )
+    futures = []
+    for i, batch in enumerate(batched(store_ids, batch_size), start=1):
+        logger.info(f"Dispatching batch {i}/{n_batches}: {list(batch)}")
+        future = arun_deployment(
+            name="scrape-netto-store-batch/scrape-netto-store-batch_ecs",
+            parameters={"store_ids": list(batch)},
+            as_subflow=False,
+        )
+        futures.append(future)
+    await asyncio.gather(*futures)
+    logger.info(f"All {n_batches} batch(es) dispatched.")
 
-    for batch in batched(STORE_CONFIGS, batch_size):
-        scrape_futures = extract_html_with_seleniumbase.map(list(batch))  # type: ignore[no-matching-overload]
 
-        for conf, future in zip(batch, scrape_futures):
-            try:
-                pages_html = future.result()
-            except Exception as e:
-                logger.error(
-                    "Scrape failed for %s %s: %s", 
-                    conf.retailer, conf.external_id, e
-                    )
-                continue
+@flow(name="scrape-netto-store-batch")
+@forward_logs
+def scrape_store_flow(store_ids: list[str]) -> None:
+    logger = get_run_logger()
+    logger.info(f"Batch started: {len(store_ids)} store(s) — {store_ids}")
+    for i, id_ in enumerate(store_ids, start=1):
+        logger.info(f"[{i}/{len(store_ids)}] Scraping store {id_}")
+        try:
+            scrape_single_store(id_)
+        except Exception as e:
+            logger.error(f"Scrape failed for netto {id_}: {e}")
+    logger.info(f"Batch complete: {len(store_ids)} store(s) processed.")
 
-            for page_number, html in enumerate(pages_html, start=1):
-                upload_html_to_datalake(conf, html, page_number)  # type: ignore[no-matching-overload]
+
+@task
+@forward_logs
+def scrape_single_store(store_id: str) -> None:
+    logger = get_run_logger()
+    conf = StoreConfig(retailer="netto", external_id=store_id)
+    scraped_data = extract_html_with_seleniumbase(conf)
+    upload_html_to_datalake(conf, scraped_data["main"], "main")  # type: ignore[no-matching-overload]
+    upload_html_to_datalake(conf, scraped_data["articles"], "articles")  # type: ignore[no-matching-overload]
+    logger.info(f"Store {store_id} uploaded successfully.")
+
+
+# Example: run a single batch locally against the local-pool deployment
+# if __name__ == "__main__":
+#     scrape_store_flow(["4896", "5015", "5016", "5026", "7625"])
