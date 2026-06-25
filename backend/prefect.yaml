@@ -1,6 +1,6 @@
 ---
 name: backend
-prefect-version: 3.6.20
+prefect-version: 3.7.3
 
 build: null
 push: null

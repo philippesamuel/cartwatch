@@ -71,6 +71,9 @@ def deny_consent_banner(page: Page, selector: str, timeout: int = 10000) -> None
         )
 
 
+_MAX_SCROLL_ITERATIONS = 60  # 30 s at 0.5 s/tick
+
+
 def scroll_to_top(page: Page) -> None:
     page.evaluate(
         """
@@ -79,12 +82,12 @@ def scroll_to_top(page: Page) -> None:
         }, 200);
         """
     )
-    counter = 0
-    while True:
+    for counter in range(_MAX_SCROLL_ITERATIONS):
         if page.evaluate("window.scrollY <= window.innerHeight"):
             logger.success("Reached the top of the page.")
             page.evaluate("clearInterval(intervalID)")
-            break
-        counter += 1
+            return
         logger.debug(f"Scrolling... counter={counter}")
         time.sleep(0.5)
+    logger.warning(f"scroll_to_top timed out after {_MAX_SCROLL_ITERATIONS * 0.5:.0f}s — forcing stop.")
+    page.evaluate("clearInterval(intervalID)")

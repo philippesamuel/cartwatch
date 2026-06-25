@@ -84,12 +84,6 @@ def scrape_single_store(store_id: str) -> None:
     logger.info(f"Store {store_id} uploaded successfully.")
 
 
-if __name__ == "__main__":
-    scrape_store_flow([
-        "4896", 
-        "5015", 
-        "5016",
-        "5026",
-        "7625", 
-        ])
-    
+# Example: run a single batch locally against the local-pool deployment
+# if __name__ == "__main__":
+#     scrape_store_flow(["4896", "5015", "5016", "5026", "7625"])
