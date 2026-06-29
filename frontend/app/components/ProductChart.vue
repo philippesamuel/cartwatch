@@ -144,6 +144,37 @@ function resetZoom() {
   chartRef.value?.chart?.resetZoom()
 }
 
+// Grab cursor: hint pan-ability on Shift-hover, show a closed fist while panning.
+let shiftHeld = false
+let panning = false
+let hovering = false
+function applyCursor() {
+  const canvas = chartRef.value?.chart?.canvas
+  if (!canvas) return
+  canvas.style.cursor = panning ? 'grabbing' : (hovering && shiftHeld ? 'grab' : '')
+}
+function onShiftKey(e: KeyboardEvent) {
+  if (e.key !== 'Shift') return
+  shiftHeld = e.type === 'keydown'
+  applyCursor()
+}
+function onChartEnter() {
+  hovering = true
+  applyCursor()
+}
+function onChartLeave() {
+  hovering = false
+  applyCursor()
+}
+onMounted(() => {
+  window.addEventListener('keydown', onShiftKey)
+  window.addEventListener('keyup', onShiftKey)
+})
+onBeforeUnmount(() => {
+  window.removeEventListener('keydown', onShiftKey)
+  window.removeEventListener('keyup', onShiftKey)
+})
+
 const chartOptions = computed(() => ({
   responsive: true,
   maintainAspectRatio: false,
@@ -179,7 +210,13 @@ const chartOptions = computed(() => ({
     },
     zoom: {
       // Hold Shift and drag to pan; plain drag draws a zoom box.
-      pan: { enabled: true, mode: zoomMode.value, modifierKey: 'shift' as const },
+      pan: {
+        enabled: true,
+        mode: zoomMode.value,
+        modifierKey: 'shift' as const,
+        onPanStart: () => { panning = true; applyCursor() },
+        onPanComplete: () => { panning = false; applyCursor() }
+      },
       zoom: {
         wheel: { enabled: true },
         pinch: { enabled: false },
@@ -302,7 +339,7 @@ const chartOptions = computed(() => ({
       <p>No price history for <strong>{{ product.name }}</strong>.</p>
     </div>
     <div v-else>
-      <div class="h-72">
+      <div class="h-72" @mouseenter="onChartEnter" @mouseleave="onChartLeave">
         <Line ref="chartRef" :data="chartData" :options="chartOptions" />
       </div>
       <p class="text-xs text-muted mt-2 text-center">
