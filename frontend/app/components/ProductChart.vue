@@ -11,11 +11,12 @@ import {
   TimeScale
 } from 'chart.js'
 import 'chartjs-adapter-date-fns'
+import zoomPlugin from 'chartjs-plugin-zoom'
 import { Line } from 'vue-chartjs'
 
 ChartJS.register(
   CategoryScale, LinearScale, PointElement, LineElement,
-  Title, Tooltip, Legend, TimeScale
+  Title, Tooltip, Legend, TimeScale, zoomPlugin
 )
 
 const props = defineProps<{
@@ -129,6 +130,20 @@ const chartData = computed(() => {
   }
 })
 
+// ── zoom / pan ──────────────────────────────────────────────────────────
+const chartRef = ref<{ chart?: import('chart.js').Chart }>()
+const zoomMode = ref<'xy' | 'x' | 'y'>('xy')
+
+function zoomIn() {
+  chartRef.value?.chart?.zoom(1.2)
+}
+function zoomOut() {
+  chartRef.value?.chart?.zoom(0.8)
+}
+function resetZoom() {
+  chartRef.value?.chart?.resetZoom()
+}
+
 const chartOptions = computed(() => ({
   responsive: true,
   maintainAspectRatio: false,
@@ -160,6 +175,25 @@ const chartOptions = computed(() => ({
           const qty = `Qty: ${m.quantity}${m.item_unit ? ` ${m.item_unit}` : ''}`
           return [qty, date]
         }
+      }
+    },
+    zoom: {
+      // Hold Shift and drag to pan; plain drag draws a zoom box.
+      pan: { enabled: true, mode: zoomMode.value, modifierKey: 'shift' as const },
+      zoom: {
+        wheel: { enabled: true },
+        pinch: { enabled: false },
+        drag: {
+          enabled: true,
+          backgroundColor: 'rgba(34,197,94,0.15)',
+          borderColor: 'rgba(34,197,94,0.7)',
+          borderWidth: 1
+        },
+        mode: zoomMode.value
+      },
+      limits: {
+        x: { min: 'original' as const, max: 'original' as const },
+        y: { min: 'original' as const, max: 'original' as const }
       }
     }
   }
@@ -197,15 +231,63 @@ const chartOptions = computed(() => ({
           </UBadge>
         </div>
 
-        <UButton
-          size="xs"
-          color="error"
-          variant="ghost"
-          icon="i-lucide-x"
-          aria-label="Remove chart"
-          class="ml-auto"
-          @click="$emit('remove')"
-        />
+        <div class="flex items-center gap-1 ml-auto">
+          <UButtonGroup size="xs">
+            <UButton
+              :variant="zoomMode === 'xy' ? 'solid' : 'outline'"
+              color="neutral"
+              @click="zoomMode = 'xy'"
+            >
+              XY
+            </UButton>
+            <UButton
+              :variant="zoomMode === 'x' ? 'solid' : 'outline'"
+              color="neutral"
+              @click="zoomMode = 'x'"
+            >
+              X
+            </UButton>
+            <UButton
+              :variant="zoomMode === 'y' ? 'solid' : 'outline'"
+              color="neutral"
+              @click="zoomMode = 'y'"
+            >
+              Y
+            </UButton>
+          </UButtonGroup>
+          <UButton
+            size="xs"
+            color="neutral"
+            variant="ghost"
+            icon="i-lucide-zoom-in"
+            aria-label="Zoom in"
+            @click="zoomIn"
+          />
+          <UButton
+            size="xs"
+            color="neutral"
+            variant="ghost"
+            icon="i-lucide-zoom-out"
+            aria-label="Zoom out"
+            @click="zoomOut"
+          />
+          <UButton
+            size="xs"
+            color="neutral"
+            variant="ghost"
+            icon="i-lucide-rotate-ccw"
+            aria-label="Reset zoom"
+            @click="resetZoom"
+          />
+          <UButton
+            size="xs"
+            color="error"
+            variant="ghost"
+            icon="i-lucide-x"
+            aria-label="Remove chart"
+            @click="$emit('remove')"
+          />
+        </div>
       </div>
     </template>
 
@@ -219,8 +301,13 @@ const chartOptions = computed(() => ({
       <UIcon name="i-lucide-inbox" class="text-3xl mb-2" />
       <p>No price history for <strong>{{ product.name }}</strong>.</p>
     </div>
-    <div v-else class="h-72">
-      <Line :data="chartData" :options="chartOptions" />
+    <div v-else>
+      <div class="h-72">
+        <Line ref="chartRef" :data="chartData" :options="chartOptions" />
+      </div>
+      <p class="text-xs text-muted mt-2 text-center">
+        Scroll to zoom · drag to box-zoom · shift-drag to pan · X/Y locks an axis
+      </p>
     </div>
   </UCard>
 </template>

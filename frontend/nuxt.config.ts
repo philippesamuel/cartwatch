@@ -16,6 +16,12 @@ export default defineNuxtConfig({
     redirect: false
   },
 
+  // The dashboard is client-side (anon data, localStorage, Chart.js zoom plugin
+  // touches `window` at import) — render it as an SPA route.
+  routeRules: {
+    '/prices': { ssr: false }
+  },
+
   compatibilityDate: '2025-01-15',
 
   eslint: {
