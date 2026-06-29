@@ -14,8 +14,14 @@
     "@iconify-json/lucide": "^1.2.90",
     "@iconify-json/simple-icons": "^1.2.70",
     "@nuxt/ui": "^4.4.0",
+    "@nuxtjs/supabase": "^2.0.9",
+    "@supabase/supabase-js": "^2.108.2",
+    "chart.js": "^4.5.1",
+    "chartjs-adapter-date-fns": "^3.0.0",
+    "date-fns": "^4.4.0",
     "nuxt": "^4.3.1",
-    "tailwindcss": "^4.1.18"
+    "tailwindcss": "^4.1.18",
+    "vue-chartjs": "^5.3.3"
   },
   "devDependencies": {
     "@commitlint/cli": "^20.4.2",
