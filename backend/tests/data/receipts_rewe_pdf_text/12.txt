@@ -1,0 +1,51 @@
+REWE Josef Seifert oHG
+Müllerstraße 141
+13353 Berlin
+UID Nr.: DE331216382
+EUR
+DAENISCHER BACON 3,98 B
+2 Stk x 1,99
+MOZZARELLA ROLLE 2,59 B
+JA! KOERN. FRISC 1,19 B
+BIO LINSENWAFF. 2,78 B
+2 Stk x 1,39
+ORANGE SAFT 2,99 B
+ZITRONE RBW 1,19 B
+STUDENTENFUTTER 4,58 B
+2 Stk x 2,29
+RISPENTOMATE 1,05 B
+0,406 kg x 2,59 EUR/kg
+SCHLEIERKRAUT 3,59 B
+STR. MAMAN FT 23,31 B
+3 Stk x 7,77
+BIO EIER KL. S-L 3,29 B
+HAFER-CRUNCHY 2,59 B
+DINKEL GEPUFFT 1,79 B
+LAYS GESALZEN 1,99 B
+APFEL DS NL 1,69 A
+--------------------------------------
+SUMME EUR 58,60
+======================================
+Geg. VISA EUR 58,60
+* * Kundenbeleg * *
+Datum: 09.05.2026
+Uhrzeit: 20:12:17 Uhr
+Beleg-Nr. ####
+Trace-Nr. ######
+Bezahlung
+Contactless
+VISA
+Nr. ################ ####
+VU-Nr. ##########
+Terminal-ID ########
+Pos-Info ## ### ##
+AS-Zeit ##.##. ##:## Uhr
+AS-Proc-Code = ## ### ##
+Capt.-Ref.= ####
+APPROVED
+Betrag EUR 58,60
+Zahlung erfolgt
+Steuer % Netto Steuer Brutto
+A= 19,0% 1,42 0,27 1,69
+B= 7,0% 53,19 3,72 56,91
+Gesamtbetrag 54,61 3,99 58,60

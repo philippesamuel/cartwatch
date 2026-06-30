@@ -1,0 +1,45 @@
+Sophie-Charlotten-Straße 41
+14059 Berlin
+UID Nr.: DE812706034
+EUR
+TORTELLONI 1,89 B
+WRAPS HAEHN 2,99 B
+CASHEWKERNE 2,39 B
+ESL MILCH 3,5% 1,09 B
+QUINOA TRICOLORE 1,85 B
+BIO KICHERERBSEN 1,79 B
+BIO ROTE LINSEN 1,65 B
+MUESLI FLOHSAMEN 4,99 B
+PEANUT BUTTER 4,79 B
+MEERSALZ MIT JOD 0,99 B
+SAUCE PESTO 3,49 B
+W.Z. ERDBEERE 1,99 B
+BAD LIEB.MEDIUM 4,74 A
+PFAND 1,50 EURO 1,50 A *
+BATTERIEN 7,98 A
+2 Stk x 3,99
+--------------------------------------
+SUMME EUR 44,12
+======================================
+Geg. VISA EUR 44,12
+* * Kundenbeleg * *
+Datum: 27.02.2025
+Uhrzeit: 12:47:54 Uhr
+Beleg-Nr. ####
+Trace-Nr. ######
+Bezahlung
+Visa Debit
+Nr. ################ ####
+VU-Nr. ##########
+Terminal-ID ########
+Pos-Info ## ### ##
+AS-Zeit ##.##. ##:## Uhr
+AS-Proc-Code = ## ### ##
+Capt.-Ref.= ####
+APPROVED
+Betrag EUR 44,12
+Zahlung erfolgt
+Steuer % Netto Steuer Brutto
+A= 19,0% 11,95 2,27 14,22
+B= 7,0% 27,94 1,96 29,90
+Gesamtbetrag 39,89 4,23 44,12
