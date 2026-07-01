@@ -3,7 +3,7 @@ from typing import Iterable
 
 import pytest
 
-from parsing.receipts.parse_raw_rewe_pdf_text import parse_items, parse_receipt
+from parsing.receipts.parse_raw_rewe_pdf_text import parse_receipt
 
 DATA_DIR = Path(__file__).parent / "data/receipts_rewe_pdf_text"
 
@@ -48,9 +48,8 @@ Gesamtbetrag 21,36 1,89 23,25
 
 @pytest.fixture
 def all_texts() -> Iterable[str]:
-    for p in sorted(DATA_DIR.glob("*.txt")):
-        yield p.read_text()
-    
+    return (p.read_text() for p in sorted(DATA_DIR.glob("*.txt")))
+
 
 @pytest.fixture
 def receipt_with_datum_format() -> str:
@@ -89,7 +88,7 @@ def test_parse_receipt_all_have_total(all_texts):
 
 
 def test_parse_receipt_all_have_items_block(all_texts):
-    assert all(parse_receipt(t)["items_block"] is not None for t in all_texts)
+    assert all(parse_receipt(t)["items"] is not None for t in all_texts)
 
 
 # ---------------------------------------------------------------------------
@@ -125,14 +124,13 @@ def test_total_extraction(receipt_with_datum_format: str) -> None:
 # ---------------------------------------------------------------------------
 
 def test_item_count_basic(receipt_with_datum_format: str) -> None:
-    block = parse_receipt(receipt_with_datum_format)["items_block"]
-    assert len(parse_items(block)) == 9
+    items = parse_receipt(receipt_with_datum_format)["items"]
+    assert len(items) == 9
 
 
 def test_item_count_pfand_included(receipt_with_bon_nr_format: str) -> None:
     """PFAND item ending in ' *' must be counted, not silently dropped."""
-    block = parse_receipt(receipt_with_bon_nr_format)["items_block"]
-    items = parse_items(block)
+    items = parse_receipt(receipt_with_bon_nr_format)["items"]
     names = [i["name"] for i in items]
     assert any("PFAND" in n for n in names), "PFAND item was dropped"
     assert len(items) == 17
@@ -143,40 +141,35 @@ def test_item_count_pfand_included(receipt_with_bon_nr_format: str) -> None:
 # ---------------------------------------------------------------------------
 
 def test_item_has_required_keys(receipt_with_datum_format: str) -> None:
-    block = parse_receipt(receipt_with_datum_format)["items_block"]
-    for item in parse_items(block):
+    items = parse_receipt(receipt_with_datum_format)["items"]
+    for item in items:
         assert set(item.keys()) == {"name", "price", "tax", "details"}
 
 
 def test_weighted_item_has_detail_line(receipt_with_weighted_item: str) -> None:
-    block = parse_receipt(receipt_with_weighted_item)["items_block"]
-    items = parse_items(block)
+    items = parse_receipt(receipt_with_weighted_item)["items"]
     nusskern = next(i for i in items if i["name"] == "NUSSKERNMISCHUNG")
     assert nusskern["details"] == ["0,628 kg x 2,79 EUR/kg"]
 
 
 def test_multi_quantity_item_has_detail_line(receipt_with_multi_quantity: str) -> None:
-    block = parse_receipt(receipt_with_multi_quantity)["items_block"]
-    items = parse_items(block)
+    items = parse_receipt(receipt_with_multi_quantity)["items"]
     boerek = next(i for i in items if i["name"] == "BOEREKST. ASIA")
     assert boerek["details"] == ["2 Stk x 0,89"]
 
 
 def test_pfand_item_tax_is_A(receipt_with_bon_nr_format: str) -> None:
-    block = parse_receipt(receipt_with_bon_nr_format)["items_block"]
-    items = parse_items(block)
+    items = parse_receipt(receipt_with_bon_nr_format)["items"]
     pfand = next(i for i in items if "PFAND" in i["name"])
     assert pfand["tax"] == "A"
 
 
 def test_regular_item_tax_is_B(receipt_with_datum_format: str) -> None:
-    block = parse_receipt(receipt_with_datum_format)["items_block"]
-    items = parse_items(block)
+    items = parse_receipt(receipt_with_datum_format)["items"]
     assert items[0]["tax"] == "B"
 
 
 def test_simple_item_has_empty_details(receipt_with_datum_format: str) -> None:
-    block = parse_receipt(receipt_with_datum_format)["items_block"]
-    items = parse_items(block)
+    items = parse_receipt(receipt_with_datum_format)["items"]
     simple = next(i for i in items if i["name"] == "BAUERNKRUSTE")
     assert simple["details"] == []
