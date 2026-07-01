@@ -1,0 +1,106 @@
+*** eBon ***
+NETTO
+Filiale 7625
+Oudenarder Str. 14
+13347 Berlin
+WWW.NETTO-ONLINE.DE
+EUR
+2 x 1,25
+BioBio Frischmilch 3,8% 1L 2,50 B
+Lieblings ApfelKirschJohan1LPK 1,55 A
+Leergut 0,00 EUR EW 0,00* A
+Lieblings Orangen DS 1x1L FL 1,99 A
+Leergut 0,00 EUR EW 0,00* A
+Bürger Maultaschen 360g 2,19 B
+Sat/MM Pfannengericht.sor.750g 3,39 B
+Netto-App Coupon -0,68
+Mondo Ita.Spaghetti 500g 0,79 B
+Mon.Italia. Tagliatelle 500g 1,29 B
+Clarkys Erdnuesse sort. 500g 2,29 B
+ClNussk.roa.sort.ab 200g 2,99 B
+Effect Energy 1x0,33 L DS 1,09 A
+EW-Pfand 0,25 EUR 0,25* A
+Bio NK Schlagsa. 30% 200g 1,09 B
+VL Eier Freilandh. 10ST M-L 2,29 B
+GL Frischk. natur oGt 300 1,39 B
+Gran Duca St. 200g 3,29 B
+Leibniz Kekse sort. ab125g 1,99 B
+Aepfel 2kg VKE QS 2,79 B
+Orangen 1,5kg VKE 3,49 B
+Trauben hell kernlos 4,82 B
+0,966 kg x 4,99 EUR/kg
+Bio Karotten 1kg 1,49 B
+Kaki 1kg VKE 2,22 B
+Staudensellerie 500g 0,99 B
+Bananen Lose 1,42 B
+1,104 kg x 1,29 EUR/kg
+Gurken 0,59 B
+Zitronen ST 0,59 B
+Paprika rot 0,87 B
+0,292 kg x 2,99 EUR/kg
+Champignon braun 400g VKE 2,29 B
+Bio Mini-Romanasalat 1,99 B
+Bio Ingwer Lose 0,81 B
+0,118 kg x 6,90 EUR/kg
+Haehnchen-Brustfilet 600g 4,79 B
+2 x 4,69
+Bio Rinderhackfleisch 400g 9,38 B
+Gefl.-Parikafleischwurst 100g 1,39 B
+Bio Salami 100g 1,85 B
+Gefluegelbratwurst 400g 3,99 B
+SUMME [35] 75,45
+Seite 1 von 3
+----------
+SUMME € 75,45
+Kartenzahlung EUR 75,45
+-K-U-N-D-E-N-B-E-L-E-G-
+.
+Terminal-ID : 65482596
+TA-Nr 395068 BNr 8115
+Kartenzahlung
+Visa Debit
+EUR 75,45
+PAN ############6015
+Karte 0
+EMV-AID A0000000031010
+VU-Nr 4556409386
+Genehmigungs-Nr 142515
+Datum 30.10.23 14:24 Uhr
+*** Zahlung erfolgt ***
+================================
+AS-Proc-Code = 00 055 00
+Capt.-Ref.= 0000
+APPROVED
+================================
+BITTE BELEG AUFBEWAHREN
+Informationen zur
+Datenverarbeitung durch
+PAYONE
+www.payone.com/dsgvo
+MWST BRUTTO NETTO
+A 19% 0,78 4,88 4,10
+B 7% 4,62 70,57 65,95
+DeutschlandCard - 19494*****
+Ihr Punktestand vor dem Einkauf: 482
+Für diesen Einkauf erhalten Sie:
+Basis-Punkte auf 75,20€ 37
+Die Gewährung der DeutschlandCard-Punkte
+kann Entgeltminderungen zur Folge haben.
+97076250010005523032314238
+Seite 2 von 3
+TSE Transaktionsnummer.:383975
+Seriennr. Kasse:NTO-000-07625-1
+Prüfwert:cfVFC63JeUpsrJJnWae6oTg5GwtLhj+G
+fwjOa9IybGwRKxtM/w7gvUeYTxzyCQSAmZmjCjKCL
+ki1Op/MHju7kmIhq7z5CHEa1uhazoIAOACUPCNQPP
+vOAqGYVIHKdg6Q
+Signaturzähler:768688
+TSE-Start:2023-10-30T13:23:39.000Z
+TSE-Stop : 2023-10-30T13:25:23.000Z
+Steuer-Nr.DE133822409
+Montag-Samstag 7:00-22:00 Uhr
+Datum Uhrzeit
+30.10.23 14:23
+Filiale Pos Bed Bon-Nr.
+0007625 001 86649030552
+Seite 3 von 3

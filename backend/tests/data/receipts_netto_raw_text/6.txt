@@ -1,0 +1,68 @@
+*** eBon ***
+Netto
+Filiale 7625
+Oudenarder Str. 14
+13347 Berlin
+WWW.NETTO-ONLINE.DE
+EUR
+Naturalis Still 6x1,5L PK 1,74 A
+Leergut 1,50 EUR EW 1,50* A
+2 x 0,87
+Club Mate 0,5L FL 1,74 A
+2 x 0,15
+MW-Pfand 0,15 EUR 0,30* A
+SUMME [3] 5,28
+----------
+SUMME € 5,28
+Kartenzahlung EUR 5,28
+-K-U-N-D-E-N-B-E-L-E-G-
+.
+Terminal-ID : 65482605
+TA-Nr 416931 BNr 7672
+Kartenzahlung
+Visa kontaktlos
+Visa Debit
+EUR 5,28
+PAN ############9687
+Karte 0
+EMV-AID A0000000031010
+VU-Nr 4556409386
+Genehmigungs-Nr 214615
+Datum 03.07.24 21:45 Uhr
+*** Zahlung erfolgt ***
+================================
+AS-Proc-Code = 00 075 00
+Capt.-Ref.= 0000
+APPROVED
+================================
+BITTE BELEG AUFBEWAHREN
+Informationen zur
+Datenverarbeitung durch
+PAYONE
+www.payone.com/dsgvo
+MWST BRUTTO NETTO
+A 19% 0,84 5,28 4,44
+Seite 1 von 2
+DeutschlandCard - 19494*****
+Ihr Punktestand vor dem Einkauf: 1.115
+Für diesen Einkauf erhalten Sie:
+Basis-Punkte auf 3,48€ 1
+Die Gewährung der DeutschlandCard-Punkte
+kann Entgeltminderungen zur Folge haben.
+97076250060008591852421445
+TSE Transaktionsnummer.:963269
+Seriennr. Kasse:NTO-000-07625-6
+Prüfwert:XvskJaL7FZNBT/Go7/bHxOwX2DM2DaMC
+Ro55YMjc39VI8bvX0O4yeBX/PHvyXNwslSDQGfZUr
+vBon0+jpPG5YwUDP12FWtHQFthwqlVA8IdvkpK/lJ
+aOhvJOPgjPhoPI
+Signaturzähler:1928637
+TSE-Start:2024-07-03T19:45:03.000Z
+TSE-Stop : 2024-07-03T19:46:20.000Z
+Steuer-Nr.DE133822409
+Montag-Samstag 7:00-20:00 Uhr
+Datum Uhrzeit
+03.07.24 21:44
+Filiale Pos Bed Bon-Nr.
+0007625 006 99993 0859
+Seite 2 von 2

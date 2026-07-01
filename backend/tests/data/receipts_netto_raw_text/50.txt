@@ -1,0 +1,70 @@
+*** eBon ***
+Netto
+Filiale 7625
+Oudenarder Str. 14
+13347 Berlin
+WWW.NETTO-ONLINE.DE
+EUR
+Clarkys Cashews sort.150g 1,97 B²
+2 x 1,15
+BioBio Frischmilch 1,5% 1L 2,30 B²
+Clarkys Erdnuesse sort. 500g 2,06 B²
+Soer.Mischstreichfett ung.250g 1,45 B²
+Sidolin Cristal 500ml 1,99 A²
+2 x 1,69
+Frosch Spuelmittel 750ml 3,38 A²
+2 x 0,95
+PrivaWC-Powersp.Meer2x48g 1,90 A²
+SUMME [10] 15,05
+----------
+SUMME € 15,05
+Kartenzahlung EUR 15,05
+-K-U-N-D-E-N-B-E-L-E-G-
+.
+Terminal-ID : 65303572
+TA-Nr 118167 BNr 7798
+Kartenzahlung
+Visa kontaktlos
+Visa Debit
+EUR 15,05
+PAN ############6015
+Karte 0
+EMV-AID A0000000031010
+VU-Nr 4556409386
+Genehmigungs-Nr 135940
+Datum 29.12.23 13:59 Uhr
+*** Zahlung erfolgt ***
+================================
+AS-Proc-Code = 00 075 00
+Capt.-Ref.= 0000
+APPROVED
+================================
+BITTE BELEG AUFBEWAHREN
+MWST BRUTTO NETTO
+A 19% 1,16 7,27 6,11
+B 7% 0,51 7,78 7,27
+Seite 1 von 2
+(²) Aktionsartikelersparnis: 0,45 €
+DeutschlandCard - 19494*****
+Ihr Punktestand vor dem Einkauf: 658
+Für diesen Einkauf erhalten Sie:
+Basis-Punkte auf 15,05€ 7
+Die Gewährung der DeutschlandCard-Punkte
+kann Entgeltminderungen zur Folge haben.
+97076250070007953632313577
+TSE Transaktionsnummer.:519692
+Seriennr. Kasse:NTO-000-07625-7
+Prüfwert:ECcRj40c2kijCIaRZMwc327vRhZkLpTp
+6Nde5xfaeNuEJqeZZSoTR1p3WqC6PlxSoHFeLi+8B
+XMaL2sNtJrl2F9CER07a0huiB8VDnbNsWXOYBNVmm
+Fg3Miy0IqAHaF6
+Signaturzähler:1040473
+TSE-Start:2023-12-29T12:57:43.000Z
+TSE-Stop : 2023-12-29T12:59:52.000Z
+Steuer-Nr.DE133822409
+Montag-Samstag 7:00-20:00 Uhr
+Datum Uhrzeit
+29.12.23 13:57
+Filiale Pos Bed Bon-Nr.
+0007625 007 99994 0795
+Seite 2 von 2

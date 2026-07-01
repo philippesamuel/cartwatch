@@ -1,0 +1,77 @@
+*** eBon ***
+Netto
+Filiale 7625
+Oudenarder Str. 14
+13347 Berlin
+WWW.NETTO-ONLINE.DE
+EUR
+2 x 0,87
+Club Mate 0,5L FL 1,74 A
+2 x 0,15
+MW-Pfand 0,15 EUR 0,30* A
+2 x 1,19
+M.I. Mozzarella ger. 150g 2,38 B
+M.I Grana Padano St. 200g 3,49 B
+Bio Feldsalat 100g 1,59 B
+Pfirsiche gelbfleischig 1,42 B
+0,408 kg x 3,49 EUR/kg
+MW-Leergut 19% -0,70 A
+EW-Leergut 19% -4,75 A
+SUMME [7] 5,47
+----------
+SUMME € 5,47
+Kartenzahlung EUR 5,47
+Seite 1 von 4
+-K-U-N-D-E-N-B-E-L-E-G-
+.
+Terminal-ID : 65482596
+TA-Nr 494513 BNr 1018
+Kartenzahlung
+Visa kontaktlos
+Visa Debit
+EUR 5,47
+PAN ############6015
+Karte 0
+EMV-AID A0000000031010
+VU-Nr 4556409386
+Genehmigungs-Nr 092913
+Datum 12.07.24 09:28 Uhr
+*** Zahlung erfolgt ***
+================================
+AS-Proc-Code = 00 075 00
+Capt.-Ref.= 0000
+APPROVED
+================================
+BITTE BELEG AUFBEWAHREN
+Informationen zur
+Datenverarbeitung durch
+PAYONE
+www.payone.com/dsgvo
+MWST BRUTTO NETTO
+A 19% -0,54 -3,41 -2,87
+B 7% 0,58 8,88 8,30
+DeutschlandCard - 19494*****
+Ihr Punktestand vor dem Einkauf: 1.125
+Für diesen Einkauf erhalten Sie:
+Basis-Punkte auf 10,62€ 5
+Die Gewährung der DeutschlandCard-Punkte
+kann Entgeltminderungen zur Folge haben.
+97076250010001001942409281
+Seite 2 von 4
+TSE Transaktionsnummer.:985045
+Seriennr. Kasse:NTO-000-07625-1
+Prüfwert:bhbTBHIWB9YhIwofNIYJ58yrdQSfwqxS
+Dzdb7jCl6CXp9rQoXXyBrfLBHQM5+I+XAM5glUOMj
+ccP9+vFqxgb3Gw0JVUS4S3Yi8kXbhGd/x1Qyxm+e5
+ifuH8E40AvxEFf
+Signaturzähler:1972230
+TSE-Start:2024-07-12T07:28:11.000Z
+TSE-Stop : 2024-07-12T07:29:19.000Z
+Steuer-Nr.DE133822409
+Montag-Samstag 7:00-20:00 Uhr
+Datum Uhrzeit
+12.07.24 09:28
+Filiale Pos Bed Bon-Nr.
+0007625 001 42277370100
+Seite 3 von 4
+Seite 4 von 4

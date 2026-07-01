@@ -1,0 +1,71 @@
+*** eBon ***
+NETTO
+Filiale 7625
+Oudenarder Str. 14
+13347 Berlin
+WWW.NETTO-ONLINE.DE
+EUR
+Papiertasche bl.Engel ST 0,25 A
+Lauch/Porree ST 0,89 B
+Bio Kraeutertopf VKE-ST 1,49 B
+Bananen Lose 0,79 B
+0,612 kg x 1,29 EUR/kg
+2 x 0,79
+Auberginen ST 1,58 B
+Apfel Kanzi 760g VKE 2,99 B
+SUMME [7] 7,99
+----------
+SUMME € 7,99
+Kartenzahlung EUR 7,99
+-K-U-N-D-E-N-B-E-L-E-G-
+.
+Terminal-ID : 65482596
+TA-Nr 348917 BNr 5634
+Kartenzahlung
+Visa Debit
+EUR 7,99
+PAN ############6015
+Karte 0
+EMV-AID A0000000031010
+VU-Nr 4556409386
+Genehmigungs-Nr 192458
+Datum 10.07.23 19:24 Uhr
+*** Zahlung erfolgt ***
+================================
+AS-Proc-Code = 00 055 00
+Capt.-Ref.= 0000
+APPROVED
+================================
+BITTE BELEG AUFBEWAHREN
+Informationen zur
+Datenverarbeitung durch
+PAYONE
+www.payone.com/dsgvo
+MWST BRUTTO NETTO
+A 19% 0,04 0,25 0,21
+Seite 1 von 3
+B 7% 0,51 7,74 7,23
+DeutschlandCard - 19494*****
+Ihr Punktestand vor dem Einkauf: 190
+Für diesen Einkauf erhalten Sie:
+Basis-Punkte auf 7,99€ 3
+Die Gewährung der DeutschlandCard-Punkte
+kann Entgeltminderungen zur Folge haben.
+97076250010003621912319242
+TSE Transaktionsnummer.:129633
+Seriennr. Kasse:NTO-000-07625-1
+Prüfwert:JqOik3UHfYaq3nbojvwXxZH6Vpza9NZS
+vPfIUQ39nItAQ8Cqods/uQILBGWZHc8rvVnlQI5Jg
+mFnmMuKBVNPVwkVs5U6ghynL7iuqvvm2DgRgcyxqo
+LEznWpPFyxWdcJ
+Signaturzähler:259503
+TSE-Start:2023-07-10T17:24:18.000Z
+TSE-Stop : 2023-07-10T17:25:06.000Z
+Steuer-Nr.DE133822409
+Montag-Samstag 7:00-22:00 Uhr
+Datum Uhrzeit
+10.07.23 19:24
+Filiale Pos Bed Bon-Nr.
+0007625 001 89029610362
+Seite 2 von 3
+Seite 3 von 3

@@ -1,0 +1,79 @@
+*** eBon ***
+Netto
+Filiale 7625
+Oudenarder Str. 14
+13347 Berlin
+WWW.NETTO-ONLINE.DE
+EUR
+Papiertragetasche bl. Engel ST 0,25 A
+ClNussk.roa.sort.ab 200g 2,99 B
+Clarkys Erdnuesse sort. 500g 2,29 B
+2 x 2,19
+Bürger Maultaschen 360g 4,38 B
+MI Pizza Edelsal.3ST1050g 3,99 B
+KatjesWunderlandSauer175g 0,99 B
+Rexona Deo Cobalt 150ml 1,99 A
+Dove Deo Men 150ml 2,45 A
+Cl. Tortilla Chips sort. 300g 1,49 B
+Erdaepfel 2kg 2,49 B
+2 x 2,79
+Tomaten Trimix 400g 5,58 B
+Suesskartoffeln 1,06 A
+0,482 kg x 2,19 EUR/kg
+SUMME [14] 29,95
+----------
+SUMME € 29,95
+Kartenzahlung EUR 29,95
+Seite 1 von 3
+-K-U-N-D-E-N-B-E-L-E-G-
+.
+Terminal-ID : 65482596
+TA-Nr 424472 BNr 2416
+Kartenzahlung
+Visa kontaktlos
+Visa Debit
+EUR 29,95
+PAN ############6015
+Karte 0
+EMV-AID A0000000031010
+VU-Nr 4556409386
+Genehmigungs-Nr 193824
+Datum 06.01.24 19:38 Uhr
+*** Zahlung erfolgt ***
+================================
+AS-Proc-Code = 00 075 00
+Capt.-Ref.= 0000
+APPROVED
+================================
+BITTE BELEG AUFBEWAHREN
+Informationen zur
+Datenverarbeitung durch
+PAYONE
+www.payone.com/dsgvo
+MWST BRUTTO NETTO
+A 19% 0,92 5,75 4,83
+B 7% 1,58 24,20 22,62
+DeutschlandCard - 19494*****
+Ihr Punktestand vor dem Einkauf: 704
+Für diesen Einkauf erhalten Sie:
+Basis-Punkte auf 29,95€ 14
+Die Gewährung der DeutschlandCard-Punkte
+kann Entgeltminderungen zur Folge haben.
+97076250010005430062419379
+Seite 2 von 3
+TSE Transaktionsnummer.:534786
+Seriennr. Kasse:NTO-000-07625-1
+Prüfwert:yxW0AmyJoolwGt8YYsadZOEKrTgz1sXP
+GaozZmGUyEbqOaxCse8KhX3J9YPiYv1vPtpycQeZl
+lGxufCQV/s5QXdncCwNJDdYr9BFKELQd+SAmRQgu7
+COr5irViuLGq4u
+Signaturzähler:1070668
+TSE-Start:2024-01-06T18:37:35.000Z
+TSE-Stop : 2024-01-06T18:38:30.000Z
+Steuer-Nr.DE133822409
+Montag-Samstag 7:00-20:00 Uhr
+Datum Uhrzeit
+06.01.24 19:37
+Filiale Pos Bed Bon-Nr.
+0007625 001 55195970543
+Seite 3 von 3

@@ -1,0 +1,71 @@
+*** eBon ***
+NETTO
+Filiale 7625
+Oudenarder Str. 14
+13347 Berlin
+WWW.NETTO-ONLINE.DE
+EUR
+M.I.Tomaten pass.500g 0,85 B
+Glockenh.Hoernchen 250g 0,69 B
+Satori Jasminreis 1kg 2,69 B
+Cla.Erd.XXLsort.550g 1,79 B
+2 x 1,25
+Bio BB ESL Milch 3,8% 1L 2,50 B
+Bio BB Hirtenkaese 200g 1,99 B
+2 x 2,99
+Tomaten Trimix 400G VKE 5,98 B
+Buerger Maultaschen 360g 2,19 B
+Bio Paprika Mix 400g VKE 2,29 B
+Paprika rot 500g VKE 1,79 B
+Mini Wassermelone ST 3,49 B
+Petersilie kraus 40g VKE 0,99 B
+Fenchel 500g VKE 1,49 B
+Kopfsalat ST 0,89 B
+SUMME [16] 29,62
+Kartenzahlung EUR 29,62
+-K-U-N-D-E-N-B-E-L-E-G-
+.
+Terminal-ID : 65482596
+TA-Nr 347408 BNr 4901
+Kartenzahlung
+kontaktlos
+girocard
+EUR 29,62
+PAN ###############4181
+Karte 2
+EMV-AID A0000003591010028001
+VU-Nr 1044482596
+Genehmigungs-Nr 811956
+Datum 06.07.23 15:56 Uhr
+*** Zahlung erfolgt ***
+BITTE BELEG AUFBEWAHREN
+Informationen zur
+Datenverarbeitung durch
+PAYONE
+www.payone.com/dsgvo
+Seite 1 von 2
+MWST BRUTTO NETTO
+B 7% 1,94 29,62 27,68
+DeutschlandCard - 19494*****
+Ihr Punktestand vor dem Einkauf: 176
+Für diesen Einkauf erhalten Sie:
+Basis-Punkte auf 29,62€ 14
+Die Gewährung der DeutschlandCard-Punkte
+kann Entgeltminderungen zur Folge haben.
+97076250010000051872315559
+TSE Transaktionsnummer.:120494
+Seriennr. Kasse:NTO-000-07625-1
+Prüfwert:HH+2Ce43s8HsHuXTGgduZAmAcIqU7fN2
+s3Au9I7foW6FB2OOw7M1mPjouBIwFu3jb1E8aF8Ul
+wnnMROKQWTCrHlqorElglFk53s0gCgJXBByWWlb8h
+VxYffMx89LUWyw
+Signaturzähler:241191
+TSE-Start:2023-07-06T13:55:28.000Z
+TSE-Stop : 2023-07-06T13:56:23.000Z
+Steuer-Nr.DE133822409
+Montag-Samstag 7:00-22:00 Uhr
+Datum Uhrzeit
+06.07.23 15:55
+Filiale Pos Bed Bon-Nr.
+0007625 001 90223580005
+Seite 2 von 2

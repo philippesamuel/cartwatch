@@ -1,0 +1,75 @@
+*** eBon ***
+NETTO
+Filiale 7625
+Oudenarder Str. 14
+13347 Berlin
+WWW.NETTO-ONLINE.DE
+EUR
+Cl.Tortill.Chip.sort.300 1,49 B
+Leibniz Kekse sort.ab125 1,99 B
+SaltlettsSticks 250g 2,19 B
+Stard.A-SchorleEW1,5LFL 0,99 A
+Einwegpfand 0,25* A
+2 x 0,83
+Club Mate MW1x0,5LFL 1,66 A
+2 x 0,15
+Pfand 0,30* A
+MW-Leergut 19% -0,68 A
+EW-Leergut 19% -0,50 A
+SUMME [6] 7,69
+----------
+SUMME € 7,69
+Kartenzahlung EUR 7,69
+Seite 1 von 3
+-K-U-N-D-E-N-B-E-L-E-G-
+.
+Terminal-ID : 65482596
+TA-Nr 370661 BNr 6206
+Kartenzahlung
+Visa kontaktlos
+Visa Debit
+EUR 7,69
+PAN ############6015
+Karte 0
+EMV-AID A0000000031010
+VU-Nr 4556409386
+Genehmigungs-Nr 203601
+Datum 31.08.23 20:35 Uhr
+*** Zahlung erfolgt ***
+================================
+AS-Proc-Code = 00 075 00
+Capt.-Ref.= 0000
+APPROVED
+================================
+BITTE BELEG AUFBEWAHREN
+Informationen zur
+Datenverarbeitung durch
+PAYONE
+www.payone.com/dsgvo
+MWST BRUTTO NETTO
+A 19% 0,32 2,02 1,70
+B 7% 0,37 5,67 5,30
+DeutschlandCard - 19494*****
+Ihr Punktestand vor dem Einkauf: 332
+Für diesen Einkauf erhalten Sie:
+Basis-Punkte auf 8,32€ 4
+Die Gewährung der DeutschlandCard-Punkte
+kann Entgeltminderungen zur Folge haben.
+97076250010008542432320356
+Seite 2 von 3
+TSE Transaktionsnummer.:244642
+Seriennr. Kasse:NTO-000-07625-1
+Prüfwert:zTuoCL3S2kfavhwZtS9+n4DJns8zUE4w
+wT7Tz81/At9hzhLhvmv8/WSvayCqEENu15WMeI0mz
+3PRvnrEXADTfkK0uWqJlYEc2oJSMV2SSl3FYexVl9
+c+jp/nILzN0U7S
+Signaturzähler:489747
+TSE-Start:2023-08-31T18:35:17.000Z
+TSE-Stop : 2023-08-31T18:36:08.000Z
+Steuer-Nr.DE133822409
+Montag-Samstag 7:00-22:00 Uhr
+Datum Uhrzeit
+31.08.23 20:35
+Filiale Pos Bed Bon-Nr.
+0007625 001 92230630854
+Seite 3 von 3

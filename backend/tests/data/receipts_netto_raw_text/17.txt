@@ -1,0 +1,95 @@
+*** eBon ***
+NETTO
+Filiale 7625
+Oudenarder Str. 14
+13347 Berlin
+WWW.NETTO-ONLINE.DE
+EUR
+2 x 0,35
+RTL Spendentasche ST 0,70 A
+Kuehlschrankorganizer 3ST 6,99 A
+BioBio Tomaten gehackt 400g 0,99 B
+Bio Kokosnussmilch 400ml 1,85 B
+BioBio Frischmilch 3,8% 1L 1,25 B
+AS Sandwich Vollkorn 750g 1,49 B
+GW Weisskrautsalat 400g 1,69 B
+Botato Kart.Wedges 750g 1,99 B
+MI Gnocchi/Tagl.sort.600g 1,99 B
+Suntat Rote Linsen 500g 2,79 B
+M.I. Mozzarella oGt 125g 0,69 B
+Netto-App Coupon -0,20
+Gruenl.SHB sort. ab 120g 1,39 B
+Gurken 0,55 B
+Champinons weiss 400g 1,79 B
+Netto-App Coupon -0,20
+4 x 0,79
+Kiwi Gold ST 3,16 B
+Birne rot Lose 1,37 B
+0,392 kg x 3,49 EUR/kg
+Rispentomaten 1,25 B
+0,628 kg x 1,99 EUR/kg
+Eisbergsalat QS 1,19 B
+Mandarinen 750g VKE 1,99 B
+Apfel 2kg Herz für Erzeuger QS 3,49 B
+Kuerbis Butternut 1,53 B
+1,024 kg x 1,49 EUR/kg
+Bananen Lose 1,17 B
+0,906 kg x 1,29 EUR/kg
+Unterschenkel gewuerzt 600g 3,99 B
+SUMME [27] 44,89
+----------
+SUMME € 44,89
+Kartenzahlung EUR 44,89
+Seite 1 von 3
+-K-U-N-D-E-N-B-E-L-E-G-
+.
+Terminal-ID : 65482597
+TA-Nr 120784 BNr 7580
+Kartenzahlung
+Visa kontaktlos
+Visa Debit
+EUR 44,89
+PAN ############6015
+Karte 0
+EMV-AID A0000000031010
+VU-Nr 4556409386
+Genehmigungs-Nr 191032
+Datum 02.10.23 19:10 Uhr
+*** Zahlung erfolgt ***
+================================
+AS-Proc-Code = 00 075 00
+Capt.-Ref.= 0000
+APPROVED
+================================
+BITTE BELEG AUFBEWAHREN
+Informationen zur
+Datenverarbeitung durch
+PAYONE
+www.payone.com/dsgvo
+MWST BRUTTO NETTO
+A 19% 1,23 7,69 6,46
+B 7% 2,43 37,20 34,77
+DeutschlandCard - 19494*****
+Ihr Punktestand vor dem Einkauf: 424
+Für diesen Einkauf erhalten Sie:
+Basis-Punkte auf 44,89€ 22
+Die Gewährung der DeutschlandCard-Punkte
+kann Entgeltminderungen zur Folge haben.
+97076250020007892752319098
+Seite 2 von 3
+TSE Transaktionsnummer.:319461
+Seriennr. Kasse:NTO-000-07625-2
+Prüfwert:vwNZTLwRtXPYJ24UjQhK3bro9lNQ7JIh
+Twju36rL/S5x3aGamAtMLL63gfn1r4tPl/PtN+o1w
+vVjhJE3jC836cb2RevDzGGkc8zqdB/OLN8AWVAibP
+NUJ+WanrGVfpJ2
+Signaturzähler:639539
+TSE-Start:2023-10-02T17:09:19.000Z
+TSE-Stop : 2023-10-02T17:10:38.000Z
+Steuer-Nr.DE133822409
+Montag-Samstag 7:00-22:00 Uhr
+Datum Uhrzeit
+02.10.23 19:09
+Filiale Pos Bed Bon-Nr.
+0007625 002 92230630789
+Seite 3 von 3

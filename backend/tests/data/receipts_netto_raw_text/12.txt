@@ -1,0 +1,113 @@
+*** eBon ***
+Netto
+Filiale 7625
+Oudenarder Str. 14
+13347 Berlin
+WWW.NETTO-ONLINE.DE
+EUR
+Kopierpapier Maker 500 Bl 5,99 A
+2 x 1,25
+BioBio Frischmilch 3,8% 1L 2,50 B
+MI Pizza Edelsal.3ST1050g 3,99 B
+GL Naturjogh. 3,5% 500g 0,85 B
+VL Eier Freilandh. 10ST M-L 1,79 B
+Genussw.Spae/Nudelpf.sort.750g 3,39 B
+KatjesWunderlandSauer175g 0,99 B
+CT Holla die Waldfrucht 60g 1,29 B
+2 x 1,19
+BO Wuerstchendog 2,38 B
+2 x 0,99
+Kn.Suppenliebe Huehnersu.0,75L 1,98 B
+Maggi GA.Buchstabensuppe1L 0,99 B
+KM Weichweizengriess500g 0,69 B
+Iglo Filegro sort.ab 240g 4,49 B
+GTAmericanClas.Sandw.750g 1,49 B
+Carat Bruehe Huhn/Rind sort.7L 0,99 B
+Hela CGK sort. 300ml 2,29 B
+Seagold 15 Fischstaebchen 450g 2,79 B
+Cla. Cashews XXL sort. 300g 3,33 B
+ClNussk.roa.sort.ab 200g 2,99 B
+Netto-App Coupon -0,30
+Clarkys Erdnuesse sort. 500g 2,29 B
+7 Huehn.Gabelspaghetti. 600g 1,99 B
+Kartoffel blau Pfanni 2,5kg 2,99 B
+Birnen 1,5 kg VKE 1,99 B
+Gurken 0,99 B
+Mini-Romanasalat 1,59 B
+Bio Naturland Karotten 1kg 1,49 B
+Trauben-Mix 500g 2,99 B
+Orangen 1,5kg VKE 2,99 B
+Bio Rispentomaten 500g 2,79 B
+Champignon braun 400g VKE 1,79 B
+2 x 1,29
+Paprika rot 500g 2,58 B
+Bio Spitzpaprika 180g 1,79 B
+Bananen Lose 0,98 B
+0,986 kg x 0,99 EUR/kg
+Bio Zitronen 500g VKE 1,49 B
+Apfel Kanzi 1kg QS 2,69 B
+Netto-App Coupon -0,20
+Bananen Lose 0,54 B
+0,544 kg x 0,99 EUR/kg
+Weiderind-Hackfleisch 400g 3,89 B
+Seite 1 von 3
+1,162 kg 4,99 EUR/kg
+SB Maishaehnch.ca.1,4kgQS 5,80 B
+MW-Leergut 19% -0,15 A
+EW-Leergut 19% -1,00 A
+SUMME [42] 87,20
+----------
+SUMME € 87,20
+Kartenzahlung EUR 87,20
+-K-U-N-D-E-N-B-E-L-E-G-
+.
+Terminal-ID : 65482596
+TA-Nr 404146 BNr 2541
+Kartenzahlung
+Visa kontaktlos
+Visa Debit
+EUR 87,20
+PAN ############6015
+Karte 0
+EMV-AID A0000000031010
+VU-Nr 4556409386
+Genehmigungs-Nr 165710
+Datum 18.11.23 16:56 Uhr
+*** Zahlung erfolgt ***
+================================
+AS-Proc-Code = 00 075 00
+Capt.-Ref.= 0000
+APPROVED
+================================
+BITTE BELEG AUFBEWAHREN
+Informationen zur
+Datenverarbeitung durch
+PAYONE
+www.payone.com/dsgvo
+MWST BRUTTO NETTO
+A 19% 0,77 4,84 4,07
+B 7% 5,39 82,36 76,97
+DeutschlandCard - 19494*****
+Ihr Punktestand vor dem Einkauf: 532
+Für diesen Einkauf erhalten Sie:
+Basis-Punkte auf 88,35€ 44
+Die Gewährung der DeutschlandCard-Punkte
+kann Entgeltminderungen zur Folge haben.
+97076250010005053222316525
+Seite 2 von 3
+TSE Transaktionsnummer.:432985
+Seriennr. Kasse:NTO-000-07625-1
+Prüfwert:kmL0sISDMyzBrDHJSNmPasUdT+bOrsfA
+AID0tBOddZHVL7qSdP0RTbphVPn5A7caoTL+D7/Ow
+BHoufksp2kG+n+uzEUCuvMCCPnk8I0sEpjL8N31oU
+cxkPyBAmcbzy38
+Signaturzähler:866839
+TSE-Start:2023-11-18T15:52:45.000Z
+TSE-Stop : 2023-11-18T15:57:14.000Z
+Steuer-Nr.DE133822409
+Montag-Samstag 7:00-20:00 Uhr
+Datum Uhrzeit
+18.11.23 16:52
+Filiale Pos Bed Bon-Nr.
+0007625 001 55195970505
+Seite 3 von 3

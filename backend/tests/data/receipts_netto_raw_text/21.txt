@@ -1,0 +1,62 @@
+*** eBon ***
+Netto
+Filiale 7625
+Oudenarder Str. 14
+13347 Berlin
+WWW.NETTO-ONLINE.DE
+EUR
+Naturalis Medium 6x1,5L PK 1,74 A
+Leergut 1,50 EUR EW 1,50* A
+SUMME [1] 3,24
+Kartenzahlung EUR 3,24
+-K-U-N-D-E-N-B-E-L-E-G-
+.
+Terminal-ID : 65482603
+TA-Nr 422929 BNr 8025
+Kartenzahlung
+Visa kontaktlos
+Visa Debit
+EUR 3,24
+PAN ############6015
+Karte 0
+EMV-AID A0000000031010
+VU-Nr 4556409386
+Genehmigungs-Nr 101142
+Datum 27.08.24 10:11 Uhr
+*** Zahlung erfolgt ***
+================================
+AS-Proc-Code = 00 075 00
+Capt.-Ref.= 0000
+APPROVED
+================================
+BITTE BELEG AUFBEWAHREN
+Informationen zur
+Datenverarbeitung durch
+PAYONE
+www.payone.com/dsgvo
+MWST BRUTTO NETTO
+A 19% 0,52 3,24 2,72
+DeutschlandCard - 19494*****
+Ihr Punktestand vor dem Einkauf: 1.214
+Für diesen Einkauf erhalten Sie:
+Basis-Punkte auf 1,74€ 1
+Seite 1 von 2
+Die Gewährung der DeutschlandCard-Punkte
+kann Entgeltminderungen zur Folge haben.
+97076250050001752402410090
+TSE Transaktionsnummer.:1090999
+Seriennr. Kasse:NTO-000-07625-5
+Prüfwert:QqnLHEMQ/D/GZz1RaER5cs3RuegOn8n3
++En8WDRhUpOc9rm7RyXyjDsdxHuX4whJvgg3IreoY
+Px7401676POzPPGioLxdUgja++YnZagf4CmQVcN6C
+Cz3MlqfDG8L+/C
+Signaturzähler:2184341
+TSE-Start:2024-08-27T08:09:59.000Z
+TSE-Stop : 2024-08-27T08:11:49.000Z
+Steuer-Nr.DE133822409
+Montag-Samstag 7:00-22:00 Uhr
+Datum Uhrzeit
+27.08.24 10:09
+Filiale Pos Bed Bon-Nr.
+0007625 005 99995 0175
+Seite 2 von 2

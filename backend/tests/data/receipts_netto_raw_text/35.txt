@@ -1,0 +1,74 @@
+*** eBon ***
+Netto
+Filiale 7625
+Oudenarder Str. 14
+13347 Berlin
+WWW.NETTO-ONLINE.DE
+EUR
+M.I. Mozzarella oGt 125g 0,79 B
+Aprikosen 1kg 2,49 B
+Orangen 1,5kg VKE 1,99 B
+Bio Naturland Karotten 1kg 2,39 B
+Rispentomaten 1,21 B
+0,940 kg x 1,29 EUR/kg
+Apfel Kanzi 760g 2,99 B
+Bananen Lose 1,49 B
+1,158 kg x 1,29 EUR/kg
+Gurken 0,49 B
+Birne rot Lose 2,24 B
+0,642 kg x 3,49 EUR/kg
+Apfel Gala 1kg 2,99 B
+SUMME [10] 19,07
+Kartenzahlung EUR 19,07
+Seite 1 von 3
+-K-U-N-D-E-N-B-E-L-E-G-
+.
+Terminal-ID : 65482596
+TA-Nr 492608 BNr 0094
+Kartenzahlung
+Visa kontaktlos
+Visa Debit
+EUR 19,07
+PAN ############6015
+Karte 0
+EMV-AID A0000000031010
+VU-Nr 4556409386
+Genehmigungs-Nr 101853
+Datum 08.07.24 10:18 Uhr
+*** Zahlung erfolgt ***
+================================
+AS-Proc-Code = 00 075 00
+Capt.-Ref.= 0000
+APPROVED
+================================
+BITTE BELEG AUFBEWAHREN
+Informationen zur
+Datenverarbeitung durch
+PAYONE
+www.payone.com/dsgvo
+MWST BRUTTO NETTO
+B 7% 1,25 19,07 17,82
+DeutschlandCard - 19494*****
+Ihr Punktestand vor dem Einkauf: 1.116
+Für diesen Einkauf erhalten Sie:
+Basis-Punkte auf 19,07€ 9
+Die Gewährung der DeutschlandCard-Punkte
+kann Entgeltminderungen zur Folge haben.
+97076250010007811902410189
+Seite 2 von 3
+TSE Transaktionsnummer.:972467
+Seriennr. Kasse:NTO-000-07625-1
+Prüfwert:WhLbXIj3NbBtanZ7hmsqWFO/VmG/qCwJ
+NZvzMJ2iVkot79bY0jqvbyiCvXbMPhDsHSLA7Mb0H
+QNdjie2RnKdmYTl7HVtfufnOb93YEXOhOQIXzv+5C
+MAF58TGDgOpa/u
+Signaturzähler:1947065
+TSE-Start:2024-07-08T08:18:05.000Z
+TSE-Stop : 2024-07-08T08:18:59.000Z
+Steuer-Nr.DE133822409
+Montag-Samstag 7:00-20:00 Uhr
+Datum Uhrzeit
+08.07.24 10:18
+Filiale Pos Bed Bon-Nr.
+0007625 001 79734520781
+Seite 3 von 3
