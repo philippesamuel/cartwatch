@@ -21,7 +21,8 @@ useSeoMeta({
 
         <UNavigationMenu
           :items="[
-            { label: 'Price History', to: '/prices', icon: 'i-lucide-trending-up' }
+            { label: 'Price History', to: '/prices', icon: 'i-lucide-trending-up' },
+            { label: 'Products', to: '/products', icon: 'i-lucide-table' }
           ]"
           class="ml-4"
         />
