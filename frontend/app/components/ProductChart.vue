@@ -144,6 +144,54 @@ function resetZoom() {
   chartRef.value?.chart?.resetZoom()
 }
 
+// Direction-aware box zoom: in XY mode the plugin zooms both axes to the drag
+// box; afterwards we undo the axis that barely moved, so a flat drag zooms only
+// X and a tall drag only Y. An explicit X/Y toggle wins. (The plugin caches its
+// own mode, so we can't influence it live — hence the after-the-fact restore.)
+let dragProbe: { x: number; y: number } | null = null
+let dragVec = { dx: 0, dy: 0 }
+let preX: { min: number; max: number } | null = null
+let preY: { min: number; max: number } | null = null
+function dragMode(): 'x' | 'y' | 'xy' {
+  if (zoomMode.value !== 'xy') return zoomMode.value
+  const { dx, dy } = dragVec
+  const MIN = 12 // px — below this the drag is too small to have a direction
+  const DOMINANCE = 2.5 // one axis must be this many times longer to lock to it
+  if (dx < MIN && dy < MIN) return 'xy'
+  if (dx >= dy * DOMINANCE) return 'x'
+  if (dy >= dx * DOMINANCE) return 'y'
+  return 'xy'
+}
+function onDragProbeDown(e: MouseEvent) {
+  if (e.shiftKey) return // shift-drag pans, not zooms
+  dragProbe = { x: e.clientX, y: e.clientY }
+  dragVec = { dx: 0, dy: 0 }
+  const chart = chartRef.value?.chart
+  if (chart) {
+    preX = { min: chart.scales.x.min, max: chart.scales.x.max }
+    preY = { min: chart.scales.y.min, max: chart.scales.y.max }
+  }
+}
+function onDragProbeMove(e: MouseEvent) {
+  if (!dragProbe) return
+  dragVec = { dx: Math.abs(e.clientX - dragProbe.x), dy: Math.abs(e.clientY - dragProbe.y) }
+}
+function onDragProbeUp() {
+  if (!dragProbe) return
+  dragProbe = null
+  const m = dragMode()
+  const chart = chartRef.value?.chart
+  if (m === 'xy' || !chart || !preX || !preY) return
+  const px = preX
+  const py = preY
+  // The drag zoom lands first; on the next frame reset the near-flat axis.
+  requestAnimationFrame(() => {
+    const z = chart as unknown as { zoomScale: (id: string, range: { min: number; max: number }, t: string) => void }
+    if (m === 'x') z.zoomScale('y', { min: py.min, max: py.max }, 'none')
+    else z.zoomScale('x', { min: px.min, max: px.max }, 'none')
+  })
+}
+
 // Grab cursor: hint pan-ability on Shift-hover, show a closed fist while panning.
 let shiftHeld = false
 let panning = false
@@ -339,11 +387,19 @@ const chartOptions = computed(() => ({
       <p>No price history for <strong>{{ product.name }}</strong>.</p>
     </div>
     <div v-else>
-      <div class="h-72" @mouseenter="onChartEnter" @mouseleave="onChartLeave">
+      <div
+        class="h-72"
+        @mouseenter="onChartEnter"
+        @mouseleave="onChartLeave"
+        @dblclick="resetZoom"
+        @mousedown="onDragProbeDown"
+        @mousemove="onDragProbeMove"
+        @mouseup="onDragProbeUp"
+      >
         <Line ref="chartRef" :data="chartData" :options="chartOptions" />
       </div>
       <p class="text-xs text-muted mt-2 text-center">
-        Scroll to zoom · drag to box-zoom · shift-drag to pan · X/Y locks an axis
+        Scroll to zoom · drag to box-zoom · double-click to reset · shift-drag to pan
       </p>
     </div>
   </UCard>
