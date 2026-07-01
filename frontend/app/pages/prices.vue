@@ -65,6 +65,38 @@ function addProduct(product: ProductHit) {
 function removeProduct(id: string) {
   products.value = products.value.filter(p => p.id !== id)
 }
+
+// ── drag-and-drop reorder ───────────────────────────────────────────────
+// The card's grip handle is the only draggable element, so its native
+// dragstart bubbles here; the canvas stays non-draggable (box-zoom intact).
+const dragFromIndex = ref<number | null>(null)
+
+function onDragStart(i: number, e: DragEvent) {
+  dragFromIndex.value = i
+  if (e.dataTransfer) {
+    e.dataTransfer.effectAllowed = 'move'
+    const cell = (e.target as HTMLElement | null)?.closest('.chart-cell') as HTMLElement | null
+    if (cell) e.dataTransfer.setDragImage(cell, 24, 24)
+  }
+}
+
+function onDragOver(e: DragEvent) {
+  e.preventDefault()
+  if (e.dataTransfer) e.dataTransfer.dropEffect = 'move'
+}
+
+function onDrop(toIndex: number) {
+  const from = dragFromIndex.value
+  if (from === null || from === toIndex) return
+  const arr = [...products.value]
+  const [moved] = arr.splice(from, 1)
+  arr.splice(toIndex, 0, moved)
+  products.value = arr
+}
+
+function onDragEnd() {
+  dragFromIndex.value = null
+}
 </script>
 
 <template>
@@ -74,7 +106,7 @@ function removeProduct(id: string) {
         Price History
       </h1>
       <p class="text-muted text-sm">
-        Add a chart per product to compare price trends across stores. Your layout is saved in this browser.
+        Add a chart per product to compare price trends across stores. Drag the grip to reorder; your layout is saved in this browser.
       </p>
     </div>
 
@@ -132,12 +164,21 @@ function removeProduct(id: string) {
       class="grid gap-6"
       :style="{ gridTemplateColumns: `repeat(${perRow}, minmax(0, 1fr))` }"
     >
-      <ProductChart
-        v-for="product in products"
+      <div
+        v-for="(product, i) in products"
         :key="product.id"
-        :product="product"
-        @remove="removeProduct(product.id)"
-      />
+        class="chart-cell transition-opacity"
+        :class="{ 'opacity-40': dragFromIndex === i }"
+        @dragstart="onDragStart(i, $event)"
+        @dragend="onDragEnd"
+        @dragover="onDragOver"
+        @drop="onDrop(i)"
+      >
+        <ProductChart
+          :product="product"
+          @remove="removeProduct(product.id)"
+        />
+      </div>
     </div>
 
     <div v-else class="text-center py-16 text-muted">

@@ -289,6 +289,14 @@ const chartOptions = computed(() => ({
   <UCard>
     <template #header>
       <div class="flex items-center gap-2 flex-wrap">
+        <div
+          class="drag-handle cursor-grab active:cursor-grabbing text-muted hover:text-default shrink-0 flex items-center"
+          draggable="true"
+          aria-label="Drag to reorder"
+          title="Drag to reorder"
+        >
+          <UIcon name="i-lucide-grip-vertical" />
+        </div>
         <div class="flex items-center gap-2 min-w-0">
           <UIcon name="i-lucide-package" class="text-muted shrink-0" />
           <h3 class="font-semibold truncate">
