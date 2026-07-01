@@ -9,14 +9,18 @@ const query = ref('')
 const searchResults = ref<ProductHit[]>([])
 const searching = ref(false)
 
-// Persisted list of charts (one per product), kept in this browser.
+// Persisted state, kept in this browser.
 const STORAGE_KEY = 'cartwatch:price-charts'
+const PERROW_KEY = 'cartwatch:charts-per-row'
 const products = ref<ProductHit[]>([])
+const perRow = ref(1)
 
 onMounted(() => {
   try {
     const saved = localStorage.getItem(STORAGE_KEY)
     if (saved) products.value = JSON.parse(saved)
+    const savedPerRow = Number(localStorage.getItem(PERROW_KEY))
+    if (savedPerRow >= 1 && savedPerRow <= 3) perRow.value = savedPerRow
   } catch {
     // ignore malformed storage
   }
@@ -25,6 +29,10 @@ onMounted(() => {
 watch(products, (val) => {
   if (import.meta.client) localStorage.setItem(STORAGE_KEY, JSON.stringify(val))
 }, { deep: true })
+
+watch(perRow, (val) => {
+  if (import.meta.client) localStorage.setItem(PERROW_KEY, String(val))
+})
 
 const addedIds = computed(() => new Set(products.value.map(p => p.id)))
 
@@ -60,17 +68,17 @@ function removeProduct(id: string) {
 </script>
 
 <template>
-  <UContainer class="py-8 max-w-4xl">
+  <UContainer class="py-8" :class="perRow === 1 ? 'max-w-4xl' : 'max-w-7xl'">
     <div class="mb-6">
       <h1 class="text-2xl font-bold mb-1">
         Price History
       </h1>
       <p class="text-muted text-sm">
-        Add a chart per product to compare price trends across stores. Your charts are saved in this browser.
+        Add a chart per product to compare price trends across stores. Your layout is saved in this browser.
       </p>
     </div>
 
-    <div class="relative mb-8">
+    <div class="relative mb-6">
       <UInput
         v-model="query"
         placeholder="Search products to add a chart… e.g. milk, eggs"
@@ -104,7 +112,26 @@ function removeProduct(id: string) {
       </div>
     </div>
 
-    <div v-if="products.length" class="space-y-6">
+    <div v-if="products.length" class="flex items-center justify-end gap-2 mb-4">
+      <span class="text-sm text-muted">Charts per row</span>
+      <UButtonGroup size="xs">
+        <UButton
+          v-for="n in [1, 2, 3]"
+          :key="n"
+          :variant="perRow === n ? 'solid' : 'outline'"
+          color="neutral"
+          @click="perRow = n"
+        >
+          {{ n }}
+        </UButton>
+      </UButtonGroup>
+    </div>
+
+    <div
+      v-if="products.length"
+      class="grid gap-6"
+      :style="{ gridTemplateColumns: `repeat(${perRow}, minmax(0, 1fr))` }"
+    >
       <ProductChart
         v-for="product in products"
         :key="product.id"
