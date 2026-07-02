@@ -98,6 +98,7 @@ const checks: Check[] = [
       const { data, count } = await supabase
         .from('receipt_items')
         .select('raw_name, unit_price, total_price', { count: 'exact' })
+        .is('ignore', null)
         .or('unit_price.is.null,unit_price.lte.0,total_price.is.null')
       return {
         count: count ?? 0,
@@ -119,6 +120,7 @@ const checks: Check[] = [
       const { data } = await supabase
         .from('receipts')
         .select('purchased_at, total, receipt_items(total_price)')
+        .is('receipt_items(ignore)', null)
       const rows: Record<string, any>[] = []
       for (const r of data ?? []) {
         const sum = (r.receipt_items ?? []).reduce((s: number, i: any) => s + Number(i.total_price || 0), 0)
@@ -184,6 +186,7 @@ const checks: Check[] = [
       const { data, count } = await supabase
         .from('receipt_items')
         .select('raw_name', { count: 'exact' })
+        .is('ignore', null)
         .is('unit_id', null)
       const grouped = groupByCount(data ?? [], 'raw_name')
       return {
