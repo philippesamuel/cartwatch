@@ -113,21 +113,61 @@ const yAxisLabel = computed(() =>
   `Price (${currencySymbol.value}${displayUnit.value ? ` / ${displayUnit.value}` : ''})`
 )
 
+function median(nums: number[]) {
+  const s = [...nums].sort((a, b) => a - b)
+  const mid = Math.floor(s.length / 2)
+  return s.length % 2 ? s[mid]! : (s[mid - 1]! + s[mid]!) / 2
+}
+function startOfDay(ts: number) {
+  const d = new Date(ts)
+  d.setHours(0, 0, 0, 0)
+  return d.getTime()
+}
+
+// Two datasets per chain: the raw observations as dots (no line), plus a line
+// that connects the daily median — so multiple purchases on one day no longer
+// make the line zig-zag, while every real data point stays visible.
 const chartData = computed(() => {
   const chains = [...new Set(history.value.map(p => p.store_chain))]
-  return {
-    datasets: chains.map(chain => ({
+  const datasets: any[] = []
+  for (const chain of chains) {
+    const color = CHAIN_COLORS[chain] ?? '#94a3b8'
+    const points = history.value.filter(p => p.store_chain === chain)
+
+    // raw dots (kept so nothing is hidden)
+    datasets.push({
+      label: `${chain} (raw)`,
+      data: points.map(p => ({ x: new Date(p.date).getTime(), y: p.unit_price, meta: p })),
+      showLine: false,
+      pointRadius: 3,
+      pointHoverRadius: 6,
+      pointBackgroundColor: color,
+      borderColor: color
+    })
+
+    // daily-median line
+    const byDay = new Map<number, number[]>()
+    for (const p of points) {
+      const key = startOfDay(new Date(p.date).getTime())
+      const arr = byDay.get(key) ?? []
+      arr.push(p.unit_price)
+      byDay.set(key, arr)
+    }
+    const line = [...byDay.entries()]
+      .sort((a, b) => a[0] - b[0])
+      .map(([x, prices]) => ({ x, y: median(prices) }))
+    datasets.push({
       label: chain,
-      data: history.value
-        .filter(p => p.store_chain === chain)
-        .map(p => ({ x: new Date(p.date).getTime(), y: p.unit_price, meta: p })),
-      borderColor: CHAIN_COLORS[chain] ?? '#94a3b8',
-      backgroundColor: (CHAIN_COLORS[chain] ?? '#94a3b8') + '33',
+      data: line,
+      borderColor: color,
+      backgroundColor: color + '33',
       tension: 0.3,
-      pointRadius: 4,
-      pointHoverRadius: 6
-    }))
+      borderWidth: 2,
+      pointRadius: 0,
+      pointHoverRadius: 0
+    })
   }
+  return { datasets }
 })
 
 // ── zoom / pan ──────────────────────────────────────────────────────────
@@ -144,52 +184,94 @@ function resetZoom() {
   chartRef.value?.chart?.resetZoom()
 }
 
-// Direction-aware box zoom: in XY mode the plugin zooms both axes to the drag
-// box; afterwards we undo the axis that barely moved, so a flat drag zooms only
-// X and a tall drag only Y. An explicit X/Y toggle wins. (The plugin caches its
-// own mode, so we can't influence it live — hence the after-the-fact restore.)
-let dragProbe: { x: number; y: number } | null = null
-let dragVec = { dx: 0, dy: 0 }
-let preX: { min: number; max: number } | null = null
-let preY: { min: number; max: number } | null = null
-function dragMode(): 'x' | 'y' | 'xy' {
+// Custom box zoom with an axis-matching preview: a mostly-horizontal drag locks
+// to X (full-height band), a mostly-vertical drag to Y (full-width band), and a
+// square-ish drag zooms both. An explicit X/Y toggle overrides the auto choice.
+// Done by hand (the plugin's own drag is disabled) so the preview band always
+// matches what actually gets zoomed.
+type Pt = { x: number; y: number }
+type BoxStyle = { left: string; top: string; width: string; height: string; background: string; border: string }
+const boxStyle = ref<BoxStyle | null>(null)
+let boxStart: Pt | null = null
+const MIN_DRAG = 8 // px — below this it's a click, not a zoom
+const DOMINANCE = 2 // one axis must be this many times longer to lock to it
+
+function clamp(v: number, lo: number, hi: number) {
+  return Math.max(lo, Math.min(hi, v))
+}
+function pointerPos(e: MouseEvent): Pt | null {
+  const chart = chartRef.value?.chart
+  if (!chart) return null
+  const rect = chart.canvas.getBoundingClientRect()
+  const ca = chart.chartArea
+  return {
+    x: clamp(e.clientX - rect.left, ca.left, ca.right),
+    y: clamp(e.clientY - rect.top, ca.top, ca.bottom)
+  }
+}
+function boxMode(dx: number, dy: number): 'x' | 'y' | 'xy' {
   if (zoomMode.value !== 'xy') return zoomMode.value
-  const { dx, dy } = dragVec
-  const MIN = 12 // px — below this the drag is too small to have a direction
-  const DOMINANCE = 2.5 // one axis must be this many times longer to lock to it
-  if (dx < MIN && dy < MIN) return 'xy'
+  if (dx < MIN_DRAG && dy < MIN_DRAG) return 'xy'
   if (dx >= dy * DOMINANCE) return 'x'
   if (dy >= dx * DOMINANCE) return 'y'
   return 'xy'
 }
-function onDragProbeDown(e: MouseEvent) {
-  if (e.shiftKey) return // shift-drag pans, not zooms
-  dragProbe = { x: e.clientX, y: e.clientY }
-  dragVec = { dx: 0, dy: 0 }
+function onBoxDown(e: MouseEvent) {
+  if (e.shiftKey) return // shift-drag pans
+  boxStart = pointerPos(e)
+  boxStyle.value = null
+}
+function onBoxMove(e: MouseEvent) {
   const chart = chartRef.value?.chart
-  if (chart) {
-    preX = { min: chart.scales.x.min, max: chart.scales.x.max }
-    preY = { min: chart.scales.y.min, max: chart.scales.y.max }
+  const p = pointerPos(e)
+  if (!boxStart || !chart || !p) return
+  const ca = chart.chartArea
+  const dx = Math.abs(p.x - boxStart.x)
+  const dy = Math.abs(p.y - boxStart.y)
+  const mode = boxMode(dx, dy)
+  let left: number, top: number, width: number, height: number
+  if (mode === 'x') {
+    left = Math.min(boxStart.x, p.x); width = dx; top = ca.top; height = ca.bottom - ca.top
+  } else if (mode === 'y') {
+    top = Math.min(boxStart.y, p.y); height = dy; left = ca.left; width = ca.right - ca.left
+  } else {
+    left = Math.min(boxStart.x, p.x); top = Math.min(boxStart.y, p.y); width = dx; height = dy
+  }
+  boxStyle.value = {
+    left: `${left}px`,
+    top: `${top}px`,
+    width: `${width}px`,
+    height: `${height}px`,
+    background: 'rgba(34,197,94,0.15)',
+    border: '1px solid rgba(34,197,94,0.7)'
   }
 }
-function onDragProbeMove(e: MouseEvent) {
-  if (!dragProbe) return
-  dragVec = { dx: Math.abs(e.clientX - dragProbe.x), dy: Math.abs(e.clientY - dragProbe.y) }
-}
-function onDragProbeUp() {
-  if (!dragProbe) return
-  dragProbe = null
-  const m = dragMode()
+function onBoxUp(e: MouseEvent) {
+  const start = boxStart
+  boxStart = null
+  boxStyle.value = null
   const chart = chartRef.value?.chart
-  if (m === 'xy' || !chart || !preX || !preY) return
-  const px = preX
-  const py = preY
-  // The drag zoom lands first; on the next frame reset the near-flat axis.
-  requestAnimationFrame(() => {
-    const z = chart as unknown as { zoomScale: (id: string, range: { min: number; max: number }, t: string) => void }
-    if (m === 'x') z.zoomScale('y', { min: py.min, max: py.max }, 'none')
-    else z.zoomScale('x', { min: px.min, max: px.max }, 'none')
-  })
+  const p = pointerPos(e)
+  if (!start || !chart || !p) return
+  const dx = Math.abs(p.x - start.x)
+  const dy = Math.abs(p.y - start.y)
+  if (dx < MIN_DRAG && dy < MIN_DRAG) return // a click, not a zoom
+  const mode = boxMode(dx, dy)
+  const z = chart as unknown as { zoomScale: (id: string, range: { min: number; max: number }, t: string) => void }
+  if (mode === 'x' || mode === 'xy') {
+    const a = chart.scales.x.getValueForPixel(Math.min(start.x, p.x))!
+    const b = chart.scales.x.getValueForPixel(Math.max(start.x, p.x))!
+    z.zoomScale('x', { min: Math.min(a, b), max: Math.max(a, b) }, 'none')
+  }
+  if (mode === 'y' || mode === 'xy') {
+    const a = chart.scales.y.getValueForPixel(Math.min(start.y, p.y))!
+    const b = chart.scales.y.getValueForPixel(Math.max(start.y, p.y))!
+    z.zoomScale('y', { min: Math.min(a, b), max: Math.max(a, b) }, 'none')
+  }
+}
+function cancelBox() {
+  boxStart = null
+  boxStyle.value = null
 }
 
 // Grab cursor: hint pan-ability on Shift-hover, show a closed fist while panning.
@@ -199,7 +281,13 @@ let hovering = false
 function applyCursor() {
   const canvas = chartRef.value?.chart?.canvas
   if (!canvas) return
-  canvas.style.cursor = panning ? 'grabbing' : (hovering && shiftHeld ? 'grab' : '')
+  canvas.style.cursor = panning
+    ? 'grabbing'
+    : hovering && shiftHeld
+      ? 'grab'
+      : hovering
+        ? 'crosshair'
+        : ''
 }
 function onShiftKey(e: KeyboardEvent) {
   if (e.key !== 'Shift') return
@@ -212,6 +300,7 @@ function onChartEnter() {
 }
 function onChartLeave() {
   hovering = false
+  cancelBox()
   applyCursor()
 }
 onMounted(() => {
@@ -239,17 +328,22 @@ const chartOptions = computed(() => ({
     }
   },
   plugins: {
-    legend: { position: 'bottom' as const },
+    legend: {
+      position: 'bottom' as const,
+      labels: { filter: (item: any) => !item.text.endsWith('(raw)') }
+    },
     tooltip: {
       callbacks: {
         title: (items: any[]) => items[0]?.raw?.meta?.raw_name ?? '',
         label: (ctx: any) => {
-          const m = ctx.raw.meta as PricePoint
+          const m = ctx.raw?.meta as PricePoint | undefined
+          if (!m) return ''
           const unit = displayUnit.value ?? m.item_unit
           return `${ctx.dataset.label}: ${currencySymbol.value}${ctx.parsed.y.toFixed(2)}${unit ? ` / ${unit}` : ''}`
         },
         afterLabel: (ctx: any) => {
-          const m = ctx.raw.meta as PricePoint
+          const m = ctx.raw?.meta as PricePoint | undefined
+          if (!m) return []
           const date = new Date(m.date).toLocaleDateString()
           const qty = `Qty: ${m.quantity}${m.item_unit ? ` ${m.item_unit}` : ''}`
           return [qty, date]
@@ -268,12 +362,9 @@ const chartOptions = computed(() => ({
       zoom: {
         wheel: { enabled: true },
         pinch: { enabled: false },
-        drag: {
-          enabled: true,
-          backgroundColor: 'rgba(34,197,94,0.15)',
-          borderColor: 'rgba(34,197,94,0.7)',
-          borderWidth: 1
-        },
+        // Box zoom is handled manually (onBoxDown/Move/Up) so the preview band
+        // matches the locked axis; the plugin still owns wheel + pan.
+        drag: { enabled: false },
         mode: zoomMode.value
       },
       limits: {
@@ -396,18 +487,23 @@ const chartOptions = computed(() => ({
     </div>
     <div v-else>
       <div
-        class="h-72"
+        class="relative h-72"
         @mouseenter="onChartEnter"
         @mouseleave="onChartLeave"
         @dblclick="resetZoom"
-        @mousedown="onDragProbeDown"
-        @mousemove="onDragProbeMove"
-        @mouseup="onDragProbeUp"
+        @mousedown="onBoxDown"
+        @mousemove="onBoxMove"
+        @mouseup="onBoxUp"
       >
         <Line ref="chartRef" :data="chartData" :options="chartOptions" />
+        <div
+          v-if="boxStyle"
+          class="absolute pointer-events-none rounded-sm"
+          :style="boxStyle"
+        />
       </div>
       <p class="text-xs text-muted mt-2 text-center">
-        Scroll to zoom · drag to box-zoom · double-click to reset · shift-drag to pan
+        Scroll to zoom · drag a box (thin → one axis) · double-click to reset · shift-drag to pan
       </p>
     </div>
   </UCard>

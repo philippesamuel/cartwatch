@@ -53,8 +53,13 @@ const columns: Col[] = [
 ]
 
 const query = ref('')
+const unitFilter = ref('all')
 const sortKey = ref<keyof Row>('line_item_count')
 const sortDir = ref<'asc' | 'desc'>('desc')
+
+const availableUnits = computed(() =>
+  [...new Set(rows.value.map(r => r.unit_symbol).filter(Boolean))].sort()
+)
 
 function toggleSort(key: keyof Row) {
   if (sortKey.value === key) {
@@ -68,8 +73,10 @@ function toggleSort(key: keyof Row) {
 
 const filtered = computed(() => {
   const s = query.value.trim().toLowerCase()
-  if (!s) return rows.value
-  return rows.value.filter(r => r.canonical_product_name.toLowerCase().includes(s))
+  return rows.value.filter(r =>
+    (unitFilter.value === 'all' || r.unit_symbol === unitFilter.value)
+    && (!s || r.canonical_product_name.toLowerCase().includes(s))
+  )
 })
 
 const sorted = computed(() => {
@@ -93,8 +100,26 @@ const sorted = computed(() => {
         icon="i-lucide-search"
         class="w-64"
       />
+      <UButtonGroup size="xs">
+        <UButton
+          :variant="unitFilter === 'all' ? 'solid' : 'outline'"
+          color="neutral"
+          @click="unitFilter = 'all'"
+        >
+          All units
+        </UButton>
+        <UButton
+          v-for="u in availableUnits"
+          :key="u"
+          :variant="unitFilter === u ? 'solid' : 'outline'"
+          color="neutral"
+          @click="unitFilter = u"
+        >
+          {{ u }}
+        </UButton>
+      </UButtonGroup>
       <span class="text-sm text-muted">
-        {{ sorted.length }}<span v-if="query"> / {{ rows.length }}</span> products
+        {{ sorted.length }}<span v-if="sorted.length !== rows.length"> / {{ rows.length }}</span> products
       </span>
       <span class="text-xs text-muted ml-auto">
         Median / Min / Max are price per unit
