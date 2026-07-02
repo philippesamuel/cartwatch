@@ -22,7 +22,8 @@ useSeoMeta({
         <UNavigationMenu
           :items="[
             { label: 'Price History', to: '/prices', icon: 'i-lucide-trending-up' },
-            { label: 'Products', to: '/products', icon: 'i-lucide-table' }
+            { label: 'Products', to: '/products', icon: 'i-lucide-table' },
+            { label: 'Data Quality', to: '/data-quality', icon: 'i-lucide-shield-alert' }
           ]"
           class="ml-4"
         />
