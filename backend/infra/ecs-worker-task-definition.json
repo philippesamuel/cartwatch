@@ -1,0 +1,43 @@
+{
+    "containerDefinitions": [
+        {
+            "name": "prefect",
+            "image": "ghcr.io/philippesamuel/cartwatch/worker:latest",
+            "repositoryCredentials": {
+                "credentialsParameter": "arn:aws:secretsmanager:eu-central-1:560133288359:secret:ghcr_io_pat-9W3agy"
+            },
+            "essential": true,
+            "secrets": [
+                {
+                    "name": "PREFECT_API_AUTH_STRING",
+                    "valueFrom": "arn:aws:secretsmanager:eu-central-1:560133288359:secret:cartwatch/prefect/auth-string-MLUPBn"
+                },
+                {
+                    "name": "SUPABASE_SERVICE_KEY",
+                    "valueFrom": "arn:aws:secretsmanager:eu-central-1:560133288359:secret:cartwatch/supabase/service-key-LBLbUq"
+                },
+                {
+                    "name": "SUPABASE_ANON_KEY",
+                    "valueFrom": "arn:aws:secretsmanager:eu-central-1:560133288359:secret:cartwatch/supabase/anon-key-hj8Y8B"
+                }
+            ],
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-group": "prefect",
+                    "awslogs-create-group": "true",
+                    "awslogs-region": "eu-central-1",
+                    "awslogs-stream-prefix": "prefect-logs_ecs-pool_cartwatch-worker"
+                }
+            }
+        }
+    ],
+    "family": "prefect_ecs-pool_cartwatch-worker",
+    "executionRoleArn": "arn:aws:iam::560133288359:role/service-role/ecsTaskExecutionRole",
+    "networkMode": "awsvpc",
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "cpu": "1024",
+    "memory": "2048"
+}

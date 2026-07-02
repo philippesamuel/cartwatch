@@ -139,7 +139,7 @@
             "type": "null"
           }
         ],
-        "default": null,
+        "default": "arn:aws:ecs:eu-central-1:560133288359:task-definition/prefect_ecs-pool_cartwatch-worker:1",
         "description": "An identifier for an existing task definition to use. If set, options that require changes to the task definition will be ignored. All contents of the task definition in the job configuration will be ignored.",
         "title": "Task Definition ARN"
       },
