@@ -21,6 +21,7 @@ ChartJS.register(
 
 const props = defineProps<{
   product: { id: string; name: string; short_name: string; unit: string | null }
+  jitter?: boolean
 }>()
 defineEmits<{ remove: [] }>()
 
@@ -118,15 +119,14 @@ function median(nums: number[]) {
   const mid = Math.floor(s.length / 2)
   return s.length % 2 ? s[mid]! : (s[mid - 1]! + s[mid]!) / 2
 }
-function startOfDay(ts: number) {
+function startOfMonth(ts: number) {
   const d = new Date(ts)
-  d.setHours(0, 0, 0, 0)
-  return d.getTime()
+  return new Date(d.getFullYear(), d.getMonth(), 1).getTime()
 }
+const JITTER_MS = 4 * 24 * 60 * 60 * 1000 // spread same-day dots by up to ±4 days
 
-// Two datasets per chain: the raw observations as dots (no line), plus a line
-// that connects the daily median — so multiple purchases on one day no longer
-// make the line zig-zag, while every real data point stays visible.
+// Two datasets per chain: the raw observations as dots, plus a solid line
+// through the monthly median. Every raw observation stays visible.
 const chartData = computed(() => {
   const chains = [...new Set(history.value.map(p => p.store_chain))]
   const datasets: any[] = []
@@ -134,10 +134,14 @@ const chartData = computed(() => {
     const color = CHAIN_COLORS[chain] ?? '#94a3b8'
     const points = history.value.filter(p => p.store_chain === chain)
 
-    // raw dots (kept so nothing is hidden)
+    // raw dots — optionally jittered on the date axis to reveal same-day overlaps
     datasets.push({
       label: `${chain} (raw)`,
-      data: points.map(p => ({ x: new Date(p.date).getTime(), y: p.unit_price, meta: p })),
+      data: points.map((p) => {
+        const base = new Date(p.date).getTime()
+        const x = props.jitter ? base + (Math.random() * 2 - 1) * JITTER_MS : base
+        return { x, y: p.unit_price, meta: p }
+      }),
       showLine: false,
       pointRadius: 3,
       pointHoverRadius: 6,
@@ -145,24 +149,24 @@ const chartData = computed(() => {
       borderColor: color
     })
 
-    // daily-median line
-    const byDay = new Map<number, number[]>()
+    // monthly-median line — dashed + diamond markers = "this is calculated"
+    const byMonth = new Map<number, number[]>()
     for (const p of points) {
-      const key = startOfDay(new Date(p.date).getTime())
-      const arr = byDay.get(key) ?? []
+      const key = startOfMonth(new Date(p.date).getTime())
+      const arr = byMonth.get(key) ?? []
       arr.push(p.unit_price)
-      byDay.set(key, arr)
+      byMonth.set(key, arr)
     }
-    const line = [...byDay.entries()]
+    const line = [...byMonth.entries()]
       .sort((a, b) => a[0] - b[0])
-      .map(([x, prices]) => ({ x, y: median(prices) }))
+      .map(([x, prices]) => ({ x, y: median(prices), agg: true }))
     datasets.push({
       label: chain,
       data: line,
       borderColor: color,
       backgroundColor: color + '33',
-      tension: 0.3,
       borderWidth: 2,
+      tension: 0.3,
       pointRadius: 0,
       pointHoverRadius: 0
     })
@@ -172,7 +176,6 @@ const chartData = computed(() => {
 
 // ── zoom / pan ──────────────────────────────────────────────────────────
 const chartRef = ref<{ chart?: import('chart.js').Chart }>()
-const zoomMode = ref<'xy' | 'x' | 'y'>('xy')
 
 function zoomIn() {
   chartRef.value?.chart?.zoom(1.2)
@@ -210,7 +213,7 @@ function pointerPos(e: MouseEvent): Pt | null {
   }
 }
 function boxMode(dx: number, dy: number): 'x' | 'y' | 'xy' {
-  if (zoomMode.value !== 'xy') return zoomMode.value
+  // Axis is chosen by the drag shape: mostly-horizontal → x, mostly-vertical → y.
   if (dx < MIN_DRAG && dy < MIN_DRAG) return 'xy'
   if (dx >= dy * DOMINANCE) return 'x'
   if (dy >= dx * DOMINANCE) return 'y'
@@ -334,12 +337,19 @@ const chartOptions = computed(() => ({
     },
     tooltip: {
       callbacks: {
-        title: (items: any[]) => items[0]?.raw?.meta?.raw_name ?? '',
+        title: (items: any[]) => {
+          const raw = items[0]?.raw
+          if (raw?.meta) return raw.meta.raw_name
+          if (raw?.agg) return new Date(raw.x).toLocaleDateString(undefined, { year: 'numeric', month: 'long' })
+          return ''
+        },
         label: (ctx: any) => {
-          const m = ctx.raw?.meta as PricePoint | undefined
-          if (!m) return ''
-          const unit = displayUnit.value ?? m.item_unit
-          return `${ctx.dataset.label}: ${currencySymbol.value}${ctx.parsed.y.toFixed(2)}${unit ? ` / ${unit}` : ''}`
+          const raw = ctx.raw
+          const unit = displayUnit.value ?? raw?.meta?.item_unit
+          const price = `${currencySymbol.value}${ctx.parsed.y.toFixed(2)}${unit ? ` / ${unit}` : ''}`
+          if (raw?.meta) return `${ctx.dataset.label}: ${price}`
+          if (raw?.agg) return `${ctx.dataset.label} · monthly median: ${price}`
+          return ''
         },
         afterLabel: (ctx: any) => {
           const m = ctx.raw?.meta as PricePoint | undefined
@@ -354,7 +364,7 @@ const chartOptions = computed(() => ({
       // Hold Shift and drag to pan; plain drag draws a zoom box.
       pan: {
         enabled: true,
-        mode: zoomMode.value,
+        mode: 'xy' as const,
         modifierKey: 'shift' as const,
         onPanStart: () => { panning = true; applyCursor() },
         onPanComplete: () => { panning = false; applyCursor() }
@@ -365,7 +375,7 @@ const chartOptions = computed(() => ({
         // Box zoom is handled manually (onBoxDown/Move/Up) so the preview band
         // matches the locked axis; the plugin still owns wheel + pan.
         drag: { enabled: false },
-        mode: zoomMode.value
+        mode: 'xy' as const
       },
       limits: {
         x: { min: 'original' as const, max: 'original' as const },
@@ -416,29 +426,6 @@ const chartOptions = computed(() => ({
         </div>
 
         <div class="flex items-center gap-1 ml-auto">
-          <UButtonGroup size="xs">
-            <UButton
-              :variant="zoomMode === 'xy' ? 'solid' : 'outline'"
-              color="neutral"
-              @click="zoomMode = 'xy'"
-            >
-              XY
-            </UButton>
-            <UButton
-              :variant="zoomMode === 'x' ? 'solid' : 'outline'"
-              color="neutral"
-              @click="zoomMode = 'x'"
-            >
-              X
-            </UButton>
-            <UButton
-              :variant="zoomMode === 'y' ? 'solid' : 'outline'"
-              color="neutral"
-              @click="zoomMode = 'y'"
-            >
-              Y
-            </UButton>
-          </UButtonGroup>
           <UButton
             size="xs"
             color="neutral"

@@ -6,7 +6,6 @@ type Row = {
   unit_symbol: string
   line_item_count: number
   receipt_count: number
-  store_count: number
   retailer_count: number
   median_unit_price: number | null
   min_unit_price: number | null
@@ -20,7 +19,7 @@ const loading = ref(true)
 onMounted(async () => {
   const { data } = await supabase
     .from('mv_product_stats')
-    .select('canonical_product_name, unit_symbol, line_item_count, receipt_count, store_count, retailer_count, median_unit_price, min_unit_price, max_unit_price, total_price_sum')
+    .select('canonical_product_name, unit_symbol, line_item_count, receipt_count, retailer_count, median_unit_price, min_unit_price, max_unit_price, total_price_sum')
   rows.value = (data ?? []) as Row[]
   loading.value = false
 })
@@ -44,7 +43,6 @@ const columns: Col[] = [
   { key: 'unit_symbol', label: 'Unit', numeric: false },
   { key: 'line_item_count', label: 'Obs.', numeric: true, title: 'Line items observed', format: r => fmtInt(r.line_item_count) },
   { key: 'receipt_count', label: 'Receipts', numeric: true, title: 'Distinct receipts', format: r => fmtInt(r.receipt_count) },
-  { key: 'store_count', label: 'Stores', numeric: true, title: 'Distinct stores', format: r => fmtInt(r.store_count) },
   { key: 'retailer_count', label: 'Retailers', numeric: true, title: 'Distinct retailers', format: r => fmtInt(r.retailer_count) },
   { key: 'median_unit_price', label: 'Median', numeric: true, title: 'Median price per unit', format: r => fmtPrice(r.median_unit_price) },
   { key: 'min_unit_price', label: 'Min', numeric: true, title: 'Min price per unit', format: r => fmtPrice(r.min_unit_price) },
