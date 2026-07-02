@@ -1,0 +1,74 @@
+*** eBon ***
+Netto
+Filiale 7625
+Oudenarder Str. 14
+13347 Berlin
+WWW.NETTO-ONLINE.DE
+EUR
+2 x 1,05
+GL Weidemilch 3,5% 1L 2,10 B
+BioBio Mandeldr. ungesüsst 1L 1,11 A²
+Bio BB Hafer-Mandeldr. 1L 0,95 A
+Clarkys Nusskernmischung 200g 2,49 B²
+Clarkys Erdnuesse sort. 500g 2,29 B
+Clarkys Cashewkerne 200g 2,29 B
+Grop.Proteinpudding sort. 200g 0,79 B
+GL Proteinjogh.sort.200g 0,79 B
+SUMME [9] 12,81
+----------
+SUMME € 12,81
+Kartenzahlung EUR 12,81
+-K-U-N-D-E-N-B-E-L-E-G-
+.
+Terminal-ID : 65482605
+TA-Nr 421968 BNr 0147
+Kartenzahlung
+Visa kontaktlos
+Visa Debit
+EUR 12,81
+PAN ############6015
+Karte 0
+EMV-AID A0000000031010
+VU-Nr 4556409386
+Genehmigungs-Nr 153137
+Datum 19.07.24 15:31 Uhr
+*** Zahlung erfolgt ***
+================================
+AS-Proc-Code = 00 075 00
+Capt.-Ref.= 0000
+APPROVED
+================================
+BITTE BELEG AUFBEWAHREN
+Informationen zur
+Datenverarbeitung durch
+PAYONE
+www.payone.com/dsgvo
+Seite 1 von 3
+MWST BRUTTO NETTO
+A 19% 0,33 2,06 1,73
+B 7% 0,70 10,75 10,05
+(²) Aktionsartikelersparnis: 0,54 €
+DeutschlandCard - 19494*****
+Ihr Punktestand vor dem Einkauf: 1.130
+Für diesen Einkauf erhalten Sie:
+Basis-Punkte auf 12,81€ 6
+Die Gewährung der DeutschlandCard-Punkte
+kann Entgeltminderungen zur Folge haben.
+97076250060005132012415305
+TSE Transaktionsnummer.:1003862
+Seriennr. Kasse:NTO-000-07625-6
+Prüfwert:6e3MdXNZKp30jZInynK0aTSIEl5uFKA7
+FFAcbr6WDIf9wVj1En4xx7yk6J65rPr15DKyq+w7D
+JyK3VXJuLss0OqeSjZk8bjZ4pbI5vfLoKuXuhHktO
+fEJdM6+C5rlZRL
+Signaturzähler:2009894
+TSE-Start:2024-07-19T13:30:02.000Z
+TSE-Stop : 2024-07-19T13:31:41.000Z
+Steuer-Nr.DE133822409
+Montag-Samstag 7:00-20:00 Uhr
+Datum Uhrzeit
+19.07.24 15:30
+Filiale Pos Bed Bon-Nr.
+0007625 006 99996 0513
+Seite 2 von 3
+Seite 3 von 3

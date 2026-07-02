@@ -1,0 +1,68 @@
+*** eBon ***
+Netto
+Filiale 7625
+Oudenarder Str. 14
+13347 Berlin
+WWW.NETTO-ONLINE.DE
+EUR
+2 x 1,05
+GL Weidemilch 3,5% 1L 2,10 B
+Pfirsiche gelbfleischig 4,48 B
+1,362 kg x 3,29 EUR/kg
+Birne rot Lose 2,61 B
+0,748 kg x 3,49 EUR/kg
+SUMME [4] 9,19
+----------
+SUMME € 9,19
+Kartenzahlung EUR 9,19
+-K-U-N-D-E-N-B-E-L-E-G-
+.
+Terminal-ID : 65482605
+TA-Nr 423623 BNr 0963
+Kartenzahlung
+Visa kontaktlos
+Visa Debit
+EUR 9,19
+PAN ############6015
+Karte 0
+EMV-AID A0000000031010
+VU-Nr 4556409386
+Genehmigungs-Nr 154128
+Datum 24.07.24 15:41 Uhr
+*** Zahlung erfolgt ***
+================================
+AS-Proc-Code = 00 075 00
+Capt.-Ref.= 0000
+APPROVED
+================================
+BITTE BELEG AUFBEWAHREN
+Informationen zur
+Datenverarbeitung durch
+PAYONE
+www.payone.com/dsgvo
+MWST BRUTTO NETTO
+B 7% 0,60 9,19 8,59
+Seite 1 von 2
+DeutschlandCard - 19494*****
+Ihr Punktestand vor dem Einkauf: 1.136
+Für diesen Einkauf erhalten Sie:
+Basis-Punkte auf 9,19€ 4
+Die Gewährung der DeutschlandCard-Punkte
+kann Entgeltminderungen zur Folge haben.
+97076250060003862062415377
+TSE Transaktionsnummer.:1014965
+Seriennr. Kasse:NTO-000-07625-6
+Prüfwert:6l06N4K3chzLU+i1GGkHtuEBTihadk8Y
+bh/o6xP/peU1q8Fb5nM2wyGQcUbwNuidxJLqpTUEL
+5tvcYSsK0mcdoLN4Pj9BmxlOkqH3SLzzzp4QwwWh7
+x/L0QbnQGuHZao
+Signaturzähler:2032142
+TSE-Start:2024-07-24T13:37:47.000Z
+TSE-Stop : 2024-07-24T13:41:33.000Z
+Steuer-Nr.DE133822409
+Montag-Samstag 7:00-20:00 Uhr
+Datum Uhrzeit
+24.07.24 15:37
+Filiale Pos Bed Bon-Nr.
+0007625 006 99996 0386
+Seite 2 von 2

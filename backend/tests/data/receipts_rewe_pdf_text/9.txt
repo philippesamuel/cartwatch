@@ -1,0 +1,41 @@
+REWE Josef Seifert oHG
+Müllerstraße 141
+13353 Berlin
+UID Nr.: DE331216382
+EUR
+BAUERNKRUSTE 1,39 B
+BOEREK-STANGE 1,78 B
+2 Stk x 0,89
+BOEREKST. ASIA 0,99 B
+JA! SONNTAGSBR. 1,29 B
+EIER BH M-L 2,49 B
+LMUV H-SAHNE30% 0,99 B
+WEIZENMEHL T 405 0,79 B
+RAPSOEL 1,19 B
+ZARTBITTER 50% 1,79 B
+--------------------------------------
+SUMME EUR 12,70
+======================================
+Geg. Mastercard EUR 12,70
+* * Kundenbeleg * *
+Datum: 27.01.2026
+Uhrzeit: 20:49:41 Uhr
+Beleg-Nr. 7483
+Trace-Nr. 468844
+Bezahlung
+Contactless
+DEBIT MASTERCARD
+Nr. ################ ####
+VU-Nr. ##########
+Terminal-ID ########
+Pos-Info ## ### ##
+AS-Zeit ##.##. ##:## Uhr
+AS-Proc-Code = ## ### ##
+Capt.-Ref.= ####
+APPROVED
+Betrag EUR 12,70
+Zahlung erfolgt
+Approved
+Steuer % Netto Steuer Brutto
+B= 7,0% 11,87 0,83 12,70
+Gesamtbetrag 11,87 0,83 12,70

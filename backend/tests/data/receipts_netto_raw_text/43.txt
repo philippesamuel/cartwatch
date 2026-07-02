@@ -1,0 +1,73 @@
+*** eBon ***
+NETTO
+Filiale 7625
+Oudenarder Str. 14
+13347 Berlin
+WWW.NETTO-ONLINE.DE
+EUR
+Schwep.TonicWaterMW1x1LF 1,49 A
+Pfand 0,15* A
+Mini Wassermelone ST 3,99 B
+Tesa Malerkrepp 50m 4,49 A
+Clarky Mand.blanch.200g 2,79 B
+Heidelbeeren 200g VKE QS 1,99 B
+Clarkys Cashewk.200g 2,39 B
+4 x 0,89
+Lauch/Porree ST 3,56 B
+SUMME [10] 20,85
+----------
+SUMME € 20,85
+Kartenzahlung EUR 20,85
+-K-U-N-D-E-N-B-E-L-E-G-
+.
+Terminal-ID : 65482596
+TA-Nr 352517 BNr 7387
+Kartenzahlung
+Visa kontaktlos
+Visa Debit
+EUR 20,85
+PAN ############6015
+Karte 0
+EMV-AID A0000000031010
+VU-Nr 4556409386
+Genehmigungs-Nr 083601
+Datum 19.07.23 08:35 Uhr
+*** Zahlung erfolgt ***
+================================
+AS-Proc-Code = 00 075 00
+Capt.-Ref.= 0000
+APPROVED
+================================
+BITTE BELEG AUFBEWAHREN
+Informationen zur
+Datenverarbeitung durch
+PAYONE
+www.payone.com/dsgvo
+Seite 1 von 3
+MWST BRUTTO NETTO
+A 19% 0,98 6,13 5,15
+B 7% 0,96 14,72 13,76
+DeutschlandCard - 19494*****
+Ihr Punktestand vor dem Einkauf: 264
+Für diesen Einkauf erhalten Sie:
+Basis-Punkte auf 20,70€ 10
+Die Gewährung der DeutschlandCard-Punkte
+kann Entgeltminderungen zur Folge haben.
+97076250010002912002308354
+TSE Transaktionsnummer.:150440
+Seriennr. Kasse:NTO-000-07625-1
+Prüfwert:e1oOFRI/yoaPFliHD4oAd+c5iGQf/Ifw
+EkVJKca5asoz9Ay6mmouYJeH1msFgzPvkCHeDj25l
+D8ZpsfkW8Tpnm2CRLgUA3+ADDghROFL/E9SaA/759
+R+PreLS0Gecy0R
+Signaturzähler:301166
+TSE-Start:2023-07-19T06:35:30.000Z
+TSE-Stop : 2023-07-19T06:36:05.000Z
+Steuer-Nr.DE133822409
+Montag-Samstag 7:00-22:00 Uhr
+Datum Uhrzeit
+19.07.23 08:35
+Filiale Pos Bed Bon-Nr.
+0007625 001 42277370291
+Seite 2 von 3
+Seite 3 von 3

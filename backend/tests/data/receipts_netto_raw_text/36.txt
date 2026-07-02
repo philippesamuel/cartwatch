@@ -1,0 +1,86 @@
+*** eBon ***
+NETTO
+Filiale 7625
+Oudenarder Str. 14
+13347 Berlin
+WWW.NETTO-ONLINE.DE
+EUR
+BE Champignons 1.W.Scheib.170g 1,09 B
+Nivea Dusche Men Sport 250ml 1,85 A
+3 x 1,69
+NordGut Schmelzkaes Sahne 200g 5,07 B
+2 x 2,45
+Dove Deo Men 150ml 4,90 A
+2 x 1,25
+BioBio Frischmilch 3,8% 1L 2,50 B
+BE Kaisergemuese 1000g 2,19 B
+GL Creme Fraiche Natur 200g 0,99 B
+Kartoffel blau Pfanni 2,5kg 2,79 B
+Orangen 1,5kg VKE 2,99 B
+Apfel rot lose 0,73 B
+0,366 kg x 1,99 EUR/kg
+Aepfel 2kg VKE QS 2,49 B
+Birnen 1kg VKE 2,09 B
+Bananen Lose 1,68 B
+1,306 kg x 1,29 EUR/kg
+Tomaten 500g 1,99 B
+MW-Leergut 19% -1,20 A
+EW-Leergut 19% -1,25 A
+SUMME [18] 30,90
+Netto-App Coupon -1,00
+----------
+SUMME € 29,90
+Kartenzahlung EUR 29,90
+Seite 1 von 3
+-K-U-N-D-E-N-B-E-L-E-G-
+.
+Terminal-ID : 65482596
+TA-Nr 391231 BNr 6255
+Kartenzahlung
+Visa kontaktlos
+Visa Debit
+EUR 29,90
+PAN ############6015
+Karte 0
+EMV-AID A0000000031010
+VU-Nr 4556409386
+Genehmigungs-Nr 183722
+Datum 20.10.23 18:36 Uhr
+*** Zahlung erfolgt ***
+================================
+AS-Proc-Code = 00 075 00
+Capt.-Ref.= 0000
+APPROVED
+================================
+BITTE BELEG AUFBEWAHREN
+Informationen zur
+Datenverarbeitung durch
+PAYONE
+www.payone.com/dsgvo
+MWST BRUTTO NETTO
+A 19% 0,65 4,10 3,45
+B 7% 1,69 25,80 24,11
+DeutschlandCard - 19494*****
+Ihr Punktestand vor dem Einkauf: 466
+Für diesen Einkauf erhalten Sie:
+Basis-Punkte auf 32,35€ 16
+Die Gewährung der DeutschlandCard-Punkte
+kann Entgeltminderungen zur Folge haben.
+97076250010007662932318361
+Seite 2 von 3
+TSE Transaktionsnummer.:363106
+Seriennr. Kasse:NTO-000-07625-1
+Prüfwert:vdy8Qln20uFFjkqacO4hT24+2UAO6mVA
+7Ikhgy7oAOFLyyOlJ4wTApRnySuY5YehIuhTeEApT
+BkggWl9fPnBLGGoRlN4gfxdPpvMDCIrGXia4XAZnZ
+nu2zTb686gdRIN
+Signaturzähler:726944
+TSE-Start:2023-10-20T16:36:32.000Z
+TSE-Stop : 2023-10-20T16:37:27.000Z
+Steuer-Nr.DE133822409
+Montag-Samstag 7:00-22:00 Uhr
+Datum Uhrzeit
+20.10.23 18:36
+Filiale Pos Bed Bon-Nr.
+0007625 001 40729420766
+Seite 3 von 3

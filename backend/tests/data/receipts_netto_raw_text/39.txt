@@ -1,0 +1,66 @@
+*** eBon ***
+NETTO
+Filiale 7625
+Oudenarder Str. 14
+13347 Berlin
+WWW.NETTO-ONLINE.DE
+EUR
+2 x 2,45
+Rex.Deospray Cobalt150ml 4,90 A²
+Salat m. Wurzel Mix ST 1,39 B²
+Aquasale Meersalz 500g 0,99 B²
+Bananen Lose 1,50 B²
+1,166 kg x 1,29 EUR/kg
+SUMME [5] 8,78
+----------
+SUMME € 8,78
+Kartenzahlung EUR 8,78
+-K-U-N-D-E-N-B-E-L-E-G-
+.
+Terminal-ID : 65303572
+TA-Nr 064891 BNr 1908
+Kartenzahlung
+Visa kontaktlos
+Visa Debit
+EUR 8,78
+PAN ############6015
+Karte 0
+EMV-AID A0000000031010
+VU-Nr 4556409386
+Genehmigungs-Nr 093042
+Datum 17.07.23 09:30 Uhr
+*** Zahlung erfolgt ***
+================================
+AS-Proc-Code = 00 075 00
+Capt.-Ref.= 0000
+APPROVED
+================================
+BITTE BELEG AUFBEWAHREN
+MWST BRUTTO NETTO
+A 19% 0,78 4,90 4,12
+B 7% 0,25 3,88 3,63
+DeutschlandCard - 19494*****
+Ihr Punktestand vor dem Einkauf: 223
+Für diesen Einkauf erhalten Sie:
+Basis-Punkte auf 8,78€ 4
+Seite 1 von 3
+Die Gewährung der DeutschlandCard-Punkte
+kann Entgeltminderungen zur Folge haben.
+97076250070001161982309294
+TSE Transaktionsnummer.:144709
+Seriennr. Kasse:NTO-000-07625-7
+Prüfwert:jY2TiNTEE6rF2mOvwzs8ByGLMOQ49bS0
+je3Zo9U2yUfPsU471Mt9Dhs4eHJNJqIuKu1BrD9pg
+XcoBHXKmzOpMYBgbQnEYSABmwgcBoljwxu7WxEXyh
+pOvzSK6OmOd0zb
+Signaturzähler:289704
+TSE-Start:2023-07-17T07:29:01.000Z
+TSE-Stop : 2023-07-17T07:30:54.000Z
+Steuer-Nr.DE133822409
+Montag-Samstag 7:00-22:00 Uhr
+Datum Uhrzeit
+17.07.23 09:29
+Filiale Pos Bed Bon-Nr.
+0007625 007 99996 0116
+Seite 2 von 3
+Seite 3 von 3

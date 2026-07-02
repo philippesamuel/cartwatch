@@ -1,0 +1,74 @@
+*** eBon ***
+Netto
+Filiale 7625
+Oudenarder Str. 14
+13347 Berlin
+WWW.NETTO-ONLINE.DE
+EUR
+2 x 5,94
+Gerolsteiner Sprudel 6x1,5L PK 11,88 A
+2 x 1,50
+EW-Pfand 1,50 EUR 3,00* A
+Clarkys Erdnuesse sort. 500g 2,29 B
+ClNussk.roa.sort.ab 200g 2,99 B
+MW-Leergut 19% -0,15 A
+MW-Leergut 7% -0,15 B
+EW-Leergut 19% -4,00 A
+EW-Leergut 19% -0,75 A
+SUMME [4] 15,11
+----------
+SUMME € 15,11
+Kartenzahlung EUR 15,11
+Seite 1 von 3
+-K-U-N-D-E-N-B-E-L-E-G-
+.
+Terminal-ID : 65482599
+TA-Nr 514271 BNr 1570
+Kartenzahlung
+Visa kontaktlos
+Visa Debit
+EUR 15,11
+PAN ############6015
+Karte 0
+EMV-AID A0000000031010
+VU-Nr 4556409386
+Genehmigungs-Nr 185303
+Datum 24.06.24 18:52 Uhr
+*** Zahlung erfolgt ***
+================================
+AS-Proc-Code = 00 075 00
+Capt.-Ref.= 0000
+APPROVED
+================================
+BITTE BELEG AUFBEWAHREN
+Informationen zur
+Datenverarbeitung durch
+PAYONE
+www.payone.com/dsgvo
+MWST BRUTTO NETTO
+A 19% 1,59 9,98 8,39
+B 7% 0,34 5,13 4,79
+DeutschlandCard - 19494*****
+Ihr Punktestand vor dem Einkauf: 1.105
+Für diesen Einkauf erhalten Sie:
+Basis-Punkte auf 17,16€ 8
+Die Gewährung der DeutschlandCard-Punkte
+kann Entgeltminderungen zur Folge haben.
+97076250040002351762418502
+Seite 2 von 3
+TSE Transaktionsnummer.:938019
+Seriennr. Kasse:NTO-000-07625-4
+Prüfwert:ua7xUhSmdlMN9+w8Kex1PIiWOwY0DdlI
+gfJLrFRRcHc0ZpVni4X2Jk3D07sQR+/xUB5Vsfiri
+NN/ujLq5rnItTdSUSILY9cn2/TMaukOOa8kiWoORZ
+I3iAi9/0D2RRX9
+Signaturzähler:1878088
+TSE-Start:2024-06-24T16:51:01.000Z
+TSE-Stop : 2024-06-24T16:53:09.000Z
+Steuer-Nr.DE133822409
+Montag-Samstag 7:00-20:00 Uhr
+Datum Uhrzeit
+24.06.24 18:50
+Filiale Pos Bed Bon-Nr.
+0007625 004 99991 0235
+Seite 3 von 3

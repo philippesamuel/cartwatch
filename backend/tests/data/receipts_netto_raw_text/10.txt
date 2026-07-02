@@ -1,0 +1,92 @@
+*** eBon ***
+Netto
+Filiale 7625
+Oudenarder Str. 14
+13347 Berlin
+WWW.NETTO-ONLINE.DE
+EUR
+Kolios Feta 200g 2,19 B
+2 x 1,05
+GL Weidemilch 3,5% 1L 2,10 B
+Mezzo Mix 0,33L FL 0,80 A
+MW-Pfand 0,15 EUR 0,15* A
+Bisc. Cookies sort.ab 200g 1,59 B
+Bisc.Keks m.Fuellung sort.500g 2,39 B
+Fritz Kola 0,33L FL 1,09 A
+MW-Pfand 0,08 EUR 0,08* A
+BE Junge Erbsen 1 kg 2,19 B
+Aquasale Meersalz 500g 0,99 B
+3 x 0,79
+GL Sahne 30% 200g VLOG 2,37 B
+2 x 2,49
+GL Cheddar sort.ab 175g 4,98 B
+Elinas Jo.Van.-Man.4x150g 1,49 B
+2 x 1,79
+Leerdammer Auflauf-Genuss 160g 3,58 B
+Las Cuar.Span.Olivenoel 500ml 6,99 B
+2 x 1,99
+Kochschinken 150g 3,98 B
+Lachsfilet 500g 9,99 B
+MW-Leergut 19% -0,45 A
+MW-Leergut 19% -0,15 A
+EW-Leergut 19% -0,25 A
+EW-Leergut 19% -1,00 A
+EW-Leergut 19% -4,00 A
+SUMME [21] 41,10
+----------
+SUMME € 41,10
+Kartenzahlung EUR 41,10
+Seite 1 von 4
+-K-U-N-D-E-N-B-E-L-E-G-
+.
+Terminal-ID : 65482596
+TA-Nr 500710 BNr 4019
+Kartenzahlung
+Visa kontaktlos
+Visa Debit
+EUR 41,10
+PAN ############6015
+Karte 0
+EMV-AID A0000000031010
+VU-Nr 4556409386
+Genehmigungs-Nr 180632
+Datum 27.07.24 18:06 Uhr
+*** Zahlung erfolgt ***
+================================
+AS-Proc-Code = 00 075 00
+Capt.-Ref.= 0000
+APPROVED
+================================
+BITTE BELEG AUFBEWAHREN
+Informationen zur
+Datenverarbeitung durch
+PAYONE
+www.payone.com/dsgvo
+MWST BRUTTO NETTO
+A 19% -0,60 -3,73 -3,13
+B 7% 2,93 44,83 41,90
+DeutschlandCard - 19494*****
+Ihr Punktestand vor dem Einkauf: 1.140
+Für diesen Einkauf erhalten Sie:
+Basis-Punkte auf 46,72€ 23
+Die Gewährung der DeutschlandCard-Punkte
+kann Entgeltminderungen zur Folge haben.
+97076250010001302092418056
+Seite 2 von 4
+TSE Transaktionsnummer.:1023093
+Seriennr. Kasse:NTO-000-07625-1
+Prüfwert:JPxjLMvMmfpTMnKh/8U8bpdMQWROhb1U
+a20eEe6ONFdsINCX4y3cscA+fu3vhu8qk0t2AaBjH
+38SBCvV2sPsMuVw7cJmjrz/F8mVt+nXAQSZBGvLHS
+fXPqJDiftTfT0b
+Signaturzähler:2048391
+TSE-Start:2024-07-27T16:05:17.000Z
+TSE-Stop : 2024-07-27T16:06:39.000Z
+Steuer-Nr.DE133822409
+Montag-Samstag 7:00-20:00 Uhr
+Datum Uhrzeit
+27.07.24 18:05
+Filiale Pos Bed Bon-Nr.
+0007625 001 42830140130
+Seite 3 von 4
+Seite 4 von 4

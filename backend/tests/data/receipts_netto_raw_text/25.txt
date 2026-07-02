@@ -1,0 +1,73 @@
+*** eBon ***
+Netto
+Filiale 7625
+Oudenarder Str. 14
+13347 Berlin
+WWW.NETTO-ONLINE.DE
+EUR
+Bayreuth. Hell 0,5L FL 0,93 A
+MW-Pfand 0,08 EUR 0,08* A
+Erdinger Zitrone AF 0,33L FL 0,80 A
+MW-Pfand 0,08 EUR 0,08* A
+Erdinger Alk.-frei 1x0,33L FL 0,80 A
+MW-Pfand 0,08 EUR 0,08* A
+Goesser Natur Radler 0,5L FL 1,00 A
+MW-Pfand 0,08 EUR 0,08* A
+Oberdorfer Hell 1x0,5L FL 0,70 A
+MW-Pfand 0,08 EUR 0,08* A
+SUMME [5] 4,63
+----------
+SUMME € 4,63
+Kartenzahlung EUR 4,63
+Seite 1 von 3
+-K-U-N-D-E-N-B-E-L-E-G-
+.
+Terminal-ID : 65482596
+TA-Nr 489380 BNr 8540
+Kartenzahlung
+Visa kontaktlos
+Visa Debit
+EUR 4,63
+PAN ############9687
+Karte 0
+EMV-AID A0000000031010
+VU-Nr 4556409386
+Genehmigungs-Nr 220435
+Datum 28.06.24 22:04 Uhr
+*** Zahlung erfolgt ***
+================================
+AS-Proc-Code = 00 075 00
+Capt.-Ref.= 0000
+APPROVED
+================================
+BITTE BELEG AUFBEWAHREN
+Informationen zur
+Datenverarbeitung durch
+PAYONE
+www.payone.com/dsgvo
+MWST BRUTTO NETTO
+A 19% 0,74 4,63 3,89
+DeutschlandCard - 19494*****
+Ihr Punktestand vor dem Einkauf: 1.113
+Für diesen Einkauf erhalten Sie:
+Basis-Punkte auf 4,23€ 2
+Die Gewährung der DeutschlandCard-Punkte
+kann Entgeltminderungen zur Folge haben.
+97076250010004871802422043
+Seite 2 von 3
+TSE Transaktionsnummer.:951565
+Seriennr. Kasse:NTO-000-07625-1
+Prüfwert:Nm8xq1eOeiyp9vrAiYJ9FvVBqhP94+Fn
+gRzIct1mrLOhfewBhZymJcErNFi/kIewVkQZR3K/C
+aNN5x4yndpGp1TEeW5g/TzuhZ4TCXJ6wmmh9+jOWE
+jYCQZb2mve9E+t
+Signaturzähler:1905182
+TSE-Start:2024-06-28T20:04:14.000Z
+TSE-Stop : 2024-06-28T20:04:41.000Z
+Steuer-Nr.DE133822409
+Montag-Samstag 7:00-20:00 Uhr
+Datum Uhrzeit
+28.06.24 22:04
+Filiale Pos Bed Bon-Nr.
+0007625 001 40729420487
+Seite 3 von 3

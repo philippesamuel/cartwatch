@@ -1,0 +1,69 @@
+*** eBon ***
+Netto
+Filiale 7625
+Oudenarder Str. 14
+13347 Berlin
+WWW.NETTO-ONLINE.DE
+EUR
+VL Eier Freilandh. 10ST M-L 2,29 B
+Clarkys Cashewkerne 200g 2,06 B²
+Clarkys Studentenfutter 200g 1,52 B²
+Clarkys Paranuesse 200g 2,51 B²
+Clarkys Erdnuesse sort. 500g 2,06 B²
+Apfel Kanzi 760g 2,99 B
+Bananen Lose 1,94 B
+1,502 kg x 1,29 EUR/kg
+SUMME [7] 15,37
+Kartenzahlung EUR 15,37
+-K-U-N-D-E-N-B-E-L-E-G-
+.
+Terminal-ID : 65482603
+TA-Nr 414854 BNr 4073
+Kartenzahlung
+Visa kontaktlos
+Visa Debit
+EUR 15,37
+PAN ############6015
+Karte 0
+EMV-AID A0000000031010
+VU-Nr 4556409386
+Genehmigungs-Nr 105033
+Datum 29.07.24 10:50 Uhr
+*** Zahlung erfolgt ***
+================================
+AS-Proc-Code = 00 075 00
+Capt.-Ref.= 0000
+APPROVED
+================================
+BITTE BELEG AUFBEWAHREN
+Informationen zur
+Datenverarbeitung durch
+PAYONE
+www.payone.com/dsgvo
+MWST BRUTTO NETTO
+B 7% 1,01 15,37 14,36
+Seite 1 von 2
+(²) Aktionsartikelersparnis: 0,71 €
+DeutschlandCard - 19494*****
+Ihr Punktestand vor dem Einkauf: 1.163
+Für diesen Einkauf erhalten Sie:
+Basis-Punkte auf 15,37€ 7
+Die Gewährung der DeutschlandCard-Punkte
+kann Entgeltminderungen zur Folge haben.
+97076250050008462112410480
+TSE Transaktionsnummer.:1024426
+Seriennr. Kasse:NTO-000-07625-5
+Prüfwert:k/ghQX37BfVm4Zg7hl8uBOvHMeEAl5VA
+platVrVHMoPNHg3hl2Kn5Ww56IWVWdedMAl+02JGV
+ThVgTIAEQ/1XGNLIFDVQ7HTfS4kNx9RtuhzMM3lUV
+k4f2OFk9TUB5Xb
+Signaturzähler:2051088
+TSE-Start:2024-07-29T08:48:04.000Z
+TSE-Stop : 2024-07-29T08:50:39.000Z
+Steuer-Nr.DE133822409
+Montag-Samstag 7:00-20:00 Uhr
+Datum Uhrzeit
+29.07.24 10:48
+Filiale Pos Bed Bon-Nr.
+0007625 005 99995 0846
+Seite 2 von 2

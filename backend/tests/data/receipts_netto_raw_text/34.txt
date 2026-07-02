@@ -1,0 +1,79 @@
+*** eBon ***
+NETTO
+Filiale 7625
+Oudenarder Str. 14
+13347 Berlin
+WWW.NETTO-ONLINE.DE
+EUR
+Gurken ST 0,55 B
+Apfel rot lose 1,92 B
+0,642 kg x 2,99 EUR/kg
+GW Dressing sort. 250 ml 0,99 B
+LU Bauernmild 500g 1,89 B
+Pri.BioPapiermuellb20x10 1,65 A
+GL Weidemilch 3,5% 1L 0,99 B
+Paprika rot 500g VKE 1,59 B
+Radieschen ST 0,59 B
+Preisaenderung -0,30
+Suesskartoffeln Lose 0,77 A
+0,298 kg x 2,59 EUR/kg
+Bio Zucchini 500g VKE 1,99 B
+Preisaenderung -1,00
+Bananen Lose 1,20 B
+0,932 kg x 1,29 EUR/kg
+Markenbutter sauer 250g 1,45 B
+Bio BB Hirtenkaese 200g 1,99 B
+Tomaten Trimix 400G VKE 2,99 B
+VL Eier FH 10ST 2,29 B
+Mini-Romanas. VKE-ST QS 0,89 B
+Preisaenderung -0,45
+SUMME [16] 21,99
+Kartenzahlung EUR 21,99
+Seite 1 von 3
+-K-U-N-D-E-N-B-E-L-E-G-
+.
+Terminal-ID : 65482596
+TA-Nr 345957 BNr 4194
+Kartenzahlung
+kontaktlos
+girocard
+EUR 21,99
+PAN ###############4181
+Karte 2
+EMV-AID A0000003591010028001
+VU-Nr 1044482596
+Genehmigungs-Nr 773608
+Datum 03.07.23 20:08 Uhr
+*** Zahlung erfolgt ***
+BITTE BELEG AUFBEWAHREN
+Informationen zur
+Datenverarbeitung durch
+PAYONE
+www.payone.com/dsgvo
+MWST BRUTTO NETTO
+A 19% 0,39 2,42 2,03
+B 7% 1,28 19,57 18,29
+DeutschlandCard - 19494*****
+Ihr Punktestand vor dem Einkauf: 166
+Für diesen Einkauf erhalten Sie:
+Basis-Punkte auf 21,99€ 10
+Die Gewährung der DeutschlandCard-Punkte
+kann Entgeltminderungen zur Folge haben.
+97076250010008271842320075
+TSE Transaktionsnummer.:112313
+Seriennr. Kasse:NTO-000-07625-1
+Prüfwert:5kzAwjyWj3cr5sxFGkKqFJPOATX24KGx
+YVwNcc/lC6mWv0WQmYE05PRZCpNWeeGieLl3pLfH8
+7b+zFvxG6BoFYaxg4OmElG0hVjVwrNCETXcmUyluN
+XTtaJzqoAm8qXO
+Signaturzähler:224793
+TSE-Start:2023-07-03T18:07:45.000Z
+TSE-Stop : 2023-07-03T18:08:41.000Z
+Steuer-Nr.DE133822409
+Montag-Samstag 7:00-22:00 Uhr
+Seite 2 von 3
+Datum Uhrzeit
+03.07.23 20:07
+Filiale Pos Bed Bon-Nr.
+0007625 001 42571100827
+Seite 3 von 3

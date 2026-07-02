@@ -1,0 +1,71 @@
+*** eBon ***
+NETTO
+Filiale 7625
+Oudenarder Str. 14
+13347 Berlin
+WWW.NETTO-ONLINE.DE
+EUR
+BE Junge Erbsen 1 kg 2,19 B²
+BioBio Frischmilch 3,8% 1L 1,25 B²
+0,170 kg 18,90 EUR/kg
+Cheddar Port. 48% ca.175g 3,21 B²
+GL Saure Sahne 200g VLOG 0,65 B²
+VL Eier Freilandh. 10ST M-L 2,29 B²
+BIO NL Zwiebeln 750g VKE 1,69 B²
+Heidelbeeren 125g 2,49 B²
+Bananen Lose 1,01 B²
+0,786 kg x 1,29 EUR/kg
+Thueringer Kochschinken 150g 2,49 B²
+MW-Leergut 19% -0,15 A
+SUMME [9] 17,12
+----------
+SUMME € 17,12
+Kartenzahlung EUR 17,12
+-K-U-N-D-E-N-B-E-L-E-G-
+.
+Terminal-ID : 65303574
+TA-Nr 068812 BNr 3543
+Kartenzahlung
+Visa kontaktlos
+Visa Debit
+EUR 17,12
+PAN ############6015
+Karte 0
+EMV-AID A0000000031010
+VU-Nr 4556409386
+Genehmigungs-Nr 085507
+Datum 06.11.23 08:55 Uhr
+*** Zahlung erfolgt ***
+================================
+AS-Proc-Code = 00 075 00
+Capt.-Ref.= 0000
+APPROVED
+================================
+BITTE BELEG AUFBEWAHREN
+Seite 1 von 2
+MWST BRUTTO NETTO
+A 19% -0,02 -0,15 -0,13
+B 7% 1,13 17,27 16,14
+DeutschlandCard - 19494*****
+Ihr Punktestand vor dem Einkauf: 524
+Für diesen Einkauf erhalten Sie:
+Basis-Punkte auf 17,27€ 8
+Die Gewährung der DeutschlandCard-Punkte
+kann Entgeltminderungen zur Folge haben.
+97076250090005413102308538
+TSE Transaktionsnummer.:399125
+Seriennr. Kasse:NTO-000-07625-9
+Prüfwert:VAmHagL1KynvdtxGB5A7BqAAyYAheXB2
+1N9Uga0C780bGzsJdxCfQlkpjcBSvU3fKJnSsWr5I
+0+lD5JR4hoJrwNZTUKqz1vITCG/3DSqcX4QIbiRxe
+KITloCCTRhXghl
+Signaturzähler:799068
+TSE-Start:2023-11-06T07:53:09.000Z
+TSE-Stop : 2023-11-06T07:55:15.000Z
+Steuer-Nr.DE133822409
+Montag-Samstag 7:00-22:00 Uhr
+Datum Uhrzeit
+06.11.23 08:53
+Filiale Pos Bed Bon-Nr.
+0007625 009 99996 0541
+Seite 2 von 2
