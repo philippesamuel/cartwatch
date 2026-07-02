@@ -41,6 +41,7 @@ const checks: Check[] = [
       const { data, count } = await supabase
         .from('receipt_items')
         .select('raw_name', { count: 'exact' })
+        .is('ignore', null)
         .is('canonical_product_id', null)
       const grouped = groupByCount(data ?? [], 'raw_name')
       return {
@@ -175,27 +176,6 @@ const checks: Check[] = [
     }
   },
   {
-    id: 'products-no-unit',
-    title: 'Products without a unit',
-    description: 'Canonical products with no unit set — prices cannot be normalised.',
-    severity: 'medium',
-    run: async () => {
-      const { data, count } = await supabase
-        .from('canonical_products')
-        .select('name, short_name', { count: 'exact' })
-        .is('unit_id', null)
-        .order('name')
-      return {
-        count: count ?? 0,
-        rows: data ?? [],
-        columns: [
-          { key: 'name', label: 'Product' },
-          { key: 'short_name', label: 'Short name' }
-        ]
-      }
-    }
-  },
-  {
     id: 'items-no-unit',
     title: 'Items without a unit',
     description: 'Receipt line items missing a unit symbol.',
@@ -246,6 +226,7 @@ const checks: Check[] = [
       const { data, count } = await supabase
         .from('stores')
         .select('name, city', { count: 'exact' })
+        .is('ignore', null)
         .is('chain_id', null)
         .order('name')
       return {
